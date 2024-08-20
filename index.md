@@ -22,4 +22,8 @@ Dies ist die Startseite meiner GitHub Page.
 
 [Sektionen](Sektionen/sektionen.md)
 
+[Zahlenysteme, Bits und Bytes](ZahlensysBitsBytes/zbb.md)
+
+[Prozedurale Programmierung](Proz/prozprog.md)
+
 <link rel="asmpi" href="/favicon.png" type="image/png">
