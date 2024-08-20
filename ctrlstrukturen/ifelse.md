@@ -27,3 +27,5 @@ endif:               @ Ende der Kontrollstruktur
 #### Betrachtet man den Controlflow-graph dieser Kontrollstruktur in einem Disassembler, ergibt sich folgendes Bild:
 
 ![Ifelse](./ifelse.png)
+
+[If-then elseif-then](If-then elseif-then.md)
