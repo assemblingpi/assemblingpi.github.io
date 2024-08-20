@@ -28,7 +28,7 @@ Dies ist die Startseite meiner GitHub Page.
 
 [Kontrollstrukturen](ctrlstrukturen/ctrlstrcts.md)
 
-[Arithetisch logische Befehle](arithlog/arithlogintro.md)
+[Arithmetisch logische Befehle](arithlog/arithlogintro.md)
 
 [GPU](GPU/gpuintro.md)
 
