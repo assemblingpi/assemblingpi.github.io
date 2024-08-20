@@ -30,4 +30,6 @@ Dies ist die Startseite meiner GitHub Page.
 
 [Arithetisch logische Befehle](arithlog/arithlogintro.md)
 
+[GPU](GPU/gpuintro.md)
+
 <link rel="asmpi" href="/favicon.png" type="image/png">
