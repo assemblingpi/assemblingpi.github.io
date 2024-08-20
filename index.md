@@ -15,3 +15,5 @@ Dies ist die Startseite meiner GitHub Page.
 [Immediates](immediates/immediates.md)
 
 [Label](label/label.md)
+
+[Datentypen in Assembler](Datentypen/datentypen.md)

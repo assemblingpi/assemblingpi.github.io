@@ -21,8 +21,8 @@ Um den tatsächlichen Wert von My_data in ein Register zu laden, müssen folglic
 ```asm
 ldr r0, =My_data
 ```
-```asm
 2.Zugriff auf den Wert an dieser Adresse:
+```asm
 ldr r0, [r0]
 ```
 
