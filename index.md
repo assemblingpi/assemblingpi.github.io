@@ -6,4 +6,4 @@ Dies ist die Startseite meiner GitHub Page.
 
 ## Weitere Inhalte
 
-[Notebook Beispiel](debuggdb.md)
+[Notebook Beispiel](einführungarch/archintro.md)
