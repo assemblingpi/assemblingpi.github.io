@@ -1,6 +1,6 @@
 # Einführung in die ARM-Architektur
 
-## 1. Komponenten der Von-Neumann-Architektur
+## Komponenten der Von-Neumann-Architektur
 
 Um mit der Assembler-Programmierung auf ARM-Prozessoren zu beginnen, ist es entscheidend, die grundlegende Funktionsweise der ARM-CPUs zu verstehen.
 
