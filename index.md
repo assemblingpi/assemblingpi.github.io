@@ -6,4 +6,5 @@ Dies ist die Startseite meiner GitHub Page.
 
 ## Weitere Inhalte
 
-[Notebook Beispiel](einführungarch/archintro.md)
+[Arch Intro Test](einführungarch/archintro.md)
+[Was ist ein Assembler + Linker Test](assemblerlinker/wasistasmlinker.md)
