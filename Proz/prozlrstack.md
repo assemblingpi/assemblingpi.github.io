@@ -1,5 +1,6 @@
 ## Prozeduren, Link Register und Stack
-Bei der Programmierung in Assembler ist es in diesem Kontext besonders wichtig, das Link Register korrekt zu verwalten. Das LR-Register enthält die Rücksprungadresse, also die Adresse, zu der die Ausführung zurückkehren soll, nachdem eine Prozedur beendet ist. Die Handhabung dieses Registers ist entscheidend für das korrekte Funktionieren von Prozeduren und deren Aufrufen.
+Bei der Programmierung in Assembler ist es in diesem Kontext besonders wichtig, das Link Register korrekt zu verwalten. 
+Das LR-Register enthält die Rücksprungadresse, also die Adresse, zu der die Ausführung zurückkehren soll, nachdem eine Prozedur beendet ist. Die Handhabung dieses Registers ist entscheidend für das korrekte Funktionieren von Prozeduren und deren Aufrufen.
 
 ### Non-Leaf Prozeduren und Link Register
 Wenn eine Non-Leaf-Prozedur eine andere Prozedur aufruft, muss die Rücksprungadresse, die im LR-Register gespeichert ist, gesichert werden, bevor der neue Aufruf stattfindet. Dies liegt daran, dass der Aufruf einer weiteren Prozedur das LR-Register überschreiben wird, da der Prozessor die Rücksprungadresse für die neu aufgerufene Prozedur dort speichert. Um die ursprüngliche Rücksprungadresse nicht zu verlieren, wird der aktuelle Wert des LR-Registers vor dem weiteren Aufruf auf dem Stack gespeichert. Dies sorgt dafür, dass nach dem Beenden der inneren Prozedur die Ausführung an der richtigen Stelle im Programm fortgesetzt wird.
@@ -7,8 +8,8 @@ Wenn eine Non-Leaf-Prozedur eine andere Prozedur aufruft, muss die Rücksprungad
 #### Beispiel für den Ablauf bei einer Non-Leaf Prozedur:
 ```asm
 Prolog:
-    PUSH {lr}    // Speichern des alten Frame-Pointers und der Rücksprungadresse
-    PUSH {r11}
+    PUSH {lr}       @ Speichern der Rücksprungadresse
+    PUSH {r11}      @ Speichern des alten Frame-Pointers
     MOV  r11, sp
 
 Body:

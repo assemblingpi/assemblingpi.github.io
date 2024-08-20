@@ -26,4 +26,6 @@ Dies ist die Startseite meiner GitHub Page.
 
 [Prozedurale Programmierung](Proz/prozprog.md)
 
+[Kontrollstrukturen](ctrlstrukturen/ctrlstrcts.md)
+
 <link rel="asmpi" href="/favicon.png" type="image/png">

@@ -6,6 +6,7 @@ Die Interaktion mit dem Stack erfolgt über die Befehle `PUSH` und `POP`:
 
 **PUSH**: Dieser Befehl legt Daten auf den Stack und reduziert dabei den Stack-Pointer (`SP`), da
       der Stack in ARM abwärts, also zu niedrigeren Speicheradressen wächst.
+      
 **POP**:  Dieser Befehl entfernt Daten vom Stack, legt sie in ein Register und erhöht den Stack-
  Pointer entsprechend.
 

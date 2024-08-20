@@ -2,9 +2,11 @@
 Ein Stackframe ist der Speicherbereich auf dem Stack, der einer Funktion bei ihrem Aufruf zugewiesen wird. Er enthält die Rücksprungadresse, lokale Variablen und eventuell gespeicherte Register. Der Stackframe wird beim Funktionsaufruf erstellt und beim Verlassen der Funktion wieder freigegeben. Er ermöglicht es, Daten und Rückkehradressen einer Funktion zu verwalten, ohne andere Funktionen zu beeinflussen.
 
 ### Bestandteile eines Stackframes
-Return-Adresse: Die Adresse, zu der der Programmfluss nach Beendigung der Funktion zurückkehrt.
-Frame Pointer (FP): Der vorherige Wert des Frame Pointers, der es ermöglicht, auf lokale Variablen und Parameter der aufrufenden Funktion zuzugreifen.
-Lokale Variablen: Speicherbereich für Variablen, die nur innerhalb der Funktion gültig sind.
+**Return-Adresse:** Die Adresse, zu der der Programmfluss nach Beendigung der Funktion zurückkehrt.
+
+**Frame Pointer (FP):** Der vorherige Wert des Frame Pointers, der es ermöglicht, auf lokale Variablen und Parameter der aufrufenden Funktion zuzugreifen.
+
+**Lokale Variablen:** Speicherbereich für Variablen, die nur innerhalb der Funktion gültig sind.
 Speicher für Register: Falls nötig, werden Registerinhalte gesichert, um den Zustand der aufrufenden Funktion wiederherzustellen.
 
 ### Erstellung und Zerstörung eines Stackframes

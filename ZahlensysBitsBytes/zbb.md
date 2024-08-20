@@ -1,13 +1,17 @@
 ## Zahlensysteme
 Das Binärsystem verwendet nur zwei Ziffern: 0 und 1. Es ist direkt auf die Art und Weise abgestimmt, wie Daten in Computern verarbeitet werden. Jede Ziffer in einem Binärsystem ist eine Potenz von 2. 
-Beispielsweise stellt die Binärzahl 101 die Dezimalzahl 5 dar (1×2^2 + 0×2^1 + 1×2^0 = 4 + 0 + 1).
+Beispielsweise stellt die Binärzahl **101** die Dezimalzahl **5** dar (1×2^2 + 0×2^1 + 1×2^0 = 4 + 0 + 1).
 
-Das Hexadezimalsystem hingegen verwendet 16 Ziffern: 0-9 und A-F. Es bietet eine kompaktere Darstellung von Binärdaten, da jede hexadezimale Ziffer vier Binärstellen entspricht. Zum Beispiel wird die Binärzahl 1101 im Hexadezimalsystem als D dargestellt (1×2^3 + 1×2^2 + 0×2^1 + 1×2^0 = 8 + 4 + 0 + 1 = 13).
+Das Hexadezimalsystem hingegen verwendet 16 Ziffern: 0-9 und A-F. Es bietet eine kompaktere Darstellung von Binärdaten, da jede hexadezimale Ziffer vier Binärstellen entspricht. 
+Zum Beispiel wird die Binärzahl **1101** im Hexadezimalsystem als **D** dargestellt 
+```
+(1×2^3 + 1×2^2 + 0×2^1 + 1×2^0 = 8 + 4 + 0 + 1 = 13)
+```
 
 ## Bits, Bytes und Nibbles
 Bits (Binary Digits) sind die kleinsten Informationseinheiten in der digitalen Welt. Ein Bit kann nur 0 oder 1 sein. Mehrere Bits zusammen ermöglichen die Darstellung komplexerer Daten.
 Ein Nibble besteht aus 4 Bits und kann 16 verschiedene Werte darstellen, da \(2^4 = 16\). Jeder Wert in einem Nibble entspricht genau einer Ziffer im Hexadezimalsystem.
-Ein Byte besteht aus 8 Bits und kann \(2^8 = 256\) verschiedene Werte darstellen (von 0 bis 255). Diese 256 Werte ergeben sich, weil ein Byte aus zwei Nibbles besteht und somit \(16 \times 16 = 256\) mögliche Kombinationen von 4-Bit Nibbles ergibt. Ein Byte wird häufig verwendet, um ein Zeichen in einem Text oder eine kleine Datenmenge zu kodieren.
+Ein Byte besteht aus 8 Bits und kann \(2^8 = 256\) verschiedene Werte darstellen (von 0 bis 255). Diese 256 Werte ergeben sich, weil ein Byte aus zwei Nibbles besteht und somit \(16 \cdot 16 = 256\) mögliche Kombinationen von 4-Bit Nibbles ergibt. Ein Byte wird häufig verwendet, um ein Zeichen in einem Text oder eine kleine Datenmenge zu kodieren.
 
 Hinweis: Die Taschenrechner-App in Windows verfügt über einen sogenannten Programmer-Mode der es ermöglicht auch größere Werte einfach zwischen den Zahlensystemen zu konvertieren.
 
