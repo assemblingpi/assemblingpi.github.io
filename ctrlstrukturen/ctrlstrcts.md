@@ -5,48 +5,8 @@ Eine einfache Variante einer Kontrollstruktur ist die if-else-Struktur, die eine
 Die switch-Struktur erlaubt es, zwischen mehreren möglichen Codeblöcken basierend auf dem Wert einer Variablen zu wählen, was eine klare und übersichtliche Handhabung mehrerer Bedingungen ermöglicht. Diese Kontrollstrukturen sind essenziell für die flexible Steuerung des Programmflusses.
 
 [if-not then](ifnotthen.md)
-If-not-then
-In Assembler ist die simpelste Kontrollstruktur ein if-not-then. Sprich, wenn eine Bedingung nicht erfüllt ist, wird ein Codeabschnitt ausgeführt, anderenfalls wird er übersprungen.
-Der Pseudocode dafür ist
-if not(Condition) then do ...
 
-Beispiel in ARM-Assembler:
-_start:
-        MOV r0, #111  @ Beispielwert 1
-        MOV r1, #222  @ Beispielwert 2
-@ Kontrollstruktur if not...then...
-        CMP r0, r1    @ check(r0 == r1)
-        BEQ endif
-ifnot:                @ Wenn Condition == false
-        MOV r0, #123
-        B endif
-@ Ende der Kontrollstruktur
-endif:
-        MOV r0, #00
-        
-If-else
-
-Pseudocode:
-if(Condition) then... else...
-
-Beispiel in ARM-Assembler:
-
-        MOV r0, #111
-        MOV r1, #222
-
-        @ Kontrollstruktur if...then - else...
-        CMP r0, r1  @ if(r0 == r1)
-        BEQ iftrue
-     
-else:               @ Wenn Condition == false
-        MOV r0, #123
-        ...
-        B endif
-iftrue:              @ Wenn Condition = true
-        MOV r0, #0x32
-        ...
-endif:               @ Ende der Kontrollstruktur
-        MOV r0, #00
+[if else](ifelse.md) 
 
 
 If-then elseif-then

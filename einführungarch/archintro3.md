@@ -8,13 +8,13 @@ Innerhalb der ARM-CPU gibt es verschiedene 32-Bit Register, die für spezifische
 
 - **General-Purpose Register**: Diese Register dienen allgemeinen Berechnungen und Datenoperationen und sind vielseitig einsetzbar.
 
-- **Stack Pointer (SP)**: Verwaltet den Stack im Speicher und zeigt auf den aktuellen Standort. Er wird verwendet, um temporäre Daten und Rücksprungadressen zu speichern.
+- **Stack Pointer (SP)**: Verwaltet den Stack im Speicher und zeigt auf den aktuellen **Top of Stack**. Er wird verwendet, um temporäre Daten und Rücksprungadressen zu speichern.
 
 - **Link Register (LR)**: Speichert die Rücksprungadresse bei Funktionsaufrufen, um nach der Ausführung der Funktion zur ursprünglichen Adresse zurückzukehren.
 
 - **Frame Pointer (FP)**: Wird verwendet, um auf Parameter und lokale Variablen im Stack zuzugreifen.
 
-- **Program Counter (PC)**: Beinhaltet die Adresse der nächsten auszuführenden Instruktion. Er wird nach jeder Instruktion automatisch erhöht, und bei Verzweigungen angepasst, um zur neuen Instruktionsadresse zu springen.
+- **Program Counter (PC)**: Beinhaltet die Adresse der nächsten auszuführenden Instruktion. Der PC wird nach jeder Instruktion automatisch erhöht, und bei Verzweigungen angepasst, um zur neuen Instruktionsadresse zu springen.
 
 - **Statusregister**: Ein 32-Bit-Register, das Flags enthält, die den Status des Prozessors anzeigen, wie etwa den Zustand vorheriger Operationen.
 

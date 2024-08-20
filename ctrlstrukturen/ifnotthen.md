@@ -23,4 +23,6 @@ endif:
 ```
 #### Betrachtet man den Controlflow-graph dieser Kontrollstruktur in einem Disassembler, ergibt sich folgendes Bild:
 
-[If-not then](./ifnotthen.png)
+![If-not then](./ifnotthen.png)
+
+[if else](ifelse.md) 
