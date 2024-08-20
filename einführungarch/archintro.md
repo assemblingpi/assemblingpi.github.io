@@ -51,3 +51,29 @@ E/A-Geräte sind Hardwarekomponenten, die Daten in das System einspeisen (z.B. T
 ## Systembus
 
 Der Systembus ist das Kommunikationsmedium, das die CPU, den Speicher und die E/A-Geräte miteinander verbindet. Er besteht aus Leitungen, die Daten, Adressen und Steuerinformationen zwischen den Komponenten übertragen, sodass diese effizient zusammenarbeiten können. Der Systembus ist in der Von-Neumann-Architektur entscheidend, um die verschiedenen Komponenten zu koordinieren und Daten auszutauschen.
+
+## Stored Program Concept
+
+Ein zentrales Konzept der Von-Neumann-Architektur ist das "Stored Program Concept". Es besagt, dass Programme und Daten im selben Speicher abgelegt werden. Dies erlaubt es der CPU, Befehle aus dem Speicher zu lesen und auszuführen, wodurch die Flexibilität erhöht wird, verschiedene Programme einfach durch Ändern des Speicherinhalts auszuführen.
+
+## Load/Store-Architektur
+
+Bei ARM-CPUs handelt es sich um eine Load/Store-Architektur, bei denen Speicherzugriffe nur mittels spezieller Befehle (LDR und STR) durchgeführt werden können und direkte Berechnungen auf Daten im Speicher nicht möglich sind (im Gegensatz zu x86 CPUs). Rechenoperationen finden demnach ausschließlich in den Registern (kleine Speichereinheiten) der CPU statt. Dies bedeutet, dass Daten für ihre Verarbeitung zuerst vom Speicher in Register geladen und nach der Berechnung wieder in den Speicher zurückgeschrieben werden müssen. 
+
+Innerhalb der ARM-CPU gibt es verschiedene 32-Bit Register, die für spezifische Aufgaben verwendet werden:
+
+- **General-Purpose Register**: Diese Register dienen allgemeinen Berechnungen und Datenoperationen und sind vielseitig einsetzbar.
+
+- **Stack Pointer (SP)**: Verwaltet den Stack im Speicher und zeigt auf den aktuellen Standort. Er wird verwendet, um temporäre Daten und Rücksprungadressen zu speichern.
+
+- **Link Register (LR)**: Speichert die Rücksprungadresse bei Funktionsaufrufen, um nach der Ausführung der Funktion zur ursprünglichen Adresse zurückzukehren.
+
+- **Frame Pointer (FP)**: Wird verwendet, um auf Parameter und lokale Variablen im Stack zuzugreifen.
+
+- **Program Counter (PC)**: Beinhaltet die Adresse der nächsten auszuführenden Instruktion. Er wird nach jeder Instruktion automatisch erhöht, und bei Verzweigungen angepasst, um zur neuen Instruktionsadresse zu springen.
+
+- **Statusregister**: Ein 32-Bit-Register, das Flags enthält, die den Status des Prozessors anzeigen, wie etwa den Zustand vorheriger Operationen.
+
+## Speicher und Cache
+
+Den Speicher kann man, wie bereits angedeutet, vereinfacht als einen linearen Array von Bytes betrachten. Moderne ARM-CPUs verwenden zudem einen schnellen Zwischenspeicher, bekannt als Cache, um häufig benötigte Daten schnell verfügbar zu machen und Engpässe durch den langsamen Hauptspeicher zu vermeiden, doch damit wollen wir uns im Rahmen dieses Tutorials nicht weiter befassen.
