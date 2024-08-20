@@ -6,7 +6,7 @@ Dies ist die Startseite meiner GitHub Page.
 
 ## Weitere Inhalte
 
-[Arch Intro Test](einführungarch/archintro.md)
+[Arch Intro Test](archintro.md)
 
-[Was ist ein Assembler + Linker Test](assemblerlinker/wasistasmlinker.md)
-[Grundkonzepte Linkerscripte](assemblerlinker/linkerscr.md)
+[Was ist ein Assembler + Linker Test](wasistasmlinker.md)
+[Grundkonzepte Linkerscripte](linkerscr.md)
