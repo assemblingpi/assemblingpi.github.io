@@ -1,5 +1,5 @@
 # komplexe Datentypen
-Komplexe Datentypen bestehen aus mehreren einfachen Datentypen und ermöglichen die Darstellung komplexerer Datenstrukturen.
+Komplexe Datentypen setzen sich aus mehreren einfachen Datentypen zusammen und ermöglichen die Darstellung komplexerer Datenstrukturen.
 
 [Strukturen](structs.md)
 

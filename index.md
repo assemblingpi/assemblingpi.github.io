@@ -17,3 +17,5 @@ Dies ist die Startseite meiner GitHub Page.
 [Label](label/label.md)
 
 [Datentypen in Assembler](Datentypen/datentypen.md)
+
+<link rel="asmpi" href="/favicon.png" type="image/png">

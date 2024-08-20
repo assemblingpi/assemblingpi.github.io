@@ -27,3 +27,5 @@ Zugriff auf die Struct:
     LDR r2, [r0, #Wert]   @ Lade die Fließkommazahl (Offset 4) in Register r2
 
 ```
+
+[Arrays](arrays.md)

@@ -25,3 +25,5 @@ Insertion Sort funktioniert, indem jedes Element einzeln an die richtige Stelle 
 Kopiere den oben abgebildeten Code in den CPUlator und ergänze ihn so, dass er
 1. mittels Bubblesort sortiert wird
 2. mittels Insertionsort sortiert wird
+
+[Mehrdimensionale Arrays](arraymultidim.md)

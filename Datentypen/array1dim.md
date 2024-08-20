@@ -22,6 +22,6 @@ _start:
 end:
         b end
 ```
-[Übung zu Eindimensionalen Arrays](array1dueb.md)
+[Übung zu eindimensionalen Arrays](array1dueb.md)
 
 [Mehrdimensionale Arrays](arraymultidim.md)
