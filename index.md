@@ -18,4 +18,8 @@ Dies ist die Startseite meiner GitHub Page.
 
 [Datentypen in Assembler](Datentypen/datentypen.md)
 
+[Kontrollflussinstruktionen](kontrollflusinstr/ctrlflow.md)
+
+[Sektionen](Sektionen/sektionen.md)
+
 <link rel="asmpi" href="/favicon.png" type="image/png">

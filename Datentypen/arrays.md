@@ -15,4 +15,4 @@ Ein eindimensionaler Array ist eine einfache, lineare Datenstruktur, bei der all
 
 [Eindimensionale Arrays](array1dim.md)
 
-[Mehrdimensionale Arrays](arraymultidim.md)
+[Mehrdimensionale Arrays](arraysmultidim.md)
