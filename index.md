@@ -1,6 +1,13 @@
-# Willkommen zu meinem Projekt
+## Assembling Pi: Ein praxisorientiertes Tutorial zur Assembler-Programmierung auf dem Raspberry Pi
 
-Dies ist die Startseite meiner GitHub Page.
+Willkommen zu Assembling Pi – einem Tutorial, das Sie Schritt für Schritt in die Welt der Assembler-Programmierung auf dem Raspberry Pi einführt. Dieses Tutorial richtet sich an alle, die ein tieferes Verständnis für das Zusammenspiel von Hard- und Software auf einer grundlegenden Ebene erlangen möchten, auch ohne Vorkenntnisse in der Assembler-Programmierung.
+
+In den kommenden Kapiteln werden Sie die Grundlagen der ARM-Assembler-Programmierung kennenlernen. Sie erfahren nicht nur mehr über wichtige Konzepte der ARM-Architektur und Systemprogrammierung, sondern auch über die faszinierende Welt der Grafikprogrammierung. Dieses praxisorientierte Tutorial bietet Ihnen nicht nur theoretisches Wissen, sondern begleitet jeden Schritt mit gezielten Übungsaufgaben, um das Gelernte direkt anzuwenden und zu festigen.
+
+Begleiten Sie uns auf dem Weg die Sprache der ARM-Prozessoren zu erlernen!
+
+
+Es ist ratsam, während des Durcharbeitens dieses Tutorials aktiv Notizen zu machen, bei Bedarf zusätzliche Recherchen anzustellen und die Übungsaufgaben sorgfältig zu bearbeiten. Darüber hinaus sollten Sie Ihre Neugier und Experimentierfreude nutzen. Wenn Sie sich trauen, eigene Ideen auszuprobieren und mögliche Herausforderungen anzunehmen, vertiefen Sie Ihr Verständnis erheblich. Gerade dann, wenn etwas nicht auf Anhieb funktioniert, bieten sich wertvolle Lernmomente, die Ihr Wissen festigen und erweitern.
 
 ![BILD_TEST](./asmpi.png)
 
@@ -41,4 +48,6 @@ Dies ist die Startseite meiner GitHub Page.
 [UART](UART/uart.md)
 
 [Was ist die Programmiersprache Assembler?](progspracheasm/progasmintro.md)
+
+[Timer](Timer/timerintro.md)
 <link rel="asmpi" href="/favicon.png" type="image/png">
