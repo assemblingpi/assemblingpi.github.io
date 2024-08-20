@@ -30,6 +30,10 @@ Dies ist die Startseite meiner GitHub Page.
 
 [Arithmetisch logische Befehle](arithlog/arithlogintro.md)
 
+[BCM2836](bcm2836.md)
+
 [GPU](GPU/gpuintro.md)
+
+[Priviligierungslevel und Prozessormodi](privlmodi/privmodiintro.md)
 
 <link rel="asmpi" href="/favicon.png" type="image/png">
