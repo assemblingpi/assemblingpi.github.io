@@ -51,3 +51,6 @@ SECTIONS {
 ```
 Laufzeit-Initialisierungscode
 Zur Laufzeit muss der initialisierte Datenteil vom ROM-Image an seine Ausführungsadresse kopiert werden. Der uninitialisierte Datenteil (BSS) muss auf Null gesetzt werden.
+
+[Weitere Informationen zu Linkern, inklusive detailierter Beschreibung aller Linkerskript-Befehle]( https://sourceware.org/binutils/docs/ld/index.html)
+
