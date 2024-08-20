@@ -15,7 +15,8 @@ In Assembler wird die `switch-case`-Struktur durch indirekte Sprünge effizient 
 Anstelle einer ineffizienten, linearen Reihe von Vergleichen wie bei `if-else`, bei denen jede Bedingung nacheinander geprüft wird, wird bei `switch-case` ein Sprungtabelle verwendet. 
 Diese Tabelle enthält Adressen zu den verschiedenen `case`-Labels. Die Implementierung erfolgt typischerweise so:
 ```
-1. Der Wert, der überprüft werden soll, wird als Index verwendet, um den entsprechenden Fall in der Tabelle auszuwählen. Der Index wird verrechnet mit der Breite von Maschinenbefehlen bei ARM (* 4). Das Produkt davon dient als Offset in eine Sprungtabelle
+1. Der Wert, der überprüft werden soll, wird als Index verwendet, um den entsprechenden Fall in der Tabelle auszuwählen.
+ Der Index wird verrechnet mit der Breite von Maschinenbefehlen bei ARM (* 4). Das Produkt davon dient als Offset in eine Sprungtabelle
 2. Eine Sprungtabelle mit Adressen zu den `case`-Labels wird erstellt.
 3. Der Wert wird genutzt, um in der Tabelle die Adresse des entsprechenden Codeblocks zu finden.
 4. Ein indirekter Sprung (`BX`) wird verwendet, um direkt zum passenden Codeblock zu springen.

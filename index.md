@@ -28,4 +28,6 @@ Dies ist die Startseite meiner GitHub Page.
 
 [Kontrollstrukturen](ctrlstrukturen/ctrlstrcts.md)
 
+[Arithetisch logische Befehle](arithlog/arithlogintro.md)
+
 <link rel="asmpi" href="/favicon.png" type="image/png">
