@@ -12,7 +12,7 @@ Ein Linker-Skript ist eine Textdatei und besteht aus einer Reihe von Befehlen. J
 
 Beispiel für ein solches Linker-Skript:
 ```ld
-SECTIONS
+SECTIONS{
   . = 0x10000;
   .text : { *(.text) }
   . = 0x8000000;
@@ -30,9 +30,9 @@ Der Linker stellt zudem sicher, dass jede Ausgabesektion die erforderliche Ausri
 
 Setzen des Einstiegspunkts
 Die erste Anweisung, die in einem Programm ausgeführt wird, wird als Einstiegspunkt (Entry) bezeichnet. Man kann das ENTRY-Kommando im Linker-Skript verwenden, um den Einstiegspunkt festzulegen. Das Argument ist der Name eines Symbols (sprich eines globalen labels):
-
+```
 ENTRY(symbol)
-
+```
 
 
 Output-Section LMA (Load Memory Address)

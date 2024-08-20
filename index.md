@@ -36,4 +36,9 @@ Dies ist die Startseite meiner GitHub Page.
 
 [Priviligierungslevel und Prozessormodi](privlmodi/privmodiintro.md)
 
+[Interrupts](Interrupts/intintro.md)
+
+[UART](UART/uart.md)
+
+[Was ist die Programmiersprache Assembler?](progspracheasm/progasmintro.md)
 <link rel="asmpi" href="/favicon.png" type="image/png">
