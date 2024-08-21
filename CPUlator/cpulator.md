@@ -28,9 +28,13 @@ Nach dem Assemblierungsvorgang wechselt der Simulator automatisch vom Editor-Fen
 Für die Ausführung des Codes, gibt es oben auf der Website mehrere Schaltflächen, die relevant sind:
 
 **Step Into:** Führt die Instruktionen schrittweise aus, sodass jede einzelne Anweisung nacheinander ausgeführt wird.
+
 **Continue:** Setzt die Programmausführung fort, bis ein Breakpoint erreicht wird. 
+
 **Stop:** Hält die Programmausführung an, wenn sie im Modus "Continue" läuft.
+
 **Restart:** Setzt die Programmausführung zurück und startet das Programm von vorne.
+
 **Reload:** Lädt das Programm erneut in den Speicher, falls Änderungen vorgenommen oder das Programm neu gestartet werden soll.
 
 ![BILD: Cpulator5](./cpulator5.png)
