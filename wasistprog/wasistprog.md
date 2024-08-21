@@ -15,5 +15,4 @@ Programme auf diese Weise zu begreifen ist nicht nur eine theoretische Übung, d
 
 [Was ist denn nun ein "Disassembler"?](disasm.md)
 
-[weiter](../progspracheasm/progasmintro.md)
-
+[weiter](../einführungarch/archintro.md)
