@@ -19,3 +19,4 @@ Diese zentralen Komponenten der Von-Neumann-Architektur werden durch das Stored 
 [Stored Program Concept](archintro2.md)
 
 [Load/Store Architektur](archintro3.md)
+

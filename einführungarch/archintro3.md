@@ -18,3 +18,4 @@ Innerhalb der ARM-CPU gibt es verschiedene 32-Bit Register, die für spezifische
 
 - **Statusregister**: Ein 32-Bit-Register, das Flags enthält, die den Status des Prozessors anzeigen, wie etwa den Zustand vorheriger Operationen.
 
+[weiter](../progspracheasm/progasmintro.md)
