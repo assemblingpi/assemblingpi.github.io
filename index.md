@@ -17,4 +17,4 @@ Der Fokus des Quellcodes liegt auf Übersichtlichkeit, nicht auf Perfektion oder
 ## Weitere Inhalte
 
 
-[Was ist eigentlich ein Programm?](wasistprog/wasistprog.md)
+[Tutorial starten](wasistprog/wasistprog.md)
