@@ -14,53 +14,7 @@ Es wird empfohlen, die gestellten Aufgaben zunächst eigenständig zu bearbeiten
 Der Fokus des Quellcodes liegt auf Übersichtlichkeit, nicht auf Perfektion oder Optimierung. Machen Sie aktiv Notizen, recherchieren Sie bei Bedarf und experimentieren Sie mit eigenen Ideen. Herausforderungen bieten wertvolle Lernmöglichkeiten und vertiefen Ihr Verständnis.
 
 ![BILD_TEST](./asmpi.png)
-
 ## Weitere Inhalte
 
-[Arch Intro Test](einführungarch/archintro.md)
-
-[Was ist ein Assembler + Linker Test](assemblerlinker/wasistasmlinker.md)
-
-[Grundkonzepte Linkerscripte](assemblerlinker/linkerscr.md)
-
-[Immediates](immediates/immediates.md)
-
-[Label](label/label.md)
-
-[Datentypen in Assembler](Datentypen/datentypen.md)
-
-[Kontrollflussinstruktionen](kontrollflusinstr/ctrlflow.md)
-
-[Sektionen](Sektionen/sektionen.md)
-
-[Zahlenysteme, Bits und Bytes](ZahlensysBitsBytes/zbb.md)
-
-[Prozedurale Programmierung](Proz/prozprog.md)
-
-[Kontrollstrukturen](ctrlstrukturen/ctrlstrcts.md)
-
-[Arithmetisch logische Befehle](arithlog/arithlogintro.md)
-
-[BCM2836](bcm2836/bcm2836.md)
-
-[GPU](GPU/gpuintro.md)
-
-[Priviligierungslevel und Prozessormodi](privlmodi/privmodiintro.md)
-
-[Interrupts](Interrupts/intintro.md)
-
-[UART](UART/uart.md)
-
-[Was ist die Programmiersprache Assembler?](progspracheasm/progasmintro.md)
-
-[Timer](Timer/timerintro.md)
-
-[Coprozessoren](Coproc/Coprocessor.md)
-
-[Wichtige Konzepte der Systemprogrammierung](Systemprog/sysprog.md)
 
 [Was ist eigentlich ein Programm?](wasistprog/wasistprog.md)
-
-[Erste Schritte](CPUlator/erste.md)
-
-<link rel="asmpi" href="/favicon.png" type="image/png">
