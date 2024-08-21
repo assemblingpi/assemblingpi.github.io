@@ -21,12 +21,17 @@ Syntax:
 ```
   MCR: `mcr <coprocessor>, <opcode1>, <Rt>, <CRn>, <CRm>, <opcode2>`
   MRC: `mrc <coprocessor>, <opcode1>, <Rt>, <CRn>, <CRm>, <opcode2>`
-
-<coprocessor>: Bestimmt den Coprozessor, z.B. `p15` für die Systemsteuerungseinheit.
-<opcode1>: Zusätzlicher Opcode zur Spezifizierung der Operation.
-<Rt>: Bei MCR das ARM-Register, dessen Wert übertragen wird; bei MRC das ARM-Register, in das der Wert gelesen wird.
-<CRn>: Zielregister im Coprozessor (bei MCR) oder Quellregister im Coprozessor (bei MRC).
-<CRm>: Optionales zweites Coprozessor-Register.
-<opcode2>: Weiterer Opcode für Steuerinformationen.
 ```
+**coprocessor:** Bestimmt den Coprozessor, z.B. `p15` für die Systemsteuerungseinheit.
+
+**opcode1:** Zusätzlicher Opcode zur Spezifizierung der Operation.
+
+**Rt:** Bei MCR das ARM-Register, dessen Wert übertragen wird; bei MRC das ARM-Register, in das der Wert gelesen wird.
+
+**CRn:** Zielregister im Coprozessor (bei MCR) oder Quellregister im Coprozessor (bei MRC).
+
+**CRm:** Optionales zweites Coprozessor-Register.
+
+**opcode2:** Weiterer Opcode für Steuerinformationen.
+
 
