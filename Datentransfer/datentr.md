@@ -60,3 +60,5 @@ STR: Store
 
 ...
 ```
+
+[weiter](../arithlog/arithlogintro.md)
