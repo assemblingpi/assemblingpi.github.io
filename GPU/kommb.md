@@ -1,6 +1,8 @@
 ## Kommunikation mittels Mailbox
 Um über die Mailbox zwischen GPU und CPU Daten austauschen zu können werden zunächst zwei Funktionen benötigt. Eine, um damit der ARM-Prozessor Daten senden kann, MailboxWrite - und eine weitere, damit er Daten in Empfang nehmen kann, MailboxRead.
 
+![Mailbox](mailbox.png)
+
 ### MailboxWrite: Sende Nachricht an Mailbox 1
 Der Absender wartet, bis das Statusfeld im most significant Bit eine 0 anzeigt. Anschließend schreibt der Absender seine Mail in das Schreibregister (MAILBOX_WRITE), wobei die unteren 4 Bits die Nummer des Kanals angeben, in den geschrieben werden soll, und die oberen 28 Bits die Nachricht enthalten, die gesendet werden soll.
 

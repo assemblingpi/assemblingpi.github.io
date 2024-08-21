@@ -7,8 +7,6 @@ Die Kommunikation zwischen der ARM-CPU und der VideoCore IV GPU erfolgt über ei
 ### Kommunikation zwischen CPU und GPU
 Die Kommunikation zwischen der ARM-CPU und der VideoCore IV GPU des Raspberry Pi erfolgt über einen sogenannten Mailbox-Mechanismus. Eine Mailbox wird vom Cortex A7 gelesen und vom GPU beschrieben, während das andere vom GPU gelesen und vom Cortex A7 beschrieben wird. 
 
-![Mailbox](mailbox.png)
-
 **Mailbox:** Mailboxes sind spezielle Speicherbereiche, die als Schnittstellen für die Kommunikation zwischen der CPU und der GPU dienen. Es gibt zwei Mailboxen auf dem Raspberry Pi: Mailbox 0 und Mailbox 1. Diese Mailboxen ermöglichen, dass Daten in beide Richtungen gleichzeitig gesendet und empfangen werden können.
 
 Die Mailbox verfügt über mehrere Register, unter anderem:

@@ -37,7 +37,7 @@ Es ist ratsam, während des Durcharbeitens dieses Tutorials aktiv Notizen zu mac
 
 [Arithmetisch logische Befehle](arithlog/arithlogintro.md)
 
-[BCM2836](bcm2836.md)
+[BCM2836](bcm2836/bcm2836.md)
 
 [GPU](GPU/gpuintro.md)
 
@@ -50,4 +50,8 @@ Es ist ratsam, während des Durcharbeitens dieses Tutorials aktiv Notizen zu mac
 [Was ist die Programmiersprache Assembler?](progspracheasm/progasmintro.md)
 
 [Timer](Timer/timerintro.md)
+
+[Coprozessoren](Coproc/Coprocessor.md)
+
+[Wichtige Konzepte der Systemprogrammierung](Systemprog/sysprog.md)
 <link rel="asmpi" href="/favicon.png" type="image/png">
