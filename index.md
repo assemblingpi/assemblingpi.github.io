@@ -7,7 +7,11 @@ In den kommenden Kapiteln werden Sie die Grundlagen der ARM-Assembler-Programmie
 Begleiten Sie uns auf dem Weg die Sprache der ARM-Prozessoren zu erlernen!
 
 
-Es ist ratsam, während des Durcharbeitens dieses Tutorials aktiv Notizen zu machen, bei Bedarf zusätzliche Recherchen anzustellen und die Übungsaufgaben sorgfältig zu bearbeiten. Darüber hinaus sollten Sie Ihre Neugier und Experimentierfreude nutzen. Wenn Sie sich trauen, eigene Ideen auszuprobieren und mögliche Herausforderungen anzunehmen, vertiefen Sie Ihr Verständnis erheblich. Gerade dann, wenn etwas nicht auf Anhieb funktioniert, bieten sich wertvolle Lernmomente, die Ihr Wissen festigen und erweitern.
+
+### Hinweis zu den Übungsaufgaben:  
+Es wird empfohlen, die gestellten Aufgaben zunächst eigenständig zu bearbeiten. Falls Schwierigkeiten auftreten, kann der bereitgestellte Quellcode als Orientierung dienen. Nutzen Sie Tools wie den CPUlator oder QEMU, um zu erkunden, wie bestimmte Befehle das System beeinflussen. Da dieses Tutorial nicht alle Aspekte des ARMv7 Assemblers abdeckt, ist ergänzende Recherche sinnvoll.
+
+Der Fokus des Quellcodes liegt auf Übersichtlichkeit, nicht auf Perfektion oder Optimierung. Machen Sie aktiv Notizen, recherchieren Sie bei Bedarf und experimentieren Sie mit eigenen Ideen. Herausforderungen bieten wertvolle Lernmöglichkeiten und vertiefen Ihr Verständnis.
 
 ![BILD_TEST](./asmpi.png)
 
@@ -56,5 +60,7 @@ Es ist ratsam, während des Durcharbeitens dieses Tutorials aktiv Notizen zu mac
 [Wichtige Konzepte der Systemprogrammierung](Systemprog/sysprog.md)
 
 [Was ist eigentlich ein Programm?](wasistprog/wasistprog.md)
+
+[Erste Schritte](CPUlator/erste.md)
 
 <link rel="asmpi" href="/favicon.png" type="image/png">
