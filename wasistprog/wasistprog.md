@@ -14,3 +14,6 @@ Programme auf diese Weise zu begreifen ist nicht nur eine theoretische Übung, d
 ![Programm](./prog.png)
 
 [Was ist denn nun ein "Disassembler"?](disasm.md)
+
+[weiter](../progspracheasm/progasmintro.md)
+

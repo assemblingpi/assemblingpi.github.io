@@ -1,5 +1,6 @@
 
 ## Operanden und Adressierungsarten
+
 Die meisten Anweisungen in Assembler benötigen Operanden, um Daten zu verarbeiten. Eine Operandenadresse gibt dabei den Speicherort der Daten an. Das gilt nicht nur für Daten im Speicher, sondern auch für Register in der CPU. Obwohl Register keine physischen Adressen wie der Arbeitsspeicher haben, besitzen sie eindeutige Kennungen (z.B. `R0`, `R1`), die die CPU verwendet, um auf die darin gespeicherten Daten zuzugreifen. Diese Registeradressen ermöglichen es der CPU, gezielt auf die benötigten Daten in den Registern zuzugreifen.
 
 Einige Anweisungen benötigen keinen Operanden, während andere ein, zwei oder drei Operanden erfordern können.
@@ -63,4 +64,4 @@ opcode Rd, [Rn, Rm]
 
 Zwei Register (`Rn` und `Rm`) werden verwendet, um die Speicheradresse zu berechnen. Die Basisadresse liegt in `Rn`, und der Wert in `Rm` wird als offset hinzugefügt.
      
-
+[weiter](../CPUlator/erste.md)

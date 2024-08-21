@@ -17,4 +17,4 @@ In diesem Beispiel steht das Mnemonic ADD für den OPCODE, der den Prozessor anw
 
 Durch die Verwendung von Mnemonics ist Assembler verständlicher als Maschinensprache, da der Programmierer in der Lage ist, komplexe Maschinenoperationen auf einer lesbaren und relativ intuitiven Ebene auszudrücken. Anstatt direkt mit den Binärcodes zu arbeiten, können Entwickler so auf einer symbolischen Ebene arbeiten, die dennoch sehr nah an der Hardware ist und präzise Steuerung über die CPU ermöglicht. 
 
-[Operanden und Adressierungsarten](adrmodi.md)
+[weiter](adrmodi.md)

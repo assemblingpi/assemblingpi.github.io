@@ -54,3 +54,5 @@ Am linken Rand der Website befindet sich eine Ansicht der CPU-Register.
 ![BILD: Cpulator9](./cpulator9.png)
 
 Hier kann man in Echtzeit verfolgen, wie sich die Registerwerte während der Ausführung von Instruktionen ändern, was hilfreich ist, um Fehler zu identifizieren.
+
+[weiter](../Datentransfer/datentr.md)
