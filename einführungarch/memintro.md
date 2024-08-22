@@ -31,8 +31,5 @@ Moderne ARM-Prozessoren unterstützen sowohl little, als auch big Endian, aber i
 
 [Übungsaufgabe zu Endianess](endiantest.md)
 
-## Speicher und Cache
+[weiter](cache.md)
 
-Den Speicher kann man, wie bereits angedeutet, vereinfacht als einen linearen Array von Bytes betrachten. Moderne ARM-CPUs verwenden zudem einen schnellen Zwischenspeicher, bekannt als Cache, um häufig benötigte Daten schnell verfügbar zu machen und Engpässe durch den langsamen Hauptspeicher zu vermeiden, doch damit wollen wir uns im Rahmen dieses Tutorials nicht weiter befassen.
-
-[E/A](eaintro.md)

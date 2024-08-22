@@ -7,4 +7,4 @@ Der CPUlator ist ein webbasiertes Tool, das als Simulator und Debugger für vers
 
 Wenn man ein Programm im CPUlator ausführt, verhält es sich nahezu identisch zu einer Ausführung auf realer Hardware. Dies ermöglicht es, Programme vorab zu testen und zu optimieren, bevor sie auf ein physisches Gerät übertragen werden.
 
-[Einführung in CPUlator](cpulator.md)
+[weiter](cpulator.md)

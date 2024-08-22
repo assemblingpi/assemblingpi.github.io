@@ -52,7 +52,7 @@ MOV R2, #10       @ Lade den Wert 10 in Register R2
 
 ### LDR/STR: Datentransfer zwischen Register und Speicher:
 Neben dem Datentransfer zwischen Registern kann es notwendig sein, Daten zwischen einem Register und dem Hauptspeicher auszutauschen. Für diese Art des Datentransfers gibt es in ARM-Assembler Load und Store-Befehle. Bei diesen Befehlen (LDR/STR) gibt es unterschiedliche Adressierungsarten
-```asm
+
 LDR: Load
 LDR steht für "Load Register" und wird verwendet, um Daten von einer Adresse im Speicher in ein Register zu laden. Hierbei unterscheidet man zwischen unterschiedlichen Adressierungsarten.
 

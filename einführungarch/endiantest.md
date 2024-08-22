@@ -12,3 +12,5 @@ Gegeben ist ein Speicherbereich, der vollständig mit 0 initialisiert wurde. Ihr
 | 0x004    | 0x00   | 0x00   | 0x00   | 0x00   |
 
 [Zur Lösung](endilsg.md)
+
+[weiter](cache.md)
