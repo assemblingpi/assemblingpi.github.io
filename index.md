@@ -13,8 +13,5 @@ Es wird empfohlen, die gestellten Aufgaben zunächst eigenständig zu bearbeiten
 
 Der Fokus des Quellcodes liegt auf Übersichtlichkeit, nicht auf Perfektion oder Optimierung. Machen Sie aktiv Notizen, recherchieren Sie bei Bedarf und experimentieren Sie mit eigenen Ideen. Herausforderungen bieten wertvolle Lernmöglichkeiten und vertiefen Ihr Verständnis.
 
-![BILD_TEST](./asmpi.png)
-## Weitere Inhalte
-
 
 [Tutorial starten](wasistprog/wasistprog.md)

@@ -63,4 +63,4 @@ STR: Store
 ...
 ```
 
-[weiter](../arithlog/arithlogintro.md)
+[weiter](../label/label.md)

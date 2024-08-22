@@ -35,3 +35,5 @@ Im Code-Bereich eines Assemblers dienen Labels dazu, bestimmte Stellen im Progra
 Here: b here
 ```
 Das Label "Here" ist ein Platzhalter, nicht etwa für die Instruktion, die auf das Label folgt, sondern für die Adresse, bei der diese Instruktion im Speicher anfängt. Demnach handelt es sich bei dem Branchbefehl (Sprung) an dieser Stelle um eine Dauerschleife.
+
+[weiter](../arithlog/arithlogintro.md)
