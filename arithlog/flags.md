@@ -14,11 +14,12 @@ Das CPSR-Register ist 32 Bit breit und in verschiedene Felder unterteilt, die je
     - **V (Overflow Flag):** Das Overflow-Flag zeigt an, dass ein Überlauf bei vorzeichenbehafteten (signed) arithmetischen Operationen aufgetreten ist. Ein Überlauf tritt auf, wenn das Ergebnis einer Operation den zulässigen Zahlenbereich für vorzeichenbehaftete Zahlen überschreitet und somit das Vorzeichen des Ergebnisses falsch wird.
 
 
-#### Übersicht der relevanten Bits:
+#### Übersicht der relevanten Bits des CPSR:
+```
 |  31  |  30  |  29  |  28  |  ...  |
 |------|------|------|------|-------|
 |   N  |   Z  |   C  |   V  |  ...  |
-
+```
 
 ### Setzen des CPSR`s (nur Condition Flags)
 Das CPSR kann durch Anweisungen beeinflusst werden, die eine Berechnung durchführen und dabei die Condition Flags setzen. Dies wird erreicht, indem ein `s` am Ende der Operation angehängt wird. Diese erweiterte Syntax sorgt dafür, dass die entsprechenden Flags im CPSR basierend auf dem Ergebnis der Operation aktualisiert werden.
@@ -89,4 +90,4 @@ So sieht das CPSR nach der Ausführung aus:
 
 Wenn man die oberen vier Bits (Bits 31 bis 28) des CPSR, die die Condition-Flags repräsentieren, nach dieser Operation binär darstellt, ergibt sich die Folge 0010 (in hexadezimal 0x2, wie auch in CPULator angezeigt). Dies bedeutet, dass das das Carry-Flag (Bit 29) wie erwartet gesetzt wurde.
 
-
+[weiter](beding.md)

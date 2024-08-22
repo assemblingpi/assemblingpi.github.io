@@ -9,6 +9,6 @@ Trotz der technischen Herausforderungen und der steilen Lernkurve kann es aus me
 In bestimmten hardwarenahen Bereichen bleibt Assembler auch heute noch unerlässlich, etwa bei der Konfiguration spezieller Hardwarekomponenten. Darüber hinaus vermittelt Assembler ein tiefes Verständnis für das Zusammenspiel von Software und Hardware auf der grundlegendsten Ebene. 
 Dieses Wissen und die Fähigkeit die Sprache der Computer zu verstehen, ist nicht nur faszinierend, sondern auch unverzichtbar für das Reverse Engineering, bei dem Software ohne Quellcode analysiert wird – ein Prozess, der besonders bei der Analyse von Malware eine zentrale Rolle spielt. Ebenso sind Assemblerkenntnisse oft entscheidend, wenn es darum geht, Programme hinsichtlich maximaler Effizienz und Performance zu optimieren.
 
-[Anweisungen und Operanden](anwops.md)
+[weiter](anwops.md)
 
-[Operanden und Adressierungsarten](adrmodi.md)
+
