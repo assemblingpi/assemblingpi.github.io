@@ -25,4 +25,4 @@ endif:
 
 ![If-not then](./ifnotthen.png)
 
-[if else](ifelse.md) 
+[weiter](ifelse.md) 

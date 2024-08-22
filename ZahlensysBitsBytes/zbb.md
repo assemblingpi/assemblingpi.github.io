@@ -25,15 +25,24 @@ Vorzeichenbehaftete Zahlen verwenden ein Bit, das sogenannte Vorzeichenbit, um a
 ### Zweierkomplement
 Das Zweierkomplement ist eine Methode zur Darstellung von positiven und negativen Ganzzahlen im Binärsystem. Es ermöglicht eine effiziente Handhabung von Vorzeichen und mathematischen Operationen mit Binärzahlen.
 
-#### Grundprinzip des Zweierkomplements
+#### Grundprinzip des Zweierkomplements (klassische Methode)
 Im Zweierkomplement wird das höchstwertige Bit (MSB) als Vorzeichenbit verwendet: Eine `0` steht für positive, eine `1` für negative Zahlen. Um eine negative Zahl im Zweierkomplement darzustellen, invertiert man alle Bits der positiven Darstellung und addiert anschließend `1`.
 
+#### Schnelle Methode zur Umwandlung von vorzeichenbehafteten Zahlen
 
-# BEISPIEL 
+Hier sind einfache und schnelle Methoden, die ich entdeckt habe, um vorzeichenbehaftete Zahlen im Kopf umzurechnen. Ich habe sie bisher nirgendwo anders erwähnt gesehen, aber sie haben sich für mich als effektiv erwiesen.
+
+##### Binär -> Dezimal
+Wenn man eine Binärzahl im Zweierkomplement in ihr dezimales Äquivalent umwandeln möchte, beginnt man mit dem höchstwertigen Bit (MSB). Wenn dieses Bit eine 1 ist, gefolgt von aufeinanderfolgenden 1en, identifiziert man die niedrigste 1 in der Sequenz (direkt vor der ersten 0). Wandeln Sie die Position dieses Bits in die entsprechende negative Zweierpotenz um und addieren Sie dann alle Werte der niedrigeren Bits zu dieser Summe.
+
+Zum Beispiel würde die Binärzahl **11110101** wie folgt berechnet: **-16** (aus der Position der niedrigsten 1 in der Sequenz) plus **5** (die Summe der Werte der niedrigeren Bits), was zu **-11** führt.
+
+##### Negative Dezimalzahl -> Binär
+Wenn man eine negative Dezimalzahl in ihre Zweierkomplement-Binärdarstellung umwandeln möchte, beginnt man damit, den Absolutwert der Zahl zu nehmen und auf die nächste höhere Zweierpotenz aufzurunden. Diese Zweierpotenz bestimmt, wie weit die Binärdarstellung ab dem MSB mit einer kontinuierlichen Folge von Einsen gefüllt wird. Die verbleibenden Bits werden auf Null gesetzt. Dann berechnet man die Differenz zwischen dem Absolutwert und der Zweierpotenz, zu der man aufgerundet hat. Kombinieren Sie diese Differenz mit der ersten Binärfolge mittels einer logischen ODER-Operation.
+
+Zum Beispiel würde die Umwandlung von **-30** beinhalten, den Absolutwert **30** auf **32** aufzurunden und die führenden **1en** hinzuzufügen, was zu **1110000** führt. Dann subtrahiert man 30 von 32, was 2 ergibt, was in Binär **0000010** ist. Die Kombination dieser Ergebnisse ergibt **1110010**, das Zweierkomplement von **-30**.
 
 
-#### Interpretation von signed Binärzahlen:
-Man beginnt mit dem höchstwertigen Bit. Wenn dieses eine 1 ist und von weiteren aufeinanderfolgenden 1en gefolgt wird, wird die niedrigste 1 in dieser Sequenz identifiziert (die direkt vor dem ersten 0 steht). Die Position dieser 1 wird in die entsprechende Zweierpotenz umgewandelt, wobei dieser Wert negativ ist. Anschließend werden alle Werte der „niedrigeren Bits“ zu dieser Summe addiert. Ist das MSB(Most signifikant Bit) keine 1, dann ist die Zahl genauso zu lesen, wie eine vorzeichenlose Zahl.
 
 Beispiel:  
 `11110101` ergibt `-16 + 5 = -11`.

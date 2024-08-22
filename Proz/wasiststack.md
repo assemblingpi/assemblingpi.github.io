@@ -12,4 +12,4 @@ Die Interaktion mit dem Stack erfolgt über die Befehle `PUSH` und `POP`:
 
 Das FIFO-Prinzip stellt sicher, dass die zuletzt gespeicherten Daten als erstes wieder abgerufen werden, was für die korrekte Verwaltung von Funktionsaufrufen und Rückkehradressen entscheidend ist.
 
-[Was ist der Stackframe einer Prozedur?](wasiststackframe.md)
+[weiter](wasiststackframe.md)

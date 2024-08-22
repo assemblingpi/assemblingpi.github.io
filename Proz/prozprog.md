@@ -8,12 +8,5 @@ Der Programmfluss wird durch das Aufrufen dieser Prozeduren gesteuert, wobei jed
 ### prozedurale Programmierung in Assembler
 Um in Assembler komplexe Programme zu entwickeln, ist das Verständnis prozeduraler Konzepte unerlässlich. Prozeduren, die spezifische Aufgaben ausführen, werden über den Stack organisiert, der die Aufrufe und dazugehörigen Daten verwaltet. Stackframes speichern die Informationen jeder Prozedur, was eine klare Struktur des Programmflusses ermöglicht. Der Calltree visualisiert die Beziehungen zwischen den Funktionen und zeigt, wie sie miteinander interagieren. 
 
-[Was ist eine Prozedur](wasistproz.md)
+[weiter](wasistproz.md)
 
-[Was ist der Stack](wasiststack.md)
-
-[Was ist der Stackframe einer Prozedur?](wasiststackframe.md)
-
-[Was ist der Calltree](wasistcalltree.md)
-
-[Prozeduren, Link Register und Stack](prozlrstack.md)

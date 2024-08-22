@@ -24,3 +24,5 @@ In der ARM-Architektur können Bedingungscodes verwendet werden, um Anweisungen 
 - **AL (Always)**: Immer ausführen (keine Bedingung).
 
 Diese Bedingungscodes sind essenziell, um bedingte Instruktionen in ARM-Assembler umzusetzen.
+
+[weiter](bedinstr.md)

@@ -38,4 +38,4 @@ endif:
 
 ![If-then elseif-then](./If-then elseif-then.png)
 
-[Switch-Case](switchcase.md)
+[weiter](switchcase.md)

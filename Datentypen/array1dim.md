@@ -24,4 +24,4 @@ end:
 ```
 [Übung zu eindimensionalen Arrays](array1dueb.md)
 
-[Mehrdimensionale Arrays](arraymultidim.md)
+[weiter](arraymultidim.md)

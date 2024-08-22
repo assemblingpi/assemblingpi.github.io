@@ -36,4 +36,4 @@ aufrufenden Funktion wiederherzustellen.
 ```
 Der Stackframe sorgt dafür, dass jede Funktion ihre eigenen Daten verwalten kann, ohne die Daten anderer Funktionen zu beeinträchtigen.
 
-[Was ist der Calltree](wasistcalltree.md)
+[weiter](wasistcalltree.md)

@@ -18,6 +18,8 @@ MOV <Zielregister>, <Quelle>
 ```
 Hierbei ist `<Zielregister>` das Register, in das die Daten kopiert werden sollen, und `<Quelle>` kann ein anderes Register oder ein sofortiger (konstanter) Wert sein.
 
+[weitere Infos zu unmittelbaren Werten](../immediates/immediates.md)
+
 
 #### Laden eines unmittelbaren Wertes in ein Register
 

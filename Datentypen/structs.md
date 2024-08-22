@@ -28,4 +28,4 @@ Zugriff auf die Struct:
 
 ```
 
-[Arrays](arrays.md)
+[weiter](arrays.md)
