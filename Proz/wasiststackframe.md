@@ -31,8 +31,7 @@ aufrufenden Funktion wiederherzustellen.
 ```asm
      MOV sp, r11    @ Stack-Pointer auf Frame-Pointer zurücksetzen
      POP {r11}      @ alten Framepointer wiederherstellen
-     @ Rückkehr zur aufrufenden Funktion:
-     BX lr         @ Rückkehr zur aufrufenden Funktion
+     BX lr          @ Rückkehr zur aufrufenden Funktion
 ```
 Der Stackframe sorgt dafür, dass jede Funktion ihre eigenen Daten verwalten kann, ohne die Daten anderer Funktionen zu beeinträchtigen.
 

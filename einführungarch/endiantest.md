@@ -13,4 +13,3 @@ Gegeben ist ein Speicherbereich, der vollständig mit 0 initialisiert wurde. Ihr
 
 [Zur Lösung](endilsg.md)
 
-[weiter](cache.md)

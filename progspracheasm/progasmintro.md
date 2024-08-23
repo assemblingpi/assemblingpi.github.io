@@ -3,6 +3,7 @@
 Assembler ist eine Programmiersprache, die sehr nahe an der Maschinensprache eines Computers liegt. Sie ermöglicht es Programmierern, Anweisungen direkt auf der Ebene des Prozessors zu schreiben, wobei jede Anweisung in Assembler exakt einem Maschinenbefehl des Prozessors entspricht.
 Diese Befehle sind äußerst elementar. Sie betreffen beispielsweise das Verschieben von Daten von einem Speicherort zu einem anderen und erfordern ein tiefgehendes Verständnis der zugrunde liegenden Hardware.
 
+
 Während höhere Programmiersprachen wie Python oder Java abstraktere Konzepte verwenden, die es dem Programmierer erleichtern, komplexe Aufgaben zu bewältigen, indem sie von der technischen Komplexität der Hardware abstrahieren, verlangt Assembler präzise und detaillierte Kenntnisse der Funktionsweise des Prozessors. In Python etwa kann ein einfacher Befehl wie print("Hallo Welt") den Computer dazu bringen, eine Nachricht auf dem Bildschirm anzuzeigen – eine Aufgabe, die in Assembler wesentlich komplizierter und weniger intuitiv zu realisieren ist.
 
 Trotz der technischen Herausforderungen und der steilen Lernkurve kann es aus mehreren Gründen sinnvoll sein, Assembler zu lernen:

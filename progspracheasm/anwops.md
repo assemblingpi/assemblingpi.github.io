@@ -15,6 +15,10 @@ ADD R1, R2, #5
 ```
 In diesem Beispiel steht das Mnemonic ADD für den OPCODE, der den Prozessor anweist, die beiden Operanden R2 und #5 (wobei #5 ein unmittelbarer Wert ist) zu addieren und das Ergebnis im Register R1 zu speichern.
 
-Durch die Verwendung von Mnemonics ist Assembler verständlicher als Maschinensprache, da der Programmierer in der Lage ist, komplexe Maschinenoperationen auf einer lesbaren und relativ intuitiven Ebene auszudrücken. Anstatt direkt mit den Binärcodes zu arbeiten, können Entwickler so auf einer symbolischen Ebene arbeiten, die dennoch sehr nah an der Hardware ist und präzise Steuerung über die CPU ermöglicht. 
+Der Maschinencode, der diesem Assemblerbefehl entspricht ist:
+```
+e2821005
+```
+Alle ARMv7 Maschinenbefehle sind 32-Bit lang und da ihr Format weniger komplex ist, als das von x86-Prozessoren, kann man mit etwas Übung diesen Maschinencode lesen und interpretieren. Durch die Verwendung von Mnemonics ist Assembler jedoch viel verständlicher als Maschinensprache, da der Programmierer in der Lage ist, komplexe Maschinenoperationen auf einer lesbaren und relativ intuitiven Ebene auszudrücken. Anstatt direkt mit den Binärcodes zu arbeiten, können Entwickler so auf einer symbolischen Ebene arbeiten, die dennoch sehr nah an der Hardware ist und präzise Steuerung über die CPU ermöglicht. 
 
 [weiter](adrmodi.md)

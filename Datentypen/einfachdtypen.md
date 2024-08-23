@@ -48,4 +48,4 @@ end:
         b end
 ```
 
-[Komplexe Datentypen](komplexedtypen.md)
+[weiter](komplexedtypen.md)

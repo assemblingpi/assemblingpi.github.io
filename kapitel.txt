@@ -19,7 +19,7 @@
 
 [Zahlenysteme, Bits und Bytes](ZahlensysBitsBytes/zbb.md)
 
-[Prozedurale Programmierung](Proz/prozprog.md)
+[weiter](../Proz/prozprog.md)
 
 [Kontrollstrukturen](ctrlstrukturen/ctrlstrcts.md)
 
