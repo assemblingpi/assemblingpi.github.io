@@ -3,5 +3,5 @@ Programme auf diese Weise zu begreifen ist nicht nur eine theoretische Übung, d
 
 ![Programm](./prog.png)
 
-
-[weiter](disasm.md)
+|-------------------------|--------------------------|----------------------|
+| [zurück](wasistprog.md) | [Hauptmenü](../index.md) | [weiter](disasm.md)  | 

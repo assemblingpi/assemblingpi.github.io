@@ -10,4 +10,5 @@ Die Kontrolleinheit steuert den Ablauf der Befehlsverarbeitung, indem sie die Re
 ### Recheneinheit (ALU : Arithmetic Logic Unit)
 Die ALU führt arithmetische (z.B. Addition, Subtraktion) und logische Operationen (z.B. AND, OR) durch. Sie ist verantwortlich für die eigentliche Berechnung und Datenverarbeitung. Bei der Durchführung von Operationen setzt die ALU sogenannte Flags, um den Status der Operation anzuzeigen, wie zum Beispiel das Überlauf-Flag (wenn das Ergebnis einer Operation zu groß ist, um im Zielregister gespeichert zu werden) oder das Null-Flag (wenn das Ergebnis einer Operation null ist).
 
-[weiter](memintro.md)
+|----------------------|--------------------------|----------------------|
+| [zurück](cpuintro.md)| [Hauptmenü](../index.md) | [weiter](memintro.md)| 

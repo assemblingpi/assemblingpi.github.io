@@ -15,5 +15,5 @@
 | 0x000    | 0xAB   | 0x00   | 0x0A   | 0xBB   |
 | 0x004    | 0x11   | 0x22   | 0x33   | 0x44   |
 
-
-[weiter](cache.md)
+|------------------------|--------------------------|-------------------|
+| [zurück](endiantest.md)| [Hauptmenü](../index.md) | [weiter](cache.md)| 

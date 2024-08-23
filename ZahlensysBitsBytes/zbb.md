@@ -57,4 +57,5 @@ Diese Methode ist schneller als der übliche Ansatz.
 #### Vorzeichenlose Zahlen (Unsigned):
 Vorzeichenlose Zahlen verwenden alle verfügbaren Bits zur Darstellung des Zahlenwerts, ohne ein Bit für das Vorzeichen zu reservieren. Daher können vorzeichenlose Zahlen nur nicht-negative Werte darstellen, also Werte von 0 bis zu einem maximalen Wert, der durch die Anzahl der Bits bestimmt wird. Zum Beispiel kann eine 8-Bit vorzeichenlose Zahl Werte von 0 bis 255 darstellen. Da kein Bit für das Vorzeichen verwendet wird, kann jeder einzelne Bitplatz zur Darstellung von Zahlen verwendet werden, was zu einem größeren Bereich positiver Werte führt als bei vorzeichenbehafteten Zahlen mit derselben Bitanzahl.
 
-[zurück](../einführungarch/archintro3.md) [Hauptmenü](../index.md) [weiter](../progspracheasm/progasmintro.md)
+|------------------------------------------|--------------------------|--------------------------------------------|
+| [zurück](../einführungarch/archintro3.md)| [Hauptmenü](../index.md) | [weiter](../progspracheasm/progasmintro.md)| 
