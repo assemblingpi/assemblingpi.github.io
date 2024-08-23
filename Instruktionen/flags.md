@@ -15,11 +15,11 @@ Das CPSR-Register ist 32 Bit breit und in verschiedene Felder unterteilt, die je
 
 
 #### Übersicht der relevanten Bits des CPSR:
-```
-|  31  |  30  |  29  |  28  |  ...  |
-|------|------|------|------|-------|
-|   N  |   Z  |   C  |   V  |  ...  |
-```
+
+|  31  |  30  |  29  |  28  |  ... |
+|------|------|------|------|------|
+|   N  |   Z  |   C  |   V  |  ... |
+
 
 ### Setzen des CPSR`s (nur Condition Flags)
 Das CPSR kann durch Anweisungen beeinflusst werden, die eine Berechnung durchführen und dabei die Condition Flags setzen. Dies wird erreicht, indem ein `s` am Ende der Operation angehängt wird. Diese erweiterte Syntax sorgt dafür, dass die entsprechenden Flags im CPSR basierend auf dem Ergebnis der Operation aktualisiert werden.
