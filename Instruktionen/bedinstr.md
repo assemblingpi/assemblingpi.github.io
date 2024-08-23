@@ -1,1 +1,3 @@
-[weiter](../kontrollflussinstr/ctrlflow.md)
+
+
+[zurück](beding.md) [weiter](../kontrollflussinstr/ctrlflow.md)
