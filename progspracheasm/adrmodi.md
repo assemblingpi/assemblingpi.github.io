@@ -64,4 +64,4 @@ opcode Rd, [Rn, Rm]
 
 Zwei Register (`Rn` und `Rm`) werden verwendet, um die Speicheradresse zu berechnen. Die Basisadresse liegt in `Rn`, und der Wert in `Rm` wird als offset hinzugefügt.
      
-[weiter](../CPUlator/erste.md)
+[zurück](anwops.md) [Hauptmenü](../index.md) [weiter](../CPUlator/erste.md)

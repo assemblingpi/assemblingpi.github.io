@@ -21,4 +21,4 @@ e2821005
 ```
 Alle ARMv7 Maschinenbefehle sind 32-Bit lang und da ihr Format weniger komplex ist, als das von x86-Prozessoren, kann man mit etwas Übung diesen Maschinencode lesen und interpretieren. Durch die Verwendung von Mnemonics ist Assembler jedoch viel verständlicher als Maschinensprache, da der Programmierer in der Lage ist, komplexe Maschinenoperationen auf einer lesbaren und relativ intuitiven Ebene auszudrücken. Anstatt direkt mit den Binärcodes zu arbeiten, können Entwickler so auf einer symbolischen Ebene arbeiten, die dennoch sehr nah an der Hardware ist und präzise Steuerung über die CPU ermöglicht. 
 
-[weiter](adrmodi.md)
+[zurück](anwops.md) [Hauptmenü](../index.md) [weiter](adrmodi.md)
