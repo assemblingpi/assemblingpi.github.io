@@ -26,6 +26,7 @@ In ARM-Assembler können Bedingungscodes verwendet werden, um Anweisungen basier
 Diese Bedingungscodes sind essenziell, um bedingte Instruktionen in ARM-Assembler umzusetzen.
 
 #### Die folgende Tabelle zeigt den Zusammenhang von Bedingungen und Flags:
+```
 
 +-------------+-------------------------+---------------------+
 | Abkürzung   |  Bedeutung              |   Flags             |
@@ -60,6 +61,6 @@ Diese Bedingungscodes sind essenziell, um bedingte Instruktionen in ARM-Assemble
 +-------------+-------------------------+---------------------+
 | AL          | Always                  |        -            |
 +-------------+-------------------------+---------------------+
-
+```
 
 [weiter](bedinstr.md)

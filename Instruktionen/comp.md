@@ -1,3 +1,3 @@
-## compare instruktions
+## Vergleichsinstruktionen
 
 [weiter](flags.md)
