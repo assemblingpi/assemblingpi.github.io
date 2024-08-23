@@ -27,7 +27,7 @@ Hierbei ist `<Zielregister>` das Register, in das die Daten kopiert werden solle
 MOV Rd, #im
 ```
 
-Hierbei wird der unmittelbare Wert #im in das Register Rd geladen. Das #-Symbol kennzeichnet, dass es sich um einen unmittelbaren (konstanten) Wert handelt. Rd steht stellvertretend für eines der General Purpose Register von R0 bis R10.
+Hierbei wird der unmittelbare Wert #imm in das Register Rd geladen. Das #-Symbol kennzeichnet, dass es sich um einen unmittelbaren (konstanten) Wert handelt. Rd steht stellvertretend für eines der General Purpose Register von R0 bis R10.
 
 
 #### Kopieren eines Wertes von einem Register in ein anderes Register
