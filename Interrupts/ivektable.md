@@ -1,7 +1,5 @@
 ## Die Interruptvektortabelle
 
-Eine Interruptvektortabelle ist eine spezielle Tabelle im Speicher, die eine Sammlung von Interruptvektoren enthält. Jeder Interruptvektor in dieser Tabelle ist eine Speicheradresse, die auf den Anfang einer Interrupt-Service-Routine (ISR) zeigt. 
-Eine ISR ist ein spezielles Programm, das ausgeführt wird, wenn ein bestimmter Interrupt auftritt. 
-Wenn ein bestimmter Interrupt auftritt, springt der Prozessor an die Stelle des jeweiligen Interruptvektor, um die passende ISR auszuführen. 
+Die Interruptvektortabelle ist eine spezielle Tabelle im Speicher, die eine Sammlung von Speicheradressen, sogenannten Interruptvektoren, enthält. Diese Vektoren verweisen auf den Beginn von Interrupt-Service-Routinen (ISR), die ausgeführt werden, wenn ein bestimmter Interrupt auftritt. Standardmäßig beginnt die Interruptvektortabelle an der Speicheradresse 0, kann jedoch auch an eine andere Position verschoben werden. Die Interruptvektoren in der Tabelle sind für verschiedene Arten von Interrupts verantwortlich, wobei einige softwarebasierte und andere hardwarebasierte Interrupts steuern. Wenn ein Interrupt auftritt, springt der Prozessor zur entsprechenden Adresse in der Tabelle, um die zugehörige ISR auszuführen und den Interrupt zu verarbeiten.
 
 [Interrupt Handler](ihandler.md)
