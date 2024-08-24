@@ -21,6 +21,7 @@ push {r4}        @ 5. Parameter auf den Stack legen
 bl  my_function  @ Aufruf der Funktion
 add sp, sp, #4   @ Stack aufräumen nach dem Funktionsaufruf durch den Caller
 ```
+
 **Übergabe per Referenz:** Für größere Datenmengen wird ein Zeiger anstelle der tatsächlichen Daten übergeben. In diesem Fall wird ein Speicheradresszeiger in einem der Register (z.B. R0) übergeben, und die Funktion dereferenziert diesen Zeiger, um auf die Daten zuzugreifen.
 Beispiel:
 ```asm
@@ -29,7 +30,6 @@ bl  process_data       @ Aufruf der Funktion mit dem Zeiger
 ```
 
 ## Stack-Frame-Management in ARMv7 Assembler
-
 Das Stack-Frame-Management ist ein entscheidender Aspekt bei der Verwendung des Stacks zur Übergabe von Parametern Assembler. 
 
 ### Zugriff auf Parameter im Stack
@@ -56,7 +56,6 @@ ldr r1, [r11, #16]   @ Zugriff auf den zweiten Parameter
 ```
 
 Hierbei wird der Offset ab `r11`(Framepointer) so gewählt, dass er die Anzahl der gespeicherten Register berücksichtigt, bevor auf die eigentlichen Parameter zugegriffen wird.
-
 
 ### Rückgabewerte
 Der Rückgabewert einer Funktion wird üblicherweise im Register R0 gespeichert. Wenn die Funktion mehrere Werte zurückgeben muss, könnten Register R1 bis R3 zusätzlich verwendet werden. Ist ein Rückgabewert größer als 32 Bit (z.B. bei 64-Bit-Werten), können zwei Register kombiniert werden, etwa R0 und R1.
