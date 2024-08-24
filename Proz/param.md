@@ -17,7 +17,6 @@ bl  my_function  @ Aufruf der Funktion
 **Übergabe per Stack:** Wenn mehr als vier Parameter übergeben werden müssen, werden die zusätzlichen Parameter auf den Stack gelegt. Dies bedeutet, dass die Prozedur auf den Stack zugreifen muss, um die Werte abzurufen. Es ist wichtig, den Stack sorgfältig zu managen, um Stabilitätsprobleme zu vermeiden. Die Verantwortung dafür liegt entweder beim aufrufenden (Caller) oder beim aufgerufenen Code (Callee).
 Beispiel:
 ```asm
-Code kopieren
 push {r4}        @ 5. Parameter auf den Stack legen
 bl  my_function  @ Aufruf der Funktion
 add sp, sp, #4   @ Stack aufräumen nach dem Funktionsaufruf durch den Caller
@@ -25,7 +24,6 @@ add sp, sp, #4   @ Stack aufräumen nach dem Funktionsaufruf durch den Caller
 **Übergabe per Referenz:** Für größere Datenmengen wird ein Zeiger anstelle der tatsächlichen Daten übergeben. In diesem Fall wird ein Speicheradresszeiger in einem der Register (z.B. R0) übergeben, und die Funktion dereferenziert diesen Zeiger, um auf die Daten zuzugreifen.
 Beispiel:
 ```asm
-Code kopieren
 ldr r0, =data_address  @ Zeiger auf die Daten in R0 laden
 bl  process_data       @ Aufruf der Funktion mit dem Zeiger
 ```
@@ -34,7 +32,6 @@ bl  process_data       @ Aufruf der Funktion mit dem Zeiger
 Der Rückgabewert einer Funktion wird üblicherweise im Register R0 gespeichert. Wenn die Funktion mehrere Werte zurückgeben muss, könnten Register R1 bis R3 zusätzlich verwendet werden. Ist ein Rückgabewert größer als 32 Bit (z.B. bei 64-Bit-Werten), können zwei Register kombiniert werden, etwa R0 und R1.
 Beispiel:
 ```asm
-Code kopieren
 mov r0, #result      @ Rückgabewert in R0 setzen
 bx  lr               @ Rücksprung zum Aufrufer
 ```
@@ -57,8 +54,8 @@ Die folgende Tabelle veranschaulicht, wo sich die verschiedenen Elemente im Stac
 | Alter Framepointer         |    r11                            | gespeicherter Zeiger auf den Boden des vorherigen Stackframes |
 | Lokale Variable 1          |    r11 - 4                        | Erste lokale Variable                                         |
 | Lokale Variable 2          |    r11 - 8`                       | Zweite lokale Variable                                        |
-| ...                        | ...                               | ...                                                           |
-| Top of Stack               |    sp                             |                                                               |
+| ...                        |    ...                            | ...                                                           |
+| Top of Stack               |    sp                             | letzter auf den Stack gepushter Wert                          |
 
 **Beispiel:**
 ```asm
