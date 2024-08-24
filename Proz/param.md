@@ -34,7 +34,7 @@ Das Stack-Frame-Management ist ein entscheidender Aspekt bei der Verwendung des 
 
 ### Zugriff auf Parameter im Stack
 
-Parameter, die auf den Stack gelegt wurden, werden relativ zum Frame-Pointer (FP) adressiert. Da die ersten vier Register (R0 bis R3) für die Parameterübergabe verwendet werden, beginnen die Parameter auf dem Stack ab dem Offset `fp + 4`. Auf diese Weise kann auf Parameter und lokale Variablen in einer konsistenten und nachvollziehbaren Weise zugegriffen werden.
+Parameter, die auf den Stack gelegt wurden, werden relativ zum Frame-Pointer (`r11`) adressiert. Da Rücksprungadresse und der vorige Framepointer-Wert ebenfalls auf dem Stack gesichert werden, beginnen die Parameter auf dem Stack ab dem Offset `r11 + 4`. Auf diese Weise kann auf Parameter und lokale Variablen in einer konsistenten und nachvollziehbaren Weise zugegriffen werden.
 
 Die folgende Tabelle veranschaulicht, wo sich die verschiedenen Elemente im Stack befinden:
 
@@ -55,7 +55,7 @@ ldr r0, [r11, #12]   @ Zugriff auf den ersten Parameter (z.B. bei 3 Parametern a
 ldr r1, [r11, #16]   @ Zugriff auf den zweiten Parameter
 ```
 
-Hierbei wird der Offset ab `r11`(Framepointer) so gewählt, dass er die Anzahl der gespeicherten Register berücksichtigt, bevor auf die eigentlichen Parameter zugegriffen wird.
+Hierbei wird der Offset ab `r11` so gewählt, dass er die Anzahl der gespeicherten Register berücksichtigt, bevor auf die eigentlichen Parameter zugegriffen wird.
 
 ### Rückgabewerte
 Der Rückgabewert einer Funktion wird üblicherweise im Register R0 gespeichert. Wenn die Funktion mehrere Werte zurückgeben muss, könnten Register R1 bis R3 zusätzlich verwendet werden. Ist ein Rückgabewert größer als 32 Bit (z.B. bei 64-Bit-Werten), können zwei Register kombiniert werden, etwa R0 und R1.
