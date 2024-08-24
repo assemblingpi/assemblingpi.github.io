@@ -1,4 +1,4 @@
-## Bedingte Arithmetik
+## Bedingte Instruktionsausführung
 Befehle können so gestaltet werden, dass sie nur dann ausgeführt werden, wenn bestimmte Bedingungen erfüllt sind. Dies ermöglicht, dass Code nur dann ausgeführt wird, wenn die festgelegte Bedingung zutrifft.
 
 assembly
