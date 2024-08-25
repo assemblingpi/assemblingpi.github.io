@@ -19,6 +19,10 @@ Der Fokus des Quellcodes liegt auf Übersichtlichkeit, nicht auf Perfektion oder
 
 Test:
 
+## Decodierung von Arm Befehlen
+
+im folgenden das Befehlsformat einiger Instruktionstypen von ARMv7 Prozessoren:
+
 `Datenverarbeitungsbefehle`
 
 |31 ... 28|27 ... 25| 24 ... 21 |  20 | 19 ... 16|15 ... 12|11  ...  0|
