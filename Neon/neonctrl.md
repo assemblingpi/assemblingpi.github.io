@@ -17,3 +17,18 @@ Dies ist wichtig, um den aktuellen Status und die Ergebnisse von NEON- oder Glei
 
 ### Achtung: Bedingte Ausführung von NEON-Instruktionen hängt vom CPSR ab!
 Wichtig zu beachten ist, dass die Bedingungsflags im FPSCR (wie N, Z, C, V) zuerst in das CPSR übertragen werden müssen, um sie für bedingte Ausführungen von NEON- und Gleitkomma-Instruktionen verwenden zu können!
+
+**1. Übertragen der Flags vom FPSCR in ein ARM-Register**
+Zuerst müssen die Flags aus dem FPSCR in ein ARM-Register übertragen werden. Dies geschieht mithilfe des Befehls VMRS:
+
+```asm
+vmrs r0, fpscr  @ Übertrage die FPSCR-Flags in das ARM-Register r0
+```
+**2. Übertragen der Flags vom ARM-Register in das CPSR**
+Nachdem die Flags im ARM-Register gespeichert sind, können sie in das CPSR übertragen werden. Dies erfolgt mit dem Befehl MSR:
+
+```asm
+msr cpsr_f, r0  @ Übertrage die Flags vom ARM-Register r0 in das CPSR
+```
+
+**Der alte CPSR Inhalt muss selbstverständlich gespeichert werden, anderenfalls kommt es zu Problemen im weiteren Programmablauf!**
