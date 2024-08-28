@@ -21,21 +21,15 @@ Ein NEON-Vektorregister kann in mehrere Lanes unterteilt werden, wobei jede Lane
 - **64-Bit Lanes**: Ein 128-Bit Q-Register hat 2 Lanes.
 
 Jede Lane kann unabhängig von den anderen Lanes denselben oder unterschiedliche Datenwerte enthalten, und SIMD-Instruktionen (Single Instruction, Multiple Data) können auf jeder Lane parallel dieselbe Operation ausführen.
+Im Kontext des NEON-Coprozessors in ARMv7 bezieht sich der Begriff "Lanes" also auf die logischen Einheiten innerhalb der NEON-Register, die unabhängig voneinander arithmetische Operationen durchführen können. Jede Lane arbeitet mit einer festen Bitbreite, und Überträge bleiben innerhalb dieser Lane begrenzt, ohne in die nächste überzulaufen.
+Die Suffixe bei NEON-Operationen bestimmen die Lane-Größe und den Datentyp. Suffixe wie `.8`, `.16`, `.32` oder `.64` spezifizieren die Größe der Lanes.
+Diese Struktur ermöglicht es, mehrere Operationen gleichzeitig durchzuführen, jedoch in festen und unabhängigen Bereichen der Register, wodurch parallele Verarbeitung effizient wird, aber die Übertragungen zwischen den Einheiten verhindert werden.
 
 ### Beispiel: 32-Bit Lanes in einem Q-Register
 
-Angenommen, Sie haben ein 128-Bit Q-Register (`Q0`). Wenn Sie dieses Register in 32-Bit Lanes unterteilen, haben Sie 4 Lanes (`Lane 0`, `Lane 1`, `Lane 2`, und `Lane 3`). Eine SIMD-Operation, wie z.B. eine Addition, würde auf allen vier 32-Bit-Werten gleichzeitig ausgeführt werden. Das heißt, die Addition wird parallel in jeder Lane durchgeführt, was zu einem erheblichen Geschwindigkeitsgewinn führt, wenn viele ähnliche Operationen ausgeführt werden müssen.
+Angenommen, man hat ein 128-Bit Q-Register (`Q0`). Wenn man dieses Register in 32-Bit Lanes unterteilet, hat man 4 Lanes (`Lane 0`, `Lane 1`, `Lane 2`, und `Lane 3`). Eine SIMD-Operation, wie z.B. eine Addition, würde auf allen vier 32-Bit-Werten gleichzeitig ausgeführt werden. Das heißt, die Addition wird parallel in jeder Lane durchgeführt, was zu einem erheblichen Geschwindigkeitsgewinn führt, wenn viele ähnliche Operationen ausgeführt werden müssen.
 
-NEON also provides integer arithmetic operations. How do the results from an
-arithmetic operation such as addition or multiplication compare to one of the
-logical operations? Logical operations are bit-by-bit, and the results stay in each
-bit “column,” but arithmetic operations must expand to use more bits. Even an
-example as 12+12=102 shows addition can have a carry that requires another bit
-column. In order to provide multiple simultaneous parallel arithmetic operations,
-the NEON coprocessor forces arithmetic operations to stay in fixed-sized “lanes”
-and does not allow the results from one lane to carry (or overflow) into the next.
-Although there can be 128 simultaneous 1-bit logical operations performed,
-the number of simultaneous arithmetic operations is reduced by the lane size. In
-a NEON arithmetic operation, the total number of bits involved is specified by
-whether a D (64 bits) or a Q (128 bits) register is used. The lane size and type
-are specified by the suffix.
+
+
+
+
