@@ -4,7 +4,8 @@ Grundlegende Kenntnisse in verschiedenen Zahlensystemen und das hantieren mit Bi
 
 ### Zahlensysteme
 
-Das Binärsystem verwendet nur zwei Ziffern: 0 und 1. Es ist direkt auf die Art und Weise abgestimmt, wie Daten in Computern verarbeitet werden. Jede Ziffer in einem Binärsystem ist eine Potenz von 2. 
+Das Binärsystem verwendet nur zwei Ziffern: 0 und 1. Es ist direkt auf die Art und Weise abgestimmt, wie Daten in Computern verarbeitet werden. Jede Ziffer in einem Binärsystem ist eine Potenz von 2.
+ 
 Beispielsweise stellt die Binärzahl **101** die Dezimalzahl **5** dar `1×2^2` + `0×2^1` + `1×2^0` = 4 + 0 + 1
 
 Das Hexadezimalsystem hingegen verwendet 16 Ziffern: 0-9 und A-F. Es bietet eine kompaktere Darstellung von Binärdaten, da jede hexadezimale Ziffer vier Binärstellen entspricht. 
