@@ -32,7 +32,7 @@ Die folgende Tabelle zeigt, wie die verschiedenen Registertypen (Q, D, S) zueina
 
 - **Q-Register** (z.B. Q0) sind 128-Bit breit und bestehen aus zwei D-Registern (z.B. D0 und D1).
 - **D-Register** (z.B. D0) sind 64-Bit breit und bestehen aus zwei S-Registern (z.B. S0 und S1).
-- **S-Register** (z.B. S0) sind 32-Bit breit und repräsentieren die kleinste Einheit.
+- **S-Register** (z.B. S0) sind 32-Bit breit und repräsentieren die kleinste Einheit. (u.a relevant für single precision floating point arithmetik)
 
 ### Visualisierung
 

@@ -42,10 +42,3 @@ In ARM-Architekturen, insbesondere bei der Ausführung von ARM-Befehlen, zeigt d
 
 Der Grund für diesen Offset liegt in der Pipeline-Architektur selbst: Während eine Instruktion dekodiert wird, wird die nächste bereits geholt. Dadurch hat der PC, wenn er während der Ausführung einer Instruktion gelesen wird, bereits die Adresse der Instruktion plus 8 (oder 4 bei Thumb).
 
-### Auswirkungen
-
-Dieser Unterschied bedeutet, dass, wenn ein Programmierer den PC direkt manipuliert oder ihn in einem Befehl verwendet, der tatsächliche Wert des PC nicht auf die nächste Instruktion zeigt, die ausgeführt werden soll, sondern auf eine weiter voraus liegende Instruktion. Das ist besonders wichtig bei der Behandlung von Ausnahmen (Exceptions), wo der PC-Wert genutzt wird, um festzustellen, wo die Instruktion war, die die Ausnahme ausgelöst hat.
-
-Dies ist ein historisches Designmerkmal, das für die Kompatibilität mit älterer Software beibehalten wurde und nicht unbedingt die tatsächliche Position der ausgeführten Instruktion widerspiegelt【15†source】【16†source】【17†source】【18†source】.
-
-**Möchtest du mehr über spezifische Beispiele erfahren, bei denen dieses Verhalten zu Problemen führen kann, oder über die Auswirkungen auf bestimmte Programmiertechniken in ARM?**
