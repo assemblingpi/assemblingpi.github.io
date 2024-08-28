@@ -36,9 +36,8 @@ In ARMv7-A Prozessoren wie dem Cortex-A7 wird eine **8-stufige Pipeline** verwen
 Aufgrund der gepipelineten Architektur gibt es in ARMv7 - Prozessoren eine Besonderheit bezüglich des Programm Counters:
 Der PC zeigt nicht auf die nächste auszuführende Instruktion, sondern ist um gleich mehrere Instruktionen voraus. Dies liegt an der Art und Weise, wie die Pipeline die Befehle bearbeitet.
 
+Hier ist eine klarere und prägnantere Formulierung ohne Redundanzen:
+
 ### Offset des PC
 
-In ARM-Architekturen, insbesondere bei der Ausführung von ARM-Befehlen, zeigt der PC oft auf die Adresse der aktuellen Instruktion plus einen Offset. Typischerweise wird der PC um **8 Bytes** (zwei Instruktionen) vor der aktuell ausgeführten Instruktion inkrementiert. 
-
-Der Grund für diesen Offset liegt in der Pipeline-Architektur selbst: Während eine Instruktion dekodiert wird, wird die nächste bereits geholt. Dadurch hat der PC, wenn er während der Ausführung einer Instruktion gelesen wird, bereits die Adresse der Instruktion plus 8 (oder 4 bei Thumb).
-
+In gepipelten ARM-Architekturen zeigt der Program Counter (PC) anders als beim CPUlator nicht auf die nächste, sondern auf die übernächste Instruktion. Das liegt daran, dass der PC typischerweise um **8 Bytes** (zwei Instruktionen) vor der gerade ausgeführten Instruktion steht. Dieser Offset resultiert aus der Pipeline-Architektur: Während eine Instruktion dekodiert wird, wird die nächste bereits geladen, weshalb der PC bereits die Adresse der übernächsten Instruktion enthält.
