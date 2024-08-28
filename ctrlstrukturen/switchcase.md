@@ -65,11 +65,15 @@ LDR r1, [r1, r0, LSL #2]
 BX  r1
 ```
 **r1:** enthält die Basisadresse der Sprungtabelle.
+
 **r0:** ist der Index, der mit **LSL #2** multipliziert wird, um auf das richtige Wort in der Tabelle zuzugreifen. Der Index wird mit 4 multipliziert, weil jede Adresse in der Sprungtabelle 4 Bytes groß ist. Die Multiplikation stellt sicher, dass man den richtigen Speicherplatz für das gewünschte Element in der Tabelle trifft, da die Tabelle sequentiell in 4-Byte-Schritten angeordnet ist.
+
 **LDR r1, [r1, r0, LSL #2]:** gibt somit an, dass die effektive Adresse durch Hinzufügen des verschobenen Werts von r0 zur Basisadresse in r1 gebildet wird, anschließend wird diese Adresse in r1 geladen. 
+
 **BX r1** führt einen bedingungslosen Sprung zur Adresse aus, die in r1 steht.
 
-Alternativ hätte man dem Sprung auch in einer Zeile realisieren können:
+
+**Alternativ hätte man dem Sprung auch in einer Zeile realisieren können:**
 ``` 
 LDR pc, [r1, r0, LSL #2]
 ```
