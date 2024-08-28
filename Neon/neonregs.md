@@ -19,14 +19,14 @@ Die folgende Tabelle zeigt, wie die verschiedenen Registertypen (Q, D, S) zueina
 | Q5                        | D10, D11               | S20, S21, S22, S23      | Q5 = {D10, D11}       |
 | Q6                        | D12, D13               | S24, S25, S26, S27      | Q6 = {D12, D13}       |
 | Q7                        | D14, D15               | S28, S29, S30, S31      | Q7 = {D14, D15}       |
-| Q8                        | D16, D17               | -                       | keine Überschneidung  |
-| Q9                        | D18, D19               | -                       | keine Überschneidung  |
-| Q10                       | D20, D21               | -                       | keine Überschneidung  |
-| Q11                       | D22, D23               | -                       | keine Überschneidung  |
-| Q12                       | D24, D25               | -                       | keine Überschneidung  |
-| Q13                       | D26, D27               | -                       | keine Überschneidung  |
-| Q14                       | D28, D29               | -                       | keine Überschneidung  |
-| Q15                       | D30, D31               | -                       | keine Überschneidung  |
+| Q8                        | D16, D17               | -                       |                       |
+| Q9                        | D18, D19               | -                       |                       |
+| Q10                       | D20, D21               | -                       |                       |
+| Q11                       | D22, D23               | -                       |                       |
+| Q12                       | D24, D25               | -                       |                       |
+| Q13                       | D26, D27               | -                       |                       |
+| Q14                       | D28, D29               | -                       |                       |
+| Q15                       | D30, D31               | -                       |                       |
 
 ### Erläuterungen:
 
