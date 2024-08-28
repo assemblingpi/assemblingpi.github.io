@@ -14,7 +14,7 @@ Row-major Ordering: Die Elemente einer gesamten Reihe werden nacheinander gespei
 ### Zugriff auf zweidimensionale Arrays nach Row Major ordering
 Beim Zugriff auf ein Element eines mehrdimensionalen Arrays in Hochsprachen, wie `array[i][j]`, wird intern eine Formel verwendet, um die Speicheradresse des Elements zu berechnen. Diese Formel lautet:
 ```
-Elementadresse = Basisadresse + (Spaltenindex + Reihengröße × Reihenindex) × Elementgröße
+Elementadresse = Basisadresse + (Spaltenindex + (Reihengröße × Reihenindex)) × Elementgröße
 ```
 
 Hierbei gilt:
@@ -38,7 +38,7 @@ _start:
         mov r3, #0     @ spaltenindex
         mov r4, #1     @ elementgroesse in byte
         
-        @ mla Rd, Rm, Rs, Rn mit Rd = (Rm * Rs) + Rn
+        @ mla Rd, Rm, Rs, Rn entspricht Rd = (Rm * Rs) + Rn
         mla r1, r1, r2, r3
         mul r1, r4
         

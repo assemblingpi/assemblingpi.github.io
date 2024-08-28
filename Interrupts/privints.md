@@ -1,13 +1,13 @@
 ## Privilegierungslevel und ihre Rolle bei Interrupts
 
-ARMv7-A Prozessoren unterstützen verschiedene Privilegierungslevel wie den User Mode und den Supervisor Mode. Wenn der Prozessor beispielsweise zurückgesetzt wird, startet er im Supervisor-Modus, einem privilegierten Modus, der es ermöglicht, auf alle Systemressourcen zuzugreifen. Jeder Exception-Typ hat einen zugeordneten Modus, und beim Auftreten eines Interrupts wechselt der Prozessor automatisch in den entsprechenden Modus, wie den IRQ-Modus für normale Interrupts oder den FIQ-Modus für schnelle Interrupts. Dies stellt sicher, dass die ISR den vollständigen Zugriff auf die notwendigen Ressourcen hat.
+ARMv7-A Prozessoren unterstützen verschiedene Privilegierungslevel wie den "User Mode" und den "Supervisor Mode". Wenn der Prozessor beispielsweise zurückgesetzt wird, startet er im Supervisor-Modus, einem privilegierten Modus, der es ermöglicht, auf alle Systemressourcen zuzugreifen. Jeder Exception-Typ hat einen zugeordneten Modus, und beim Auftreten eines Interrupts wechselt der Prozessor automatisch in den entsprechenden Modus, wie den IRQ-Modus für normale Interrupts, den FIQ-Modus für schnelle Interrupts oder den Supervisor-Modus für Supervisor Calls. Dies stellt sicher, dass die ISR den vollständigen Zugriff auf die notwendigen Ressourcen hat.
 
 Beim Eintreten eines Interrupts wechselt der Prozessor in den dafür vorgesehenen privilegierteren IRQ-Modus, um sicherzustellen, dass der Interrupt-Handler vollständigen Zugriff auf die Systemressourcen hat. Dieser Moduswechsel soll verhindern, dass unprivilegierter Code unerlaubte Operationen ausführt, die das System destabilisieren könnten.
 
 
 ### Verwendung eines separaten Stacks für Interrupts
-Jeder Modus, einschließlich des IRQ-Modus, verfügt aus Sicherheitsgründen über einen eigenen Stack verfügen, was uns die Architektur dadurch ermöglicht, dass die unterschiedlichen Betriebsmodi eigene Stackpointer besitzen. 
-Ein Stack ist im Interruptmodus notwendig, um bei Start der ISR den vorherigen Prozessorzustand zu speichern, bevor die ISR ausgeführt wird. 
+Jeder Modus, einschließlich des IRQ-Modus, verfügt aus Sicherheitsgründen über einen eigenen Stack, was uns die Architektur dadurch ermöglicht, dass die unterschiedlichen Betriebsmodi eigene Stackpointer besitzen. 
+Ein eigener Stack ist im Interruptmodus notwendig, um bei Start der ISR den vorherigen Prozessorzustand zu speichern, bevor die ISR ausgeführt wird. 
 
 #### Aufsetzen eines seperaten Stacks für den IRQ-Modus: 
 ```asm

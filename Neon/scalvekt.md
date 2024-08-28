@@ -2,7 +2,7 @@
 
 In der ARMv7-Architektur behandelt NEON jedes der **Q-Register** oder **D-Register** als **Vektor**, der aus mehreren Elementen gleicher Größe und desselben Typs besteht. Ein Vektor ist eine Datenstruktur, die mehrere Datenwerte enthält, die parallel verarbeitet werden können, was eine effizientere Bearbeitung großer Datenmengen ermöglicht. Diese Vektoren können aus 1, 2, 4, 8 oder 16 Elementen bestehen, abhängig von der Größe jedes einzelnen Elements. Ein 128-Bit Q-Register kann bis zu 16 Elemente umfassen, wenn diese 8 Bit groß sind, oder nur zwei Elemente, wenn sie 64 Bit groß sind.
 
-Ein **Skalar** ist ein einzelnes Element innerhalb eines solchen Vektors. NEON erlaubt es, auf diese einzelnen Elemente zuzugreifen und sie zu bearbeiten, als wären sie eigenständige Werte. Dies ist besonders nützlich, wenn eine Operation nur auf einem bestimmten Element eines Vektors ausgeführt werden soll.
+Ein **Skalar** ist ein einzelnes Element innerhalb eines solchen Vektors. NEON erlaubt es, auf diese Elemente auch so zuzugreifen und sie zu bearbeiten, als wären sie eigenständige Werte. Dies ist besonders nützlich, wenn eine Operation nur auf einem bestimmten Element eines Vektors ausgeführt werden soll.
 
 Bei der ARMv7-Architektur, die auch die NEON-Erweiterung unterstützt, sind die Vektorregister für die SIMD-Verarbeitung verantwortlich. Hier sind die spezifischen Details zu den Vektorregistern in ARMv7:
 

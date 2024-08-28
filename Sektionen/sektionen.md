@@ -17,7 +17,7 @@ Ein Beispiel für die Definition einer Variablen in dieser Sektion könnte so au
    gespeichert. 
 
 ### .bss-Sektion:
-Die `.bss`-Sektion (Block Started by Symbol) wird für Variablen verwendet, die ebenfalls eine statische Lebensdauer haben, aber entweder nicht initialisiert sind oder mit Null initialisiert werden. Diese Sektion reserviert Platz im Speicher für solche Variablen, ohne ihnen beim Programmstart einen spezifischen Wert zuzuweisen. 
+Die `.bss`-Sektion (Block Started by Symbol) wird für Variablen verwendet, die ebenfalls eine statische Lebensdauer haben, aber entweder nicht initialisiert sind oder mit Null initialisiert werden. Diese Sektion reserviert Platz im Speicher für solche Variablen, ohne ihnen beim Programmstart einen spezifischen Wert zuzuweisen. Üblicherweise werden die Variablen in der .bss-Sektion bei Systemstart auf Null gesetzt, 
 Die Direktive `.bss` wird verwendet, um die nachfolgende Anweisung in diese Sektion einzuordnen. 
 Beispiel:
 ```asm

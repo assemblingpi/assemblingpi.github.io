@@ -15,8 +15,8 @@ VMRS Rd, FPSCR
 Der Befehl VMRS überträgt den aktuellen Status aus einem NEON- oder VFP-Statusregister (z.B. FPSCR) in ein ARM-Register.
 Dies ist wichtig, um den aktuellen Status und die Ergebnisse von NEON- oder Gleitkommaoperationen zu lesen. Da das FPSCR Zustände wie Überlauf, Unterlauf, ungültige Operationen, usw. speichert, ermöglicht VMRS es, diesen Status auszulesen und entsprechende Entscheidungen im Programm zu treffen.
 
-### Achtung: Bedingte Ausführung von NEON-Instruktionen hängt vom CPSR ab!
-Wichtig zu beachten ist, dass die Bedingungsflags im FPSCR (wie N, Z, C, V) zuerst in das CPSR übertragen werden müssen, um sie für bedingte Ausführungen von NEON- und Gleitkomma-Instruktionen verwenden zu können!
+### Achtung: Bedingte Ausführung von NEON-Code hängt vom CPSR ab!
+Wichtig zu beachten ist, dass die Bedingungsflags im FPSCR (wie N, Z, C, V) zuerst in das CPSR übertragen werden müssen, um sie für bedingte Ausführungen von NEON-Code verwenden zu können! NEON-Instruktionen selbst unterstützen bis auf einige Ausnahmen keine bedingte Ausführung, demnach muss die bedingte Ausführung mit Sprüngen implementiert werden.
 
 **1. Übertragen der Flags vom FPSCR in ein ARM-Register**
 Zuerst müssen die Flags aus dem FPSCR in ein ARM-Register übertragen werden. Dies geschieht mithilfe des Befehls VMRS:
@@ -41,4 +41,3 @@ Dieser Befehl kopiert die Statusbits **N, Z, C, V** des Floating-Point Status an
 (Das APSR (Application Program Status Register) speichert die Statusflags (z.B. N, Z, C, V) und ist immer aktiv, unabhängig vom aktuellen Modus des Prozessors. Es spiegelt nicht den Modus wider, in dem sich der Prozessor befindet, sondern nur die aktuellen Zustand-Flags, die nach jeder Anweisung aktualisiert werden. DAS APSR ist somit eine Teilemnge des CPSR.)
 Dies ermöglicht es, die Ergebnisse von Gleitkommaberechnungen mit den Statusbits zu überprüfen.
 
-**Der alte CPSR Inhalt muss selbstverständlich gespeichert werden, anderenfalls kommt es zu Problemen im weiteren Programmablauf!**

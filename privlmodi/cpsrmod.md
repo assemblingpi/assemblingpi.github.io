@@ -1,7 +1,7 @@
 ## Statusregister und Betriebsmodi
 
-Das **CPSR (Statusregister)** ist ein zentrales Register, das den aktuellen Zustand, wie etwa die ALU-Flags und den aktuellen Betriebsmodus des Prozessors speichert. Die Flags werden automatisch durch arithmetische und logische Operationen gesetzt. Die **Bits 4 bis 0** des Statusregisters bestimmen, in welchem Modus der Prozessor arbeitet. 
-Unpriviligierte Modi haben im Gegensatz zu priviligierten Modi keinen direkten Zugriff auf das CPSR zur Änderung der ALU-Flags oder der Betriebsmodi. Dieser Schutzmechanismus verhindert, dass Anwendungsprogramme den kritischen Systemstatus beeinflussen können, was die Sicherheit des Systems gewährleistet.
+Das **CPSR (Statusregister)** ist ein zentrales Register, das den aktuellen Zustand, wie etwa die ALU-Flags und den aktuellen Betriebsmodus des Prozessors speichert. Die Flags werden automatisch indirekt durch arithmetische und logische Operationen oder Vergleichegesetzt. Die **Bits 4 bis 0** des Statusregisters bestimmen, in welchem Modus der Prozessor arbeitet. 
+Unpriviligierte Modi haben im Gegensatz zu priviligierten Modi keinen direkten(!) Zugriff auf das CPSR zur Änderung der ALU-Flags oder der Betriebsmodi. Dieser Schutzmechanismus verhindert, dass Anwendungsprogramme den kritischen Systemstatus beeinflussen können, was die Sicherheit des Systems gewährleistet.
 
 ```
 Mode:  | Encoding: |  Priv.-Level:      
@@ -29,7 +29,7 @@ Syntax: MSR  Destination, Source
 ```
 Syntax: MRS  Destination, Source
 ```
-Beim Starten des Prozessors wollen wir überprüfen, ob er sich im Supervisormode befindet und wenn ihn "Schlafen legen", sollte das nicht der Fall sein.
+Beim Starten des Prozessors wollen wir überprüfen, ob er sich im Supervisormode befindet und wenn ihn "Schlafen legen", also in eine Dauerschleife führen, sollte das nicht der Fall sein.
 ```asm
 EQUS für die benötigten Konstanten
 .equ   MODE_MASK,              0x1F

@@ -4,7 +4,7 @@ Ein Koprozessor ist ein Spezialprozessor, der bestimmte Aufgaben übernimmt, um 
 
 ### Systemcontrol-Koprozessor
 In der ARM-Architektur gibt es mehrere Koprozessoren, die nummeriert sind. 
-Der p15 Coprocessor, auch als CP15 bekannt, ist der Systemkontroll-Koprozessor in der ARM-Architektur. Er verwaltet wichtige Systemfunktionen wie die Konfiguration von Caches, die Steuerung der Memory Management Unit (MMU) und Sicherheitsfunktionen. 
+Der p15 Coprocessor, auch als CP15 bekannt, ist der Systemsteuerungs-Koprozessor in der ARM-Architektur. Er verwaltet wichtige Systemfunktionen wie die Konfiguration von Caches, die Steuerung der Memory Management Unit (MMU) und Sicherheitsfunktionen. 
 CP15 ermöglicht es dem Betriebssystem und privilegierten Programmen, die Hardware auf einer niedrigen Ebene zu steuern und zu überwachen. Als integraler Bestandteil des ARM-Prozessors ist er unerlässlich für die Systemsteuerung.
 
 Der Zugriff auf CP15 ist auf privilegierte Modi beschränkt, wie den Kernel- oder Supervisor-Modus. Dies ist eine Sicherheitsmaßnahme, um sicherzustellen, dass nur vertrauenswürdige Software, die im privilegierten Modus läuft, kritische Systemoperationen durchführen kann, die über CP15 gesteuert werden​
@@ -29,9 +29,9 @@ In der ARM-Architektur ermöglichen die MCR- und MRC-Instruktionen den Datenaust
 
 **Rt:** Bei MCR das ARM-Register, dessen Wert übertragen wird; bei MRC das ARM-Register, in das der Wert gelesen wird.
 
-**CRn:** Zielregister im Koprozessor (bei MCR) oder Quellregister im Koprozessor (bei MRC).
+**CRn:** Platzhalter für Zielregister im Koprozessor (bei MCR) oder Quellregister im Koprozessor (bei MRC).
 
-**CRm:** Optionales zweites Koprozessor-Register.
+**CRm:** Platzhalter für optionales zweites Koprozessor-Register.
 
 **opcode2:** Weiterer Opcode für Steuerinformationen.
 

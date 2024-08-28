@@ -1,5 +1,5 @@
 ## Was ist der Stackframe einer Prozedur?
-Ein Stackframe ist der Speicherbereich auf dem Stack, der einer Funktion bei ihrem Aufruf zugewiesen wird. Er enthält die Rücksprungadresse, lokale Variablen und eventuell gespeicherte Register. Der Stackframe wird beim Funktionsaufruf erstellt und beim Verlassen der Funktion wieder freigegeben. Er ermöglicht es, Daten und Rückkehradressen einer Funktion zu verwalten, ohne andere Funktionen zu beeinflussen.
+Ein Stackframe ist der Speicherbereich auf dem Stack, der einer Funktion bei ihrem Aufruf zugewiesen wird. Er enthält die Rücksprungadresse und lokale Variablen. Zudem dient der Stackframe auch zum Speichern von Registern, die innerhalb der Funktion verändert werden, um den Zustand der aufrufenden Funktion wiederherstellen zu können. Der Stackframe wird beim Funktionsaufruf erstellt und beim Verlassen der Funktion wieder freigegeben. Er ermöglicht es, Daten und Rückkehradressen einer Funktion zu verwalten, ohne andere Funktionen zu beeinflussen.
 
 ### Bestandteile eines Stackframes
 **Return-Adresse:** Die Adresse, zu der der Programmfluss nach Beendigung der Funktion zurückkehrt.
@@ -11,8 +11,7 @@ Speicher für Register: Falls nötig, werden Registerinhalte gesichert, um den Z
 
 ### Erstellung und Zerstörung eines Stackframes
 
-**Prolog**: Der Stackframe wird zu Beginn der Funktion erstellt. Der Frame Pointer wird auf den 
-"Boden" des aktuellen Stackframes gesetzt, damit man auf die lokalen Parameter und 
+**Prolog**: Der Stackframe wird zu Beginn der Funktion erstellt. Der Frame Pointer wird auf den "Boden" des aktuellen Stackframes gesetzt, damit man auf die lokalen Parameter und 
 Variablen der Funktion am Stack über einen Offset zum Framepointer zugreifen kann.
 
 #### Beispiel für die Erstellung eines Stackframes:
@@ -23,9 +22,7 @@ funktion:
 ```
 Da bei (1) der Framepointer auf dem Stack gesichert wurde, zeigt der SP nach (1) auf den alten Framepointer und dementsprechend beinhaltet der FP bei (2) nun auch einen Zeiger auf seinen alten Wert. Dadurch, dass der Framepointer nun auf den Boden des neuen Stackframes zeigt, kann man über ein Offset zum Framepointer auf die Parameter und lokalen Variablen zugreifen.
 
-**Epilog**: Am Ende der Funktion wird der Stackframe aufgelöst. Der Stack Pointer wird 
-zurückgesetzt, und der Frame Pointer wird wiederhergestellt, um den Zustand der 
-aufrufenden Funktion wiederherzustellen.
+**Epilog**: Am Ende der Funktion wird der Stackframe aufgelöst. Der Stack Pointer wird zurückgesetzt, so dass er wieder auf den alten Framepointer zeigt und der Framepointer wird wiederhergestellt, um den Zustand der aufrufenden Funktion wiederherzustellen.
 
 #### Beispiel für die Zerstörung eines Stack-Frames:
 ```asm

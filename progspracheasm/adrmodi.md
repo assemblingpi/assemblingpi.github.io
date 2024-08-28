@@ -1,10 +1,10 @@
 
 ## Operanden und Adressierungsarten
 
-Die meisten Anweisungen in Assembler benötigen Operanden, um Daten zu verarbeiten. Eine Operandenadresse gibt dabei den Speicherort der Daten an. Das gilt nicht nur für Daten im Speicher, sondern auch für Register in der CPU. Obwohl Register keine physischen Adressen wie der Arbeitsspeicher haben, besitzen sie eindeutige Kennungen (z.B. `R0`, `R1`), die die CPU verwendet, um auf die darin gespeicherten Daten zuzugreifen. Diese Registeradressen ermöglichen es der CPU, gezielt auf die benötigten Daten in den Registern zuzugreifen.
+Die meisten Anweisungen in Assembler benötigen Operanden, um Daten zu verarbeiten. Eine Operandenadresse gibt dabei den Speicherort der Daten an. Das gilt nicht nur für Daten im Speicher, sondern auch für Register in der CPU. Obwohl Register keine physischen Adressen wie der Arbeitsspeicher haben, besitzen sie eindeutige Kennungen (z.B. `R0`, `R1`), die die CPU verwendet, um auf die darin gespeicherten Daten zuzugreifen. Diese ermöglicht der CPU, gezielt auf die benötigten Daten in den Registern zuzugreifen.
 
 Einige Anweisungen benötigen keinen Operanden, während andere ein, zwei oder drei Operanden erfordern können.
-Wenn eine Anweisung zwei Operanden benötigt, ist der erste Operand das Zielregister und der zweite Operand ist die Quelle. Die Quelle enthält entweder die zu übertragenden Daten (bei direkter Adressierung) oder die Adresse der Daten (in einem Register oder Speicher). 
+Wenn eine Anweisung zwei Operanden benötigt, ist der erste Operand in der Regel das Zielregister und der zweite Operand ist die Quelle. (Bei bestimmten Befehlen kann das Zielregister auch an einer anderen Position stehen!) Die Quelle enthält entweder die zu übertragenden Daten (bei direkter Adressierung) oder die Adresse der Daten (in einem Register oder Speicher). 
 
 ### Adressierungsarten
 Die Adressierungsart gibt an, wie die CPU auf Daten zugreift. Sie legt fest, wie die in einem Befehl angegebene Adresse verwendet wird, um den Speicherort zu bestimmen, auf den zugegriffen werden soll. Dies kann direkt, über Register oder durch Berechnung mit Offsets geschehen.

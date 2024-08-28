@@ -1,7 +1,7 @@
 # Grundkonzepte von Linker-Skripten
 
 Die verschiedenen Eingabedateien, die wir mithilfe des Linkers zu einer Ausgabedatei umwandeln möchten nennt man auch Objektdatei. 
-Alle Objektdatein und die Ausgabedatei enthalten unter anderem eine Liste von Sektionen. Jede Sektion hat einen Namen und eine Größe.  
+Alle Objektdatein und die Ausgabedatei enthalten unter anderem eine Liste von Sektionen. Jede Sektion hat einen Namen und eine Größe. Diese Sektionen sind Bereiche im Speicher, die für verschiedene Daten oder Code vorgesehen sind.
 
 Jede Objektdatei enthält eine Symboltabelle mit definierten und undefinierten Symbolen, die Namen und Adressen haben. Beim Assemblieren  eines Programms werden Symbole für alle definierten Funktionen und Variablen erstellt. Undefinierte Funktionen oder Variablen werden als undefinierte Symbole aufgeführt.
 
@@ -21,6 +21,7 @@ SECTIONS{
 }
 ```
 Der Befehl SECTIONS wird mit dem Schlüsselwort SECTIONS eingeleitet, gefolgt von einer Reihe von Symbolzuweisungen und Beschreibungen der Ausgabesektionen in geschweiften Klammern. Die erste Zeile setzt den Wert des speziellen Symbols . (Punkt), welches der Lokationszähler ist. Wenn die Adresse einer Ausgabesektion nicht anders angegeben ist, wird diese Adresse vom aktuellen Wert des Lokationszählers gesetzt. Der Lokationszähler wird dann um die Größe der jeweiligen Ausgabesektion erhöht. Zu Beginn des SECTIONS-Befehls hat der Lokationszähler den Wert 0.. 
+Da `. = 0x8000000`; die Adresse für .data festlegt wird der Lokationszähler um die Größe von `.data`erhöht.
 
 Die Zeilen .text, .data und .bss definieren Ausgabesektionen für Code, initialisierte Daten und uninitialisierte Daten. Innerhalb der geschweiften Klammern werden mit *(.text), *(.data) und *(.bss) die jeweiligen Eingabesektionen aufgelistet, die in die entsprechende Ausgabesektion platziert werden sollen. Das * ist ein Platzhalter, der alle Eingabesektionen mit dem entsprechenden Namen einschließt.
 

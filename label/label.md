@@ -13,8 +13,9 @@ My_data: .word 0xbb0000aa
 Hier bezeichnet das Label My_data eine Speicheradresse. Ab dieser Adresse wird der Speicher so initialisiert, dass ein Word (also 4 Bytes) mit dem Wert 0xbb0000aa belegt wird. Das Label My_data fungiert also als Verweis auf die Adresse, die den festgelegten Wert enthält. Wenn später im Programm auf My_data verwiesen wird, greift der Code auf diese Speicheradresse zu, um den darin gespeicherten Wert zu lesen oder zu schreiben.
 
 ### Der Literal Pool
-Achtung: Ein häufiges Missverständnis ist, dass der Befehl ldr r0, =My_data die Daten, (in diesem Fall den Wert 0xbb0000aa) in ein Register lädt. 
-Tatsächlich lädt dieser Befehl jedoch die Adresse von My_data in das Register r0, nicht den gesuchten Datenwert. Der Assembler platziert diese Adresse am Ende der Text-Sektion im Code, im sogenannten Literal Pool um den Zugriff auf die Daten zu ermöglichen.
+Achtung: Ein häufiges Missverständnis ist, dass der Befehl ```ldr r0, =My_data``` die Daten, (in diesem Fall den Wert 0xbb0000aa) in ein Register lädt. 
+Tatsächlich lädt dieser Befehl jedoch die Adresse von My_data in das Register r0, nicht den gesuchten Datenwert. 
+Woher wird diese Adresse geladen? Der Assembler platziert diese Adresse am Ende der Text-Sektion im Code, im sogenannten Literal Pool um den Zugriff auf die Daten zu ermöglichen. 
 
 Um den tatsächlichen Wert von My_data in ein Register zu laden, müssen folglich zwei Schritte durchgeführt werden:
 1.Laden der Adresse von My_data in ein Register:

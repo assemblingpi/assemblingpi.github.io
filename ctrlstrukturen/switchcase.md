@@ -3,10 +3,11 @@
 Ein `switch case` ist eine Kontrollstruktur, die es ermöglicht, eine Variable oder einen Ausdruck mit mehreren möglichen Werten zu vergleichen. Basierend auf dem Wert wird der entsprechende Fall (Case) ausgewählt und dessen Anweisungen ausgeführt. Diese Struktur ermöglicht eine effiziente und übersichtliche Handhabung von mehreren Bedingungen im Vergleich zu einer langen Kette von `if-else`-Anweisungen.
 ```
 case(X)
- 0: statement 0; break;
- 1: statement 1; break;
- 2: statement 2; break;
- 3: statement 2; break;
+ 0:       statement 0; break;
+ 1:       statement 1; break;
+ 2:       statement 2; break;
+ default: statement 3; break;
+
 ```
 **Wichtig: X darf nicht größer als Anzahl cases sein, es liegt am Programmierer dies zu gewährleisten!**
 
@@ -26,23 +27,22 @@ Diese Tabelle enthält Adressen zu den verschiedenen `case`-Labels. Die Implemen
 ```asm 
 .data
 table: .word case0
-                .word case1
-                .word case2
-                .word case3
+        .word case1
+        .word case2
+        .word default
 ```
 Eine Sprungtabelle wie diese funktioniert, indem sie eine Liste von Adressen (Sprungziele) enthält, die den Code für verschiedene cases repräsentieren.
 
 ```asm 
 .text
-.start:
-MOV r0, #2           @ r0 = X
-
+start:
+        MOV r0, #2           @ r0 = X
+        
     @ CASE(X) 
         AND r0, r0, #3
         LDR r1, =table
         LDR r1, [r1, r0, LSL #2]
         BX  r1
-
 case0:
         MOV r2, #1
         B endcase
@@ -52,9 +52,8 @@ case1:
 case2:
         MOV r2, #3
         B endcase
-case3:
-        MOV r2, #4
 default:
+       MOV r2, #5
 endcase:
         MOV r0, r2
 ...

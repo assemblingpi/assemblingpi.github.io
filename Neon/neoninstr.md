@@ -5,7 +5,7 @@ V<OpCode>.<DatenTyp> <ZielRegister>, <QuellRegister1>, <QuellRegister2>
 ```
 Dabei gibt der OpCode die Operation an (z.B. ADD, SUB), und der Datentyp (.i8, .f32 etc.) spezifiziert die Breite der verwendeten Daten (8-bit, 32-bit, etc.). Die Register können entweder ARM-Register oder NEON-Register sein, abhängig von der jeweiligen Instruktion.
 
-Einige NEON-Instruktionen erfordern spezifische Registertypen, während andere dem Programmierer die Wahl lassen, ob er ein Single Word-, Double Word- oder Quad Word-Register verwenden möchte. Wenn eine Instruktion etwa ein Single Precision-Register benötigt, werden die Register wie folgt bezeichnet:`Sd` für das Zielregister, `Sn` für den ersten Operand und `Sm` für den zweiten Operand. Bei Instruktionen, die nur zwei Register verwenden, wird `Sn` weggelassen. Die Bezeichnungen `Sd`, `Sn` und `Sm` stehen jeweils für eines der 31 S-Register, die von `S0` bis `S31` nummeriert sind.
+Einige NEON-Instruktionen erfordern spezifische Registertypen, während andere dem Programmierer die Wahl lassen, ob er ein Single Word-, Double Word- oder Quad Word-Register verwenden möchte. Wenn eine Instruktion etwa ein Single Precision-Register benötigt, werden die Register wie folgt bezeichnet:`Sd` für das Zielregister, `Sn` für den ersten Operand und `Sm` für den zweiten Operand. Bei Instruktionen, die nur zwei Register verwenden, wird `Sn` weggelassen. Die Bezeichnungen `Sd`, `Sn` und `Sm` stehen jeweils für eines der 32 S-Register, die von `S0` bis `S31` nummeriert sind.
 
 Die Notation der Instruktionen umfasst folgende Elemente:
 - **Ry**: Ein ARM-Integer-Register, wobei „y“ eine Zahl von 0 bis 15 sein kann.
@@ -28,6 +28,6 @@ Für einige Instruktionen können Listen von bis zu vier NEON-Registern, Vektore
 
 ### Immediates
 
-Neben den Register- und Datentypenspezifikationen können NEON-Instruktionen auch Immediate-Werte verwenden, die in der Instruktionsnotation direkt spezifiziert werden.
+Neben den Register- und Datentypenspezifikationen können manche NEON-Instruktionen auch Immediate-Werte verwenden, die in der Instruktionsnotation direkt spezifiziert werden.
 
 

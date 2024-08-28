@@ -11,7 +11,7 @@ Bei single precision 32-bit Gleitkommazahlen hat die Mantisse 23 Bit, der Expone
 
 ### 1. Normalisierung 
 
-Das **Normalisieren** im Kontext von Floating-Point-Zahlen (Gleitkommazahlen) bezieht sich auf den Prozess, bei dem die Mantisse einer Zahl so angepasst wird, dass der führende Stellenwert vor dem Komma (oder im Falle der binären Darstellung: vor dem Punkt) eine 1 ist. Dies wird als **normalisierte Form** bezeichnet. Entsprechend muss auch der Exponent angepasst werden, um den tatsächlichen Wert der Zahl beizubehalten
+Das **Normalisieren** im Kontext von Floating-Point-Zahlen (Gleitkommazahlen) bezieht sich auf den Prozess, bei dem die Mantisse einer Zahl so angepasst wird, dass der führende Stellenwert vor dem Komma (oder im Falle der binären Darstellung: vor dem Punkt) eine 1 ist. Dies wird als **normalisierte Form** bezeichnet. Entsprechend muss auch der Exponent angepasst werden, um den tatsächlichen Wert der Zahl beizubehalten. Da die führende 1 der Mantisse bei der normalisierten Form vorausgesetzt wird, kann sie in der Darstellung der Zahl letzlich weggelassen werden. 
 
 #### Warum ist Normalisierung wichtig?
 Die Normalisierung ist entscheidend, weil sie sicherstellt, dass die Gleitkommazahlen auf eine standardisierte Weise gespeichert werden. Dies hat zwei wesentliche Vorteile:
@@ -53,7 +53,7 @@ Zum Abschluss der Umwandlung in das Single Precision Floating Point Format müss
 **Beispiel:** Bei der Zahl 9.75:
 - Da die Zahl positiv ist, ist das S-Bit 0.
 - Der Exponent 130 wird als 10000010 in Binär dargestellt.
-- Die Mantisse beginnt mit 0011100, der Rest wird mit Nullen aufgefüllt.
+- Die Mantisse beginnt mit 0011100, die führende 1 wird verworfen und der Rest wird mit Nullen aufgefüllt.
 
 |S | Exponent | Mantisse                |  
 |--|----------|-------------------------|
