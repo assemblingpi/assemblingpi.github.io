@@ -9,7 +9,7 @@ Bei einer **Single-Cycle-Architektur** wird jeder Befehl in genau einem Taktzykl
 
 ### Pipelined-Architektur
 Die **Pipelined-Architektur** ist ein Konzept, das die Verarbeitungsgeschwindigkeit von CPUs erheblich steigert. Sie basiert auf der Idee, dass der Prozess der Befehlsausführung in mehrere Phasen unterteilt wird, die parallel ausgeführt werden können. Diese Phasen sind in unserem Modell die zuvor genannten Schritte: **Fetch**, **Decode** und **Execute**. Während der Prozessor eine Operation ausführt (Execute), dekodiert er die nächste und holt die übernächste Instruktion schon aus dem Speicher.
-Durch die parallele Ausführung dieser Phasen in einer Pipeline können somit mehrere Befehle gleichzeitig verarbeitet werden. Dies erhöht die Effizienz des Prozessors erheblich, da keine der Hauptkomponenten des Prozessors (wie das ALU oder Controlunit) untätig bleibt.
+Durch die parallele Ausführung dieser Phasen in einer Pipeline können somit mehrere Befehle gleichzeitig verarbeitet werden. Dies erhöht die Effizienz des Prozessors erheblich, da keine der Hauptkomponenten des Prozessors (wie die ALU oder Controlunit) untätig bleibt.
 
 ### Erweiterter Befehlzyklus in modernen Prozessoren
 Moderne Prozessoren wie der ARMv7 erweitern den klassischen Befehlzyklus um zusätzliche Stufen. Diese zusätzlichen Stufen ermöglichen eine noch effizientere Verarbeitung der Befehle und tragen zur Verbesserung der Gesamtleistung des Prozessors bei. Diese erweiterten Stufen werden hier jedoch nicht weiter thematisiert.
