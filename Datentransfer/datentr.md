@@ -258,5 +258,4 @@ Diese Speicheradressen wurden jeweils einmal in Register `R1` und einmal in Regi
 
 ![Screenshot of Example Program](./LDRHB4.png) 
 
-
-[weiter](array1dim.md)
+[weiter](.../Datentypen/array1dim.md)
