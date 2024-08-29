@@ -13,7 +13,7 @@ Der CMP-Befehl ("Compare") ist ein Vergleichsoperator, der zwei Registerwerte du
 CMP <RegisterA>, <RegisterB>
 ```
 
-Der Befehl vergleicht den Wert in Register A mit dem in Register B, indem er die Differenz der beiden berechnet (Register A - Register B) und dient somit dazu, zu überprüfen, ob der Wert in Register A kleiner, größer oder gleich dem Wert in Register B ist, um abhängig von den Statusflags im 
+Der Befehl vergleicht den Wert in Register A mit dem in Register B, indem er die Differenz der beiden berechnet (Register A - Register B) und dient somit dazu, zu überprüfen, ob der Wert in Register A kleiner, größer oder gleich dem Wert in Register B ist.
 
 #### Beispiel
 
