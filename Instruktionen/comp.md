@@ -138,6 +138,6 @@ Die Z-Flag bleibt unverändert, da das Ergebnis nicht null ist.
 Die C-Flag bleibt gesetzt, weil kein Borrow aufgetreten ist.
 
 
-Das **S-Suffix** kombinieret also die Möglichkeit Rechenoperationen durchzuführen, mit der Funktionalität von Vergleichsoperatoren, indem sie die Statusflags für spätere bedingte Anweisungen aktualisieren.
+Das **S-Suffix** kombiniert also die Möglichkeit Rechenoperationen durchzuführen, mit der Funktionalität von Vergleichsoperatoren, indem sie die Statusflags für spätere bedingte Anweisungen aktualisieren.
 
 [weiter](flags.md)
