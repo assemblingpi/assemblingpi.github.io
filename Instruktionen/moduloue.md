@@ -24,9 +24,8 @@ _start:
 ```
 
 ### Aufgabenstellung:
-1. Kopiere den oben abgebildeten Code in den CPUlator.
-2. Ergänze den Code so, dass `resultat = a mod b` berechnet wird.
-3. Speichere das Ergebnis der Modulo-Berechnung in r0 und überprüfe es für verschiedene Werte auf Korrektheit.
+1. Ergänze den Code so, dass `resultat = a mod b` berechnet wird.
+2. Speichere das Ergebnis der Modulo-Berechnung in r0 und überprüfe es für verschiedene Werte auf Korrektheit.
 
 ### Hinweis:
 Um den Modulo-Operator 𝑎 mod 𝑏 zu berechnen, wenn nur Integer-Multiplikation und Integer-Division zur Verfügung stehen, bietet sich folgende Methode an:
