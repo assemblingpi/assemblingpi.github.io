@@ -88,10 +88,7 @@ Ein **Linker-Skript** gibt dem Linker vor, wie Code und Daten eines Programms im
 
 #### SECTIONS: Definition von Programm-Speicherbereichen
 
-Der Befehl **SECTIONS** ist das Herzstück eines Linker-Skripts. Er gibt vor, welche Teile des Programms (die sogenannten **Sektionen**) in welche Speicherbereiche geladen werden sollen. Sektionen wie `.text`, `.data` und `.bss` enthalten jeweils unterschiedliche Arten von Inhalten:
-- **.text**: enthält den ausführbaren Code.
-- **.data**: enthält initialisierte Daten.
-- **.bss**: enthält nicht initialisierte Daten.
+Der Befehl **SECTIONS** ist das Herzstück eines Linker-Skripts. Er gibt vor, welche Teile des Programms (die sogenannten **Sektionen**) in welche Speicherbereiche geladen werden sollen. 
 
 Im Linker-Skript können diese Sektionen wie folgt zugeordnet werden:
 
