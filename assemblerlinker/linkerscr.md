@@ -32,15 +32,25 @@ Section Headers:
 ```
 
 **[Nr]**: Die laufende Nummer der Sektion, beginnend bei 0.
+
 **Name**: Der Name der Sektion (z.B. `.text`, `.data`).
+
 **Type**: Der Sektionstyp, der die Art der Daten angibt (z.B. `PROGBITS` für ausführbaren Code oder `NOBITS` für uninitialisierte Daten).
+
 **Addr**: Die Adresse im Speicher, an der die Sektion geladen wird.
+
 **Off**: Der Offset der Sektion innerhalb der Datei, d.h. die Position der Sektion im Dateistream.
+
 **Size**: Die Größe der Sektion in Bytes.
+
 **ES**: Die Größe eines Eintrags innerhalb der Sektion (für Sektionen mit Tabelleneinträgen relevant).
+
 **Flg**: Flags, die verschiedene Eigenschaften der Sektion angeben (z.B. `ALLOC`, `EXEC`).
+
 **Lk**: Der Index einer verlinkten Sektion, falls zutreffend (z.B. Verweis auf die Symboltabelle).
+
 **Inf**: Zusätzliche Information, die je nach Sektionstyp variiert (z.B. Anzahl von Einträgen in einer Tabelle).
+
 **Al**: Die Ausrichtungsanforderung der Sektion im Speicher (z.B. 4-Byte-Ausrichtung).
 
 
@@ -72,12 +82,19 @@ Symbol table '.symtab' contains 663 entries:
 ```
 
 **Num:** Symbolnummer in der Tabelle, eindeutiger Index.
+
 **Value:** Adresse oder Wert des Symbols (z.B. Speicherposition).
+
 **Size:** Größe des Symbols in Bytes.
+
 **Type:** Symboltyp, z.B. Funktion (FUNC), Variable (OBJECT).
+
 **Bind:** Bindung, z.B. GLOBAL (in anderen Dateien verfügbar), LOCAL (nur in dieser Datei).
+
 **Vis:** Sichtbarkeit, z.B. DEFAULT (standard), HIDDEN (versteckt).
+
 **Ndx:** gibt den Status oder Kontext des Symbols an
+
 **Name:** Name des Symbols, z.B. Funktions- oder Variablenname.
 
 
@@ -191,8 +208,6 @@ MEMORY
 ```
 
 Jede Region hat Berechtigungen wie **r** (lesen), **w** (schreiben) oder **x** (ausführen). Diese Attribute werden mit denen der Sektionen abgeglichen. So würden `.text` und `.rodata` in dem **FLASH**-Speicher landen, da sie nicht schreibbar sind. 
-
-Hier eine kombinierte und verständliche Version der beiden Texte:
 
 ### LMA und VMA: Lade- und virtuelle Adressen in Linker-Skripten
 
