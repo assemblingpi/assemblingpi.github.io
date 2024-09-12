@@ -108,8 +108,11 @@ Ein **Linker-Skript** gibt dem Linker vor, wie Code und Daten eines Programms im
 Ein Linker-Skript besteht aus mehreren Hauptbestandteilen:
 
 **Speicherlayout**: Definiert, welcher Speicherbereich wo verfügbar ist.
+
 **Sektionen**: Bestimmt, welche Teile des Programms in welchen Speicherbereich geladen werden sollen.
+
 **Optionen**: Befehle zur Spezifikation der Architektur, des Einstiegspunkts und anderer Parameter, falls nötig.
+
 
 
 Diese Struktur sorgt dafür, dass der Linker das Programm korrekt im Speicher anordnet und bestimmte Symbole oder Optionen an festgelegten Stellen platziert werden können.
