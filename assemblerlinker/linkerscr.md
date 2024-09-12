@@ -103,9 +103,39 @@ Symbol table '.symtab' contains 663 entries:
 
 Ein **Linker-Skript** gibt dem Linker vor, wie Code und Daten eines Programms im Speicher angeordnet werden. Diese Textdatei enthält Befehle zur Festlegung von Speicheradressen und der Organisation der Programmsektionen, wobei zentrale Konzepte der **SECTIONS**-Befehl und der **Einstiegspunkt** (ENTRY) sind.
 
+**Anatomie eines Linker-Skripts**
+Ein Linker-Skript besteht aus mehreren Hauptbestandteilen:
+
+**Speicherlayout**: Definiert, welcher Speicherbereich wo verfügbar ist.
+**Sektionen**: Bestimmt, welche Teile des Programms in welchen Speicherbereich geladen werden sollen.
+**Optionen**: Befehle zur Spezifikation der Architektur, des Einstiegspunkts und anderer Parameter, falls nötig.
+
+
+Diese Struktur sorgt dafür, dass der Linker das Programm korrekt im Speicher anordnet und bestimmte Symbole oder Optionen an festgelegten Stellen platziert werden können.
+
+#### Speicherlayout
+Um Speicherplatz für ein Programm zu reservieren, muss der Linker wissen, wie viel Speicher verfügbar ist und an welchen Adressen er sich befindet. Dafür dient die **MEMORY**-Definition im Linkerskript.
+
+Die Syntax für MEMORY sieht folgendermaßen aus:
+
+```
+MEMORY
+  {
+    name [(attr)] : ORIGIN = origin, LENGTH = len
+    …
+  }
+```
+
+Dabei bedeuten:
+
+- **name**: Der Name für diesen Speicherbereich, z.B. "flash" oder "ram". Der Name ist frei wählbar und dient nur zur Identifikation.
+- **(attr)**: Optionale Attribute wie Schreibbarkeit (w), Lesbarkeit (r) oder Ausführbarkeit (x). Flash-Speicher ist oft (rx), RAM typischerweise (rwx). Diese Attribute beschreiben die Eigenschaften des Speichers, setzen sie aber nicht fest.
+- **origin**: Die Startadresse des Speicherbereichs.
+- **len**: Die Größe des Speicherbereichs in Bytes.
+
 #### SECTIONS: Definition von Programm-Speicherbereichen
 
-Der Befehl **SECTIONS** ist das Herzstück eines Linker-Skripts. Er gibt vor, welche Teile des Programms (die sogenannten **Sektionen**) in welche Speicherbereiche geladen werden sollen. 
+Der Befehl **SECTIONS** ist das Herzstück eines Linker-Skripts. Er gibt vor, welche Teile des Programms (die sogenannten **Sektionen**) in welche Speicherbereiche geladen werden sollen. Sektionen im Speicher definieren zusammenhängende Bereiche, in denen Code und Daten organisiert werden. Symbole werden in denselben Abschnitt gelegt, wenn sie zusammen initialisiert werden oder sich im gleichen Speicherbereich befinden sollen. 
 
 Im Linker-Skript können diese Sektionen wie folgt zugeordnet werden:
 
