@@ -101,9 +101,10 @@ Symbol table '.symtab' contains 663 entries:
 
 ### Linker-Skript: Aufbau und Schlüsselkonzepte
 
-Ein **Linker-Skript** gibt dem Linker vor, wie Code und Daten eines Programms im Speicher angeordnet werden. Diese Textdatei enthält Befehle zur Festlegung von Speicheradressen und der Organisation der Programmsektionen, wobei zentrale Konzepte der **SECTIONS**-Befehl und der **Einstiegspunkt** (ENTRY) sind.
+Ein **Linker-Skript** gibt dem Linker vor, wie Code und Daten eines Programms im Speicher angeordnet werden.
 
 **Anatomie eines Linker-Skripts**
+
 Ein Linker-Skript besteht aus mehreren Hauptbestandteilen:
 
 **Speicherlayout**: Definiert, welcher Speicherbereich wo verfügbar ist.
