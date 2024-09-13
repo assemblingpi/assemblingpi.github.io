@@ -17,40 +17,15 @@ Der Fokus des Quellcodes liegt auf Übersichtlichkeit, nicht auf Perfektion oder
 [Tutorial starten](wasistprog/wasistprog.md)
 
 
-Test:
+```mermaid
+flowchart TD
+    A[Vorheriger Codeabschnitt] --> |Schleifeneintritt| C
 
-## Decodierung von Arm Befehlen
+    subgraph C [Kopfgesteuerte Schleife]
+        C1[Schleifenbedingung prüfen]
+        C1 --> |Bedingung A| C2[Schleifeninhalt] 
+    end
 
-im folgenden das Befehlsformat einiger Instruktionstypen von ARMv7 Prozessoren:
-
-`Datenverarbeitungsbefehle`
-
-|31 ... 28|27 ... 25| 24 ... 21 |  20 | 19 ... 16|15 ... 12|11  ...  0|
-|---------|---------|-----------|-----|----------|---------|----------|
-| Cond    | 001     | Opcode    | S   | Rn       | Rd      | Operand2 | 
-
-`Multiply`
-
-|31 ... 28|27 ... 22|21 |20 |19 ...16|15 ... 12|11 ... 8|7 ... 4|3 ... 0| 
-|---------|---------|---|---|--------|---------|--------|-------|-------|      
-| Cond    | 000000  | A | S | Rd     | Rn      | Rs     | 1001  | Rm    | 
-
-`Load/Store Byte/ Word`
-
-|31 ... 28|27 ... 26|25 |24 |23 |22 |21 |20 |19 ... 16|15 ... 12|11 ... 0|
-|---------|---------|---|---|---|---|---|---|---------|---------|--------|
-| Cond    | 01      | I | P | U | B | W | L | Rn      | Rd      | Offset |   
-
-`Branch`
-
-|31 ... 28|27 ... 25|24 |23 ... 0|
-|---------|---------|---|--------|
-| Cond    | 101     | L | Offset | 
-
-`Branch Exchange`
-
-|31 ... 28|27 ... 24|23 ... 20|19 ... 17|16 ... 13|12 ... 9|8 ... 5|4 ... 0|
-|---------|---------|---------|---------|---------|---------|------|-------|
-| Cond    | 0001    | 0010    | 1111    | 1111    | 1111    | 0001 | Rn    | 
-
-
+    C2 --> |Rücksprung| C1
+    C1 --> |Bedingung B| D1[Nächster Codeblock]
+```

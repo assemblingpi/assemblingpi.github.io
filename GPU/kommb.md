@@ -12,4 +12,6 @@ Der Empfänger wartet, bis das Statusfeld im 30. Bit eine 0 anzeigt. Danach lies
 ### Fehlerbehandlung
 Zudem ist es ratsam eine Fehlerbehandlung vorzunehmen, bei der sich die Funktionen bei Problemen vorzeitig beenden, indem sie mit einem Fehlercode als Rückgabewert zur Rücksprungadresse zurückkehren.
 
-[Der Framebuffer und seine Nutzung](framebuff.md)
+
+|------------------------|--------------------------|---------------------------------|
+| [zurück](...)          | [Hauptmenü](../index.md) | [weiter](framebuff.md)          | 

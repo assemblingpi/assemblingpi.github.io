@@ -90,4 +90,6 @@ So sieht das CPSR nach der Ausführung aus:
 
 Wenn man die oberen vier Bits (Bits 31 bis 28) des CPSR, die die Condition-Flags repräsentieren, nach dieser Operation binär darstellt, ergibt sich die Folge 0010 (in hexadezimal 0x2, wie auch in CPULator angezeigt). Dies bedeutet, dass das das Carry-Flag (Bit 29) wie erwartet gesetzt wurde.
 
-[weiter](beding.md)
+
+|-------------------------|--------------------------|---------------------------------|
+| [zurück](...)  | [Hauptmenü](../index.md) | [weiter](beding.md)           | 

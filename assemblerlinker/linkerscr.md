@@ -103,7 +103,7 @@ Symbol table '.symtab' contains 663 entries:
 
 Ein **Linker-Skript** gibt dem Linker vor, wie Code und Daten eines Programms im Speicher angeordnet werden.
 
-**Anatomie eines Linker-Skripts**
+#### Anatomie eines Linker-Skripts
 
 Ein Linker-Skript besteht aus mehreren Hauptbestandteilen:
 
