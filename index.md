@@ -17,15 +17,3 @@ Der Fokus des Quellcodes liegt auf Übersichtlichkeit, nicht auf Perfektion oder
 [Tutorial starten](wasistprog/wasistprog.md)
 
 
-```mermaid
-flowchart TD
-    A[Vorheriger Codeabschnitt] --> |Schleifeneintritt| C
-
-    subgraph C [Kopfgesteuerte Schleife]
-        C1[Schleifenbedingung prüfen]
-        C1 --> |Bedingung A| C2[Schleifeninhalt] 
-    end
-
-    C2 --> |Rücksprung| C1
-    C1 --> |Bedingung B| D1[Nächster Codeblock]
-```
