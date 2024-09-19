@@ -76,4 +76,4 @@ BX  r1
 ``` 
 LDR pc, [r1, r0, LSL #2]
 ```
-[weiter](../Proz/prozprog.md)
+[weiter](while.md)

@@ -32,3 +32,5 @@ Dieser Code implementiert eine `while-Schleife`, die die Variable `i` von 1 bis 
 ### Der Kontrollflussgraph zum Beispiel
 
 ![Screenshot of Example Program](./while.png)
+
+[weiter](do_while.md)
