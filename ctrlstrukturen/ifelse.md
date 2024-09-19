@@ -31,4 +31,4 @@ endif:               @ Ende der Kontrollstruktur
 
 ![Ifelse](./ifelse.png)
 
-[weiter](If-then elseif-then.md)
+[weiter](If-then_elseif-then.md)

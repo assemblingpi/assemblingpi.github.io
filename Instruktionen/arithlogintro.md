@@ -209,4 +209,4 @@ Um das Ergebnis der bitweisen Negierung zu verdeutlichen, wird der Hexadezimalwe
 
 Wie hier ersichtlich ist, ergibt sich als Ergebnis der Negation `0xffffffc5`. Dies liegt daran, dass alle Bits des ursprünglichen Wertes invertiert wurden: `1` wird zu `0`, und `0` wird zu `1`. (Vergleich: Wahrheitstabelle)
 
-[weiter](arithinstr.md)
+[weiter](comp.md)
