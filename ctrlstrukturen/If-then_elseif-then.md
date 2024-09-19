@@ -39,6 +39,6 @@ endif:
 
 #### Betrachtet man den Controlflow-graph dieser Kontrollstruktur in einem Disassembler, ergibt sich folgendes Bild:
 
-![If-then elseif-then](./If-then elseif-then.png)
+![If-then elseif-then](./If-then_elseif-then.png)
 
 [weiter](switchcase.md)
