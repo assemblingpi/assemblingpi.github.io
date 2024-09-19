@@ -9,7 +9,7 @@ Der Name „Branch“ bezieht sich darauf, dass durch derartige Befehle der Prog
 #### Unbedingte Sprünge:
 Unbedingte Sprünge, wie der `B`-Befehl (Branch), ändern den Programmfluss immer zu einer angegebenen Adresse, ohne Rücksicht auf etwaige Bedingungen. Das bedeutet, dass das Programm immer zu der angegebenen Stelle im Code springt, wenn dieser Befehl ausgeführt wird.
 
-# b bl bx pc-direkt manipulieren alle unbedingten sprünge können mit bedingungen versehen werden!
+**b bl bx pc-direkt manipulieren alle unbedingten sprünge können mit bedingungen versehen werden!**
 
 #### Bedingte Sprünge:
 Bedingte Sprünge sind etwas komplexer. Sie führen nur dann einen Sprung aus, wenn eine bestimmte Bedingung erfüllt ist. Diese Bedingung basiert auf Status-Flags, die durch vorherige Operationen von der ALU gesetzt wurden. Zum Beispiel überprüft der `BEQ`-Befehl (Branch if Equal), ob das Ergebnis einer vorherigen Operation gleich Null war, und springt nur dann zu einer neuen Adresse, wenn dies zutrifft. Weitere Beispiele sind etwa `BNE` (Branch if Not Equal) und `BGT` (Branch if Greater Than). Diese bedingten Sprünge ermöglichen es dem Programm, verschiedene Codepfade abhängig von bestimmten Bedingungen oder Ergebnissen zu verfolgen, was eine flexible und dynamische Steuerung des Programms ermöglicht.
