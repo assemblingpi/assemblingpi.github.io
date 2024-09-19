@@ -1,0 +1,34 @@
+## While-Schleifen
+Die `while-Schleife` ist eine kopfgesteuerte Schleife, bei der die Bedingung vor der ersten Ausführung des Schleifeninhalts geprüft wird. Das heißt, dass der Inhalt nur ausgeführt wird, wenn die Bedingung zum Ausführen wahr ist, ansonsten wird die Schleife verlassen.
+
+### Kopfgesteuerte Schleife 
+
+![Screenshot of Example Program](./kopfgesteuerte_schleife.png)
+
+### Pseudocode:
+    ```
+    while (i < limit): i = i + 1 
+    ```
+
+### Beispiel in ARM-Assembler:
+```
+.global _start
+_start:
+	
+	MOV R0, #1           @ i = 1
+    MOV R1, #7           @ Setze die Obergrenze (7 für i < 7)
+
+while_loop:
+    CMP R0, R1           @ Vergleiche i mit der Obergrenze (R0-R1)
+    BGE end_while        @ Wenn i >= 7, springe aus der Schleife
+    ADD R0, R0, #1       @ i++, falls i < 7
+    B while_loop         @ Springe zurück zum Schleifenanfang
+
+end_while:
+    MOV R2, #10			 @ Programmende
+```
+Dieser Code implementiert eine `while-Schleife`, die die Variable `i` von 1 bis 6 hochzählt. Solange `i` kleiner als 7 ist, wird `i` um 1 erhöht. Sobald `i` den Wert 7 erreicht oder überschreitet, wird die Schleife verlassen und das Programm beendet.
+
+### Der Kontrollflussgraph zum Beispiel
+
+![Screenshot of Example Program](./while.png)
