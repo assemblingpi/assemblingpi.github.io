@@ -23,6 +23,9 @@ iftrue:              @ Wenn Condition = true
 endif:               @ Ende der Kontrollstruktur
         MOV r0, #00
 ```
+#### Der Kontrollflussgraph zum Beispiel:
+
+![Screenshot of Example Program](./ifelse_fc.png)
 
 #### Betrachtet man den Controlflow-graph dieser Kontrollstruktur in einem Disassembler, ergibt sich folgendes Bild:
 

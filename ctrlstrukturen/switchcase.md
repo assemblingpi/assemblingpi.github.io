@@ -71,6 +71,9 @@ BX  r1
 
 **BX r1** führt einen bedingungslosen Sprung zur Adresse aus, die in r1 steht.
 
+#### Der Kontrollflussgraph zum Beispiel:
+
+![Screenshot of Example Program](./switch_case_fc.png)
 
 **Alternativ hätte man dem Sprung auch in einer Zeile realisieren können:**
 ``` 

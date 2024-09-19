@@ -39,3 +39,4 @@ _start:
     SUB R4, #8, #3   // Das Subtrahieren von zwei unmittelbaren Werten ist nicht erlaubt
     SUB R5, #9, R1   // Ein Registerwert kann nicht auf einen unmittelbaren Wert subtrahiert werden
 ```
+[weiter](MUL.md)

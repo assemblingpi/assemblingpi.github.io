@@ -33,6 +33,9 @@ iftrue:
 endif:
         MOV r0, #00
 ```
+#### Der Kontrollflussgraph zum Beispiel:
+
+![Screenshot of Example Program](./If-then_elseif-then_fc.png)
 
 #### Betrachtet man den Controlflow-graph dieser Kontrollstruktur in einem Disassembler, ergibt sich folgendes Bild:
 

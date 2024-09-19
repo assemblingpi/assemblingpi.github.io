@@ -21,6 +21,11 @@ ifnot:                @ Wenn Condition == false
 endif:
         MOV r0, #00
 ```
+
+#### Der Kontrollflussgraph zum Beispiel:
+
+![Screenshot of Example Program](./ifnotthen_fc.png)
+
 #### Betrachtet man den Controlflow-graph dieser Kontrollstruktur in einem Disassembler, ergibt sich folgendes Bild:
 
 ![If-not then](./ifnotthen.png)
