@@ -6,15 +6,12 @@ Die `do-while-Schleife` ist eine fußgesteuerte Schleife, bei der der Schleifeni
 ![Screenshot of Example Program](./fußgesteuerte_schleife.png)
 
 ### Pseudocode:
-    ```
+```
     do: i = i + 1 ... while (i < limit)
-    ```
+```
 
 ### Beispiel in ARM-Assembler:
-```
-.global _start
-_start:
-	
+```	
     MOV R0, #1           @ i = 1
     MOV R1, #7           @ Setze die Obergrenze (7 für i < 7)
 

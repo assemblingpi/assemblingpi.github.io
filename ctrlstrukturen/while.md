@@ -12,8 +12,6 @@ Die `while-Schleife` ist eine kopfgesteuerte Schleife, bei der die Bedingung vor
 
 ### Beispiel in ARM-Assembler:
 ```
-
-	
 	MOV R0, #1           @ i = 1
     MOV R1, #7           @ Setze die Obergrenze (7 für i < 7)
 
