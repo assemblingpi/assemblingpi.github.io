@@ -9,8 +9,5 @@ Ein Programm besteht somit aus Blöcken von Befehlen, die linear abgearbeitet we
 Programme auf diese Weise zu betrachten, ist nicht bloss als abstrakte Betrachtung ein Hilfsmittel für denjenigen, der gerade seine erste Schritte als Assemblerprogrammierer macht, sondern es spiegelt eine ganz grundlegende Eigenschaft von Programmen wider. Dies merkt man, wenn man ein Programm, in welcher Programmierstpache auch immer geschrieben - disassembliert und einen Controlflowgraph vom Disassembler anfertigen lässt.
 
 
-
-
-
 |-----------------------|--------------------------|----------------------|
 | [zurück](../index.md) | [Hauptmenü](../index.md) | [weiter](mehrals.md) | 
