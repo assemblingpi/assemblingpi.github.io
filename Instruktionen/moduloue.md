@@ -15,9 +15,9 @@ number_b: .word 5
 _start:
         
         ldr r0, =number_a
-        ldr r0, [r0]      // Lade number_a in r0
+        ldr r0, [r0]            @ Lade number_a in r0
         ldr r1, =number_b
-        ldr r1, [r1]      // Lade number_b in r1
+        ldr r1, [r1]            @ Lade number_b in r1
 
         // Code hier
 

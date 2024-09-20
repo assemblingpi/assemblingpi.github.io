@@ -1,5 +1,5 @@
 #### Bedingte Sprünge:
-Bedingte Sprünge sind etwas komplexer. Sie führen nur dann einen Sprung aus, wenn eine bestimmte Bedingung erfüllt ist. Diese Bedingung basiert auf Status-Flags, die durch vorherige Operationen von der ALU gesetzt wurden. Zum Beispiel überprüft der `BEQ`-Befehl (Branch if Equal), ob das Ergebnis einer vorherigen Operation gleich Null war, und springt nur dann zu einer neuen Adresse, wenn dies zutrifft. Weitere Beispiele sind etwa `BNE` (Branch if Not Equal) und `BGT` (Branch if Greater Than). Diese bedingten Sprünge ermöglichen es dem Programm, verschiedene Codepfade abhängig von bestimmten Bedingungen oder Ergebnissen zu verfolgen, was eine flexible und dynamische Steuerung des Programms ermöglicht.
+Bedingte Sprünge sind etwas komplexer. Sie führen nur dann einen Sprung aus, wenn eine bestimmte Bedingung erfüllt ist. Diese Bedingung basiert auf Status-Flags, die durch vorherige Operationen von der ALU gesetzt wurden. Diese bedingten Sprünge ermöglichen es dem Programm, verschiedene Codepfade abhängig von bestimmten Bedingungen oder Ergebnissen zu verfolgen, was eine flexible und dynamische Steuerung des Programms ermöglicht.
 
 ###### Syntax
 ```

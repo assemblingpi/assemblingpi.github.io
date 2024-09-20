@@ -27,16 +27,15 @@ Hier wird der unmittelbare Wert `<#imm>` von dem Wert in `<Rn>` subtrahiert, das
 
 
 ```
-.global _start
-_start:
-    MOV R0, #10      // Lade den Wert 10 in Register R0
-    MOV R1, #4       // Lade den Wert 4 in Register R1
-    SUB R2, R0, R1   // Subtrahiere R1 von R0, speichere das Ergebnis in R2
-    SUB R3, R0, #5   // Subtrahiere den Wert 5 von R0, speichere das Ergebnis in R3
-    
-    // Folgende Beispiele zeigen, wie man SUB nicht anwenden kann:
-    
-    SUB R4, #8, #3   // Das Subtrahieren von zwei unmittelbaren Werten ist nicht erlaubt
-    SUB R5, #9, R1   // Ein Registerwert kann nicht auf einen unmittelbaren Wert subtrahiert werden
+
+    MOV R0, #10      @ Lade den Wert 10 in Register R0
+    MOV R1, #4       @ Lade den Wert 4 in Register R1
+    SUB R2, R0, R1   @ Subtrahiere R1 von R0, speichere das Ergebnis in R2
+    SUB R3, R0, #5   @ Subtrahiere den Wert 5 von R0, speichere das Ergebnis in R3
+```    
+### Folgende Beispiele zeigen, wie man SUB nicht anwenden kann:
+```    
+    SUB R4, #8, #3   @ Das Subtrahieren von zwei unmittelbaren Werten ist nicht erlaubt
+    SUB R5, #9, R1   @ Ein Registerwert kann nicht von einem unmittelbaren Wert subtrahiert werden
 ```
 [weiter](MUL.md)

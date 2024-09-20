@@ -6,14 +6,13 @@ Die `while-Schleife` ist eine kopfgesteuerte Schleife, bei der die Bedingung vor
 ![Screenshot of Example Program](./kopfgesteuerte_schleife.png)
 
 ### Pseudocode:
-    ```
+```
     while (i < limit): i = i + 1 
-    ```
+```
 
 ### Beispiel in ARM-Assembler:
 ```
-.global _start
-_start:
+
 	
 	MOV R0, #1           @ i = 1
     MOV R1, #7           @ Setze die Obergrenze (7 für i < 7)

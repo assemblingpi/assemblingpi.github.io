@@ -49,7 +49,7 @@ EQUS für die benötigten Konstanten
                                 BNE sleep
 ...
                         sleep:
-                           B sleep
+                                B sleep
 ```
 
 [Interrupts und Priviligierungslevel](irqpriv.md)

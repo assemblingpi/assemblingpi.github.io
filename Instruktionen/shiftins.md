@@ -19,8 +19,6 @@ Hier wird der Wert in `Register A` um den Wert, der in `Register B` steht, nach 
 
 #### Beispiel
 ```
-.global _start
-_start:
 	
 	MOV R0, #10
 	MOV R1, #4
@@ -62,9 +60,6 @@ Hier wird der Wert in `Register A` um den Wert, der in `Register B` steht, nach 
 
 #### Beispiel
 ```
-.global _start
-_start:
-	
 	MOV R0, #1024
 	MOV R1, #4
 	LSR R2, R0, R1
@@ -106,8 +101,6 @@ Hier wird der Wert in `Register A` um die Anzahl der Stellen nach rechts arithme
 
 #### Beispiel
 ```
-.global _start
-_start:
 	
 	MOV R0, #-80
 	MOV R1, #2
@@ -156,8 +149,6 @@ Hier wird der Wert in `Register A` um die Anzahl der Stellen nach rechts rotiert
 
 #### Beispiel
 ```
-.global _start
-_start:
 
 	LDR R0, =0xaabbccdd
 	ROR R1, R0, #4
