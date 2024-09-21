@@ -70,7 +70,7 @@ Im Cortex-A7 wird eine **8-stufige Pipeline** verwendet, die es erlaubt, dass me
 
 Ein Aspekt, der in diesem Kontext dabei oft zu Verwirrung führt, ist die Rolle des **Program Counters (PC)** in der Pipeline-Architektur. Im ARM-Modus zeigt der PC während der Ausführung einer Instruktion nicht auf die aktuelle, sondern auf die übernächste Instruktion. Dies liegt daran, dass die Pipeline die nächsten Instruktionen bereits im Voraus lädt. Im **ARM-Modus** (bei 32-Bit-Instruktionen) ist der PC immer **8 Bytes voraus**, im **Thumb-Modus** (bei 16-Bit-Instruktionen) **4 Bytes**. Dieser Vorlauf ermöglicht es dem Prozessor, Instruktionen schneller zu verarbeiten, da er die nächsten Schritte bereits vorbereitet, während eine Instruktion noch dekodiert oder ausgeführt wird.
 
-### Warum zeigt der PC trotzdem scheinbar auf die aktuelle Instruktion?
+### Warum zeigt der PC im Debugger trotzdem scheinbar auf die aktuelle Instruktion?
 
 Beim Debuggen und der Ausführung in Emulatoren wie dem CPUlator scheint es teils jedoch, als würde der PC auf die **aktuell ausgeführte** Instruktion zeigen. Dies ist darauf zurückzuführen, dass Debugger speziell dafür ausgelegt sind, die Pipeline-Effekte zu abstrahieren. Sie passen den angezeigten Wert des PC an, um den Entwicklern eine klarere Darstellung des tatsächlichen Programmablaufs zu geben. Ohne diese Anpassung könnte der Vorlauf des PC zu Missverständnissen führen, da der Entwickler erwarten würde, dass der PC auf die Instruktion zeigt, die gerade ausgeführt wird. 
 

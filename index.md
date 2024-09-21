@@ -26,11 +26,9 @@ Der Fokus des Quellcodes liegt auf Übersichtlichkeit, nicht auf Perfektion oder
 | **2. Basic Blocks**                         |
 | Wiederholung: Was ist ein Basic Block       | 
 | Datentransfer                               | 
-| Immediates                                  | 
-| arithmetisch logische Instruktionen         | 
 | Sektionen                                   | 
 | Label                                       | 
-| Instruktionen                               |
+| arithmetisch logische Instruktionen         | 
 | **3. Verknüpfungen von Basic Blocks**       |
 | Kontrollflussinstruktionen                  | 
 | Kontrollstrukturen                          | 
@@ -38,13 +36,26 @@ Der Fokus des Quellcodes liegt auf Übersichtlichkeit, nicht auf Perfektion oder
 | Datentypen                                  |
 | einfache Datentypen                         |
 | komplexe Datentypen                         |
-| Structs                                     |
-| Arrays                                      |
-| mehrdimensionale Arrays                     |
 | **5. prozedurale Programmierung**           |
 | Was ist prozedurale Programmierung?         |
-| Stack                                       |
-| Stackframe                                  |
-| Calltree                                    |
-| Prozeduren, Link Register und Stack         |
-| Parameterübergabe und Rückgabewerte         |
+| Elemente der prozeduralen Programmierung    |
+
+
+|**B. Fortgeschrittene Konzepte und Anwendungen**|
+|------------------------------------------------|
+| **1. Einführung**                              |
+| Systemprogrammierung                           | 
+| BCM2836                                        |
+| GDB                                            |
+| Assembler und Linker                           |
+| Priviligierungslevel und Interrupts            |
+| **2. Coprozessoren und Peripherie**            | 
+| UART                                           |
+| Coprozessoren                                  |
+| Timer                                          |
+| VFP und NEON                                   |
+| GPU                                            |
+| **5. Anwendungen**                             |
+| Textausgabe via UART                           |
+| Grafikausgabe                                  |
+| Textausgabe via Display                        |
