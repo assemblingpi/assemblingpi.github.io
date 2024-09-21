@@ -16,4 +16,51 @@ Der Fokus des Quellcodes liegt auf Übersichtlichkeit, nicht auf Perfektion oder
 
 [Tutorial starten](wasistprog/wasistprog.md)
 
+|------------------------------------------|
+| A. Grundlagen der Assemblerprogrammierung|
 
+| 1. Einführung                            |
+|------------------------------------------|
+| Was ist ein Programm?                    | 
+| Grundlagen der Computerarchitektur       | 
+| Zahlensysteme, Bits und Bytes            | 
+| Die Programmiersprache Assembler         | 
+| CPUlator                                 | 
+
+
+| 2. Basic Blocks                          |
+|------------------------------------------|
+| Wiederholung: Was ist ein Basic Block    | 
+| Datentransfer                            | 
+| Immediates                               | 
+| arithmetisch logische Instruktionen      | 
+| Sektionen                                | 
+| Label                                    | 
+| Instruktionen                            |
+
+
+| 3. Verknüpfungen von Basic Blocks        |
+|------------------------------------------|
+| Kontrollflussinstruktionen               | 
+| Kontrollstrukturen                       | 
+
+|------------------------------------------|
+| 4. Datentypen                            |
+
+|------------------------------------------|
+| 5. prozedurale Programmierung            |
+
+3. Verknüpfungen von Basic Blocks
+Kontrollflussinstruktionen
+Kontrollstrukturen
+4. Datentypen
+ASCII
+5. Prozedurale Programmierung in Assembler
+B. Assemblerprogrammierung in der Praxis
+
+1. Einführung Teil 2
+Fortgeschrittene Konzepte und Anwendungen
+Systemprogrammierung
+Grafikprogrammierung
+NEON und Floating Point
+....

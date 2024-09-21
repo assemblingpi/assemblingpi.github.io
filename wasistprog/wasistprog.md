@@ -6,8 +6,6 @@ Um als Programm eine sinnvolle Tätigkeit zu verrichten, braucht es viele dieser
 
 Ein Programm besteht somit aus Blöcken von Befehlen, die linear abgearbeitet werden und aus Verzweigungen, die diese elementaren Blöcke miteinander verbinden. Diese Blöcke, "Basic Blocks" genannt, enthalten eine Abfolge von Befehlen, die ohne Unterbrechung durchlaufen werden, bis eine Bedingung oder ein Sprungbefehl auftritt. Verzweigungen bestimmen, wie der Programmfluss von einem Block zum nächsten erfolgt, sei es durch bedingte Anweisungen oder direkte Sprünge.
 
-Programme auf diese Weise zu betrachten, ist nicht bloss als abstrakte Betrachtung ein Hilfsmittel für denjenigen, der gerade seine erste Schritte als Assemblerprogrammierer macht, sondern es spiegelt eine ganz grundlegende Eigenschaft von Programmen wider. Dies merkt man, wenn man ein Programm, in welcher Programmierstpache auch immer geschrieben - disassembliert und einen Controlflowgraph vom Disassembler anfertigen lässt.
-
 
 |-----------------------|--------------------------|----------------------|
 | [zurück](../index.md) | [Hauptmenü](../index.md) | [weiter](mehrals.md) | 

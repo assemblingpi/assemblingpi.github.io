@@ -29,7 +29,7 @@ In der ARM-Architektur beispielsweise gibt es mehrere Koprozessoren, die jeweils
 
 Der **CP15** ermöglicht es dem Betriebssystem und privilegierten Programmen, die Hardware auf einer niedrigen Ebene zu steuern und zu überwachen. Diese Steuerung ist entscheidend, um die Effizienz und Sicherheit des Systems zu gewährleisten.
 
-#### *Zugriff und Sicherheit
+#### Zugriff und Sicherheit
 
 Der Zugriff auf den **CP15 Coprocessor** ist auf privilegierte Betriebsmodi beschränkt, wie den **Kernel- oder Supervisor-Modus**. Diese Einschränkung stellt sicher, dass nur vertrauenswürdige Software, die im privilegierten Modus läuft, kritische Systemoperationen durchführen kann, die über den Koprozessor gesteuert werden. Diese Sicherheitsmaßnahme verhindert, dass unautorisierte Programme auf wichtige Systemfunktionen zugreifen und sorgt für eine stabile und sichere Systemumgebung.
 
