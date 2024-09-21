@@ -1,4 +1,4 @@
-### Operanden und Adressierungsarten**
+### Operanden und Adressierungsarten
 
 In der Assemblerprogrammierung sind Operanden und Adressierungsarten entscheidend, da sie bestimmen, welche Daten von einer Anweisung verarbeitet werden und wie diese Daten im Speicher oder in Registern gefunden werden. Operandenadressen geben den Speicherort der Daten an, sei es im Arbeitsspeicher oder in CPU-Registern, die über eindeutige Kennungen (z.B. R0, R1) angesprochen werden. Manche Anweisungen benötigen keine Operanden, andere hingegen ein bis drei. Bei zwei Operanden dient der erste meist als Zielregister, während der zweite die Quelle ist, die entweder die Daten oder deren Adresse angibt.
 
