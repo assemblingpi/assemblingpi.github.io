@@ -12,8 +12,8 @@ Ein Beispiel für einen Formatstring:
 "Fehlercode %d: %s"
 ```
 Hier steht:
-**%d** für eine Ganzzahl (Fehlercode),
-**%s** für eine Zeichenkette (Fehlerbeschreibung).
+- **%d** für eine Ganzzahl (Fehlercode),
+- **%s** für eine Zeichenkette (Fehlerbeschreibung).
 Wenn die Funktion diesen Formatstring mit den Argumenten 404 und "Datei nicht gefunden" verarbeitet, wird die Ausgabe:
 ```
 "Fehlercode 404: Datei nicht gefunden"

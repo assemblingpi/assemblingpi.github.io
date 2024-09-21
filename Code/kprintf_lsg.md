@@ -130,13 +130,10 @@ scan_srcstr_loop:
 	str		r1, [r11, #STR_ADR]
 	ldrb    r1, [r1]                 @ Lade das nächste Zeichen nach %
 ```
-**Ende des Strings prüfen**: Es wird überprüft, ob das aktuelle Zeichen ein Nullbyte (`0`) ist, was das Ende des nullterminierten Strings signalisiert. Ist dies der Fall, wird die Verarbeitung beendet und der Inhalt des Ausgabepuffers ausgegeben.
-
-**Zeilenumbruch prüfen**: Wenn das Zeichen ein Carriage Return (`0xD`) ist, wird ebenfalls die Verarbeitung beendet und der Puffer ausgegeben.
-
-**Formatierungsspezifikator erkennen**: Bei einem `%`-Zeichen beginnt die Verarbeitung eines Formatierungsspezifikators. Der Parameterzähler (`PARAM_CNT`) wird erhöht, um das nächste Argument vom Stack zu laden.
-
-**Normale Zeichen verarbeiten**: Ist das Zeichen weder das Ende des Strings noch ein `%`, wird es als normales Zeichen behandelt. Es wird direkt in den Ausgabepuffer kopiert, der Pufferzähler (`BUFF_CNT`) wird inkrementiert, und der Stringpointer wird auf das nächste Zeichen gesetzt.
+- **Ende des Strings prüfen**: Es wird überprüft, ob das aktuelle Zeichen ein Nullbyte (`0`) ist, was das Ende des nullterminierten Strings signalisiert. Ist dies der Fall, wird die Verarbeitung beendet und der Inhalt des Ausgabepuffers ausgegeben.
+- **Zeilenumbruch prüfen**: Wenn das Zeichen ein Carriage Return (`0xD`) ist, wird ebenfalls die Verarbeitung beendet und der Puffer ausgegeben.
+- **Formatierungsspezifikator erkennen**: Bei einem `%`-Zeichen beginnt die Verarbeitung eines Formatierungsspezifikators. Der Parameterzähler (`PARAM_CNT`) wird erhöht, um das nächste Argument vom Stack zu laden.
+- **Normale Zeichen verarbeiten**: Ist das Zeichen weder das Ende des Strings noch ein `%`, wird es als normales Zeichen behandelt. Es wird direkt in den Ausgabepuffer kopiert, der Pufferzähler (`BUFF_CNT`) wird inkrementiert, und der Stringpointer wird auf das nächste Zeichen gesetzt.
 
 #### Verarbeitung von Formatierungsspezifikatoren
 Nach Erkennung eines %-Zeichens wird geprüft, welcher Spezifikator folgt:
@@ -172,7 +169,7 @@ check_loop:                          @ prüfe ob zeichen nach % eine nummer d.h 
 
 **Feldbreite prüfen:** Es wird geprüft, ob nach dem % eine Zahl folgt, die die Feldbreite angibt. Wenn diese aus mehreren Zeichen besteht muss die entsprechende Dezimalzahl ermittelt werden.
 
-Eine Sprungtabelle (ascii_jmp_tbl) wird verwendet, um effizient zum entsprechenden Codeabschnitt für den Spezifikator zu springen
+Eine Sprungtabelle (ascii_jmp_tbl) wird verwendet, um effizient zum entsprechenden Codeabschnitt für den Spezifikator zu springen:
 ```
 checkasc:
 	orr 	r1, #32                 @ wandle das Zeichen in `r1` in einen Kleinbuchstaben um
@@ -216,12 +213,11 @@ ascii_jmp_tbl:
 ```
 
 Für jeden unterstützten Spezifikator gibt es einen entsprechenden Codeabschnitt:
-
-**%d (vorzeichenbehaftete Dezimalzahl):** Wandelt eine Zahl in eine dezimale Zeichenkette um.
-**%u (vorzeichenlose Dezimalzahl):** Wandelt eine vorzeichenlose Zahl in eine dezimale Zeichenkette um.
-**%s (Zeichenkette):** Verarbeitet eine Zeichenkette und ermittelt deren Länge.
-**%x (hexadezimale Zahl):** Wandelt eine Zahl in eine hexadezimale Zeichenkette um.
-**%f (Fließkommazahl):** Wandelt eine Fließkommazahl in eine Zeichenkette um (Aufruf von float2ascii).
+- **%d (vorzeichenbehaftete Dezimalzahl):** Wandelt eine Zahl in eine dezimale Zeichenkette um.
+- **%u (vorzeichenlose Dezimalzahl):** Wandelt eine vorzeichenlose Zahl in eine dezimale Zeichenkette um.
+- **%s (Zeichenkette):** Verarbeitet eine Zeichenkette und ermittelt deren Länge.
+- **%x (hexadezimale Zahl):** Wandelt eine Zahl in eine hexadezimale Zeichenkette um.
+- **%f (Fließkommazahl):** Wandelt eine Fließkommazahl in eine Zeichenkette um (Aufruf von float2ascii).
 
 
 Für zulässige Umwandlungszeichen werden die entsprechenden Schritte eingeleitet um die Umwandlung durchzuführen, d.h Funktionen die dies erledigen aufgerufen, bzw bei %s muss nur die Länge des Strings ermittelt werden:
@@ -389,9 +385,9 @@ print_is_filled:
 	str     r2, [r11, #FIELD_W]
 
 ```
-**Pufferüberlauf prüfen:** Bevor die Zeichenkette kopiert wird, wird geprüft, ob genügend Platz im Puffer vorhanden ist.
-**Feldbreite berücksichtigen:** Wenn eine Feldbreite angegeben wurde, wird diese berücksichtigt, indem Leerzeichen hinzugefügt werden. Nach der Verarbeitung wird die Feldbreite auf Null gesetzt, um sicherzustellen, dass sie nicht unbeabsichtigt auf folgende Ausgaben angewendet wird.
-**Aktualisierung der Pufferposition:** Der Pufferzähler BUFF_CNT wird entsprechend erhöht.
+- **Pufferüberlauf prüfen:** Bevor die Zeichenkette kopiert wird, wird geprüft, ob genügend Platz im Puffer vorhanden ist.
+- **Feldbreite berücksichtigen:** Wenn eine Feldbreite angegeben wurde, wird diese berücksichtigt, indem Leerzeichen hinzugefügt werden. Nach der Verarbeitung wird die Feldbreite auf Null gesetzt, um sicherzustellen, dass sie nicht unbeabsichtigt auf folgende Ausgaben angewendet wird.
+- **Aktualisierung der Pufferposition:** Der Pufferzähler BUFF_CNT wird entsprechend erhöht.
 
 Nach dem Schreiben in den Ausgabepuffer kehrt die Funktion zur Hauptschleife zurück, um den nächsten Teil des Formatstrings zu verarbeiten. Dieser Prozess wiederholt sich, bis das Ende des Formatstrings erreicht ist oder ein Zeilenumbruch erkannt wird:
 ```
