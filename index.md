@@ -6,8 +6,6 @@ In den kommenden Kapiteln werden Sie die Grundlagen der ARM-Assembler-Programmie
 
 Begleiten Sie uns auf dem Weg die Sprache der ARM-Prozessoren zu erlernen!
 
-
-
 ### Hinweis zu den Übungsaufgaben:  
 Es wird empfohlen, die gestellten Aufgaben zunächst eigenständig zu bearbeiten. Falls Schwierigkeiten auftreten, kann der bereitgestellte Quellcode als Orientierung dienen. Nutzen Sie Tools wie den CPUlator oder QEMU, um zu erkunden, wie bestimmte Befehle das System beeinflussen. Da dieses Tutorial nicht alle Aspekte des ARMv7 Assemblers abdeckt, ist ergänzende Recherche sinnvoll.
 
@@ -37,5 +35,16 @@ Der Fokus des Quellcodes liegt auf Übersichtlichkeit, nicht auf Perfektion oder
 | Kontrollflussinstruktionen                  | 
 | Kontrollstrukturen                          | 
 | **4. Datentypen**                           |
+| Datentypen                                  |
+| einfache Datentypen                         |
+| komplexe Datentypen                         |
+| Structs                                     |
+| Arrays                                      |
+| mehrdimensionale Arrays                     |
 | **5. prozedurale Programmierung**           |
-
+| Was ist prozedurale Programmierung?         |
+| Stack                                       |
+| Stackframe                                  |
+| Calltree                                    |
+| Prozeduren, Link Register und Stack         |
+| Parameterübergabe und Rückgabewerte         |
