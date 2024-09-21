@@ -26,8 +26,9 @@ Beispiel: Der Buchstabe 'A' wird als Wert 65 im ASCII-Code gespeichert.
 ```
 
 ## Pointer (Zeiger)
-Pointer sind Variablen, die die Adresse eines Wertes speichern. Sie ermöglichen dadurch den Zugriff auf Daten im Speicher. Bei den LDR und STR Instruktionen, die bereits vorgestellt wurden, hat ein Register (gegebenenfalls mit einem Offset) - die Rolle eines solchen Zeigers übernommen. Zeiger müssen jedoch nicht zwangsläufig in Registern vorliegen, sondern können auch selbst im Speicher platziert sein.
-Um einen solchen Pointer für Speicherzugriff zu benutzen, muss er jedoch zwangsläufig in eines der CPU-Register geladen werden.
+Pointer sind Variablen, die die Adresse eines Wertes speichern. Sie ermöglichen dadurch den Zugriff auf Daten im Speicher und werden häufig verwendet, um auf Datenstrukturen oder Arrays zu verweisen, wodurch der Programmfluss dynamisch gesteuert werden kann.
+Bei den LDR und STR Instruktionen, die bereits vorgestellt wurden, hat ein Register (gegebenenfalls mit einem Offset) - die Rolle eines solchen Zeigers übernommen. Zeiger müssen jedoch nicht zwangsläufig in Registern vorliegen, sondern können auch selbst im Speicher platziert sein.
+Um einen solchen Pointer für Speicherzugriff zu **benutzen**, muss er jedoch zwangsläufig in eines der CPU-Register geladen werden.
 
 Beispiel:
 ```asm

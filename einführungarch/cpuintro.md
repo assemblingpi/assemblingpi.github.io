@@ -1,14 +1,12 @@
-# Komponenten der Von-Neumann-Architektur
+## Die Ausführung von Programmen durch den Computer
 
-## 1. CPU (Central Processing Unit)
+Ein Computer führt Programme aus, indem er deren Anweisungen verarbeitet und Daten manipuliert. Im Zentrum dieses Prozesses steht die **CPU (Central Processing Unit)**, die als Mechanismus fungiert, der Programme umsetzt. Die CPU beginnt, indem sie Anweisungen aus dem Hauptspeicher lädt, der vereinfacht betrachtet wie ein lineares Array von Daten und Instruktionen organisiert ist. Diese Anweisungen werden im **Program Counter (PC)**, einem speziellen Register, verfolgt, das die Adresse der nächsten auszuführenden Anweisung enthält. Die **Kontrolleinheit** dekodiert die geladenen Anweisungen und bestimmt, welche Aktionen als nächstes ausgeführt werden sollen, sei es die fortlaufende Ausführung oder eine Verzweigung zu einem anderen Teil des Programms.
 
-Die CPU ist das Herzstück eines Computers und führt die Befehle eines Programms aus. Sie besteht hauptsächlich aus zwei Teilen: Kontrolleinheit und Recheneinheit
+Während die Kontrolleinheit die Reihenfolge der Ausführung steuert, nutzt die **arithmetisch-logische Einheit (ALU)** die Daten, die in den **Registern**, schnellen Zwischenspeichern innerhalb der CPU, gespeichert sind. Diese Register ermöglichen der ALU einen schnellen Zugriff auf die benötigten Informationen, um arithmetische Berechnungen und logische Vergleiche effizient durchzuführen. Die Ergebnisse dieser Operationen können den weiteren Programmfluss beeinflussen, indem sie Bedingungen für Verzweigungen festlegen.
 
-### Kontrolleinheit
-Die Kontrolleinheit steuert den Ablauf der Befehlsverarbeitung, indem sie die Reihenfolge bestimmt, in der Befehle aus dem Speicher geholt, dekodiert und ausgeführt werden. Sie koordiniert auch den Datenfluss zwischen der CPU und anderen Komponenten wie Speicher und Ein-/Ausgabegeräten.
+Der **Hauptspeicher** speichert sowohl den Programmcode als auch die zu verarbeitenden Daten. Nachdem die ALU die Daten verarbeitet hat, werden die Ergebnisse entweder in den Registern gehalten oder zurück in den Speicher geschrieben, um für zukünftige Anweisungen verfügbar zu sein. Dieses kontinuierliche Laden, Dekodieren, Verarbeiten und Speichern gewährleistet eine reibungslose und effiziente Ausführung der Programme.
 
-### Recheneinheit (ALU : Arithmetic Logic Unit)
-Die ALU führt arithmetische (z.B. Addition, Subtraktion) und logische Operationen (z.B. AND, OR) durch. Sie ist verantwortlich für die eigentliche Berechnung und Datenverarbeitung. Bei der Durchführung von Operationen setzt die ALU sogenannte Flags, um den Status der Operation anzuzeigen, wie zum Beispiel das Überlauf-Flag (wenn das Ergebnis einer Operation zu groß ist, um im Zielregister gespeichert zu werden) oder das Null-Flag (wenn das Ergebnis einer Operation null ist).
+Zusätzlich ermöglichen **Eingabe-/Ausgabegeräte (I/O)** dem Computer, mit externen Quellen und Zielen zu kommunizieren. Daten von diesen Geräten werden über den **Systembus** zur CPU übertragen, während verarbeitete Daten an die Ausgabegeräte gesendet werden. Der Systembus fungiert als Kommunikationskanal, der den Datenaustausch zwischen der CPU, dem Speicher und den I/O-Geräten ermöglicht, wodurch die Kontrolleinheit Anweisungen und Daten effizient zwischen den Komponenten hin- und herschieben kann.
 
 |----------------------|--------------------------|----------------------|
 | [zurück](cpuintro.md)| [Hauptmenü](../index.md) | [weiter](memintro.md)| 

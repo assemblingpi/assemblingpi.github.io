@@ -1,6 +1,6 @@
 ## Speicher und Cache
 
-Den Speicher kann man, wie bereits angedeutet, vereinfacht als einen linearen Array von Bytes betrachten. Moderne ARM-CPUs verwenden zudem einen schnellen Zwischenspeicher, bekannt als Cache, um häufig benötigte Daten schnell verfügbar zu machen und Engpässe durch den langsamen Hauptspeicher zu vermeiden, doch damit wollen wir uns im Rahmen dieses Tutorials nicht weiter befassen.
+Den Hauptspeicher kann man, wie bereits erwähnt, vereinfacht als ein lineares Array von Bytes betrachten. Der direkte Zugriff auf diesen Speicher ist jedoch relativ langsam. Aus diesem Grund nutzen moderne ARM-CPUs einen zusätzlichen schnellen Zwischenspeicher, den sogenannten Cache. Dieser Cache sorgt dafür, dass häufig benötigte Daten schneller verfügbar sind und verhindert, dass der langsame Hauptspeicher zu Engpässen führt. Auf die Funktionsweise des Caches werden wir in diesem Tutorial allerdings nicht weiter eingehen.
 
 |---------------------|--------------------------|---------------------|
 | [zurück](endilsg.md)| [Hauptmenü](../index.md) | [weiter](eaintro.md)| 

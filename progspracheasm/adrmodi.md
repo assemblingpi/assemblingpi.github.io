@@ -1,68 +1,88 @@
+### Operanden und Adressierungsarten**
 
-## Operanden und Adressierungsarten
+In der Assemblerprogrammierung sind Operanden und Adressierungsarten entscheidend, da sie bestimmen, welche Daten von einer Anweisung verarbeitet werden und wie diese Daten im Speicher oder in Registern gefunden werden. Operandenadressen geben den Speicherort der Daten an, sei es im Arbeitsspeicher oder in CPU-Registern, die über eindeutige Kennungen (z.B. R0, R1) angesprochen werden. Manche Anweisungen benötigen keine Operanden, andere hingegen ein bis drei. Bei zwei Operanden dient der erste meist als Zielregister, während der zweite die Quelle ist, die entweder die Daten oder deren Adresse angibt.
 
-Die meisten Anweisungen in Assembler benötigen Operanden, um Daten zu verarbeiten. Eine Operandenadresse gibt dabei den Speicherort der Daten an. Das gilt nicht nur für Daten im Speicher, sondern auch für Register in der CPU. Obwohl Register keine physischen Adressen wie der Arbeitsspeicher haben, besitzen sie eindeutige Kennungen (z.B. `R0`, `R1`), die die CPU verwendet, um auf die darin gespeicherten Daten zuzugreifen. Diese ermöglicht der CPU, gezielt auf die benötigten Daten in den Registern zuzugreifen.
+#### Operanden: Die Bausteine der Anweisungen**
 
-Einige Anweisungen benötigen keinen Operanden, während andere ein, zwei oder drei Operanden erfordern können.
-Wenn eine Anweisung zwei Operanden benötigt, ist der erste Operand in der Regel das Zielregister und der zweite Operand ist die Quelle. (Bei bestimmten Befehlen kann das Zielregister auch an einer anderen Position stehen!) Die Quelle enthält entweder die zu übertragenden Daten (bei direkter Adressierung) oder die Adresse der Daten (in einem Register oder Speicher). 
+Jede Assembleranweisung benötigt **Operanden**, um Daten zu verarbeiten. Ein Operand kann entweder ein direkter Wert, ein Register oder eine Speicheradresse sein. Die Art und Weise, wie diese Operanden adressiert werden, bestimmt, wie die CPU auf die benötigten Daten zugreift und diese verarbeitet.
 
-### Adressierungsarten
-Die Adressierungsart gibt an, wie die CPU auf Daten zugreift. Sie legt fest, wie die in einem Befehl angegebene Adresse verwendet wird, um den Speicherort zu bestimmen, auf den zugegriffen werden soll. Dies kann direkt, über Register oder durch Berechnung mit Offsets geschehen.
-
-#### Immediate Adressierung:
-```
-opcode Rd, #imm 
-```
-
-Die Quelle ist ein Wert, der direkt im Befehl eingebettet ist. Einen solchen Wert nennt man auch immediate oder direkter Wert.
-   
-
-#### Register-Adressierung:
-```
-opcode Rd, Rn
-```
-
-Die Quelle ist ein Registerwert.
+- **Direkte Operanden:** Hierbei handelt es sich um feste Werte, die direkt in der Anweisung enthalten sind. Zum Beispiel enthält der Befehl `MOV R1, #5` den direkten Wert `5`, der sofort in das Register `R1` geladen wird.
   
+- **Register-Operanden:** Diese beziehen sich auf Daten, die in den schnellen **Registern** der CPU gespeichert sind. Ein Beispiel wäre `ADD R1, R2`, bei dem die Werte in den Registern `R1` und `R2` addiert werden.
 
-#### Register-indirekte Adressierung:
+- **Speicher-Operanden:** Diese Operanden verweisen auf Daten, die im **Hauptspeicher** abgelegt sind. Zum Beispiel bedeutet `LOAD R1, [R2]`, dass der Inhalt der Speicheradresse, auf die `R2` zeigt, in das Register `R1` geladen wird.
+
+#### Adressierungsarten: Zugriffsmethoden auf Daten
+
+Die **Adressierungsart** einer Anweisung legt fest, wie die Adresse des Operanden berechnet wird. Unterschiedliche Adressierungsarten ermöglichen verschiedene Zugriffsmethoden auf Daten, was die Flexibilität und Effizienz der Datenverarbeitung erhöht.
+
+##### Immediate Adressierung
 ```
-opcode Rd, [Rn]
+MOV R1, #10
+```
+Bei der **Immediate Adressierung** ist der Operand ein direkter Wert, der unmittelbar in der Anweisung angegeben wird. Die ALU verarbeitet diesen Wert direkt, ohne auf den Speicher zugreifen zu müssen. Dies ermöglicht schnelle und einfache Operationen.
+
+##### Register-Adressierung
+```
+ADD R1, R2
+```
+In der **Register-Adressierung** beziehen sich die Operanden auf Register innerhalb der CPU. Die ALU kann schnell auf die Daten in den Registern zugreifen, was die Verarbeitungsgeschwindigkeit erhöht.
+
+##### Register-indirekte Adressierung
+```
+LOAD R1, [R2]
+```
+Die **Register-indirekte Adressierung** verwendet den Inhalt eines Registers als Speicheradresse. In diesem Beispiel enthält `R2` die Adresse, an der die zu ladenden Daten gespeichert sind. Dies ermöglicht den Zugriff auf Daten im Hauptspeicher basierend auf dynamischen Adressen.
+
+##### Register-indirekte Adressierung mit Offset
+```
+LOAD R1, [R2, #4]
+```
+Diese Form der **Register-indirekten Adressierung** fügt einen festen Offset zum Inhalt des Basisregisters hinzu, um die Zieladresse zu berechnen. Dies ist nützlich für den Zugriff auf strukturierte Daten wie Arrays oder Felder innerhalb von Datenstrukturen.
+
+##### Pre-Indexed Adressierung
+```
+LOAD R1, [R2, #4]!
+```
+Bei der **Pre-Indexed Adressierung** wird der Offset vor dem Zugriff auf den Speicher zur Basisadresse hinzugefügt. Der Inhalt des Basisregisters wird ebenfalls aktualisiert, was den nächsten Zugriff vorbereitet.
+
+##### Post-Indexed Adressierung
+```
+LOAD R1, [R2], #4
+```
+Die **Post-Indexed Adressierung** führt den Speicherzugriff zuerst durch und fügt anschließend den Offset zur Basisadresse hinzu. Dies ermöglicht den Zugriff auf aktuelle Daten, während die Basisadresse für zukünftige Zugriffe angepasst wird.
+
+##### Register-indirekte Adressierung mit zwei Registern
+```
+LOAD R1, [R2, R3]
+```
+Hier werden zwei Register verwendet, um die Speicheradresse zu berechnen. `R2` enthält die Basisadresse, und `R3` liefert einen dynamischen Offset, was flexible und komplexe Datenzugriffe ermöglicht.
+
+#### Integration der Adressierungsarten in Basic Blocks und Programmfluss
+
+Die **Adressierungsarten** sind integrale Bestandteile der Assemblerprogrammierung, die den Zugriff auf Daten steuern und damit die **Datenverarbeitung** und den **Programmfluss** innerhalb von **Basic Blocks**, sowie deren Verknüpfung beeinflussen. Durch das 
+
+**Beispiel: Adressierungsarten im Kontext eines Basic Blocks**
+
+Betrachten wir ein einfaches Beispiel, das verschiedene Adressierungsarten innerhalb eines Basic Blocks verwendet:
+
+```
+MOV R1, #5          ; Immediate Adressierung: R1 = 5
+ADD R2, R1          ; Register-Adressierung: R2 = R2 + R1
+LOAD R3, [R2]       ; Register-indirekte Adressierung: R3 = Speicher[R2]
+CMP R3, #10         ; Immediate Adressierung: Vergleiche R3 mit 10
+BGE label_end       ; Verzweigung: Springe zu 'label_end' wenn R3 >= 10
+SUB R3, R1          ; Register-Adressierung: R3 = R3 - R1
+label_end:
 ```
 
-Die Quelle liegt im Speicher und die Adresse des Speicherorts befindet sich in einem Register.
-     
 
-#### Register-indirekte Adressierung mit Offset:
-```
-opcode Rd, [Rn, #offset]
-```
+#### Vorteile der vielfältigen Adressierungsarten
 
-Die Quelle liegt ebenfalls im Speicher. Ein Offset wird zur Basisadresse, die im einem Register liegt hinzugefügt, um die Zieladresse zu bestimmen.
-    
-
-#### Pre-Indexed Adressierung:
-```
-opcode Rd, [Rn, #offset]!
-```
-
-Die Quelle liegt ebenfalls im Speicher. Der Offset wird zur Basisadresse hinzugefügt, bevor auf den Speicher zugegriffen wird. Der Wert im Register Rn wird dadurch auch aktualisiert
-     
-
-#### Post-Indexed Adressierung:
-```
-     opcode Rd, [Rn], #offset
-```
-
-Der Speicherzugriff erfolgt zuerst auf die Basisadresse, danach wird der Offset hinzugefügt, um nachträglich das Basisregister zu aktualisieren.
-     
-
-#### Register-indirekte Adressierung mit zwei Registern:
-```
-opcode Rd, [Rn, Rm]
-```
-
-Zwei Register (`Rn` und `Rm`) werden verwendet, um die Speicheradresse zu berechnen. Die Basisadresse liegt in `Rn`, und der Wert in `Rm` wird als offset hinzugefügt.
+- **Flexibilität:** Unterschiedliche Adressierungsarten ermöglichen den Zugriff auf eine Vielzahl von Datenstrukturen und Speicherbereichen, was die Programmierung vielseitiger und effizienter macht.
+  
+- **Effizienz:** Durch die Auswahl der passenden Adressierungsart können Speicherzugriffe optimiert werden, was die Ausführungsgeschwindigkeit von Programmen erhöht.
+  
      
 |--------------------|--------------------------|--------------------------------|
 | [zurück](anwops.md)| [Hauptmenü](../index.md) | [weiter](../CPUlator/erste.md) | 
