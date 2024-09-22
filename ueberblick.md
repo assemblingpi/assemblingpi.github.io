@@ -1,7 +1,7 @@
 |**A. Grundlagen der Assemblerprogrammierung**                              |
 |---------------------------------------------------------------------------|
 | **1. Einführung**                                                         |
-| [Was ist ein Programm?](../wasistprog/wasistprog.md)                      | 
+| [Was ist ein Programm?](../wasistprog/wasistprog)                         | 
 | [Grundlagen der Computerarchitektur](../einführungarch/cpuintro.md)       | 
 | [Zahlensysteme, Bits und Bytes](../ZahlensysBitsBytes/zbb.md)             |
 | [Die Programmiersprache Assembler](../progspracheasm/progasmintro.md)     |
