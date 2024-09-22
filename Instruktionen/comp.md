@@ -140,4 +140,5 @@ Die C-Flag bleibt gesetzt, weil kein Borrow aufgetreten ist.
 
 Das **S-Suffix** kombiniert also die Möglichkeit Rechenoperationen durchzuführen, mit der Funktionalität von Vergleichsoperatoren, indem sie die Statusflags für spätere bedingte Anweisungen aktualisieren.
 
-[weiter](flags.md)
+|-----------------------|-------------------------------|--------------------------|
+|   [zurück](flags.md)  |   [Hauptmenü](../index.md)    |   [weiter](beding.md)    |

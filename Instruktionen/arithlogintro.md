@@ -5,3 +5,5 @@ Zusätzlich führt die ALU **Vergleichsoperationen** aus, die zwei Werte gegenü
 
 Damit übernimmt die ALU neben arithmetischen und logischen Operationen auch eine wichtige Rolle bei der Steuerung des Programmflusses.
 
+|------------------------------------|--------------------------|-------------------------------|
+| [zurück](../bcm2836/armfamily.md)  | [Hauptmenü](../index.md) |	[weiter](arithinstr.md)		|
