@@ -10,10 +10,9 @@ Masking bedeutet das Deaktivieren von Interrupts, um sicherzustellen, dass kriti
 Das verhindert etwa, dass der Prozessorzustand verloren geht. Während ein Interrupthandler läuft, werden Interrupts automatisch maskiert. 
 
 #### Für diesen Zweck gibt es zwei Befehle:
-```
-cpsid i: Deaktiviert (maskiert) Interrupts.
-cpsie i: Aktiviert   (demaskiert) Interrupts
-```
+
+- cpsid i: Deaktiviert (maskiert) Interrupts.
+- cpsie i: Aktiviert   (demaskiert) Interrupts
 
 #### Ein Beispiel für einen generischen IRQ-Handler:
 ```asm
