@@ -1,7 +1,6 @@
 ## Bedingte Instruktionsausführung
 Befehle können so gestaltet werden, dass sie nur dann ausgeführt werden, wenn bestimmte Bedingungen erfüllt sind. Dies ermöglicht, dass Code nur dann ausgeführt wird, wenn die festgelegte Bedingung zutrifft.
 
-assembly
 ```asm
 cmp r1, #0          @ Vergleiche r1 mit 0
 moveq r2, #1        @ Setze r2 auf 1, wenn r1 gleich 0 ist

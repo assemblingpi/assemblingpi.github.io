@@ -41,14 +41,14 @@ Hierbei ist `<Register>` das Register, das die Adresse enthält, zu der gesprung
 
 seg2:
     LDR R4, =ende        @ Lade die Adresse des Blocks 'ende' in Register R4
-	BX R4                @ Springe zu 'ende' (die Adresse in R4)
+    BX R4                @ Springe zu 'ende' (die Adresse in R4)
 
 seg1:
     ADD R2, R0, R1       @ Addiere die Werte in R0 und R1, speichere das Ergebnis in R2
     BX R3                @ Springe zur Adresse in R3 (zu Block 'seg2')
 	
 ende:
-	MOV R5, R2           @ Speichere das Ergebnis der Addition (R2) in R5
+    MOV R5, R2           @ Speichere das Ergebnis der Addition (R2) in R5
 ```
 
 In diesem Beispiel zeigt der Code, wie mit `B` und `BX` verschiedene Blöcke angesprungen werden können. Der `B-Befehl` springt bedingungslos zu einem Label, während `BX` einen Sprung zur Adresse ermöglicht, die in einem Register gespeichert ist. 
@@ -69,8 +69,8 @@ Hierbei ist `label` der Block, zu dem das Programm springen soll.
     MOV R1, #4          @ Speichere die Zahl 4 in Register R1
     BL addierer         @ Springe in Block "addierer" und speichere die Rücksprungadresse in LR
     MOV R0, R2          @ Dieser Befehl wird ausgeführt, nachdem 'addierer' beendet ist
-	LDR R4, =ende		@ Lade die Adresse des Blocks 'ende' in Register R4
-	BX R4				@ Springe zu Block 'ende'
+    LDR R4, =ende       @ Lade die Adresse des Blocks 'ende' in Register R4
+    BX R4               @ Springe zu Block 'ende'
     
 addierer:
     ADD R2, R0, R1      @ Addiere die Werte 3 (R0) und 4 (R1) auf, speichere das Ergebnis in R2
