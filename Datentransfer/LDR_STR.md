@@ -193,7 +193,7 @@ var1: .word 0xaabbccdd  @ Lade das Word 0xaabbccdd
 _start:
     LDR R0, =var1	@ Lade die Adresse von var1 in R0
     LDRSB R1, [R0]	@ Lade die unteren 8 Bits des Wertes aus der Adresse von R0 in R1, fülle die vorderen Stellen mit einsen auf
-	LDRSH R2, [R0]	@ Lade die unteren 16 Bits des Wertes aus der Adresse von R0 in R1, fülle die vorderen Stellen mit einsen auf
+    LDRSH R2, [R0]	@ Lade die unteren 16 Bits des Wertes aus der Adresse von R0 in R1, fülle die vorderen Stellen mit einsen auf
 ```
 
 **So sehen die Register R1 und R2 nach Ausführung aus:**

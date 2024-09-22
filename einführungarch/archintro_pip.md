@@ -79,7 +79,5 @@ Diese Abstraktion stellt sicher, dass Breakpoints korrekt gesetzt werden und der
 
 Beim Programmieren in Assembler, müssen Entwickler den Vorlauf des PC berücksichtigen, vor allem bei **PC-relativen Berechnungen**. Solche Berechnungen, die auf den aktuellen PC-Wert zugreifen, haben den Pipeline-Vorlauf zu berücksichtigen, sodass Speicherzugriffe oder Sprungadressen korrekt berechnet werden. Im Debugging-Prozess selbst werden diese Details jedoch bewusst ausgeblendet, um Verwirrung zu vermeiden und den Fokus auf die Logik des Quellcodes zu legen.
 
-Diese Kombination aus technischer Optimierung durch die Pipeline und benutzerfreundlicher Darstellung durch den Debugger sorgt dafür, dass die ARMv7-Architektur sowohl leistungsstark als auch nachvollziehbar bleibt.
-
 |-----------------------|-------------------------------|---------------------------------------|
 | [zurück](sbusintro.md)| [Hauptmenü](../ueberblick.md) | [weiter](../ZahlensysBitsBytes/zbb.md)| 
