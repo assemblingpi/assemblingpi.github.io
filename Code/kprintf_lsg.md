@@ -332,7 +332,6 @@ is_x:
 	ldr		r1, [r11, #PARAM_CNT]
 	add     r1, #ARGS
 	ldr     r1, [r11, r1]
-	// ldr     r2, [r11, #FIELD_W]
 is_x_convert:
 	bl      num2hexascii
 	mov     r4, r1
