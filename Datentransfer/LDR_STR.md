@@ -63,7 +63,7 @@ var1: .word 4
 .global _start
 _start:
     LDR R0, =var1       @ Lade die Adresse von var1 in R0
-    LDR R1, [R0]	    @ Lade den Wert aus der Adresse in R0 in R1
+    LDR R1, [R0]        @ Lade den Wert aus der Adresse in R0 in R1
     LDR R2, [R0, #8]    @ Lade den den Wert in R0 + 8 in R2
 ```
 **Nach der Ausführung:**
