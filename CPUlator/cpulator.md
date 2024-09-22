@@ -55,4 +55,5 @@ Am linken Rand der Website befindet sich eine Ansicht der CPU-Register.
 
 Hier kann man in Echtzeit verfolgen, wie sich die Registerwerte während der Ausführung von Instruktionen ändern, was hilfreich ist, um Fehler zu identifizieren.
 
-[weiter](../Datentransfer/datentr.md)
+|-------------------|-------------------------------|---------------------------------------|
+| [zurück](erste.md)| [Hauptmenü](../ueberblick.md) | [weiter](../Datentransfer/datentr.md) | 

@@ -31,4 +31,6 @@ endif:               @ Ende der Kontrollstruktur
 
 ![Ifelse](./ifelse.png)
 
-[weiter](If-then_elseif-then.md)
+|----------------------------|------------------------------------|---------------------------------------|
+|   [zurück](ctrlstrcts.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](If-then_elseif-then.md)    |
+

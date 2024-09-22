@@ -8,4 +8,5 @@ Der Name „Branch“ bezieht sich darauf, dass durch derartige Befehle der Prog
 
 Im ARM-Assembler gibt es **unbedingte Sprünge**, die den Programmfluss unabhängig vom vorherigen Code immer ändern. Daneben gibt es **bedingte Sprünge**, die nur ausgeführt werden, wenn Status-Flags, die durch die Ausführung vorherigen Codes gesetzt wurden, bestimmte Bedingungen erfüllen.
 
-[weiter](../ctrlstrukturen/ctrlstrcts.md)
+|-------------------------------------------|------------------------------------|---------------------------------|
+|   [zurück](../Instruktionen/bedinstr.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](unbedingtespr.md)    |

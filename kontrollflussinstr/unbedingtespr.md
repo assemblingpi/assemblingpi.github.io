@@ -1,14 +1,14 @@
-#### Unbedingte Sprünge:
-##### B 
+## Unbedingte Sprünge:
+### B 
 Unbedingte Sprünge, wie der `B`-Befehl (Branch), ändern den Programmfluss immer zu einer angegebenen Adresse, ohne Rücksicht auf etwaige Bedingungen. Das bedeutet, dass das Programm immer zu der angegebenen Stelle im Code springt, wenn dieser Befehl ausgeführt wird.
 
-###### Syntax
+#### Syntax
 ```
 B <label>
 ```
 Hierbei ist `label` der Block, zu dem das Programm springen soll.
 
-###### Beispiel
+#### Beispiel
 ```
 .global _start
 _start:
@@ -26,16 +26,16 @@ addierer:
 In diesem Beispiel wird die Anweisung `MOV R3, #5` nicht ausgeführt, weil der Befehl `B addierer` die Ausführung des Programms direkt zur Sprungmarke `addierer` weiterleitet. Sobald der Befehl `B addierer` ausgeführt wird, springt das Programm sofort zum Block `addierer` und die nachfolgende Anweisung (MOV R3, #5) wird übersprungen. Nach der Addition in `addierer` wird das Programm beendet.
 
 
-##### BX
+### BX
 Der BX-Befehl ("Branch and Exchange") wird verwendet, um zu einer Adresse zu springen, die in einem Register gespeichert ist.
 
-###### Syntax
+#### Syntax
 ```
 BX <Register>
 ```
 Hierbei ist `<Register>` das Register, das die Adresse enthält, zu der gesprungen werden soll. 
 
-###### Beispiel
+#### Beispiel
 ```
 .global _start
 _start:
@@ -60,17 +60,16 @@ ende:
 In diesem Beispiel zeigt der Code, wie mit `B` und `BX` verschiedene Blöcke angesprungen werden können. Der `B-Befehl` springt bedingungslos zu einem Label, während `BX` einen Sprung zur Adresse ermöglicht, die in einem Register gespeichert ist. 
 
 
-
-##### BL
+### BL
 Der BL-Befehl ("Branch with Link") ermöglicht es, zu einer bestimmten Speicheradresse oder einem Code-Block zu springen und gleichzeitig die Rücksprungadresse im Link-Register (LR) zu speichern. Dies ist besonders nützlich für Funktionsaufrufe, bei denen nach der Ausführung einer Funktion zum ursprünglichen Programmfluss zurückgekehrt werden soll.
 
-###### Syntax
+#### Syntax
 ```
 BL <label>
 ```
 Hierbei ist `label` der Block, zu dem das Programm springen soll.
 
-###### Beispiel
+#### Beispiel
 ```
 .global _start
 _start:
@@ -89,3 +88,6 @@ addierer:
 ende:
 ```
 In diesem Beispiel wird der Befehl `BL addierer` verwendet, um in den Block `addierer` zu springen und gleichzeitig die Adresse des nächsten Befehls (MOV R0, R2) im Link-Register (LR) zu speichern. Nach der Addition in addierer wird das Programm durch den Befehl `BX lr` zur gespeicherten Adresse im Link-Register zurückgeleitet und MOV R0, R2 wird ausgeführt.
+
+|--------------------------|------------------------------------|-------------------------------|
+|   [zurück](ctrlflow.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](bedingtespr.md)    |

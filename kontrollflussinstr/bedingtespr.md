@@ -42,3 +42,6 @@ end:
 ###### Der Kontrollflussgraph zum Beispiel
 
 ![Screenshot of Example Program](./bedingt_b.png)
+
+|-------------------------------|------------------------------------|--------------------------|
+|   [zurück](unbedingtespr.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](ctrlue.md)    |

@@ -6,4 +6,6 @@ Zusätzlich gibt es den Datentransfer von direkten Werten, die im Maschinencode 
 
 Diese verschiedenen Arten von Datentransfers sind grundlegende Vorgänge in der Assemblerprogrammierung, die den Austausch von Daten innerhalb des Systems ermöglichen und dadurch sicherstellen, dass die notwendigen Daten bei Bedarf verfügbar sind.
 
-[weiter](MOV.md)
+|----------------------------------|-------------------------------|------------------|
+| [zurück](../CPUlator/cpulator.md)| [Hauptmenü](../ueberblick.md) | [weiter](MOV.md) | 
+

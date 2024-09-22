@@ -30,4 +30,6 @@ endif:
 
 ![If-not then](./ifnotthen.png)
 
-[weiter](ifelse.md) 
+|----------------------------|------------------------------------|--------------------------|
+|   [zurück](ctrlstrcts.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](ifelse.md)    |
+ 

@@ -81,5 +81,5 @@ Beim Programmieren in Assembler, müssen Entwickler den Vorlauf des PC berücksi
 
 Diese Kombination aus technischer Optimierung durch die Pipeline und benutzerfreundlicher Darstellung durch den Debugger sorgt dafür, dass die ARMv7-Architektur sowohl leistungsstark als auch nachvollziehbar bleibt.
 
-|-----------------------|--------------------------|---------------------------------------|
-| [zurück](sbusintro.md)| [Hauptmenü](../index.md) | [weiter](../ZahlensysBitsBytes/zbb.md)| 
+|-----------------------|-------------------------------|---------------------------------------|
+| [zurück](sbusintro.md)| [Hauptmenü](../ueberblick.md) | [weiter](../ZahlensysBitsBytes/zbb.md)| 

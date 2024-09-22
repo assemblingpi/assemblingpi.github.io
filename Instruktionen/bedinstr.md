@@ -8,5 +8,5 @@ moveq r2, #1        @ Setze r2 auf 1, wenn r1 gleich 0 ist
 movne r2, #0        @ Setze r2 auf 0, wenn r1 ungleich 0 ist
 ```
 
-|----------------------|---------------------------------|-----------------------------------------------------|
-|   [zurück](beding.md)  |   [Hauptmenü](../index.md)    |   [weiter](../kontrollflussinstr/ctrlflow.md)    |
+|------------------------|------------------------------------|--------------------------------------------------|
+|   [zurück](beding.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../kontrollflussinstr/ctrlflow.md)    |

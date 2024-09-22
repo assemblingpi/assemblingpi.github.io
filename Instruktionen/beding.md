@@ -45,5 +45,5 @@ Diese Bedingungscodes sind essenziell, um bedingte Instruktionen in ARM-Assemble
 | LE          | Less than or equal      |   Z=1 or N!=V       |
 | AL          | Always                  |        -            |
 
-|------------------------|-------------------------------|----------------------------|
-|   [zurück](comp.md)  |   [Hauptmenü](../index.md)    |   [weiter](bedinstr.md)    |
+|----------------------|------------------------------------|----------------------------|
+|   [zurück](comp.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](bedinstr.md)    |

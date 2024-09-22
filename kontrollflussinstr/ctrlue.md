@@ -22,3 +22,6 @@ loop:
 ```	
 ### Hinweis
 Um das Verhalten des Codes während der Ausführung zu analysieren, ist es notwendig im Fenster **Settings** alle Häckchen bei **Debugging Checks** zu entfernen.
+
+|-----------------------------|------------------------------------|------------------------------------------------|
+|   [zurück](bedingtespr.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../ctrlstrukturen/ctrlstrcts.md)    |

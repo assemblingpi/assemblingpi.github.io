@@ -84,6 +84,6 @@ label_end:
 - **Effizienz:** Durch die Auswahl der passenden Adressierungsart können Speicherzugriffe optimiert werden, was die Ausführungsgeschwindigkeit von Programmen erhöht.
   
      
-|--------------------|--------------------------|--------------------------------|
-| [zurück](anwops.md)| [Hauptmenü](../index.md) | [weiter](../CPUlator/erste.md) | 
+|--------------------|-------------------------------|--------------------------------|
+| [zurück](anwops.md)| [Hauptmenü](../ueberblick.md) | [weiter](../CPUlator/erste.md) | 
 

@@ -204,5 +204,5 @@ SDIV <Zielregister>, <Dividendregister>, <Divisorregister>
 
 **Hinweis:** Diese Instruktionen werden nicht von allen Prozessoren der ARMv7-Familie unterstützt und sind auch im CPUlator nicht ausführbar. Da jedoch in einem späteren Abschnitt des Tutorials auf einen Emulator umgestiegen wird, der die ARMv7-A-Variante unterstützt, wird an dieser Stelle bereits auf diese Befehle hingewiesen, da sie äußerst nützlich sind.
 
-|-------------------------------|-------------------------------|----------------------------|
-|   [zurück](arithlogintro.md)  |   [Hauptmenü](../index.md)    |   [weiter](loginstr.md)    |
+|-------------------------------|------------------------------------|----------------------------|
+|   [zurück](arithlogintro.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](loginstr.md)    |

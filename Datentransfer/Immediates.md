@@ -59,5 +59,5 @@ Laden eines 32-Bit-Werts: Angenommen, man möchte `0x12345678` in das Register `
 ```
 Achtung: Um mit MOVW und MOVT 32-Bit Werte zu laden, muss man die Reihenfolge der Instruktionen aufgrund deren Eigenarten beachten: **Zuerst MOVT, dann MOVW!**
 
-
-
+|-----------------|-------------------------------|----------------------|
+| [zurück](MOV.md)| [Hauptmenü](../ueberblick.md) | [weiter](LDR_STR.md) |
