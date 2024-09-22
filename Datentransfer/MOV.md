@@ -8,6 +8,7 @@ MOV <Zielregister>, <Quelle>
 ```
 Hierbei ist `<Zielregister>` das Register, in das die Daten kopiert werden sollen, und `<Quelle>` kann ein anderes Register oder ein sofortiger (konstanter) Wert sein.
 
+
 [weitere Infos zu unmittelbaren Werten](../immediates/immediates.md)
 
 
@@ -18,6 +19,8 @@ MOV Rd, #im
 ```
 
 Hierbei wird der unmittelbare Wert #imm in das Register Rd geladen. Das #-Symbol kennzeichnet, dass es sich um einen unmittelbaren (konstanten) Wert handelt. Rd steht stellvertretend für eines der General Purpose Register von R0 bis R10.
+
+Achtung: Somit können nur 8-bit Werte in Register gespeichert werden!
 
 
 ### Kopieren eines Wertes von einem Register in ein anderes Register
