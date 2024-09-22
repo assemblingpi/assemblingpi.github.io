@@ -18,7 +18,7 @@ struct struct_bsp {
 };
 ```
 
-#### Definition einer Struct in Assembler:
+#### Deklaration einer Struct in Assembler:
 In Assembler wird das Struct durch die Verwaltung von **Speicheradressen** und **Offsets** realisiert.
 ```asm
 .data

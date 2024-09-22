@@ -52,4 +52,5 @@ EQUS für die benötigten Konstanten
                                 B sleep
 ```
 
-[Interrupts und Priviligierungslevel](irqpriv.md)
+|-------------------------|------------------------------------|---------------------------|
+|   [zurück](betrmod.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](irqpriv.md)    |

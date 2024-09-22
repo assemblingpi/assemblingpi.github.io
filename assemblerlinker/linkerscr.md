@@ -267,7 +267,7 @@ SECTIONS {
 
 In diesem Beispiel wird der `.text`-Abschnitt sowohl bei der LMA `0x08000000` als auch bei der VMA `0x08000000` platziert, d.h., er wird geladen und zur Laufzeit an derselben Adresse ausgeführt. Der `.data`-Abschnitt wird jedoch bei der LMA `0x08001000` geladen, während er zur Laufzeit bei der VMA `0x20000000` ausgeführt wird.
 
-
 [Weitere Informationen zu Linkern, inklusive detailierter Beschreibung aller Linkerskript-Befehle]( https://sourceware.org/binutils/docs/ld/index.html)
 
-
+|---------------------------------|------------------------------------|----------------------------------------|
+|   [zurück](wasistasmlinker.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../debuggdb/debuggdb.md)    |

@@ -15,5 +15,5 @@ Pending-Register werden im Zusammenhang mit Interrupt-Controllern verwendet und 
 ### Coprozessoren
 Coprozessoren sind spezialisierte Prozessoren, die Aufgaben wie mathematische Berechnungen oder Speicherverwaltung übernehmen. Sie werden über spezielle Befehle gesteuert und übernehmen bestimmte Funktionen für die Haupt-CPU.
 
-|-------------------------------|------------------------------------|-----------------------------------------|
-|   [zurück](../Proz/param.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../Systemprog/sysprog.md)    |
+|--------------------------------------|------------------------------------|------------------------------------------------------|
+|   [zurück](../Advanced/advanced.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../assemblerlinker/wasistasmlinker.md)    |

@@ -5,4 +5,5 @@ RISC-Prozessoren zeichnen sich durch eine reduzierte und vereinfachte Befehlssat
 
 Im Gegensatz dazu bietet CISC eine Vielzahl komplexer Befehle, die oft mehrere Mikrooperationen in einem einzigen Befehl kombinieren. Diese Befehle können unterschiedliche Längen haben, was die Dekodierung und Ausführung komplexer macht. Der Vorteil von CISC liegt in der Reduzierung der Programmlänge und der höheren Flexibilität bei der Programmierung. CISC-Prozessoren wie die x86-Architektur sind darauf ausgelegt, viele Aufgaben mit wenigen, aber komplexen Befehlen zu erledigen.
 
-[weiter](armfamily.md)
+|-------------------------|------------------------------------|-----------------------------|
+|   [zurück](bcm2836.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](armfamily.md)    |

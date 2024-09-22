@@ -7,4 +7,5 @@ Jeder der vier Prozessor-Kerne besitzt einen eigenen lokalen Interrupt-Controlle
 Wenn ein Interrupt auftritt, erzwingt der Prozessor einen Sprung zum entsprechenden Eintrag in der Vektortabelle. 
 Je nach Quelle bzw. Ursache des Interrupts wird also eine spezifische Adresse in das Program Counter Register (PC) geladen, wodurch der Prozessor zum entsprechenden Interruptvektor verzweigt, der ihn wiederum zur ISR weiterleitet.
 
-[Die Vektortabelle in der ARMv7-A Architektur](armvekt.md)
+|-----------------------|------------------------------------|---------------------------|
+|   [zurück](ictrl.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](armvekt.md)    |

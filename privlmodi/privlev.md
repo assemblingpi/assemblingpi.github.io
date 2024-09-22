@@ -4,4 +4,5 @@
 Systemkonfigurationen ändern.
 **PL2:** Wird verwendet, wenn Virtualisierung aktiviert ist. 
 
-[Betriebsmodi](betrmod.md)
+|-------------------------------|------------------------------------|---------------------------|
+|   [zurück](privmodiintro.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](betrmod.md)    |

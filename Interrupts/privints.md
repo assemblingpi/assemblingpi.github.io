@@ -37,4 +37,6 @@ EQUS für die benötigten Konstanten
                  ORR r0, #MODE_SVC
                  MSR cpsr, r0
 ```
-[Implementierung eines IRQ-Handlers](implirq.md)
+
+|-------------------------|------------------------------------|---------------------------|
+|   [zurück](armvekt.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](implirq.md)    |

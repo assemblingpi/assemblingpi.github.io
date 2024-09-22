@@ -14,4 +14,5 @@ Instruktion betreten.
 **Hypervisor-Modus (hyp):** Privilegierter Modus zur Verwaltung von Virtualisierung, in dem der Hypervisor mehrere virtuelle Maschinen steuert.
 **System-Modus (sys):** Privilegierter Modus, der für Anwendungsprogramme geeignet ist, die privilegierten Zugriff benötigen.
 
-[Statusregister und Betriebsmodi](cpsrmod.md)
+|-------------------------|------------------------------------|---------------------------|
+|   [zurück](privlev.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](cpsrmod.md)    |

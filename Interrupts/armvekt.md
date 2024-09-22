@@ -58,6 +58,6 @@ hang:
                 wfi
                 b hang
 ```
-[Privilegierungslevel und ihre Rolle bei Interrupts](privints.md)
 
-[Implementierung eines IRQ-Handlers](implirq.md)
+|---------------------------|------------------------------------|----------------------------|
+|   [zurück](raspiints.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](privints.md)    |

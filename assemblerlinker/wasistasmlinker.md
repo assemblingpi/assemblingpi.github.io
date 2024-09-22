@@ -18,6 +18,5 @@ arm-none-eabi-ld -g  boot.o vektor.o -T link.lds -o out/kernel7.elf
 
 Nachdem die Assemblerdateien in Objektdateien übersetzt wurden, werden diese Objektdateien mit dem `arm-none-eabi-ld` Linker gelinkt. Der Linker verwendet die angegebene Linkerskriptdatei (`link.lds`) mit der Option `-T`, um die endgültige Ausgabedatei (`kernel7.elf`) zu erstellen. 
 
-
-|-----------------------------------|--------------------------|-----------------------|
-| [zurück](...) | [Hauptmenü](../index.md) | [weiter](linkerscr.md)| 
+|---------------------------------------|------------------------------------|-----------------------------|
+|   [zurück](../Systemprog/sysprog.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](linkerscr.md)    |

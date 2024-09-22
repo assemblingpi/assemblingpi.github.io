@@ -50,14 +50,19 @@ GDB bietet zahlreiche nützliche Funktionen, darunter:
 - **info vector** - Gibt Informationen über Neon-Register aus.
 
 #### Speicherauszüge anzeigen
-- **x/nfu addr** - Zeigt den Speicher an der angegebenen Adresse an, mit optionalen Parametern für Anzahl, Format und Einheit.
+**x/nfu addr** - Zeigt den Speicher an der angegebenen Adresse an, mit optionalen Parametern für Anzahl, Format und Einheit.
   - **n** - Anzahl der anzuzeigenden Einheiten (Standard ist 1).
   - **f** - Anzeigeformat: `x` (Hexadezimal), `d` (Dezimal), `u` (Unsigned), `o` (Oktal), `t` (Binär), `a` (Adresse), `c` (Zeichen), `s` (Nullterminierter String), oder `i` (Maschinenbefehl).
   - **u** - Einheitengröße: `b` (Bytes), `h` (Halbwörter, 2 Bytes), `w` (Wörter, 4 Bytes), `g` (Riesenwörter, 8 Bytes).
 
-Beispiele:
+#### Beispiele:
 - **x/3uh 0x54320** - Zeigt drei Halbwörter (`h`) im Speicher an, formatiert als unsigned Dezimal (`u`), beginnend bei Adresse 0x54320.
 - **x/4xw $sp** - Zeigt vier Wörter (`w`) im Speicher oberhalb des Stack-Pointers (`$sp`) in Hexadezimal (`x`) an.
+- **p/f $s0** - Zeigt den Inhalt von s0 als Gleitkommazahl dar
+- **p/x $s0** - Zeigt den Inhalt von s0 als Ganzzahl dar
 
 #### GDB beenden
 - **q** - Beendet GDB.
+
+|----------------------------------------------|------------------------------------|--------------------------------------|
+|   [zurück](../assemblerlinker/linkerscr.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../bcm2836/bcm2836.md)    |
