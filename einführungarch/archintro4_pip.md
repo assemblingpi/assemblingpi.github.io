@@ -1,8 +1,9 @@
 ## Befehlzyklus: Fetch, Decode, Execute
+
 Der Befehlszyklus in einem Computerprozessor beschreibt, wie Befehle vom Prozessor verarbeitet werden. Er besteht vereinfacht dargestellt aus drei grundlegenden Schritten: **Fetch (Holen)**, **Decode (Dekodieren)** und **Execute (Ausführen)**. Jeder dieser Schritte spielt eine wesentliche Rolle bei der Ausführung von Programmen.
-1. **Fetch (Holen):** Der Prozessor holt den nächsten Befehl aus dem Speicher. Die Adresse des Befehls wird durch den **Program Counter (PC)** bestimmt, der nach jedem Fetch-Schritt auf den nächsten Befehl zeigt. Der Program Counter ist entscheidend, da er sicherstellt, dass die Befehle in der richtigen Reihenfolge ausgeführt werden.
-2. **Decode (Dekodieren):** Der geholte Befehl wird vom Prozessor dekodiert. In dieser Phase interpretiert der Prozessor den Befehl, um festzustellen, welche Operation ausgeführt werden soll und welche Operanden (Daten) erforderlich sind.
-3. **Execute (Ausführen):** Der Prozessor führt die im Befehl spezifizierte Operation aus. Dies kann eine mathematische Berechnung, ein Datenzugriff oder eine andere Operation sein, die im Befehl angegeben ist.
+- 1. **Fetch (Holen):** Der Prozessor holt den nächsten Befehl aus dem Speicher. Die Adresse des Befehls wird durch den **Program Counter (PC)** bestimmt, der nach jedem Fetch-Schritt auf den nächsten Befehl zeigt. Der Program Counter ist entscheidend, da er sicherstellt, dass die Befehle in der richtigen Reihenfolge ausgeführt werden.
+- 2. **Decode (Dekodieren):** Der geholte Befehl wird vom Prozessor dekodiert. In dieser Phase interpretiert der Prozessor den Befehl, um festzustellen, welche Operation ausgeführt werden soll und welche Operanden (Daten) erforderlich sind.
+- 3. **Execute (Ausführen):** Der Prozessor führt die im Befehl spezifizierte Operation aus. Dies kann eine mathematische Berechnung, ein Datenzugriff oder eine andere Operation sein, die im Befehl angegeben ist.
 
 ## Decodierung von Arm Befehlen
 Nachdem der Prozessor einen Befehl aus dem Speicher geladen hat, muss er den Befehl korrekt deuten um die richtigen Signale für Recheneinheiten und Steuereinheiten zu generieren. Beim Dekodieren erkennt er anhand des Binärcodes die Art des Befehls und die beteiligten Operanden. Diese Information wird genutzt, um die nächsten Schritte zur Ausführung des Befehls festzulegen. Die Dekodierung bildet somit die Brücke zwischen dem Abrufen des Befehls und dessen Ausführung.
@@ -39,8 +40,6 @@ Nachdem der Prozessor einen Befehl aus dem Speicher geladen hat, muss er den Bef
 |---------|---------|---------|---------|---------|---------|------|-------|
 | Cond    | 0001    | 0010    | 1111    | 1111    | 1111    | 0001 | Rn    | 
 
-Wenn der Prozessor
-
 
 ### Single-Cycle-Architektur
 Bei einer **Single-Cycle-Architektur** wird jeder Befehl in genau einem Taktzyklus (einem „Cycle“) vollständig abgearbeitet. Die Phasen **Fetch**, **Decode** und **Execute** werden Schritt für Schritt nacheinander abgearbeitet.
@@ -65,18 +64,18 @@ Die 8-stufige Pipeline des ARM Cortex-A7 Prozessors besteht beispielsweise aus d
 7. **Write Back (WB):** Die Stufe, in der die Ergebnisse der Ausführung zurück in die Register geschrieben werden.
 8. **Commit (C):** Die letzte Stufe, in der die Ausführung abgeschlossen wird und der Befehl als abgeschlossen markiert wird.
 
-### Pipeline in ARMv7-A:
+#### Pipeline in ARMv7-A
 Im Cortex-A7 wird eine **8-stufige Pipeline** verwendet, die es erlaubt, dass mehrere Befehle gleichzeitig in verschiedenen Phasen des Befehlzyklus bearbeitet werden. Diese Pipeline umfasst die oben genannten Phasen und verbessert die Gesamteffizienz des Prozessors erheblich.
 
 Ein Aspekt, der in diesem Kontext dabei oft zu Verwirrung führt, ist die Rolle des **Program Counters (PC)** in der Pipeline-Architektur. Im ARM-Modus zeigt der PC während der Ausführung einer Instruktion nicht auf die aktuelle, sondern auf die übernächste Instruktion. Dies liegt daran, dass die Pipeline die nächsten Instruktionen bereits im Voraus lädt. Im **ARM-Modus** (bei 32-Bit-Instruktionen) ist der PC immer **8 Bytes voraus**, im **Thumb-Modus** (bei 16-Bit-Instruktionen) **4 Bytes**. Dieser Vorlauf ermöglicht es dem Prozessor, Instruktionen schneller zu verarbeiten, da er die nächsten Schritte bereits vorbereitet, während eine Instruktion noch dekodiert oder ausgeführt wird.
 
-### Warum zeigt der PC im Debugger trotzdem scheinbar auf die aktuelle Instruktion?
+#### Warum zeigt der PC im Debugger trotzdem scheinbar auf die aktuelle Instruktion?
 
 Beim Debuggen und der Ausführung in Emulatoren wie dem CPUlator scheint es teils jedoch, als würde der PC auf die **aktuell ausgeführte** Instruktion zeigen. Dies ist darauf zurückzuführen, dass Debugger speziell dafür ausgelegt sind, die Pipeline-Effekte zu abstrahieren. Sie passen den angezeigten Wert des PC an, um den Entwicklern eine klarere Darstellung des tatsächlichen Programmablaufs zu geben. Ohne diese Anpassung könnte der Vorlauf des PC zu Missverständnissen führen, da der Entwickler erwarten würde, dass der PC auf die Instruktion zeigt, die gerade ausgeführt wird. 
 
 Diese Abstraktion stellt sicher, dass Breakpoints korrekt gesetzt werden und der Entwickler den Programmfluss besser nachvollziehen kann. Letztlich wird dadurch der Unterschied zwischen der tatsächlichen Funktionsweise der Pipeline und der Darstellung im Debugger verschleiert, um den Entwicklungsprozess zu vereinfachen.
 
-### Konsequenzen für die Praxis
+#### Konsequenzen für die Praxis
 
 Beim Programmieren in Assembler, müssen Entwickler den Vorlauf des PC berücksichtigen, vor allem bei **PC-relativen Berechnungen**. Solche Berechnungen, die auf den aktuellen PC-Wert zugreifen, haben den Pipeline-Vorlauf zu berücksichtigen, sodass Speicherzugriffe oder Sprungadressen korrekt berechnet werden. Im Debugging-Prozess selbst werden diese Details jedoch bewusst ausgeblendet, um Verwirrung zu vermeiden und den Fokus auf die Logik des Quellcodes zu legen.
 

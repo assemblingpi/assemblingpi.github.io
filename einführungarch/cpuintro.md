@@ -8,5 +8,5 @@ Der **Hauptspeicher** speichert sowohl den Programmcode als auch die zu verarbei
 
 Zusätzlich ermöglichen **Eingabe-/Ausgabegeräte (I/O)** dem Computer, mit externen Quellen und Zielen zu kommunizieren. Daten von diesen Geräten werden über den **Systembus** zur CPU übertragen, während verarbeitete Daten an die Ausgabegeräte gesendet werden. Der Systembus fungiert als Kommunikationskanal, der den Datenaustausch zwischen der CPU, dem Speicher und den I/O-Geräten ermöglicht, wodurch die Kontrolleinheit Anweisungen und Daten effizient zwischen den Komponenten hin- und herschieben kann.
 
-|----------------------|--------------------------|----------------------|
-| [zurück](cpuintro.md)| [Hauptmenü](../index.md) | [weiter](memintro.md)| 
+|----------------------------------|--------------------------|----------------------|
+| [zurück](../wasistprog/disasm.md)| [Hauptmenü](../index.md) | [weiter](archintro.md)| 
