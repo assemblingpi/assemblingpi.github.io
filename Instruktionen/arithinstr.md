@@ -108,7 +108,7 @@ Achtung: Es ist nicht möglich, zwei unmittelbare Werte direkt miteinander zu ad
 
 
 ### SBC 
-Der SBC-Befehl (Subtract with Carry) führt eine Subtraktion von zwei Werten durch und zieht zusätzlich den invertierten Wert des Carry Flags (1 - C-Flag) ab. Wenn das Carry Flag gesetzt ist (C = 1), wird eine normale Subtraktion durchgeführt, da kein weiterer Abzug erfolgt. Ist das Carry Flag hingegen nicht gesetzt (C = 0), wird 1 zusätzlich vom Ergebnis abgezogen, was auf ein Borrow hinweist. Dies signalisiert, dass in der vorherigen Operation ein Unterlauf aufgetreten ist. (Mehr zu Borrow: link flags)
+Der SBC-Befehl (Subtract with Carry) führt eine Subtraktion von zwei Werten durch und zieht zusätzlich den invertierten Wert des Carry Flags (1 - C-Flag) ab. Wenn das Carry Flag gesetzt ist (C = 1), wird eine normale Subtraktion durchgeführt, da kein weiterer Abzug erfolgt. Ist das Carry Flag hingegen nicht gesetzt (C = 0), wird 1 zusätzlich vom Ergebnis abgezogen, was auf ein Borrow hinweist. Dies signalisiert, dass in der vorherigen Operation ein Unterlauf aufgetreten ist. (Mehr zu Borrow: [hier](.\flags.md))
 
 #### Syntax
 ```
@@ -204,4 +204,5 @@ SDIV <Zielregister>, <Dividendregister>, <Divisorregister>
 
 **Hinweis:** Diese Instruktionen werden nicht von allen Prozessoren der ARMv7-Familie unterstützt und sind auch im CPUlator nicht ausführbar. Da jedoch in einem späteren Abschnitt des Tutorials auf einen Emulator umgestiegen wird, der die ARMv7-A-Variante unterstützt, wird an dieser Stelle bereits auf diese Befehle hingewiesen, da sie äußerst nützlich sind.
 
-[zurück](arithlogintro.md) [Hauptmenü](../index.md) [weiter](comp.md)
+|-------------------------------|-------------------------------|----------------------------|
+|   [zurück](arithlogintro.md)  |   [Hauptmenü](../index.md)    |   [weiter](loginstr.md)    |
