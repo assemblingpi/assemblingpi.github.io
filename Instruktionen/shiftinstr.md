@@ -18,8 +18,7 @@ LSL <Zielregister>, <RegisterA>, <RegisterB>
 Hier wird der Wert in `Register A` um den Wert, der in `Register B` steht, nach links verschoben. Das Ergebnis wird anschließend in das `Zielregister` gespeichert.
 
 #### Beispiel
-```
-	
+```	
 	MOV R0, #10
 	MOV R1, #4
 	LSL R2, R0, #3
@@ -100,8 +99,7 @@ Hier wird der Wert in `Register A` um die Anzahl der Stellen nach rechts arithme
 
 
 #### Beispiel
-```
-	
+```	
 	MOV R0, #-80
 	MOV R1, #2
 	ASR R2, R0, R1
@@ -149,7 +147,6 @@ Hier wird der Wert in `Register A` um die Anzahl der Stellen nach rechts rotiert
 
 #### Beispiel
 ```
-
 	LDR R0, =0xaabbccdd
 	ROR R1, R0, #4
 ```

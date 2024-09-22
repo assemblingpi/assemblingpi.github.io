@@ -41,4 +41,5 @@ endif:
 
 ![If-then elseif-then](./If-then_elseif-then.png)
 
-[weiter](switchcase.md)
+|------------------------|------------------------------------|------------------------------|
+|   [zurück](ifelse.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](switchcase.md)    |

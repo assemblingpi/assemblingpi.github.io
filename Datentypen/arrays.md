@@ -9,10 +9,8 @@ In ARM-Assembler arbeitet man bei der Zugriff auf Array-Elemente mit Pointern un
 ## Basisadresse eines Arrays
 Die Basisadresse eines Arrays ist die Startadresse des Arrays im Speicher. Wenn ein Array im Speicher angelegt wird, wird die Adresse des ersten Elements als Basisadresse bezeichnet.
 
-
 ## Ein und mehrdimensionale Arrays
 Ein eindimensionaler Array ist eine einfache, lineare Datenstruktur, bei der alle Elemente in einer einzigen Reihe oder Liste angeordnet sind und durch einen einzelnen Index zugänglich sind. Im Gegensatz dazu hat ein mehrdimensionaler Array mehrere Indizes, die es ermöglichen, Daten in mehreren Dimensionen (z. B. in einer Matrix mit Zeilen und Spalten) zu organisieren. Während ein eindimensionaler Array wie eine einfache Liste funktioniert, kann ein mehrdimensionaler Array als eine Tabelle, ein Gitter oder ein höherdimensionales Gitter betrachtet werden.
 
-[Eindimensionale Arrays](array1dim.md)
-
-[Mehrdimensionale Arrays](arraysmultidim.md)
+|-------------------------|------------------------------------|-----------------------------|
+|   [zurück](structs.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](array1dim.md)    |

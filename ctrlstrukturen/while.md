@@ -30,4 +30,5 @@ Dieser Code implementiert eine `while-Schleife`, die die Variable `i` von 1 bis 
 
 ![Screenshot of Example Program](./while.png)
 
-[weiter](do_while.md)
+|----------------------------|------------------------------------|----------------------------|
+|   [zurück](switchcase.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](do_while.md)    |

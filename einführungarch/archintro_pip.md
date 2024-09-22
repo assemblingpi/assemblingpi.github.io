@@ -1,9 +1,9 @@
 ## Befehlzyklus: Fetch, Decode, Execute
 
 Der Befehlszyklus in einem Computerprozessor beschreibt, wie Befehle vom Prozessor verarbeitet werden. Er besteht vereinfacht dargestellt aus drei grundlegenden Schritten: **Fetch (Holen)**, **Decode (Dekodieren)** und **Execute (Ausführen)**. Jeder dieser Schritte spielt eine wesentliche Rolle bei der Ausführung von Programmen.
-- 1. **Fetch (Holen):** Der Prozessor holt den nächsten Befehl aus dem Speicher. Die Adresse des Befehls wird durch den **Program Counter (PC)** bestimmt, der nach jedem Fetch-Schritt auf den nächsten Befehl zeigt. Der Program Counter ist entscheidend, da er sicherstellt, dass die Befehle in der richtigen Reihenfolge ausgeführt werden.
-- 2. **Decode (Dekodieren):** Der geholte Befehl wird vom Prozessor dekodiert. In dieser Phase interpretiert der Prozessor den Befehl, um festzustellen, welche Operation ausgeführt werden soll und welche Operanden (Daten) erforderlich sind.
-- 3. **Execute (Ausführen):** Der Prozessor führt die im Befehl spezifizierte Operation aus. Dies kann eine mathematische Berechnung, ein Datenzugriff oder eine andere Operation sein, die im Befehl angegeben ist.
+1. **Fetch (Holen):** Der Prozessor holt den nächsten Befehl aus dem Speicher. Die Adresse des Befehls wird durch den **Program Counter (PC)** bestimmt, der nach jedem Fetch-Schritt auf den nächsten Befehl zeigt. Der Program Counter ist entscheidend, da er sicherstellt, dass die Befehle in der richtigen Reihenfolge ausgeführt werden.
+2. **Decode (Dekodieren):** Der geholte Befehl wird vom Prozessor dekodiert. In dieser Phase interpretiert der Prozessor den Befehl, um festzustellen, welche Operation ausgeführt werden soll und welche Operanden (Daten) erforderlich sind.
+3. **Execute (Ausführen):** Der Prozessor führt die im Befehl spezifizierte Operation aus. Dies kann eine mathematische Berechnung, ein Datenzugriff oder eine andere Operation sein, die im Befehl angegeben ist.
 
 ## Decodierung von Arm Befehlen
 Nachdem der Prozessor einen Befehl aus dem Speicher geladen hat, muss er den Befehl korrekt deuten um die richtigen Signale für Recheneinheiten und Steuereinheiten zu generieren. Beim Dekodieren erkennt er anhand des Binärcodes die Art des Befehls und die beteiligten Operanden. Diese Information wird genutzt, um die nächsten Schritte zur Ausführung des Befehls festzulegen. Die Dekodierung bildet somit die Brücke zwischen dem Abrufen des Befehls und dessen Ausführung.

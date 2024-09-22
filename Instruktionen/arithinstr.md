@@ -22,7 +22,6 @@ ADD Rd, Rn, Rm
 In diesem Beispiel wird der Wert von `Rn` mit dem Wert von `Rm` addiert, das Ergebnis wird dann in `Rd` gespeichert.
 
 2. **Addition mit einem unmittelbaren Wert**
-
 ```
 ADD Rd, Rn, #imm
 ```
@@ -51,7 +50,7 @@ Die grundlegende Syntax des SUB-Befehls lautet wie folgt:
 ```
 SUB <Zielregister>, <Quellregister>, <Quelle>
 ```
-Hierbei ist `<Zielregister>` das Register, in das das Ergebnis der Subtraktion gespeichert wird, <Quellregister> ist das Register, von dem subtrahiert wird, und <Quelle> ist ein Register, dessen Wert subtrahiert wird. `<Quelle>` kann aber genauso wieder ein unmittelarer Wert sein!
+Hierbei ist `<Zielregister>` das Register, in das das Ergebnis der Subtraktion gespeichert wird, <Quellregister> ist das Register, von dem subtrahiert wird, und <Quelle> ist ein Register, dessen Wert subtrahiert wird. `<Quelle>` kann aber genauso wieder ein unmittelbarer Wert sein!
 Bei SUB gelten die selben Regeln wie bei ADD: Man darf keine unmittelbaren Werte voneinander subtrahieren und ein Registerwert kann nicht von einem unmittelbaren Wert subtrahiert werden! 
 
 #### Beispiele
@@ -69,9 +68,7 @@ Hier wird der unmittelbare Wert `<#imm>` von dem Wert in `<Rn>` subtrahiert, das
 
 #### Anwendungsbeispiele
 
-
 ```
-
     MOV R0, #10      @ Lade den Wert 10 in Register R0
     MOV R1, #4       @ Lade den Wert 4 in Register R1
     SUB R2, R0, R1   @ Subtrahiere R1 von R0, speichere das Ergebnis in R2
@@ -97,13 +94,13 @@ Achtung: Es ist nicht möglich, zwei unmittelbare Werte direkt miteinander zu ad
 
 #### Beispiel
 ```
-        LDR R0, =0xffffffff		@ Setze R0 auf den maximalen 32-Bit-Wert 
-		LDR R1, =0xa    		@ Setze R1 auf 10
-		MOV R2, #0x0			@ Setze R2 auf 0
-		ADDS R3, R0, R1			@ Führe die Addition R0 + R1 durch, setze das Carry Flag
+    LDR R0, =0xffffffff		@ Setze R0 auf den maximalen 32-Bit-Wert 
+	LDR R1, =0xa    		@ Setze R1 auf 10
+	MOV R2, #0x0			@ Setze R2 auf 0
+	ADDS R3, R0, R1			@ Führe die Addition R0 + R1 durch, setze das Carry Flag
 
-		ADC R4, R2, #0			@ Addiere R2 + 0 + Carry, speichere das Ergebnis in R4  
-								@ R4 = R2 + 0 + Carry = 0 + 0 + 1 = 1
+	ADC R4, R2, #0			@ Addiere R2 + 0 + Carry, speichere das Ergebnis in R4  
+							@ R4 = R2 + 0 + Carry = 0 + 0 + 1 = 1
 ```
 
 
@@ -120,13 +117,13 @@ Achtung: Man darf keine unmittelbaren Werte voneinander subtrahieren und ein Reg
 
 #### Beispiel
 ```
-        MOV R0, #0x3			@ Setze R0 auf 3
-		MOV R1, #0x5			@ Setze R1 auf 5
-		MOV R2, #0x2			@ Setze R1 auf 0
-		SUBS R3, R0, R1			@ Führe R0 - R1 durch (3 - 5 = -2), Carry wird nicht gesetzt (C = 0), heißt ein Borrow ist aufgetreten
+    MOV R0, #0x3			@ Setze R0 auf 3
+	MOV R1, #0x5			@ Setze R1 auf 5
+	MOV R2, #0x2			@ Setze R1 auf 0
+	SUBS R3, R0, R1			@ Führe R0 - R1 durch (3 - 5 = -2), Carry wird nicht gesetzt (C = 0), heißt ein Borrow ist aufgetreten
 
-		SBC R4, R2, #0			@ Führe R2 - 0 - (1 - C) durch, speichere das Ergebnis in R4
-								@ R4 = 2 - 0 - (1 - 0) = 1 
+	SBC R4, R2, #0			@ Führe R2 - 0 - (1 - C) durch, speichere das Ergebnis in R4
+							@ R4 = 2 - 0 - (1 - 0) = 1 
 ```
 
 

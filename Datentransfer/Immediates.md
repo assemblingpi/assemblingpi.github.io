@@ -4,12 +4,12 @@ In ARM Assembler kann man immediates (unmittelbare Werte) verwenden, um Werte di
 
 Arithmetische Befehle: Man kann solche "unmittelbaren Werte" Beispielsweise in arithmetischen Befehlen wie ADD, SUB oder MOV verwenden: 
 ```asm
-MOV r0, #5        // Setzt das Register r0 auf den Wert 5
-ADD r1, r0, #10   // Addiert 10 zu r0 und speichert das Ergebnis in r1
+MOV r0, #5          @ Setzt das Register r0 auf den Wert 5
+ADD r1, r0, #10     @ Addiert 10 zu r0 und speichert das Ergebnis in r1
 ```
 Vergleiche: Immediates werden auch in Vergleichsbefehlen verwendet, wie z.B. CMP:
 ```asm
-CMP r0, #100      // Vergleicht den Wert im Register r0 mit 100
+CMP r0, #100        @ Vergleicht den Wert im Register r0 mit 100
 ```
 Bitmasken und Schiebebefehle: Bei Befehlen wie AND, ORR oder LSL können Immediates verwendet werden, um Bitmasken zu spezifizieren oder Bits zu verschieben:
 ```asm
@@ -23,15 +23,13 @@ Der Wert wird als normale Zahl ohne Präfix angegeben, z.B. `MOV R0, #42` setzt 
 Hexadezimal: 
 Werte können durch das Präfix `0x` angegeben werden, z.B. `MOV R0, #0x1A` setzt den Wert `26` (hexadezimal `0x1A`) in das Register `R0`.
 
-
-
-## Machine Code und Immediate Values
+### Machine Code und Immediate Values
 
 Bei der Immediate Addressierung, bei der Konstanten direkt in den Maschinen-Code eingebettet werden, ist die Größe der Konstanten, die verwendet werden kann, durch die fixe Länge der Instruktionen in RISC-CPUs wie ARM begrenzt. Diese Begrenzung ergibt sich daraus, dass nur eine bestimmte Anzahl von Bits für die Konstante zur Verfügung steht. Wer mehr darüber wissen möchte oder sich allgemein über die Details der Instruktionsformate informieren will, sollte die ARM-Referenzhandbücher ansehen und dort nach dem Format der Instruktionen suchen.
 
 Aus dieser Beschränkung ergibt sich, dass größere Konstanten in mehreren Schritten geladen werden müssen.
 
-kombiniertes Laden von Halfword-Immmediates
+#### Kombiniertes Laden von Halfword-Immmediates
 
 MOVT (Move Top): Diese Instruktion lädt einen 16-Bit-Wert (Halfword) in die oberen 16 Bits eines Registers. Es wird üblicherweise in Kombination mit `MOVW` verwendet, um ein 32-Bit-Register vollständig zu initialisieren. Die unteren 16 Bit, bleiben unverändert.
 

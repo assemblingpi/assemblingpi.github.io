@@ -49,4 +49,5 @@ end:
         b end
 ```
 
-[weiter](komplexedtypen.md)
+|----------------------------|------------------------------------|-------------------------|
+|   [zurück](datentypen.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](ascii.md)    |

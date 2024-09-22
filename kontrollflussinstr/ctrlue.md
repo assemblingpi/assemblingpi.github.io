@@ -4,8 +4,7 @@ Betrachten sie das folgende Codebeispiel. Wie sie sehen können, ist es nicht nu
 
 ```asm
 .global start
-.data
-.text
+.section .text
 
 start:
 some_func:

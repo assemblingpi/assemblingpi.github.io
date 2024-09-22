@@ -2,7 +2,6 @@
 Vergleichsoperatoren sind grundlegende Werkzeuge in Assembler, die verwendet werden, um Werte in Registern zu vergleichen, um auf der Grundlage dieser Vergleiche Entscheidungen zu treffen. 
 Im Gegensatz zu anderen Befehlen speichern Vergleichsoperatoren kein Resultat in einem Register. Stattdessen beeinflusst der Vergleich einzig die Statusflags, die im weiteren Programmverlauf für bedingte Anweisungen verwendet werden können.
 
-
 ### CMP
 
 Der CMP-Befehl ("Compare") ist ein Vergleichsoperator, der zwei Registerwerte durch eine Subtraktion miteinander vergleicht und die Ergebnisflags entsprechend setzt. 
@@ -18,9 +17,6 @@ Der Befehl vergleicht den Wert in Register A mit dem in Register B, indem er die
 #### Beispiel
 
 ```
-.global _start
-_start:
-
 	MOV R0, #5
 	MOV R1, #4
 	CMP R0, R1   @ Erste CMP-Operation
@@ -61,9 +57,6 @@ Der Befehl führt eine bitweise UND-Operation zwischen den Werten in Register A 
 #### Beispiel
 
 ```
-.global _start
-_start:
-
 	MOV R0, #0b1010   
 	MOV R1, #0b0101   
 	TST R0, R1			       	
@@ -89,9 +82,6 @@ TEQ <RegisterA>, <RegisterB>
 #### Beispiel
 
 ```
-.global _start
-_start:
-
 	MOV R0, #0b1100   
 	MOV R1, #0b1100   
 	TEQ R0, R1			       	
@@ -113,9 +103,6 @@ Neben den spezifischen Vergleichsoperatoren wie **CMP**, **TST** und **TEQ** kö
 ```
 #### Beispiel
 ```
-.global _start
-_start:
-
 	MOV R0, #5      
 	MOV R1, #3      
 	ADDS R2, R0, R1   @ Addition mit Flags
@@ -136,7 +123,6 @@ Die SUBS-Instruktion subtrahiert den Wert in R1 von R0 und speichert das Ergebni
 Da das Ergebnis 2 positiv ist, wird die N-Flag nicht gesetzt.
 Die Z-Flag bleibt unverändert, da das Ergebnis nicht null ist.
 Die C-Flag bleibt gesetzt, weil kein Borrow aufgetreten ist.
-
 
 Das **S-Suffix** kombiniert also die Möglichkeit Rechenoperationen durchzuführen, mit der Funktionalität von Vergleichsoperatoren, indem sie die Statusflags für spätere bedingte Anweisungen aktualisieren.
 

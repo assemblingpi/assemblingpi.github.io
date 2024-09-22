@@ -11,4 +11,5 @@ Als **Leaf-Prozeduren** (Blattprozeduren) bezeichnet man die Knoten im Calltree,
 
 **Nonleaf-Prozeduren** (Nicht-Blattprozeduren) sind dagegen Knoten im Calltree, die selbst andere Prozeduren aufrufen. Diese Prozeduren sind nicht am Ende eines Aufrufzweigs, sondern dienen als Verzweigungspunkte, von denen weitere Prozeduren aufgerufen werden. Sie haben also Kinder im Baum, die ihre eigenen Aufrufe enthalten können.
 
-[weiter](prozlrstack.md)
+|----------------------------------|------------------------------------|-------------------------------|
+|   [zurück](wasiststackframe.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](prozlrstack.md)    |

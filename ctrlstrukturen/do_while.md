@@ -30,4 +30,5 @@ Im Gegensatz zur normalen while-Schleife wird hier zuerst `i` um 1 erhöht und d
 
 ![Screenshot of Example Program](./do_while.png)
 
-[weiter](../Proz/prozprog.md)
+|-----------------------|------------------------------------|--------------------------------------------|
+|   [zurück](while.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../Datentypen/datentypen.md)    |

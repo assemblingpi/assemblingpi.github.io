@@ -10,9 +10,6 @@ Hierbei ist `label` der Block, zu dem das Programm springen soll.
 
 #### Beispiel
 ```
-.global _start
-_start:
-	
 	MOV R0, #3			@ Speichere die Zahl 3 in Register R0
 	MOV R1, #4			@ Speichere die Zahl 4 in Regster R1
 	B addierer			@ Spring in Block "addierer"
@@ -37,9 +34,6 @@ Hierbei ist `<Register>` das Register, das die Adresse enthält, zu der gesprung
 
 #### Beispiel
 ```
-.global _start
-_start:
-
     MOV R0, #3           @ Speichere die Zahl 3 in Register R0
     MOV R1, #4           @ Speichere die Zahl 4 in Register R1
     LDR R3, =seg2        @ Lade die Adresse des Blocks 'seg2' in Register R3
@@ -71,9 +65,6 @@ Hierbei ist `label` der Block, zu dem das Programm springen soll.
 
 #### Beispiel
 ```
-.global _start
-_start:
-
     MOV R0, #3          @ Speichere die Zahl 3 in Register R0
     MOV R1, #4          @ Speichere die Zahl 4 in Register R1
     BL addierer         @ Springe in Block "addierer" und speichere die Rücksprungadresse in LR

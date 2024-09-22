@@ -2,7 +2,7 @@
 
 In der Assemblerprogrammierung sind Operanden und Adressierungsarten entscheidend, da sie bestimmen, welche Daten von einer Anweisung verarbeitet werden und wie diese Daten im Speicher oder in Registern gefunden werden. Operandenadressen geben den Speicherort der Daten an, sei es im Arbeitsspeicher oder in CPU-Registern, die über eindeutige Kennungen (z.B. R0, R1) angesprochen werden. Manche Anweisungen benötigen keine Operanden, andere hingegen ein bis drei. Bei zwei Operanden dient der erste meist als Zielregister, während der zweite die Quelle ist, die entweder die Daten oder deren Adresse angibt.
 
-#### Operanden: Die Bausteine der Anweisungen**
+#### Operanden: Die Bausteine der Anweisungen
 
 Jede Assembleranweisung benötigt **Operanden**, um Daten zu verarbeiten. Ein Operand kann entweder ein direkter Wert, ein Register oder eine Speicheradresse sein. Die Art und Weise, wie diese Operanden adressiert werden, bestimmt, wie die CPU auf die benötigten Daten zugreift und diese verarbeitet.
 
@@ -67,13 +67,14 @@ Die **Adressierungsarten** sind integrale Bestandteile der Assemblerprogrammieru
 Betrachten wir ein einfaches Beispiel, das verschiedene Adressierungsarten innerhalb eines Basic Blocks verwendet:
 
 ```
-MOV R1, #5          ; Immediate Adressierung: R1 = 5
-ADD R2, R1          ; Register-Adressierung: R2 = R2 + R1
-LOAD R3, [R2]       ; Register-indirekte Adressierung: R3 = Speicher[R2]
-CMP R3, #10         ; Immediate Adressierung: Vergleiche R3 mit 10
-BGE label_end       ; Verzweigung: Springe zu 'label_end' wenn R3 >= 10
-SUB R3, R1          ; Register-Adressierung: R3 = R3 - R1
+MOV R1, #5          @ Immediate Adressierung: R1 = 5
+ADD R2, R1          @ Register-Adressierung: R2 = R2 + R1
+LOAD R3, [R2]       @ Register-indirekte Adressierung: R3 = Speicher[R2]
+CMP R3, #10         @ Immediate Adressierung: Vergleiche R3 mit 10
+BGE label_end       @ Verzweigung: Springe zu 'label_end' wenn R3 >= 10
+SUB R3, R1          @ Register-Adressierung: R3 = R3 - R1
 label_end:
+...
 ```
 
 

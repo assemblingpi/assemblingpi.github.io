@@ -71,12 +71,14 @@ BX  r1
 
 **BX r1** führt einen bedingungslosen Sprung zur Adresse aus, die in r1 steht.
 
-#### Der Kontrollflussgraph zum Beispiel:
-
-![Screenshot of Example Program](./switch_case_fc.png)
-
 **Alternativ hätte man dem Sprung auch in einer Zeile realisieren können:**
 ``` 
 LDR pc, [r1, r0, LSL #2]
 ```
-[weiter](while.md)
+
+#### Der Kontrollflussgraph zum Beispiel:
+
+![Screenshot of Example Program](./switch_case_fc.png)
+
+|-------------------------------------|------------------------------------|-------------------------|
+|   [zurück](If-then_elseif-then.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](while.md)    |

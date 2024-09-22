@@ -146,3 +146,6 @@ Die folgende Tabelle dient als Referenz, um schnell nachzusehen, welches Ascii-Z
 | }       | 125     | 0x7D        |
 | ~       | 126     | 0x7E        |
 | DEL     | 127     | 0x7F        |
+
+|-------------------------------|------------------------------------|----------------------------------|
+|   [zurück](einfachdtypen.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](komplexedtypen.md)    |

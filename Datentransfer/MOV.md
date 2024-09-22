@@ -34,16 +34,13 @@ Nach der Ausführung dieses Befehls enthalten sowohl `Rd` als auch `Rn` denselbe
 ### Anwendungsbeispiel
 Betrachten wir nun ein vollständiges Beispiel, das veranschaulicht, wie der `MOV`-Befehl verwendet wird, um Werte zwischen Registern zu kopieren und unmittelbare Werte in Register zu laden:
 ```asm
-.section .text 
-.global _start _start: 
 MOV R0, #5        @ Lade den Wert 5 in Register R0 
 MOV R1, R0        @ Kopiere den Wert von R0 nach R1 
 MOV R2, #10       @ Lade den Wert 10 in Register R2
 ```
 
 ## LDR Pseudo-Instruktion
-Wie zuvor erwähnt,  kann man mit der Instruktion `MOV Rd, #im` nur 8-bit Werte in Register speichern. Um größere Werte in einem Register abzulegen, verwendet man die LDR-Instruktion. 
-Achtung: Das ist nur ein Pseudo-Befehl. Die eigentliche Anwendung von LDR wird an späterer Stelle erklärt!
+Wie zuvor erwähnt,  kann man mit der Instruktion `MOV Rd, #im` nur 8-bit Werte in Register speichern. Um 32-Bit-Werte mittels einem Befehl in ein Register abzulegen, verwendet man die LDR-Instruktion. 
 
 ### Syntax
 ```
@@ -51,11 +48,13 @@ LDR <Zielregister>, =imm
 ```
 Hierbei ist `<Zielregister>` das Register, in das der konstante Wert `imm` kopiert werden soll. Anders als bei MOV wird hier ein `=` anstelle von `#` verwendet, um eine Konstante zu kennzeichnen.
 
+**Achtung:** `LDR <Zielregister>, =imm` ist eine Pseudo-Instruktion, weil sie nicht direkt von der Hardware unterstützt wird. Stattdessen übersetzt der Assembler sie in eine Reihe von echten Maschinenbefehlen, um den konstanten Wert in das Register zu laden. Der echte LDR-Befehl hingegen lädt ausschließlich Daten aus bestehenden Speicheradressen in ein Register, worauf an späterer Stelle genauer eingegangen wird.
+
 ### Beispiel
 ```
-        LDR R0, =0xaabb			@ Lade 16-Bit-Wert in Register R0
-		LDR R1, =0xaabbccdd		@ Lade 32-Bit-Wert in Register R1
-		MOV R2, #0xabc			@ Wird nicht funktionieren, weil 12-Bit-Werte nicht mit MOV gespeichert werden können
+LDR R0, =0xaabb			@ Lade 0xaabb als 32-Bit-Wert in Register R0 (also 0x0000aabb)
+LDR R1, =0xaabbccdd		@ Lade 32-Bit-Wert in Register R1
+MOV R2, #0xabc			@ Wird nicht funktionieren, weil #imm-Wert zu groß
 ```
 
 |---------------------|-------------------------------|-------------------------|

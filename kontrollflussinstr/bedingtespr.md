@@ -13,9 +13,6 @@ B<condition> <label>
 Wenn eine bedingte Sprunganweisung ausgeführt wird, überprüft der Prozessor die Statusflags im CPSR. Falls die angegebene Bedingung erfüllt ist, wird der Sprung zu dem spezifizierten Label durchgeführt. Andernfalls wird die nächste Anweisung im Code ausgeführt.
 
 ```
-.global _start
-_start:
-
     MOV R0, #5           @ Speichere die Zahl 5 in Register R0
     MOV R1, #7           @ Speichere die Zahl 7 in Register R1
     CMP R0, R1           @ Vergleiche R0 und R1 (5-7)

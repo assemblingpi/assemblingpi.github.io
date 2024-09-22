@@ -53,4 +53,5 @@ end:
 
 Mehrdimensionale Arrays sind besonders nützlich in der low-level Grafikprogrammierung. Beim direkten Zeichnen auf den Bildschirm wird der Bildschirmspeicher als mehrdimensionales Array betrachtet, wobei jede Position im Array einem Pixel auf dem Bildschirm entspricht. Auch in wissenschaftlichen Berechnungen, wie der Arbeit mit Matrizen, und in der Bildverarbeitung sind mehrdimensionale Arrays unverzichtbar.
 
-[Übung zu mehrdimensionalen Arrays](array2dimue.md)
+|----------------------------|------------------------------------|-------------------------------|
+|   [zurück](array1dueb.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](array2dimue.md)    |

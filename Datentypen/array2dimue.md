@@ -20,3 +20,6 @@ _start:
 ### Aufgabenstellung:
 Kopiere den oben abgebildeten Code in den CPUlator und ergänze ihn so, dass er die Daten in Matrix als einen zweidimensionalen Array verarbeitet.
 Der array matrix[3][16] soll in jeder Zeile nach der längsten Reihe von 0xaa durchsucht werden und diese soll dann jeweils durch eine ebensolange Kette von 0xcc ersetzt werden.
+
+|--------------------------------|------------------------------------|------------------------------------|
+|   [zurück](arraysmultidim.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../Proz/prozprog.md)    |

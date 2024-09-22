@@ -26,4 +26,5 @@ Kopiere den oben abgebildeten Code in den CPUlator und ergänze ihn so, dass er
 1. mittels Bubblesort sortiert wird
 2. mittels Insertionsort sortiert wird
 
-[weiter](arraymultidim.md)
+|---------------------------|------------------------------------|----------------------------------|
+|   [zurück](array1dim.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](arraysmultidim.md)    |

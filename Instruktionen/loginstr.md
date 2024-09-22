@@ -3,6 +3,7 @@
 Der `AND`-Operator in ARMv7 führt eine bitweise logische UND-Operation zwischen zwei Werten durch. Dabei wird jedes Bit des ersten Operanden (in der Wahrheitstabelle A) mit dem entsprechenden Bit des zweiten Operanden (in der Wahrheitstabelle B) verglichen. Das Ergebnis ist nur dann 1, wenn beide Bits 1 sind. Andernfalls ist das Ergebnis 0.
 
 #### Wahrheitstabelle für AND
+
 |  A  |  B  |  Y  |
 |-----|-----|-----|
 |  0  |  0  |  0  |
@@ -24,10 +25,7 @@ AND <Zielregister>, <RegisterA>, <RegisterB>
 Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Register B` bitweise verundet. Das Ergebnis wird in das `Zielregister` gespeichert.
 
 #### Beispiel
-```
-.global _start
-_start:
-    
+``` 
     MOV R0, #0x12
     MOV R1, #0x30
     AND R2, R0, R1
@@ -55,6 +53,7 @@ Wie es hier ersichtlich ist, ergibt sich als Ergebnis der Verundung `0x10`. Dies
 Der ORR-Operator führt eine bitweise logische ODER-Operation zwischen zwei Werten durch. Dabei wird jedes Bit des ersten Operanden (in der Wahrheitstabelle A) mit dem entsprechenden Bit des zweiten Operanden (in der Wahrheitstabelle B) verglichen. Das Ergebnis ist dann 1, wenn mindestens eines der beiden Bits 1 ist. Nur wenn beide Bits 0 sind, ist das Ergebnis 0.
 
 #### Wahrheitstabelle für ORR
+
 |  A  |  B  |  Y  |
 |-----|-----|-----|
 |  0  |  0  |  0  |
@@ -77,10 +76,7 @@ ORR <Zielregister>, <RegisterA>, <RegisterB>
 Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Register B` bitweise verodert. Das Ergebnis wird in das `Zielregister` gespeichert.
 
 #### Beispiel
-```
-.global _start
-_start:
-    
+``` 
     MOV R0, #0x5c
     MOV R1, #0x71
     ORR R2, R0, R1
@@ -108,6 +104,7 @@ Wie es hier ersichtlich ist, ergibt sich als Ergebnis der Veroderung `0x7d`. Die
 Der EOR-Operator (Exclusive OR) in ARMv7 führt eine bitweise exklusive ODER-Operation zwischen zwei Werten durch. Dabei wird jedes Bit des ersten Operanden (in der Wahrheitstabelle A) mit dem entsprechenden Bit des zweiten Operanden (in der Wahrheitstabelle B) verglichen. Das Ergebnis ist dann 1, wenn die Bits unterschiedlich sind, also eines der Bits 1 und das andere 0 ist. Sind beide Bits gleich, ist das Ergebnis 0.
 
 #### Wahrheitstabelle für EOR
+
 |  A  |  B  |  Y  |
 |-----|-----|-----|
 |  0  |  0  |  0  |
@@ -131,9 +128,6 @@ Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Regist
 
 #### Beispiel
 ```
-.global _start
-_start:
-
     MOV R0, #0x3a
     MOV R1, #0x6e
     EOR R2, R0, R1
@@ -162,6 +156,7 @@ Wie es hier ersichtlich ist, ergibt sich als Ergebnis der exklusive Veroderung `
 Der MVN-Operator (Move Not) in ARMv7 führt eine bitweise Negation (NOT-Operation) auf einen Wert durch. Dabei wird jedes Bit des Operanden invertiert, d.h. eine 1 wird zu 0 und 0 wird zu 1. Das Ergebnis wird dann in das Zielregister geschrieben.
 
 #### Wahrheitstabelle für MVN
+
 |  A  |  Y  |
 |-----|-----|
 |  0  |  1  |
@@ -183,9 +178,6 @@ Hier wird der Wert, der in `Register A` gespeichert ist, bitweise negiert. Das E
 
 #### Beispiel
 ```
-.global _start
-_start:
-
     MOV R0, #0x3a
     MVN R1, R0
 ```
