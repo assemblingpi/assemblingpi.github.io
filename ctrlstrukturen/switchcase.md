@@ -26,7 +26,7 @@ Diese Tabelle enthält Adressen zu den verschiedenen `case`-Labels. Die Implemen
 #### Beispiel in ARM-Assembler:
 ```asm 
 .data
-table: .word case0
+table:  .word case0
         .word case1
         .word case2
         .word default
