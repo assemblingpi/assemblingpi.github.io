@@ -19,7 +19,7 @@
 | [komplexe Datentypen](../Datentypen/komplexedtypen)                       |
 | **5. prozedurale Programmierung**                                         |
 | [Was ist prozedurale Programmierung?](../Proz/prozprog)                   |
-| [Was ist eine Prozedur?] (../Proz/wasistproz)                             |
+| [Was ist eine Prozedur?](../Proz/wasistproz)                             |
 
 
 |**B. Fortgeschrittene Konzepte und Anwendungen**|
