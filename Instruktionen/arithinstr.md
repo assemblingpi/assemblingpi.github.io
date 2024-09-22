@@ -168,9 +168,9 @@ Achtung: Auch bei `MLA` können keine unmittelbaren Werte verwendet werden!
 #### Anwendungsbeispiele
 
 ```
-    MOV R0, #2   			@ Lade den Wert 2 in Register R0        
-    MOV R1, #7 				@ Lade den Wert 7 in Register R1 
-    MOV R2, #1				@ Lade den Wert 1 in Register R2 
+    MOV R0, #2                      
+    MOV R1, #7               
+    MOV R2, #1				 
     MLA R3, R0, R1, R2      @ R3 = (R0 * R1) + R2 = (2 * 7) + 1 = 15
 ```
 ####  Folgendes Beispiel zeigt, wie man MLA nicht anwenden sollte:
