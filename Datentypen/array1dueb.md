@@ -9,7 +9,7 @@ Die Aufgabe ist nun, diesen mittels einfacher Sortieralgorithmen zu sortieren.
 .text
 .global _start
 _start:
-// code hier
+@ code hier
 ```
 
 ### Was sind Sortieralgorithmen?

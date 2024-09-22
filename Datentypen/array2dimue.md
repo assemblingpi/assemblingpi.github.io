@@ -4,8 +4,8 @@ Gegeben ist der folgende Codeabschnitt:
 .data
 
 matrix: .word 0x0, 0xaa, 0xbbff0000, 0x0
-                .word 0xaaaa, 0x0, 0xffff00ff, 0xaaaa
-                .word 0x0, 0xaaaaaaaa, 0xaaaabbff, 0x0
+        .word 0xaaaa, 0x0, 0xffff00ff, 0xaaaa
+        .word 0x0, 0xaaaaaaaa, 0xaaaabbff, 0x0
 
 
 .text
@@ -14,7 +14,7 @@ matrix: .word 0x0, 0xaa, 0xbbff0000, 0x0
 _start:
         
         ldr r0, =matrix
-        //code hier
+        @ code hier
 ```
 
 ### Aufgabenstellung:

@@ -23,8 +23,8 @@ In Assembler wird das Struct durch die Verwaltung von **Speicheradressen** und *
 ```asm
 .data
 @ offsets für den Zugriff auf die Elemente
-   .equ i_zahl, 0
-   .equ i_wert, 4        
+    .equ i_zahl, 0
+    .equ i_wert, 4        
 
 struct_bsp:
     .space 8                @ Reserviere 8 Bytes für das Struct
@@ -32,11 +32,9 @@ struct_bsp:
 
 #### Zugriff auf die Struct:
 ```
-.text
     LDR r0, =struct_bsp     @ Lade die Basisadresse des Structs in Register r0
     LDR r1, [r0, #i_Zahl]   @ Lade die Ganzzahl (Offset 0) in Register r1
     LDR r2, [r0, #f_wert]   @ Lade die Fließkommazahl (Offset 4) in Register r2
-
 ```
 
 |--------------------------------|------------------------------------|--------------------------|
