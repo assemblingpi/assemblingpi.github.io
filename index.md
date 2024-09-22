@@ -13,7 +13,7 @@ Der Fokus des Quellcodes liegt auf Übersichtlichkeit, nicht auf Perfektion oder
 
 
 |-------------------------------|----------------------------------------------------|
-[**Hauptmenü** ](ueberblick.md)     [**Tutorial starten**](wasistprog/wasistprog.md) |
+[**Hauptmenü** ](ueberblick.md) |  [**Tutorial starten**](wasistprog/wasistprog.md) |
 
 
 
