@@ -1,8 +1,8 @@
 ## Assembling Pi: Ein praxisorientiertes Tutorial zur Assembler-Programmierung auf dem Raspberry Pi
 
-Willkommen zu Assembling Pi – einem Tutorial, das Sie Schritt für Schritt in die Welt der Assembler-Programmierung auf dem Raspberry Pi einführt. Dieses Tutorial richtet sich an alle, die ein tieferes Verständnis für das Zusammenspiel von Hard- und Software auf einer grundlegenden Ebene erlangen möchten, auch ohne Vorkenntnisse in der Assembler-Programmierung.
+Willkommen zu **Assembling Pi** – einem Tutorial, das Sie Schritt für Schritt in die Welt der Assembler-Programmierung auf dem Raspberry Pi einführt. Dieses Tutorial richtet sich an alle, die ein tieferes Verständnis für das Zusammenspiel von Hard- und Software auf einer grundlegenden Ebene erlangen möchten, auch ohne Vorkenntnisse in der Assembler-Programmierung.
 
-In den kommenden Kapiteln werden Sie die Grundlagen der ARM-Assembler-Programmierung kennenlernen. Sie erfahren nicht nur mehr über wichtige Konzepte der ARM-Architektur und Systemprogrammierung, sondern auch über die faszinierende Welt der Grafikprogrammierung. Dieses praxisorientierte Tutorial bietet Ihnen nicht nur theoretisches Wissen, sondern begleitet jeden Schritt mit gezielten Übungsaufgaben, um das Gelernte direkt anzuwenden und zu festigen.
+In den kommenden Kapiteln werden Sie die Grundlagen der ARM-Assembler-Programmierung kennenlernen. Sie erfahren nicht nur mehr über wichtige Konzepte der ARM-Architektur und Systemprogrammierung, sondern auch fundamentale Grundalgen der Grafikprogrammierung. Dieses praxisorientierte Tutorial bietet Ihnen nicht nur theoretisches Wissen, sondern begleitet jeden Schritt mit gezielten Übungsaufgaben, um das Gelernte direkt anzuwenden und zu festigen.
 
 Begleiten Sie uns auf dem Weg die Sprache der ARM-Prozessoren zu erlernen!
 
