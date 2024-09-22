@@ -3,5 +3,5 @@ Programme auf diese Weise zu betrachten, ist nicht bloss als abstrakte Betrachtu
 
 ![Programm](./prog.png)
 
-|-------------------------|--------------------------|----------------------|
-| [zurück](wasistprog.md) | [Hauptmenü](../index.md) | [weiter](disasm.md)  | 
+|-------------------------|-------------------------------|----------------------|
+| [zurück](wasistprog.md) | [Hauptmenü](../ueberblick.md) | [weiter](disasm.md)  | 

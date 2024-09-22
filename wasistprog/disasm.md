@@ -8,5 +8,5 @@ Der ursprüngliche Quellcode, der in einer höheren Programmiersprache wie C ode
 ### Was ist ein Controlflowgraph?
 Ein Control Flow Graph (CFG) ist eine grafische Darstellung des Kontrollflusses innerhalb eines Programms. Er zeigt, wie die verschiedenen Anweisungen und Blöcke im Programm miteinander verbunden sind, und stellt insbesondere Verzweigungen, Schleifen und Sprünge dar. Ein CFG wird häufig in der sogenannten "statischen Analyse" verwendet, um die Struktur eines Programms zu verstehen und potenzielle Schwachstellen oder Optimierungsmöglichkeiten zu identifizieren.
 
-|-----------------------|--------------------------|------------------------------------------|
-| [zurück](mehrals.md)  | [Hauptmenü](../index.md) | [weiter](../einführungarch/archintro.md) | 
+|-----------------------|-------------------------------|------------------------------------------|
+| [zurück](mehrals.md)  | [Hauptmenü](../ueberblick.md) | [weiter](../einführungarch/cpuintro.md) | 

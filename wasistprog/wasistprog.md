@@ -7,5 +7,5 @@ Um als Programm eine sinnvolle Tätigkeit zu verrichten, braucht es viele dieser
 Ein Programm besteht somit aus Blöcken von Befehlen, die linear abgearbeitet werden und aus Verzweigungen, die diese elementaren Blöcke miteinander verbinden. Diese Blöcke, "Basic Blocks" genannt, enthalten eine Abfolge von Befehlen, die ohne Unterbrechung durchlaufen werden, bis eine Bedingung oder ein Sprungbefehl auftritt. Verzweigungen bestimmen, wie der Programmfluss von einem Block zum nächsten erfolgt, sei es durch bedingte Anweisungen oder direkte Sprünge.
 
 
-|-----------------------|--------------------------|----------------------|
-| [zurück](../index.md) | [Hauptmenü](../index.md) | [weiter](mehrals.md) | 
+|-----------------------|-------------------------------|----------------------|
+| [zurück](../index.md) | [Hauptmenü](../ueberblick.md) | [weiter](mehrals.md) | 

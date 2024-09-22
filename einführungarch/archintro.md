@@ -11,4 +11,4 @@ Diese zentralen Komponenten der Von-Neumann-Architektur werden durch das Stored 
 - Load/Store Architektur
 
 |-----------------------------------|--------------------------|----------------------|
-| [zurück](../wasistprog/disasm.md) | [Hauptmenü](../index.md) | [weiter](cpuintro.md)| 
+| [zurück](../wasistprog/disasm.md) | [Hauptmenü](../index.md) | [weiter](memintro.md)| 
