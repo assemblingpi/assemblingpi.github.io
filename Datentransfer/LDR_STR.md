@@ -74,11 +74,11 @@ _start:
 
 **So sieht der Speicher nach der Ausführung des Codes in CPULator aus:**
 
-![image.png](attachment:1865edb6-21d6-4368-a278-163957baea7a.png)
+![Screenshot of Example Program](./LDR3.png)
 
 **So sehen die Register nach der Ausführung aus:**
 
-![image.png](attachment:6295d486-15e2-4c57-a421-18ba9ce0a9cc.png)
+![Screenshot of Example Program](./LDR4.png)
 
 Wie man hier erkennen kann, wurde der Wert 0xaaaaaaaa aus der Speicheradresse 0x18 in R2 gespeichert.
 
