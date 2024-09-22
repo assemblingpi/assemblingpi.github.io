@@ -94,12 +94,11 @@ Achtung: Es ist nicht möglich, zwei unmittelbare Werte direkt miteinander zu ad
 
 #### Beispiel
 ```
-    LDR R0, =0xffffffff		@ Setze R0 auf den maximalen 32-Bit-Wert 
-    LDR R1, =0xa    		@ Setze R1 auf 10
-    MOV R2, #0x0			@ Setze R2 auf 0
-    ADDS R3, R0, R1			@ Führe die Addition R0 + R1 durch, setze das Carry Flag
-    ADC R4, R2, #0			@ Addiere R2 + 0 + Carry, speichere das Ergebnis in R4  
-                                @ R4 = R2 + 0 + Carry = 0 + 0 + 1 = 1
+    LDR R0, =0xffffffff		 
+    LDR R1, =0xa    		
+    MOV R2, #0x0			
+    ADDS R3, R0, R1         @ Führe die Addition R0 + R1 durch, setze Flags
+    ADC R4, R2, #0          @ R4 = R2 + 0 + Carry = 0 + 0 + 1 = 1
 ```
 
 
@@ -110,18 +109,17 @@ Der SBC-Befehl (Subtract with Carry) führt eine Subtraktion von zwei Werten dur
 ```
 SBC <Zielregister>, <Quellregister>, <Quelle>
 ```
-Hierbei ist `<Zielregister>` das Register, in das das Ergebnis der Subtraktion gespeichert wird, <Quellregister> ist das Register, von dem subtrahiert wird, und <Quelle> ist ein Register, dessen Wert subtrahiert wird. `<Quelle>` kann aber genauso wieder ein unmittelarer Wert sein! Zuletzt wird dann noch zusätzlich der invertierte Wert des Carry-Flags abgezogen.
+Hierbei ist `<Zielregister>` das Register, in das das Ergebnis der Subtraktion gespeichert wird, `<Quellregister>` ist das Register, von dem subtrahiert wird, und `<Quelle>` ist ein Register, dessen Wert subtrahiert wird. `<Quelle>` kann aber genauso wieder ein unmittelarer Wert sein! Zuletzt wird dann noch zusätzlich der invertierte Wert des Carry-Flags abgezogen.
 
 Achtung: Man darf keine unmittelbaren Werte voneinander subtrahieren und ein Registerwert kann nicht von einem unmittelbaren Wert subtrahiert werden! 
 
 #### Beispiel
 ```
-    MOV R0, #0x3			@ Setze R0 auf 3
-    MOV R1, #0x5			@ Setze R1 auf 5
-    MOV R2, #0x2			@ Setze R1 auf 0
-    SUBS R3, R0, R1			@ Führe R0 - R1 durch (3 - 5 = -2), Carry wird nicht gesetzt (C = 0), heißt ein Borrow ist aufgetreten
-    SBC R4, R2, #0			@ Führe R2 - 0 - (1 - C) durch, speichere das Ergebnis in R4
-                                @ R4 = 2 - 0 - (1 - 0) = 1 
+    MOV R0, #0x3			
+    MOV R1, #0x5			
+    MOV R2, #0x2			
+    SUBS R3, R0, R1         @ Führe R0 - R1 durch, Carry wird nicht gesetzt, heißt Borrow ist aufgetreten
+    SBC R4, R2, #0          @ R4 = R2 - 0 - (1 - C) = 2 - 0 - (1 - 0) = 1 
 ```
 
 
@@ -173,8 +171,7 @@ Achtung: Auch bei `MLA` können keine unmittelbaren Werte verwendet werden!
     MOV R0, #2   			@ Lade den Wert 2 in Register R0        
     MOV R1, #7 				@ Lade den Wert 7 in Register R1 
     MOV R2, #1				@ Lade den Wert 1 in Register R2 
-    MLA R3, R0, R1, R2      @ Multipliziere R0 und R1, addiere R2, speichere das Ergebnis in R3
-                                @ R3 = (R0 * R1) + R2 = (2 * 7) + 1 = 15
+    MLA R3, R0, R1, R2      @ R3 = (R0 * R1) + R2 = (2 * 7) + 1 = 15
 ```
 ####  Folgendes Beispiel zeigt, wie man MLA nicht anwenden sollte:
 ```asm
