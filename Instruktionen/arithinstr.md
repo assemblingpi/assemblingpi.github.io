@@ -99,7 +99,7 @@ Achtung: Es ist nicht möglich, zwei unmittelbare Werte direkt miteinander zu ad
     MOV R2, #0x0			@ Setze R2 auf 0
     ADDS R3, R0, R1			@ Führe die Addition R0 + R1 durch, setze das Carry Flag
     ADC R4, R2, #0			@ Addiere R2 + 0 + Carry, speichere das Ergebnis in R4  
-                            @ R4 = R2 + 0 + Carry = 0 + 0 + 1 = 1
+                                @ R4 = R2 + 0 + Carry = 0 + 0 + 1 = 1
 ```
 
 
@@ -121,7 +121,7 @@ Achtung: Man darf keine unmittelbaren Werte voneinander subtrahieren und ein Reg
     MOV R2, #0x2			@ Setze R1 auf 0
     SUBS R3, R0, R1			@ Führe R0 - R1 durch (3 - 5 = -2), Carry wird nicht gesetzt (C = 0), heißt ein Borrow ist aufgetreten
     SBC R4, R2, #0			@ Führe R2 - 0 - (1 - C) durch, speichere das Ergebnis in R4
-                            @ R4 = 2 - 0 - (1 - 0) = 1 
+                                @ R4 = 2 - 0 - (1 - 0) = 1 
 ```
 
 
@@ -173,8 +173,8 @@ Achtung: Auch bei `MLA` können keine unmittelbaren Werte verwendet werden!
     MOV R0, #2   			@ Lade den Wert 2 in Register R0        
     MOV R1, #7 				@ Lade den Wert 7 in Register R1 
     MOV R2, #1				@ Lade den Wert 1 in Register R2 
-    MLA R3, R0, R1, R2		@ Multipliziere R0 und R1, addiere R2, speichere das Ergebnis in R3
-                            @ R3 = (R0 * R1) + R2 = (2 * 7) + 1 = 15
+    MLA R3, R0, R1, R2      @ Multipliziere R0 und R1, addiere R2, speichere das Ergebnis in R3
+                                @ R3 = (R0 * R1) + R2 = (2 * 7) + 1 = 15
 ```
 ####  Folgendes Beispiel zeigt, wie man MLA nicht anwenden sollte:
 ```asm
