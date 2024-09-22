@@ -2,24 +2,24 @@
 |---------------------------------------------------------------------------|
 | **1. Einführung**                                                         |
 | [Was ist ein Programm?](../wasistprog/wasistprog)                         | 
-| [Grundlagen der Computerarchitektur](../einführungarch/cpuintro.md)       | 
-| [Zahlensysteme, Bits und Bytes](../ZahlensysBitsBytes/zbb.md)             |
-| [Die Programmiersprache Assembler](../progspracheasm/progasmintro.md)     |
-| [CPUlator](../CPUlator/cpulator.md)                                       | 
+| [Grundlagen der Computerarchitektur](../einführungarch/cpuintro)          | 
+| [Zahlensysteme, Bits und Bytes](../ZahlensysBitsBytes/zbb)                |
+| [Die Programmiersprache Assembler](../progspracheasm/progasmintro)        |
+| [CPUlator](../CPUlator/cpulator)                                          | 
 | **2. Basic Blocks implementieren**                                        |
-| [Datentransfer](../Datentransfer/datentr.md)                              | 
-| [Sektionen](../Sektionen_Label/sektionen.md)                              | 
-| [arithmetisch logische Instruktionen](../Instruktionen/arithlogintro.md)  | 
+| [Datentransfer](../Datentransfer/datentr)                                 | 
+| [Sektionen](../Sektionen_Label/sektionen)                                 | 
+| [arithmetisch logische Instruktionen](../Instruktionen/arithlogintro)     | 
 | **3. Verknüpfungen von Basic Blocks**                                     |
-| [Kontrollflussinstruktionen](../kontrollflussinstr/ctrlflow.md)           | 
-| [Kontrollstrukturen](../ctrlstrukturen/ctrlstrcts.md)                     | 
+| [Kontrollflussinstruktionen](../kontrollflussinstr/ctrlflow)              | 
+| [Kontrollstrukturen](../ctrlstrukturen/ctrlstrcts)                        | 
 | **4. Datentypen**                                                         |
-| [Datentypen](../Datentypen/datentypen.md)                                 |
-| [einfache Datentypen](../Datentypen/einfachdtypen.md)                     |
-| [komplexe Datentypen](../Datentypen/komplexedtypen.md)                    |
+| [Datentypen](../Datentypen/datentypen)                                    |
+| [einfache Datentypen](../Datentypen/einfachdtypen)                        |
+| [komplexe Datentypen](../Datentypen/komplexedtypen)                       |
 | **5. prozedurale Programmierung**                                         |
-| [Was ist prozedurale Programmierung?](../Proz/prozprog.md)                |
-| [Was ist eine Prozedur?] (../Proz/wasistproz.md)                          |
+| [Was ist prozedurale Programmierung?](../Proz/prozprog)                   |
+| [Was ist eine Prozedur?] (../Proz/wasistproz)                             |
 
 
 |**B. Fortgeschrittene Konzepte und Anwendungen**|
