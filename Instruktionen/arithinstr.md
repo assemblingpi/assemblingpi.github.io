@@ -84,7 +84,53 @@ Hier wird der unmittelbare Wert `<#imm>` von dem Wert in `<Rn>` subtrahiert, das
 ```
 
 
-### MUL
+### ADC
+Der ADC-Befehl (Add with Carry) führt eine Addition von zwei Werten durch und addiert zusätzlich den Wert des Carry Flags (C-Flag), wenn dieses gesetzt ist. Dies ist nützlich, um Operationen über mehrere Register hinweg durchzuführen.
+
+#### Syntax
+```
+ADC <Zielregister>, <Quellregister>, <Quelle>
+```
+Hierbei ist `<Zielregister>` das Register, in das das Ergebnis der Addition gespeichert wird. Auf den Wert, der im `<Quellregister>` steht, wird ein anderer Wert (`<Quelle>`) addiert, der entweder in einem anderen Register steht oder ein unmittelbarer Wert sein kann. Zuletzt wird dann noch zusätzlich der Wert des Carry-Flags aufaddiert.
+
+Achtung: Es ist nicht möglich, zwei unmittelbare Werte direkt miteinander zu addieren!
+
+#### Beispiel
+```
+        LDR R0, =0xffffffff		@ Setze R0 auf den maximalen 32-Bit-Wert 
+		LDR R1, =0xa    		@ Setze R1 auf 10
+		MOV R2, #0x0			@ Setze R2 auf 0
+		ADDS R3, R0, R1			@ Führe die Addition R0 + R1 durch, setze das Carry Flag
+
+		ADC R4, R2, #0			@ Addiere R2 + 0 + Carry, speichere das Ergebnis in R4  
+								@ R4 = R2 + 0 + Carry = 0 + 0 + 1 = 1
+```
+
+
+### SBC 
+Der SBC-Befehl (Subtract with Carry) führt eine Subtraktion von zwei Werten durch und zieht zusätzlich den invertierten Wert des Carry Flags (1 - C-Flag) ab. Wenn das Carry Flag gesetzt ist (C = 1), wird eine normale Subtraktion durchgeführt, da kein weiterer Abzug erfolgt. Ist das Carry Flag hingegen nicht gesetzt (C = 0), wird 1 zusätzlich vom Ergebnis abgezogen, was auf ein Borrow hinweist. Dies signalisiert, dass in der vorherigen Operation ein Unterlauf aufgetreten ist. (Mehr zu Borrow: link flags)
+
+#### Syntax
+```
+SBC <Zielregister>, <Quellregister>, <Quelle>
+```
+Hierbei ist `<Zielregister>` das Register, in das das Ergebnis der Subtraktion gespeichert wird, <Quellregister> ist das Register, von dem subtrahiert wird, und <Quelle> ist ein Register, dessen Wert subtrahiert wird. `<Quelle>` kann aber genauso wieder ein unmittelarer Wert sein! Zuletzt wird dann noch zusätzlich der invertierte Wert des Carry-Flags abgezogen.
+
+Achtung: Man darf keine unmittelbaren Werte voneinander subtrahieren und ein Registerwert kann nicht von einem unmittelbaren Wert subtrahiert werden! 
+
+#### Beispiel
+```
+        MOV R0, #0x3			@ Setze R0 auf 3
+		MOV R1, #0x5			@ Setze R1 auf 5
+		MOV R2, #0x2			@ Setze R1 auf 0
+		SUBS R3, R0, R1			@ Führe R0 - R1 durch (3 - 5 = -2), Carry wird nicht gesetzt (C = 0), heißt ein Borrow ist aufgetreten
+
+		SBC R4, R2, #0			@ Führe R2 - 0 - (1 - C) durch, speichere das Ergebnis in R4
+								@ R4 = 2 - 0 - (1 - 0) = 1 
+```
+
+
+#### MUL
 Der MUL-Befehl wird verwendet, um zwei Werte zu multiplizieren und das Ergebnis in ein Register zu speichern.
 
 #### Syntax
