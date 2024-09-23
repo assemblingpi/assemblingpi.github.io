@@ -19,7 +19,7 @@
 | [komplexe Datentypen](../Datentypen/komplexedtypen)                       |
 | **5. prozedurale Programmierung**                                         |
 | [Was ist prozedurale Programmierung?](../Proz/prozprog)                   |
-| [Was ist eine Prozedur?](../Proz/wasistproz)                             |
+| [Was ist eine Prozedur?](../Proz/wasistproz)                              |
 
 
 |**B. Fortgeschrittene Konzepte und Anwendungen**               |
@@ -31,16 +31,13 @@
 | [Debugging mit GDB](..//debuggdb/debuggdb)                    |
 | [BCM2836](../bcm2836/bcm2836)                                 |
 | [Priviligierungslevel](../privlmodi/privmodiintro)            |
-| **2. Coprozessoren und Peripherie**            | 
-| UART                                           |
-| Coprozessoren                                  |
-| Timer                                          |
-| VFP und NEON                                   |
-| GPU                                            |
-| **5. Anwendungen**                             |
-| Textausgabe via UART                           |
-| Grafikausgabe                                  |
-| Textausgabe via Display                        |
+| [Boot.s](../Boot/boot)                                        |
+| [UART](../UART/uart)                                          |
+| **2. Erweiterungen der CPU-Funktionalität**                   | 
+| [Coprozessoren](../Coproc/Coprocessor)                        |
+| [Timer](../Timer/timerintro)                                  |
+| [VFP und NEON](../vfpuNeon/floatingintro)                     |
+| [GPU](../GPU/gpuintro)                                        |
 
 |-----------------------------------|
 |  [**Ressourcen**](ressourcen.md)  |
