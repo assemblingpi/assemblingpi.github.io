@@ -4,12 +4,9 @@ Assembling Pi ist ein Tutorial, das Schritt für Schritt in die Welt der Assembl
 
 Der Titel ist eine Anspielung auf das Tutorial [Baking Pi](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/), das eine Einführung in die Grafikprogrammierung auf dem Raspberry Pi 1 in Assembler bietet. Während der Fokus von `Baking Pi` sich vor allem auf die praktische Anwendung in der Grafikprogrammierung richtet,  bietet dieses Tutorial eine detaillierte Auseinandersetzung mit den grundlegenden Konzepten der Assembler-Programmierung. 
 
-
 ### Lernen Sie die Sprache der ARM-Prozessoren!
 
 Die ersten Kapitel vermitteln die Grundlagen der ARM-Assembler-Programmierung und behandeln die wesentlichen Eigenschaften von ARM-Prozessoren unter Einsatz des CPUlator-Emulators. Aufbauend auf diesem theoretischen Fundament erfolgt im weiteren Verlauf die Emulation der Raspberry Pi 2B Hardware mit Qemu. Dabei werden grundlegende Input/Output-Funktionen sowie elementare Schritte in der Systemprogrammierung und Grafikprogrammierung durchgeführt. Dieses praxisorientierte Tutorial kombiniert theoretisches Wissen mit gezielten Übungsaufgaben, um das Gelernte direkt anzuwenden und zu festigen.
-
-
 
 ### Hinweis zu den Übungsaufgaben:  
 
