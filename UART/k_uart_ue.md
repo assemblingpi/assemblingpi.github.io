@@ -20,10 +20,7 @@ Die Funktion soll überprüfen, ob Daten im Empfangspuffer verfügbar sind, bevo
 
 #### Hinweise
 
-
-**Basisadresse der GPIO-Register:**           0x3F200000
-**GPIO Pull-up/down Enable Register:**        0x3F200094
-**GPIO Pull-up/down Clock Register:**         0x3F200098
+Die relevanten Adressen zur Initialisierung der UART Schnittstelle lauten:
 **Basisadresse der UART0-Register:**          0x3F201000
 **UART0 Datenregister:**                      0x3F201000
 **UART0 Flag-Register:**                      0x3F201018
@@ -33,6 +30,7 @@ Die Funktion soll überprüfen, ob Daten im Empfangspuffer verfügbar sind, bevo
 **UART0 Control Register:**                   0x3F201030
 **UART0 Interrupt Mask Set Clear Register:**  0x3F201038
 
+Zudem empfiehlt sich ein Blick in das Dokument `BCM2835 Peripherals`, das sich unter `Ressourcen` finden lässt.
 
 |----------------------|------------------------------------|-------------------------------|
 |   [zurück](uart.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](k_uart_help.md)    |
