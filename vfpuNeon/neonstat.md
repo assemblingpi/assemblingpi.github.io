@@ -24,7 +24,9 @@ Das **FPSCR**(Floating Point Status and Control Register) enthält wichtige Stat
 
 ### Rundungsmodus und Stride/Länge:
 - **RMode (23–22):** Rounding Mode
+    
     **Bestimmt den Rundungsmodus:**
+    
     **00:** Rundung auf nächste Zahl 
 
     **01:** Rundung Richtung Plus Unendlich 
