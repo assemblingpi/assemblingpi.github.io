@@ -11,5 +11,5 @@ Gegeben ist ein Speicherbereich, der vollständig mit 0 initialisiert wurde. Ihr
 | 0x000    | 0x00   | 0x00   | 0x00   | 0x00   |
 | 0x004    | 0x00   | 0x00   | 0x00   | 0x00   |
 
-|----------------------|--------------------------|---------------------|
-| [zurück](memintro.md)| [Hauptmenü](../index.md) | [weiter](endilsg.md)| 
+|----------------------|-------------------------------|---------------------|
+| [zurück](memintro.md)| [Hauptmenü](../ueberblick.md) | [weiter](endilsg.md)| 

@@ -26,5 +26,5 @@ Die Endianess spielt eine wichtige Rolle, wenn eine CPU Daten in den Speicher sc
 
 Moderne ARM-Prozessoren unterstützen sowohl little, als auch big Endian, aber im folgenden Tutorial wollen wir uns auf little Endian beschränken.
 
-|----------------------|--------------------------|-------------------------|
-| [zurück](cpuintro.md)| [Hauptmenü](../index.md) | [weiter](endiantest.md)| 
+|----------------------|-------------------------------|------------------------|
+| [zurück](cpuintro.md)| [Hauptmenü](../ueberblick.md) | [weiter](endiantest.md)| 

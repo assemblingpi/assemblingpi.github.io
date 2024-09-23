@@ -44,5 +44,5 @@ Innerhalb der ARM-CPU gibt es verschiedene 32-Bit Register, die für spezifische
 - **Program Counter (PC)**: Beinhaltet die Adresse der nächsten auszuführenden Instruktion. Der PC wird nach jeder Instruktion automatisch erhöht, und bei Verzweigungen angepasst, um zur neuen Instruktionsadresse zu springen.
 - **Statusregister**: Ein 32-Bit-Register, das Flags enthält, die den Status des Prozessors anzeigen, wie etwa den Zustand vorheriger Operationen.
 
-|-----------------------------------|--------------------------|----------------------|
-| [zurück](cpuintro.md) | [Hauptmenü](../index.md) | [weiter](memintro.md)| 
+|-----------------------|-------------------------------|----------------------|
+| [zurück](cpuintro.md) | [Hauptmenü](../ueberblick.md) | [weiter](memintro.md)| 

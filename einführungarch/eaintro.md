@@ -25,5 +25,5 @@ Der Raspberry Pi 2B ist ein Einplatinencomputer mit ARM-Architektur, der eine sp
 **Beschreibung:** In diesem Bereich sind die Peripherie-Register angesiedelt. Diese Register ermöglichen den direkten Zugriff auf Hardwarekomponenten wie GPIO, UART, SPI, I2C und weitere Schnittstellen.
 
 
-|-------------------|--------------------------|-----------------------|
-| [zurück](cache.md)| [Hauptmenü](../index.md) | [weiter](sbusintro.md)| 
+|-------------------|-------------------------------|-----------------------|
+| [zurück](cache.md)| [Hauptmenü](../ueberblick.md) | [weiter](sbusintro.md)| 
