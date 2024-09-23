@@ -18,7 +18,7 @@ Der bereitgestellte Quellcode zielt auf eine verständliche Darstellung ab, ohne
 
 
 |-------------------------------|---------------------------------|---------------------------------------------------|
-|  [Ressourcen](ressourcen.md)  | [**Hauptmenü** ](ueberblick.md) |  [**Tutorial starten**](wasistprog/wasistprog.md) |
+|  [**Ressourcen**](ressourcen.md)  | [**Hauptmenü** ](ueberblick.md) |  [**Tutorial starten**](wasistprog/wasistprog.md) |
 
 
 
