@@ -16,12 +16,10 @@ Bitmasken und Schiebebefehle: Bei Befehlen wie AND, ORR oder LSL können Immedia
 AND r2, r1, #0xFF   @ Wendet eine Bitmaske mit dem Wert 0xFF auf r1 an und speichert das Ergebnis in r2
 LSL r3, r2, #2      @ Schiebt den Wert in r2 um 2 Bit nach links und speichert das Ergebnis in r3
 ```
-Formate von Immediate Werten
+**Formate von Immediate Werten**
 
-Dezimal: 
-Der Wert wird als normale Zahl ohne Präfix angegeben, z.B. `MOV R0, #42` setzt den Wert `42` in das Register `R0`.
-Hexadezimal: 
-Werte können durch das Präfix `0x` angegeben werden, z.B. `MOV R0, #0x1A` setzt den Wert `26` (hexadezimal `0x1A`) in das Register `R0`.
+- **Dezimal:** Der Wert wird als normale Zahl ohne Präfix angegeben, z.B. `MOV R0, #42` setzt den Wert `42` in das Register `R0`.
+- **Hexadezimal:** Werte können durch das Präfix `0x` angegeben werden, z.B. `MOV R0, #0x1A` setzt den Wert `26` (hexadezimal `0x1A`) in das Register `R0`.
 
 ### Machine Code und Immediate Values
 
