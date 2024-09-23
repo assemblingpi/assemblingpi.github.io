@@ -16,7 +16,7 @@
 - [Framebuffer](https://elinux.org/RPi_Framebuffer)
 
 ### Github Repositories
-- [Yanniks pi-baremetal repository](https://github.com/yannikosterholzer/pi_baremetal_qemu): Repository eines der Tutorial-Autoren. Dort befindetsich Code der teils im Laufe des Tutorials besprochen wurde.
+- [Yanniks pi-baremetal repository](https://github.com/yannikosterholzer/pi_baremetal_qemu): Repository eines der Tutorial-Autoren. Dort befindet sich Code der teils im Laufe des Tutorials besprochen wurde.
 - [PiFox](https://github.com/ICTeam28/PiFox): 3D rail-shooter in ARM-Assembly für den Raspberry Pi 1
 - [ARM-Doom](https://github.com/kcsongor/arm-doom): Ein Doom remake in ARM-Assembler für den Raspberry Pi 1
 - [Raspi Baremetal Code Examples](https://github.com/dwelch67/raspberrypi)
