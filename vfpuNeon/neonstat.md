@@ -23,14 +23,13 @@ Das **FPSCR**(Floating Point Status and Control Register) enthält wichtige Stat
 - **FZ (24):** Flush-to-Zero Mode - Wenn gesetzt, werden sehr kleine Werte (denormalisierte Zahlen) zu null gerundet, um die Rechenleistung zu verbessern.
 
 ### Rundungsmodus und Stride/Länge:
-- **RMode (23–22):** Rounding Mode
-    
+- **RMode (23–22):** Rounding Mode   
     **Bestimmt den Rundungsmodus:**
 ```    
-    **00:** Rundung auf nächste Zahl 
-    **01:** Rundung Richtung Plus Unendlich 
-    **10:** Rundung Richtung Minus Unendlich 
-    **11:** Rundung Richtung Null
+    00: Rundung auf nächste Zahl 
+    01: Rundung Richtung Plus Unendlich 
+    10: Rundung Richtung Minus Unendlich 
+    11: Rundung Richtung Null
 ```
 - **Stride (21–20):** Vector Stride - Legt die Schrittweite für NEON-Lade-/Speicheroperationen fest. 
 
