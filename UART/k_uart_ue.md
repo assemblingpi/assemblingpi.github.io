@@ -18,5 +18,21 @@ Die Funktion soll sicherstellen, dass der Sendepuffer bereit ist, bevor das Zeic
 Erstellen Sie eine Funktion, die ein einzelnes Zeichen von der UART0-Schnittstelle empfängt.
 Die Funktion soll überprüfen, ob Daten im Empfangspuffer verfügbar sind, bevor das Zeichen gelesen wird.
 
+#### Hinweise
+
+
+**Basisadresse der GPIO-Register:**           0x3F200000
+**GPIO Pull-up/down Enable Register:**        0x3F200094
+**GPIO Pull-up/down Clock Register:**         0x3F200098
+**Basisadresse der UART0-Register:**          0x3F201000
+**UART0 Datenregister:**                      0x3F201000
+**UART0 Flag-Register:**                      0x3F201018
+**UART0 Integer Baud Rate Divisor:**          0x3F201024
+**UART0 Fractional Baud Rate Divisor:**       0x3F201028
+**UART0 Line Control Register:**              0x3F20102C
+**UART0 Control Register:**                   0x3F201030
+**UART0 Interrupt Mask Set Clear Register:**  0x3F201038
+
+
 |----------------------|------------------------------------|-------------------------------|
 |   [zurück](uart.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](k_uart_help.md)    |
