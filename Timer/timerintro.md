@@ -15,7 +15,5 @@ Bei Timern werden Interrupts oft verwendet, um dem Prozessor mitzuteilen, dass e
 #### Lesen und Schreiben von Timerwerten
 Während ein Timer läuft, kann es notwendig sein, den aktuellen Zählerstand auszulesen, um festzustellen, wie viel Zeit vergangen ist oder wie viel Zeit noch verbleibt, bevor der Timer sein Ziel erreicht. Manchmal muss man auch die Frequenz des Timers einstellen, also wie schnell der Timer zählt, oder einen Offset angeben, der den Startwert des Timers verändert.
 
-
-[Der ARMv7 Generic Timer](generictimer.md)
-
-[Steuerung des Virtual Timer](timerctrl.md)
+|---------------------------------------|------------------------------------|-------------------------------|
+|   [zurück](../Coproc/Coprocessor.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](generictimer.md)   |

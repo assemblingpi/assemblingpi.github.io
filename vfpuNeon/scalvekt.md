@@ -29,7 +29,5 @@ Diese Struktur ermöglicht es, mehrere Operationen gleichzeitig durchzuführen, 
 
 Angenommen, man hat ein 128-Bit Q-Register (`Q0`). Wenn man dieses Register in 32-Bit Lanes unterteilet, hat man 4 Lanes (`Lane 0`, `Lane 1`, `Lane 2`, und `Lane 3`). Eine SIMD-Operation, wie z.B. eine Addition, würde auf allen vier 32-Bit-Werten gleichzeitig ausgeführt werden. Das heißt, die Addition wird parallel in jeder Lane durchgeführt, was zu einem erheblichen Geschwindigkeitsgewinn führt, wenn viele ähnliche Operationen ausgeführt werden müssen.
 
-
-
-
-
+|------------------------|-------------------------------|--------------------------------|
+| [zurück](neonregs.md)  | [Hauptmenü](../ueberblick.md) | [weiter](neonadr.md)           |

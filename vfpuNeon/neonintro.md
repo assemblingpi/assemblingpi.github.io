@@ -7,3 +7,5 @@ Ein Beispiel verdeutlicht die Funktionsweise: Wenn zwei 128-Bit NEON-Register al
 
 Durch diese parallele Verarbeitung kann NEON Operationen, die normalerweise viele sequenzielle Instruktionen erfordern würden, erheblich beschleunigen. Diese Fähigkeit ist besonders nützlich in Bereichen, in denen große Datenmengen effizient verarbeitet werden müssen
 
+|-----------------------|-------------------------------|---------------------------------|
+| [zurück](vfpconv.md)  | [Hauptmenü](../ueberblick.md) | [weiter](neonregs.md)           | 

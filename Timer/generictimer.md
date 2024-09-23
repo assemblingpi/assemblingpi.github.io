@@ -23,5 +23,5 @@ Zeitmessung, was Flexibilität bei der Verwendung in unterschiedlichen Szenarien
 
 [Für dieses Projekt ist der Virtual Timer die passende Wahl, da er flexibel und einfach zu implementieren ist und gleichzeitig keine unnötige Komplexität oder Hardwareabhängigkeit mit sich bringt.](https://wiki.osdev.org/ARMv7_Generic_Timers#:~:text=Virtual%20timer.-,The%20virtual%20timer%20should%20be%20used%20by%20non%2Dsecure%20PL1,be%20used%20by%20PL2%20hypervisors)
 
-
-[Steuerung des Virtual Timer](timerctrl.md)
+|----------------------------|------------------------------------|-----------------------------|
+|   [zurück](timerintro.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](timerctrl.md)    |

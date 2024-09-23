@@ -164,3 +164,6 @@ Der gegebene Code implementiert die Grundfunktionen zur Steuerung der UART0-Schn
 3. **`k_uart_read_char`**: Liest ein empfangenes Zeichen von der UART-Schnittstelle, nachdem überprüft wurde, ob Daten im Puffer vorhanden sind.
 
 Diese Funktionen ermöglichen eine serielle Kommunikation über UART, was in vielen Anwendungen wie Debugging, Datenübertragung oder Steuerung von externen Geräten nützlich ist.
+
+|-----------------------------|------------------------------------|------------------------------------------|
+|   [zurück](k_uart_help.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../Interrupts/intintro.md)    |

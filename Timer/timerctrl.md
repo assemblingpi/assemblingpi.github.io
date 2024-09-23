@@ -72,3 +72,6 @@ read_cntfrq:
           bx lr
 ```
 Bei Punkt **5** und **6** werden 64-Bit Register gelesen und dementsprechend müssen zwei Zielregister angegeben werden, hier r0 und r1, wobei in r0 die least-significant 32 Bit gespeicher werden und in r1 die most significant 32 Bit.
+
+|------------------------------|------------------------------------|-------------------------|
+|   [zurück](generictimer.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](delay.md)    |

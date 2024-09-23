@@ -42,3 +42,6 @@ Beide Einheiten, VFP und NEON, teilen sich das Floating Point Status and Control
 **Berechnung:** Der VFP-Coprozessor führt die angeforderte Operation durch.
 **Ergebnisspeicherung:** Das Resultat wird in einem VFP-Register abgelegt.
 **Statusaktualisierung:** Das FPSCR wird aktualisiert, um den Status der Operation widerzuspiegeln, beispielsweise das Setzen von Flags bei Ausnahmebedingungen.
+
+|----------------------------|-------------------------------|--------------------------------|
+| [zurück](floatingnums.md)  | [Hauptmenü](../ueberblick.md) | [weiter](vfpconv.md)           | 

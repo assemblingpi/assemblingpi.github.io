@@ -46,3 +46,5 @@ Das **FPSCR**(Floating Point Status and Control Register) enthält wichtige Stat
 **DZC (1):** Division by Zero Cumulative Flag - Setzt das Flag, wenn eine Division durch Null aufgetreten ist.
 **IOC (0):** Invalid Operation Cumulative Flag - Setzt das Flag, wenn eine ungültige Operation durchgeführt wurde
 
+|-----------------------|-------------------------------|---------------------------------|
+| [zurück](neonadr.md)  | [Hauptmenü](../ueberblick.md) | [weiter](neonstat.md)           |

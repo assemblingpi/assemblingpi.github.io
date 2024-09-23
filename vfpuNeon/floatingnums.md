@@ -59,6 +59,5 @@ Zum Abschluss der Umwandlung in das Single Precision Floating Point Format müss
 |--|----------|-------------------------|
 | 0| 10000010 | 00111000000000000000000 |
 
-
-|------------------------|--------------------------|-------------------------|
-| [zurück](bingleit.md)  | [Hauptmenü](../index.md) | [weiter](...)           | 
+|------------------------|-------------------------------|----------------------------------|
+| [zurück](bingleit.md)  | [Hauptmenü](../ueberblick.md) | [weiter](vfp_intro.md)           | 

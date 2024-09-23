@@ -20,3 +20,6 @@
 - Überprüfen Sie das Flag Register (UART0_FR), um sicherzustellen, dass der Receive FIFO nicht leer ist (Bit 4).
 - Lesen Sie das empfangene Zeichen aus dem Datenregister (UART0_DR) und speichern Sie es in r0.
 - Sichern und Wiederherstellen der Register lr
+
+|---------------------------|------------------------------------|------------------------------|
+|   [zurück](k_uart_ue.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](k_uart_lsg.md)    |

@@ -17,3 +17,6 @@ Die Funktion soll sicherstellen, dass der Sendepuffer bereit ist, bevor das Zeic
 #### k_uart_read_char: Empfangen eines Zeichens
 Erstellen Sie eine Funktion, die ein einzelnes Zeichen von der UART0-Schnittstelle empfängt.
 Die Funktion soll überprüfen, ob Daten im Empfangspuffer verfügbar sind, bevor das Zeichen gelesen wird.
+
+|----------------------|------------------------------------|-------------------------------|
+|   [zurück](uart.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](k_uart_help.md)    |

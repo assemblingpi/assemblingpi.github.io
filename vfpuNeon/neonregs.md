@@ -109,3 +109,6 @@ Um NEON-Register in GDB zu inspizieren, kann man verschiedene Formate verwenden,
     Zeigt den Inhalt von `d0` als 64-Bit signed integers im Dezimalformat an.
 
 Diese Befehle erlauben es die NEON-Register in GDB in verschiedenen Formaten zu inspizieren, abhängig davon, wie die Daten im Register interpretiert werden sollen.
+
+|-------------------------|-------------------------------|---------------------------------|
+| [zurück](neonintro.md)  | [Hauptmenü](../ueberblick.md) | [weiter](scalvekt.md)           |

@@ -32,3 +32,6 @@ Zeichen senden: Schreibe das zu sendende Zeichen in das Datenregister.
 **Zeichen empfangen (k_uart_read_char):**
 Überprüfe das Flag-Register: Warte, bis Daten im RX-Puffer vorhanden sind.
 Zeichen lesen: Lese das empfangene Zeichen aus dem Datenregister.
+
+|------------------------------|------------------------------------|-----------------------------|
+|   [zurück](../Boot/boot.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](k_uart_ue.md)    |

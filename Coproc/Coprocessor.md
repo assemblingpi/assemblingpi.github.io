@@ -59,3 +59,6 @@ In der ARM-Architektur ermöglichen die MCR- und MRC-Instruktionen den Datenaust
 **CRm:** Platzhalter für optionales zweites Koprozessor-Register.
 
 **opcode2:** Weiterer Opcode für Steuerinformationen.
+
+|---------------------------------------|------------------------------------|---------------------------------------|
+|   [zurück](../Interrupts/implirq.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../Timer/timerintro.md)    |

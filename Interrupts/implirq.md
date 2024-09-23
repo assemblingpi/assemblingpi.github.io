@@ -26,3 +26,5 @@ irq:
 ```
 Die erweiterte Interruptbehandlung (irq_handler_ext) findet an anderer Stelle statt, prüft die genaue Ursache des Interrupts und leitet die nötigen Schritte zu seiner Abarbeitung ein. 
 
+|--------------------------|------------------------------------|-----------------------------------------|
+|   [zurück](privints.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../Coproc/Coprocessor.md)    |

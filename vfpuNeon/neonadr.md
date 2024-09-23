@@ -55,3 +55,5 @@ Die Art der Daten, die in den Registern gespeichert sind, wird durch die Instruk
 - **`.I16`**: Verarbeitet die Register als Sammlung von 16-Bit-Werten.
 - **`.F32`**: Verarbeitet die Register als 32-Bit-Gleitkommawerte.
 
+|------------------------|-------------------------------|---------------------------------|
+| [zurück](scalvekt.md)  | [Hauptmenü](../ueberblick.md) | [weiter](neonstat.md)           |
