@@ -21,14 +21,14 @@ Die Funktion soll überprüfen, ob Daten im Empfangspuffer verfügbar sind, bevo
 #### Hinweise
 
 Die relevanten Adressen zur Initialisierung der UART Schnittstelle lauten:
-**Basisadresse der UART0-Register:**          0x3F201000
-**UART0 Datenregister:**                      0x3F201000
-**UART0 Flag-Register:**                      0x3F201018
-**UART0 Integer Baud Rate Divisor:**          0x3F201024
-**UART0 Fractional Baud Rate Divisor:**       0x3F201028
-**UART0 Line Control Register:**              0x3F20102C
-**UART0 Control Register:**                   0x3F201030
-**UART0 Interrupt Mask Set Clear Register:**  0x3F201038
+- **Basisadresse der UART0-Register:**          0x3F201000
+- **UART0 Datenregister:**                      0x3F201000
+- **UART0 Flag-Register:**                      0x3F201018
+- **UART0 Integer Baud Rate Divisor:**          0x3F201024
+- **UART0 Fractional Baud Rate Divisor:**       0x3F201028
+- **UART0 Line Control Register:**              0x3F20102C
+- **UART0 Control Register:**                   0x3F201030
+- **UART0 Interrupt Mask Set Clear Register:**  0x3F201038
 
 Zudem empfiehlt sich ein Blick in das Dokument `BCM2835 Peripherals`, das sich unter `Ressourcen` finden lässt.
 
