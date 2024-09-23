@@ -17,7 +17,7 @@ Unter dem Reiter Ressourcen finden Sie technische und theoretische Hilfsmittel, 
 Der bereitgestellte Quellcode zielt auf eine verständliche Darstellung ab, ohne den Anspruch auf Perfektion oder maximale Optimierung. Nutzen Sie die Gelegenheit, aktiv Notizen zu machen, bei Bedarf zusätzliche Informationen zu suchen und eigene Ideen auszuprobieren. Herausforderungen dienen hier als wertvolle Lerngelegenheiten und helfen, das Verständnis zu vertiefen.
 
 
-|-------------------------------|---------------------------------|---------------------------------------------------|
+|-----------------------------------|---------------------------------|---------------------------------------------------|
 |  [**Ressourcen**](ressourcen.md)  | [**Hauptmenü** ](ueberblick.md) |  [**Tutorial starten**](wasistprog/wasistprog.md) |
 
 

@@ -22,14 +22,15 @@
 | [Was ist eine Prozedur?](../Proz/wasistproz)                             |
 
 
-|**B. Fortgeschrittene Konzepte und Anwendungen**|
-|------------------------------------------------|
-| **1. Einführung**                              |
-| Systemprogrammierung                           | 
-| BCM2836                                        |
-| GDB                                            |
-| Assembler und Linker                           |
-| Priviligierungslevel und Interrupts            |
+|**B. Fortgeschrittene Konzepte und Anwendungen**               |
+|---------------------------------------------------------------|
+| **1. Einführung**                                             |
+| [Einführung](../Advanced/advanced)                            | 
+| [Konzepte der Systemprogrammierung](../Systemprog/sysprog)    |
+| [Assembler und Linker](../assemblerlinker/wasistasmlinker)    |
+| [Debugging mit GDB](..//debuggdb/debuggdb)                    |
+| [BCM2836](../bcm2836/bcm2836)                                 |
+| [Priviligierungslevel](../privlmodi/privmodiintro)            |
 | **2. Coprozessoren und Peripherie**            | 
 | UART                                           |
 | Coprozessoren                                  |
@@ -40,3 +41,6 @@
 | Textausgabe via UART                           |
 | Grafikausgabe                                  |
 | Textausgabe via Display                        |
+
+|-----------------------------------|
+|  [**Ressourcen**](ressourcen.md)  |
