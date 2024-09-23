@@ -13,6 +13,5 @@ Eine Grafikprozessor-Einheit (GPU) ist ein spezialisierter Prozessor, der für d
 ## Anwendungsbereiche
 GPUs sind vielseitige Komponenten, deren Einsatzbereiche weit über die herkömmliche Berechnung von Grafik- und Physikeffekten in modernen Computerspielen hinausgehen. Neben der Hauptverantwortung für die Echtzeit-Berechnung von detaillierten und flüssigen 3D-Darstellungen, die für ein immersives Spielerlebnis unerlässlich sind, finden GPUs auch Anwendung in der wissenschaftlichen Berechnung und Datenanalyse. Hierbei nutzen sie ihre Fähigkeit zur parallelen Verarbeitung, um große Datenmengen effizient zu bewältigen und komplexe Berechnungen zügig durchzuführen. Neben diesen prominenten Einsatzgebieten gibt es noch viele weitere Anwendungsbereiche, die von der Flexibilität und Leistungsfähigkeit von GPUs profitieren.
 
-
-|------------------------------------|--------------------------|---------------------------------|
-| [zurück](../bcm2836/armfamily.md)  | [Hauptmenü](../index.md) | [weiter](gpubcm2836.md)         | 
+|--------------------------------------|-------------------------------|------------------------------|
+| [zurück](../vfpuNeon/matrix_lsg.md)  | [Hauptmenü](../ueberblick.md) | [weiter](gpubcm2836.md)      |

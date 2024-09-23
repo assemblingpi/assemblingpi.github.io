@@ -5,6 +5,5 @@ Ein Framebuffer ist ein spezieller Speicherbereich, der sowohl von der CPU als a
 In diesem Tutorial wird die GPU verwendet, um den Framebuffer zu erstellen und dessen Adresse im physikalischen Speicher zu ermitteln. Diese Adresse wird über den Mailbox-Mechanismus an die ARM-CPU übermittelt, wodurch die CPU Bilddaten direkt in den Framebuffer schreiben und die Anzeige auf dem Bildschirm steuern kann. 
 Die GPU überprüft diese Adresse regelmäßig und aktualisiert die Pixel auf dem Bildschirm entsprechend.
 
-
-|------------------------|--------------------------|---------------------------------|
-| [zurück](...)          | [Hauptmenü](../index.md) | [weiter](framemailb.md)         | 
+|---------------------|-------------------------------|-------------------------------|
+| [zurück](kommb.md)  | [Hauptmenü](../ueberblick.md) | [weiter](framemailb.md)       |

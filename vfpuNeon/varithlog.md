@@ -212,4 +212,5 @@ vmin.i16 d0, d1, d2  @ d0[i] = min(d1[i], d2[i]) für jedes 16-Bit Element i
 ```
 Hier wird jedes 16-Bit-Element von `d1` mit dem entsprechenden Element von `d2` verglichen. Der kleinere Wert wird in den entsprechenden Elementen von `d0` gespeichert.
 
-
+|-------------------------|-------------------------------|------------------------|
+| [zurück](neonldstr.md)  | [Hauptmenü](../ueberblick.md) | [weiter](vtrn.md)      |

@@ -44,3 +44,5 @@ Angenommen, zwei Vektorregister `D0` und `D1` enthalten jeweils vier 16-Bit-Elem
 ### Mehrfaches Transponieren für größere Matrizen
 Um größere Matrizen, wie eine 4x4-Matrix aus 16-Bit-Elementen, zu transponieren, können mehrere VTRN-Befehle in Folge ausgeführt werden. Eine solche Transponierung lässt sich beispielsweise durch die Anwendung von drei aufeinanderfolgenden VTRN-Befehlen erreichen, wobei nacheinander verschiedene Paare von Vektoren vertauscht werden.
 
+|-------------------------|-------------------------------|-----------------------------|
+| [zurück](varithlog.md)  | [Hauptmenü](../ueberblick.md) | [weiter](trigon_ue.md)      |

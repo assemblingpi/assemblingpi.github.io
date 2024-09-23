@@ -12,6 +12,5 @@ Der Empfänger wartet, bis das Statusfeld im 30. Bit eine 0 anzeigt. Danach lies
 ### Fehlerbehandlung
 Zudem ist es ratsam eine Fehlerbehandlung vorzunehmen, bei der sich die Funktionen bei Problemen vorzeitig beenden, indem sie mit einem Fehlercode als Rückgabewert zur Rücksprungadresse zurückkehren.
 
-
-|------------------------|--------------------------|---------------------------------|
-| [zurück](...)          | [Hauptmenü](../index.md) | [weiter](framebuff.md)          | 
+|--------------------------|-------------------------------|-----------------------------|
+| [zurück](gpubcm2836.md)  | [Hauptmenü](../ueberblick.md) | [weiter](framebuff.md)      |

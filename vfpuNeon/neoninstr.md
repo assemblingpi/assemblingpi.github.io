@@ -30,4 +30,5 @@ Für einige Instruktionen können Listen von bis zu vier NEON-Registern, Vektore
 
 Neben den Register- und Datentypenspezifikationen können manche NEON-Instruktionen auch Immediate-Werte verwenden, die in der Instruktionsnotation direkt spezifiziert werden.
 
-
+|------------------------|-------------------------------|-----------------------------|
+| [zurück](neonstat.md)  | [Hauptmenü](../ueberblick.md) | [weiter](vmov.md)           |

@@ -42,5 +42,5 @@ Channel:  |  Name:
 Die Mailbox ermöglicht es, Zeiger auf Puffer zu übermitteln, wobei die Struktur des Pufferinhalts je nach Kanal unterschiedlich ist. 
 Diese unterschiedlichen Datenstrukturen werden von Prozessor und GPU jeweils auf spezifische Weise interpretiert. Ein Puffer ist dabei ein temporärer Speicherbereich, der Daten zwischenspeichert, um sie zwischen verschiedenen Prozessen oder Geräten zu übertragen. Die genaue Struktur des Inhalts hängt vom verwendeten Kanal ab und bestimmt, wie die Daten von den beteiligten Komponenten verarbeitet werden.
 
-|-------------------------|--------------------------|---------------------------------|
-| [zurück](...)  | [Hauptmenü](../index.md) | [weiter](kommb.md)              | 
+|------------------------|-------------------------------|-------------------------|
+| [zurück](gpuintro.md)  | [Hauptmenü](../ueberblick.md) | [weiter](kommb.md)      |

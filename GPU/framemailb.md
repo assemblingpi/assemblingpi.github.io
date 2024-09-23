@@ -34,6 +34,5 @@ Die einzige Nachricht, die über diesen Kanal gesendet wird, ist ein Zeiger auf 
 
 Das ist das Format der Datenstruktur, die wir an den Grafikprozessor übermitteln wollen. Diese Struct, die wir FrameBufferInfo nennen - wird verwendet, um die gewünschte Breite, Höhe, virtuelle Breite, virtuelle Höhe und Farbtiefe zu definieren. Die Werte für die Zeilenbreite (Pitch), den GPU-Zeiger und die Größe des Framebuffers werden von der GPU automatisch ausgefüllt. Daher sollten diese Werte zurückgesetzt werden, wenn ein neuer Framebuffer erstellt wird. Wenn die Anfrage an die GPU erfolgreich ist, enthält der GPU-Zeiger-Eintrag den Zeiger auf den Framebuffer.
 
-
-|-------------------------|--------------------------|---------------------------------|
-| [zurück](framebuff.md)  | [Hauptmenü](../index.md) | [weiter](sendinit.md)           | 
+|-------------------------|-------------------------------|-----------------------------|
+| [zurück](framebuff.md)  | [Hauptmenü](../ueberblick.md) | [weiter](sendinit.md)       |
