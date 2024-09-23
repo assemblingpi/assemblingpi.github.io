@@ -12,11 +12,11 @@ Ein eigener Stack ist im Interruptmodus notwendig, um bei Start der ISR den vorh
 #### Aufsetzen eines seperaten Stacks für den IRQ-Modus: 
 ```asm
 @ EQUS für die benötigten Konstanten:
-.equ   MODE_MASK,              0x1F
-.equ   MODE_USR,               0x10
-.equ   MODE_IRQ,               0x12
-.equ   MODE_SVC,               0x13
-.equ   STACK_IRQ,            0x7000
+.equ   MODE_MASK,   0x1F
+.equ   MODE_USR,    0x10
+.equ   MODE_IRQ,    0x12
+.equ   MODE_SVC,    0x13
+.equ   STACK_IRQ,   0x7000
 
 ...
 @ Wechsel in den Interruptmodus

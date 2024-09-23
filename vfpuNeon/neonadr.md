@@ -12,11 +12,11 @@ ARMv7 NEON stellt drei Hauptregistertypen zur Verfügung:
 ### Adressierung in Instruktionen
 
 #### 1. **Q-Register (128-Bit)**
-- **Qn**: Wenn man ein Q-Register in einer Instruktion verwendet, wird das gesamte 128-Bit-Register angesprochen. Ein Q-Register kann als eine Sammlung von:
-  - 16 8-Bit-Werten
-  - 8 16-Bit-Werten
-  - 4 32-Bit-Werten
-  - 2 64-Bit-Werten
+- **Qn**: Wenn man ein Q-Register in einer Instruktion verwendet, wird das gesamte 128-Bit-Register angesprochen. Ein Q-Register kann als:
+  - 16 x 8-Bit-Werte
+  - 8 x 16-Bit-Werte
+  - 4 x 32-Bit-Werte
+  - 2 x 64-Bit-Werte
   behandelt werden, abhängig von der Art der Instruktion.
   
   **Beispiel**:
@@ -25,10 +25,10 @@ ARMv7 NEON stellt drei Hauptregistertypen zur Verfügung:
   ```
 
 #### 2. **D-Register (64-Bit)**
-- **Dn**: Ein D-Register repräsentiert 64 Bit und kann als Sammlung von:
-  - 8 8-Bit-Werten
-  - 4 16-Bit-Werten
-  - 2 32-Bit-Werten
+- **Dn**: Ein D-Register repräsentiert 64 Bit und kann als:
+  - 8 x 8-Bit-Werte
+  - 4 x 16-Bit-Werte
+  - 2 x 32-Bit-Werte
   betrachtet werden. Es ist die halbe Größe eines Q-Registers.
 
   **Beispiel**:
