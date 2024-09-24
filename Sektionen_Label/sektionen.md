@@ -35,7 +35,7 @@ Ein Beispiel für die Definition einer Variablen in dieser Sektion könnte so au
 ```
 .float 3.14
 ```
-- **.asciz:** Reserviert eine nullterminierte Zeichenkette (String).
+- **.asciz:** Reserviert eine nullterminierte Zeichenkette (String). (Eine nullterminierte Zeichenkette ist eine Folge von Zeichen, die mit einem Byte mit dem Wert 0 endet.)
 ```
 .asciz "Hello, World!"
 ```
