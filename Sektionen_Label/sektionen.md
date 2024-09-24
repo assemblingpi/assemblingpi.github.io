@@ -17,7 +17,7 @@ Ein Beispiel für die Definition einer Variablen in dieser Sektion könnte so au
    gespeichert. 
 
 #### Assembler-Direktiven zum Anlegen von Daten
-**Assembler-Direktiven** wie .byte, .hword, .word und .asciz werden in der **.data-Sektion** verwendet, um unterschiedliche Datentypen im Speicher zu **definieren** und zu **initialisieren**. Diese Direktiven sind **keine Maschinenbefehle**, sondern Anweisungen an den Assembler, die festlegen, wie viel Speicher reserviert werden soll und welche Werte dort abgelegt werden. Sie ermöglichen Entwicklern eine präzise Kontrolle über die Speicherorganisation, indem sie bestimmen, welche Daten wo und in welcher Form im Speicher platziert werden. 
+**Assembler-Direktiven** wie `.byte`, `.hword`, `.word` und `.asciz` werden in der **.data-Sektion** verwendet, um unterschiedliche Datentypen im Speicher zu **definieren** und zu **initialisieren**. Diese Direktiven sind **keine Maschinenbefehle**, sondern Anweisungen an den Assembler, die festlegen, wie viel Speicher reserviert werden soll und welche Werte dort abgelegt werden. Sie ermöglichen Entwicklern eine präzise Kontrolle über die Speicherorganisation, indem sie bestimmen, welche Daten wo und in welcher Form im Speicher platziert werden. 
 
 - **.byte:** Reserviert ein oder mehrere Bytes und initialisiert sie mit den angegebenen Werten.
 ```
