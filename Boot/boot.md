@@ -88,16 +88,16 @@ Der Code deaktiviert zunächst die Interrupts und setzt die Register zurück. An
                 cmp r2, #MODE_SVC
                 bne sleep
 
-			@ setze vector-adresse
+		@ setze vector-adresse
 				// to be implemented
 				
-    		  @ Wechsel in den Interruptmodus
+    	@ Wechsel in den Interruptmodus
                 // to be implemented
                 
-              @ Stack für Interruptmodus aufsetzen
+        @ Stack für Interruptmodus aufsetzen
                 // to be implemented
                                 
-              @ Wechsle zurück in den Supervisor Modus
+        @ Wechsle zurück in den Supervisor Modus
                 // to be implemented
 				
         @ enable Neon-Coprozessor
