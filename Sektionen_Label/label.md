@@ -12,6 +12,36 @@ My_data: .word 0xbb0000aa
 ```
 Hier bezeichnet das Label My_data eine Speicheradresse. Ab dieser Adresse wird der Speicher so initialisiert, dass ein Word (also 4 Bytes) mit dem Wert 0xbb0000aa belegt wird. Das Label My_data fungiert also als Verweis auf die Adresse, die den festgelegten Wert enthält. Wenn später im Programm auf My_data verwiesen wird, greift der Code auf diese Speicheradresse zu, um den darin gespeicherten Wert zu lesen oder zu schreiben.
 
+#### Assembler-Direktiven zum Anlegen von Daten
+**Assembler-Direktiven** wie `.byte`, `.hword`, `.word` und `.asciz` werden in der **.data-Sektion** verwendet, um unterschiedliche Datentypen im Speicher zu **definieren** und zu **initialisieren**. Diese Direktiven sind **keine Maschinenbefehle**, sondern Anweisungen an den Assembler, die festlegen, wie viel Speicher reserviert werden soll und welche Werte dort abgelegt werden. Sie ermöglichen Entwicklern eine präzise Kontrolle über die Speicherorganisation, indem sie bestimmen, welche Daten wo und in welcher Form im Speicher platziert werden. 
+
+- **.byte:** Reserviert ein oder mehrere Bytes und initialisiert sie mit den angegebenen Werten.
+```
+.byte 0x1, 0x2, 0x3
+```
+- **.hword:** Reserviert Halbwörter (2 Bytes) und initialisiert sie.
+```
+.hword 0x1234
+```
+- **.word:** Reserviert Wörter (4 Bytes) und initialisiert sie.
+```
+.word 0x12345678
+```
+- **.float:** Reserviert 4 Bytes für eine Fließkommazahl und initialisiert sie mit dem angegebenen Wert.
+```
+.float 3.14
+```
+- **.asciz:** Reserviert eine nullterminierte Zeichenkette (String). (Eine nullterminierte Zeichenkette ist eine Folge von Zeichen, die mit einem Byte mit dem Wert 0 endet.)
+```
+.asciz "Hello, World!"
+```
+
+Um die mit diesen Direktiven definierten Daten auch sinnvoll im Programm verwenden zu können, sollten sie mit einem Label versehen werden, wie etwa:
+```
+mydata: .word 0xabc
+```
+
+
 ### Der Literal Pool
 Achtung: Ein häufiges Missverständnis ist, dass der Befehl ```ldr r0, =My_data``` die Daten, (in diesem Fall den Wert 0xbb0000aa) in ein Register lädt. 
 Tatsächlich lädt dieser Befehl jedoch die Adresse von My_data in das Register r0, nicht den gesuchten Datenwert. 

@@ -31,8 +31,9 @@
 | [Debugging mit GDB](..//debuggdb/debuggdb)                    |
 | [BCM2836](../bcm2836/bcm2836)                                 |
 | [Priviligierungslevel](../privlmodi/privmodiintro)            |
-| [Boot.s](../Boot/boot)                                        |
+| [Boot](../Boot/boot)                                        |
 | [UART](../UART/uart)                                          |
+| [Interrupts](../Interrupts/intintro)                          |
 | **2. Erweiterungen der CPU-Funktionalität**                   | 
 | [Coprozessoren](../Coproc/Coprocessor)                        |
 | [Timer](../Timer/timerintro)                                  |
