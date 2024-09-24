@@ -17,3 +17,5 @@ Um die Mail für den Versand über die Mailbox vorzubereiten, müssen drei Punkt
 [Der Wert 0xC0000000 wird an dieser Stelle verwendet, um sicherzustellen, dass die GPU die Speicheradresse korrekt interpretiert, wenn der L2-Cache deaktiviert ist. 
 In diesem Fall sieht die GPU den physischen Speicher nämlich ab der Adresse 0xC0000000. Diese Anpassung ist notwendig, damit die Speicheradresse, die von der CPU an die GPU gesendet wird, korrekt übersetzt wird, sodass die GPU den richtigen Speicherbereich ansteuern kann.](https://github-wiki-see.page/m/raspberrypi/firmware/wiki/Accessing-mailboxes)
 
+|--------------------------|-------------------------------|-----------------------------|
+| [zurück](framemailb.md)  | [Hauptmenü](../ueberblick.md) | [weiter](sendinit.md)       |
