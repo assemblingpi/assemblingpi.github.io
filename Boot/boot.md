@@ -9,14 +9,11 @@ ENTRY(start)
 
 MEMORY
 {
-    ram :   ORIGIN = 0x00008000, LENGTH = 0x8000000  /* 128 MB RAM */
-    
+    ram :   ORIGIN = 0x00008000, LENGTH = 0x8000000  /* 128 MB RAM */  
 }
 
 SECTIONS
-{
-       
-    
+{ 
     . = 0x8000;                   
     .text : AT(0x8000) { KEEP*(.text) } > ram 
     . = ALIGN(16);
