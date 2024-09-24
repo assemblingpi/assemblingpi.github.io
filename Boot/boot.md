@@ -125,7 +125,7 @@ kernel_entry:
 	mov r11, #0
 	mov r12, #0
 	bl k_uart0_init
-	bl 	KMain
+	bl  KMain
 	b  .	 @ wenn main verlassen wird -> hier Dauerschleife
 							
 sleep:
