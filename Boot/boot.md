@@ -54,19 +54,19 @@ start:
 	@ interrupts ausmaskieren
 	cpsid if 
 	@ register initialisieren
-	mov r0, #0
-	mov r1, #0
-	mov r2, #0
-	mov	r3, #0
-	mov r4, #0
-	mov r5, #0
-	mov r6, #0
-	mov r7, #0
-	mov r8, #0
-	mov r9, #0
-	mov r10, #0
-	mov r11, #0
-	mov r12, #0
+	mov r0,		#0
+	mov r1,		#0
+	mov r2,		#0
+	mov	r3,		#0
+	mov r4,		#0
+	mov r5,		#0
+	mov r6,		#0
+	mov r7,		#0
+	mov r8,		#0
+	mov r9,		#0
+	mov r10,	#0
+	mov r11,	#0
+	mov r12,	#0
 	
 @ wenn der aktive core != core0 -> sleep
 which_core:
@@ -93,6 +93,7 @@ check_pl:
 	
 	@ Stack für Interruptmodus aufsetzen
 	// to be implemented
+
 	@ Wechsle zurück in den Supervisor Modus
 	// to be implemented
 	
@@ -110,22 +111,22 @@ check_pl:
 	
 kernel_entry:
 	@ Reset Register
-	mov r0,  #0
-	mov r1,  #0
-	mov r2,  #0
-	mov	r3,  #0
-	mov r4,  #0
-	mov r5,  #0
-	mov r6,  #0
-	mov r7,  #0
-	mov r8,  #0
-	mov r9,  #0
-	mov r10, #0
-	mov r11, #0
-	mov r12, #0
+	mov r0,		#0
+	mov r1,		#0
+	mov r2,		#0
+	mov	r3,		#0
+	mov r4,		#0
+	mov r5,		#0
+	mov r6,		#0
+	mov r7,		#0
+	mov r8,		#0
+	mov r9,		#0
+	mov r10,	#0
+	mov r11, 	#0
+	mov r12, 	#0
 	bl k_uart0_init
 	bl 	KMain
-	b  .    	@ wenn main verlassen wird -> hier Dauerschleife
+	b  .    		@ wenn main verlassen wird -> hier Dauerschleife
 							
 sleep:
 	b sleep						
