@@ -16,6 +16,30 @@ Ein Beispiel für die Definition einer Variablen in dieser Sektion könnte so au
    Hier wird die Variable `a` mit dem Wert `1` initialisiert und in der `.data`-Sektion
    gespeichert. 
 
+#### Assembler-Direktiven zum Anlegen von Daten
+**Assembler-Direktiven** wie .byte, .hword, .word und .asciz werden in der **.data-Sektion** verwendet, um unterschiedliche Datentypen im Speicher zu **definieren** und zu **initialisieren**. Diese Direktiven sind **keine Maschinenbefehle**, sondern Anweisungen an den Assembler, die festlegen, wie viel Speicher reserviert werden soll und welche Werte dort abgelegt werden. Sie ermöglichen Entwicklern eine präzise Kontrolle über die Speicherorganisation, indem sie bestimmen, welche Daten wo und in welcher Form im Speicher platziert werden. 
+
+- **.byte:** Reserviert ein oder mehrere Bytes und initialisiert sie mit den angegebenen Werten.
+```
+.byte 0x1, 0x2, 0x3
+```
+- **.hword:** Reserviert Halbwörter (2 Bytes) und initialisiert sie.
+```
+.hword 0x1234
+```
+- **.word:** Reserviert Wörter (4 Bytes) und initialisiert sie.
+```
+.word 0x12345678
+```
+- **.float:** Reserviert 4 Bytes für eine Fließkommazahl und initialisiert sie mit dem angegebenen Wert.
+```
+.float 3.14
+```
+- **.asciz:** Reserviert eine nullterminierte Zeichenkette (String).
+```
+.asciz "Hello, World!"
+```
+
 ### .bss-Sektion:
 Die `.bss`-Sektion (Block Started by Symbol) wird für Variablen verwendet, die ebenfalls eine statische Lebensdauer haben, aber entweder nicht initialisiert sind oder mit Null initialisiert werden. Diese Sektion reserviert Platz im Speicher für solche Variablen, ohne ihnen beim Programmstart einen spezifischen Wert zuzuweisen. Üblicherweise werden die Variablen in der .bss-Sektion bei Systemstart auf Null gesetzt, 
 Die Direktive `.bss` wird verwendet, um die nachfolgende Anweisung in diese Sektion einzuordnen. 
