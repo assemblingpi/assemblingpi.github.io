@@ -18,7 +18,7 @@ Funktionen wie `printf`, `scanf` `strcmp` und `memcpy` sind zwar nicht direkt im
 - **strcmp:** Vergleicht zwei Strings, die in r0 und r1 übergeben werden. Das Ergebnis wird in r0 zurückgegeben: Null bedeutet, die Strings sind gleich, ein anderer Wert zeigt eine Abweichung.
 
 **Nun liegt es an dir, die Funktionsweise des Codes zu analysieren und das geheime Passwort zu entschlüsseln – möge die Analyse erfolgreich sein!**
-
+```
 .extern printf
 .extern scanf
 .extern memcpy
@@ -175,7 +175,7 @@ main:
         .long   .L.str.3
 .LCPI2_3:
         .long   .L.str.2
-
+``` 
 
 
 |-----------------------------|------------------------------------|----------------------------------------|
