@@ -1,4 +1,4 @@
-## Lösung: Entschlüssele das geheime Passwort!
+## Lösung: Finde das geheime Passwort!
 
 ### Lokalisierung der main-Funktion
 Der erste Schritt zur Analyse des Programms ist das Auffinden der main-Funktion. Diese Funktion bildet den Ausgangspunkt des Programms und steuert den gesamten Ablauf. Indem wir die main-Funktion untersuchen, erhalten wir einen Überblick über die Struktur und den grundlegenden Ablauf des Codes. 

@@ -1,4 +1,5 @@
-## Aufgabe: Entschlüssele das geheime Passwort!
+## Aufgabe: Finde das geheime Passwort!
+
 Du stehst vor der Herausforderung, das **geheime Passwort** eines disassemblierten Programms zu finden. Der Code wurde aus C-Code durch einen Compiler erzeugt und erwartet die Eingabe eines Schlüssels. Wird der richtige Schlüssel eingegeben, erscheint `Success`, andernfalls `Error`. Deine Aufgabe besteht darin, den Code ausschließlich durch statische Analyse – also das Untersuchen des Codes ohne dessen Ausführung – zu entschlüsseln und den korrekten Schlüssel zu finden!
 
 ### Deine Aufgaben:
