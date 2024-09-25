@@ -43,130 +43,130 @@ Funktionen wie `printf`, `scanf` `strcmp` und `memcpy` sind zwar nicht direkt im
 
 .section .text
 .LBB0_0:
-        push    {r11, lr}
-        mov     r11, sp
-        sub     sp, sp, #40
-        str     r0, [r11, #-4]
-        ldr     r1, .LCPI0_0
-        add     r0, sp, #16
-        mov     r2, #20
-        str     r0, [sp, #8]            
-        bl      memcpy
-        mov     r1, #0
-        str     r1, [sp, #12]
-        ldr     r1, [r11, #-4]
-        str     r0, [sp, #4]            
-        mov     r0, r1
-        ldr     r1, [sp, #8]            
-        bl      strcmp
-        cmp     r0, #0
-        bne     .LBB0_2
-        b       .LBB0_1
+        push {r11, lr}
+        mov r11, sp
+        sub sp, sp, #40
+        str r0, [r11, #-4]
+        ldr r1, .LCPI0_0
+        add r0, sp, #16
+        mov r2, #20
+        str r0, [sp, #8]            
+        bl  memcpy
+        mov r1, #0
+        str r1, [sp, #12]
+        ldr r1, [r11, #-4]
+        str r0, [sp, #4]            
+        mov r0, r1
+        ldr r1, [sp, #8]            
+        bl strcmp
+        cmp r0, #0
+        bne .LBB0_2
+        b .LBB0_1
 .LBB0_1:
-        mov     r0, #1
-        str     r0, [sp, #12]
-        b       .LBB0_3
+        mov r0, #1
+        str r0, [sp, #12]
+        b .LBB0_3
 .LBB0_2:
-        mvn     r0, #0
-        str     r0, [sp, #12]
-        b       .LBB0_3
+        mvn r0, #0
+        str r0, [sp, #12]
+        b .LBB0_3
 .LBB0_3:
-        mov     sp, r11
-        pop     {r11, lr}
-        bx      lr
+        mov sp, r11
+        pop {r11, lr}
+        bx lr
 .LCPI0_0:
         .long   .Lstr_scrt
 .LBB0_4:
-        push    {r11, lr}
-        mov     r11, sp
-        sub     sp, sp, #16
-        str     r0, [sp, #8]
-        ldr     r0, [sp, #8]
-        bl      .LBB0_0
-        mov     r0, #10
-        strb    r0, [sp, #7]
-        mov     r0, #0
-        str     r0, [sp]
-        b       .LBB1_1
+        push {r11, lr}
+        mov r11, sp
+        sub sp, sp, #16
+        str r0, [sp, #8]
+        ldr r0, [sp, #8]
+        bl .LBB0_0
+        mov r0, #10
+        strb r0, [sp, #7]
+        mov r0, #0
+        str r0, [sp]
+        b .LBB1_1
 .LBB1_1:                                
-        ldr     r0, [sp]
-        ldr     r1, .LCPI1_0
-        ldrb    r0, [r1, r0]
-        cmp     r0, #0
-        beq     .LBB1_4
-        b       .LBB1_2
+        ldr r0, [sp]
+        ldr r1, .LCPI1_0
+        ldrb r0, [r1, r0]
+        cmp r0, #0
+        beq .LBB1_4
+        b .LBB1_2
 .LBB1_2:                                
-        ldrb    r0, [sp, #7]
-        ldr     r1, [sp]
-        ldr     r2, .LCPI1_0
-        ldrb    r3, [r2, r1]
-        eor     r0, r3, r0
-        strb    r0, [r2, r1]
-        b       .LBB1_3
+        ldrb r0, [sp, #7]
+        ldr r1, [sp]
+        ldr r2, .LCPI1_0
+        ldrb r3, [r2, r1]
+        eor r0, r3, r0
+        strb r0, [r2, r1]
+        b .LBB1_3
 .LBB1_3:                               
-        ldr     r0, [sp]
-        add     r0, r0, #1
-        str     r0, [sp]
-        b       .LBB1_1
+        ldr r0, [sp]
+        add r0, r0, #1
+        str r0, [sp]
+        b .LBB1_1
 .LBB1_4:
-        ldr     r0, [sp, #8]
-        ldr     r1, .LCPI1_0
-        bl      strcmp
-        cmp     r0, #0
-        bne     .LBB1_6
-        b       .LBB1_5
+        ldr r0, [sp, #8]
+        ldr r1, .LCPI1_0
+        bl strcmp
+        cmp r0, #0
+        bne .LBB1_6
+        b .LBB1_5
 .LBB1_5:
-        mov     r0, #0
-        str     r0, [r11, #-4]
-        b       .LBB1_7
+        mov r0, #0
+        str r0, [r11, #-4]
+        b .LBB1_7
 .LBB1_6:
-        mvn     r0, #0
-        str     r0, [r11, #-4]
-        b       .LBB1_7
+        mvn r0, #0
+        str r0, [r11, #-4]
+        b .LBB1_7
 .LBB1_7:
-        ldr     r0, [r11, #-4]
-        mov     sp, r11
-        pop     {r11, lr}
-        bx      lr
+        ldr r0, [r11, #-4]
+        mov sp, r11
+        pop {r11, lr}
+        bx lr
 .LCPI1_0:
         .long   .L.str.4
 main:
-        push    {r11, lr}
-        mov     r11, sp
-        sub     sp, sp, #120
-        mov     r0, #0
-        str     r0, [r11, #-4]
-        ldr     r0, .LCPI2_0
-        bl      printf
-        ldr     r1, .LCPI2_1
-        add     r2, sp, #16
-        str     r0, [sp, #8]            
-        mov     r0, r1
-        mov     r1, r2
-        str     r2, [sp, #4]            
-        bl      scanf
-        ldr     r1, [sp, #4]            
-        str     r0, [sp]                
-        mov     r0, r1
-        bl      .LBB0_4
-        str     r0, [sp, #12]
-        ldr     r0, [sp, #12]
-        cmp     r0, #0
-        bne     .LBB2_2
-        b       .LBB2_1
+        push {r11, lr}
+        mov r11, sp
+        sub sp, sp, #120
+        mov r0, #0
+        str r0, [r11, #-4]
+        ldr r0, .LCPI2_0
+        bl printf
+        ldr r1, .LCPI2_1
+        add r2, sp, #16
+        str r0, [sp, #8]            
+        mov r0, r1
+        mov r1, r2
+        str r2, [sp, #4]            
+        bl scanf
+        ldr r1, [sp, #4]            
+        str r0, [sp]                
+        mov r0, r1
+        bl .LBB0_4
+        str r0, [sp, #12]
+        ldr r0, [sp, #12]
+        cmp r0, #0
+        bne .LBB2_2
+        b .LBB2_1
 .LBB2_1:
-        ldr     r0, .LCPI2_3
-        bl      printf
-        b       .LBB2_3
+        ldr r0, .LCPI2_3
+        bl printf
+        b .LBB2_3
 .LBB2_2:
-        ldr     r0, .LCPI2_2
-        bl      printf
-        b       .LBB2_3
+        ldr r0, .LCPI2_2
+        bl printf
+        b   .LBB2_3
 .LBB2_3:
-        mov     r0, #0
-        mov     sp, r11
-        pop     {r11, lr}
-        bx      lr
+        mov r0, #0
+        mov sp, r11
+        pop {r11, lr}
+        bx  lr
 .LCPI2_0:
         .long   .L.str
 .LCPI2_1:
