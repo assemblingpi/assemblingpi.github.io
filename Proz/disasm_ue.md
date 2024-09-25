@@ -10,9 +10,10 @@ Du stehst vor der Herausforderung, das **geheime Passwort** eines disassembliert
 Unveränderliche Daten wie Strings oder Schlüssel werden nicht direkt im Code hinterlegt, sondern im sogenannten Konstantenpool gespeichert. Sie werden durch Labels wie `.LCPIx_x` referenziert, welche auf die **Speicherorte** dieser Konstanten **zeigen**. 
 
 #### Externe Funktionen: 
-Funktionen wie `printf`, `strcmp` und `memcpy` sind zwar nicht direkt im Assemblercode eingebunden, aber sie werden durch die Anweisung "Branch with Link" (bl) referenziert. Das Wissen um die Funktionsweise dieser externen Funktionen hilft dir, den Ablauf des Programms zu verstehen:
+Funktionen wie `printf`, `scanf` `strcmp` und `memcpy` sind zwar nicht direkt im Assemblercode eingebunden, aber sie werden durch die Anweisung "Branch with Link" (bl) referenziert. Das Wissen um die Funktionsweise dieser externen Funktionen hilft dir, den Ablauf des Programms zu verstehen:
 
 - **printf:** Wird verwendet, um Ausgaben auf den Bildschirm zu bringen. Dabei wird ein Zeiger auf den Formatstring in Register r0 übergeben, und mögliche weitere Argumente folgen in den Registern r1 bis r3.
+- **scanf:** Wird verwendet, um Eingaben vom Benutzer zu lesen. Ein Zeiger auf den Formatstring wird in Register `r0` übergeben, und die Speicheradressen, in die die eingegebenen Werte geschrieben werden sollen, folgen in den Registern `r1` bis `r3`. Diese Speicheradressen müssen als Zeiger auf die jeweiligen Variablen übergeben werden, da `scanf` die Werte direkt an diesen Speicherorten speichert.
 - **memcpy:** Kopiert Daten von einem Quellort (r1) zu einem Zielort (r0), wobei die Anzahl der Bytes in r2 übergeben wird.
 - **strcmp:** Vergleicht zwei Strings, die in r0 und r1 übergeben werden. Das Ergebnis wird in r0 zurückgegeben: Null bedeutet, die Strings sind gleich, ein anderer Wert zeigt eine Abweichung.
 
