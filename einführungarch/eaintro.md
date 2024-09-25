@@ -15,14 +15,15 @@ Der Raspberry Pi 2B ist ein Einplatinencomputer mit ARM-Architektur, der eine sp
 
 **Arbeitsspeicher (RAM):**
 
-**Adressbereich:** `0x00000000` bis `0x3EFFFFFF`
+- **Adressbereich:** `0x00000000` bis `0x3EFFFFFF`
 
-**Beschreibung:** Dieser Bereich umfasst den physischen Arbeitsspeicher des Systems. Hier werden Programme und Daten gespeichert, die vom Prozessor verarbeitet werden.
+- **Beschreibung:** Dieser Bereich umfasst den physischen Arbeitsspeicher des Systems. Hier werden Programme und Daten gespeichert, die vom Prozessor verarbeitet werden.
 
 **Peripheriegeräte (Memory-Mapped I/O):**
 
-**Adressbereich:** `0x3F000000` bis `0x3FFFFFFF`
-**Beschreibung:** In diesem Bereich sind die Peripherie-Register angesiedelt. Diese Register ermöglichen den direkten Zugriff auf Hardwarekomponenten wie GPIO, UART, SPI, I2C und weitere Schnittstellen.
+- **Adressbereich:** `0x3F000000` bis `0x3FFFFFFF`
+
+- **Beschreibung:** In diesem Bereich sind die Peripherie-Register angesiedelt. Diese Register ermöglichen den direkten Zugriff auf Hardwarekomponenten wie GPIO, UART, SPI, I2C und weitere Schnittstellen.
 
 
 |-------------------|-------------------------------|-----------------------|
