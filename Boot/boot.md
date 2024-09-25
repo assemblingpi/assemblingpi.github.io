@@ -50,87 +50,86 @@ Folgende **Equs** sind Konstantendefinitionen, die den Code leserlicher und dami
 Der Code deaktiviert zunächst die Interrupts und setzt die Register zurück. Anschließend wird der aktive Core geprüft, um sicherzustellen, dass es sich um Core 0 handelt. Wenn dies nicht der Fall ist, wird in eine Dauerschleife (sleep) gewechselt.
 ```  
 .section .text
-	start:
-				@ interrupts ausmaskieren				
-				cpsid if 
-				@ register initialisieren
-				mov r0, #0
-				mov r1, #0
-				mov r2, #0
-				mov	r3, #0
-				mov r4, #0
-				mov r5, #0
-				mov r6, #0
-				mov r7, #0
-				mov r8, #0
-				mov r9, #0
-				mov r10, #0
-				mov r11, #0
-				mov r12, #0
-				
-		@ wenn der aktive core != core0 -> sleep
-		which_core:
-				@ mpidr = multiprocessor affinity register enthaelt info bzgl corenr.
-				mrc p15, #0, r0, c0, c0, #5
-				and r0, r0, #3
-				cmp r0, #0 		
-				@ sleep				
-				bne		.
-		
-		@ pruefe das privigierungslevel des aktiven cores 
-		check_pl:	
-                mrs r0, cpsr  
-                mov r1, #MODE_MASK
-                and r2, r0, r1
-                cmp r2, #MODE_SVC
-                bne sleep
+start:
+	@ interrupts ausmaskieren
+	cpsid if 
+	@ register initialisieren
+	mov r0,  #0
+	mov r1,  #0
+	mov r2,  #0
+	mov r3,  #0
+	mov r4,  #0
+	mov r5,  #0
+	mov r6,  #0
+	mov r7,  #0
+	mov r8,  #0
+	mov r9,  #0
+	mov r10, #0
+	mov r11, #0
+	mov r12, #0
+	
+@ wenn der aktive core != core0 -> sleep
+which_core:
+	@ mpidr = multiprocessor affinity register enthaelt info bzgl corenr.
+	mrc p15, #0, r0, c0, c0, #5
+	and r0, r0, #3
+	cmp r0, #0
+	@ sleep
+	bne		.
+	
+@ pruefe das privigierungslevel des aktiven cores
+check_pl:
+	mrs r0, cpsr
+	mov r1, #MODE_MASK
+	and r2, r0, r1
+	cmp r2, #MODE_SVC
+	bne sleep
+	
+	@ setze vector-adresse
+	// to be implemented
+	
+	@ Wechsel in den Interruptmodus
+	// to be implemented
+	
+	@ Stack für Interruptmodus aufsetzen
+	// to be implemented
 
-		@ setze vector-adresse
-				// to be implemented
-				
-    	@ Wechsel in den Interruptmodus
-                // to be implemented
-                
-        @ Stack für Interruptmodus aufsetzen
-                // to be implemented
-                                
-        @ Wechsle zurück in den Supervisor Modus
-                // to be implemented
-				
-        @ enable Neon-Coprozessor
-		        // to be implemented
-		
-		@ Setze Stack-Basis-Adresse
-				mov sp, #0x80000
-				
-		@ enable interrupts
-				cpsie i  
-
-		@ set up textmode
-				// to be implemented
-		
-		@ Aufruf der Mainfunktion
-		kernel_entry:
-				@ Reset Register
-				mov r0,  #0
-				mov r1,  #0
-				mov r2,  #0
-				mov	r3,  #0
-				mov r4,  #0
-				mov r5,  #0
-				mov r6,  #0
-				mov r7,  #0
-				mov r8,  #0
-				mov r9,  #0
-				mov r10, #0
-				mov r11, #0
-				mov r12, #0
-				bl k_uart0_init
-				bl 	KMain 	
-				b  .    	@ wenn main verlassen wird -> hier Dauerschleife
+	@ Wechsle zurück in den Supervisor Modus
+	// to be implemented
+	
+	@ enable Neon-Coprozessor
+	// to be implemented
+	
+	@ Setze Stack-Basis-Adresse
+	mov sp, #0x80000
+	
+	@ enable interrupts
+	cpsie i
+	
+	@ set up textmode
+	// to be implemented
+	
+kernel_entry:
+	@ Reset Register
+	mov r0,  #0
+	mov r1,  #0
+	mov r2,  #0
+	mov r3,  #0
+	mov r4,  #0
+	mov r5,  #0
+	mov r6,  #0
+	mov r7,  #0
+	mov r8,  #0
+	mov r9,  #0
+	mov r10, #0
+	mov r11, #0
+	mov r12, #0
+	bl k_uart0_init
+	bl  KMain
+	b  .	 @ wenn main verlassen wird -> hier Dauerschleife
 							
 sleep:
-				b sleep						
+	b sleep						
 ```
 
 ### KMAIN.s
@@ -138,9 +137,8 @@ Die Datei kmain.s definiert die Hauptfunktion KMain:
 ```
 .global KMain
 .section .text
-
-        KMAIN: 
-                b   .
+KMAIN: 
+	b   .
 ```
 Diese Funktion führt im Moment keine Aktionen aus und verweilt in einer Dauerschleife.
 
