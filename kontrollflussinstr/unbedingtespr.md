@@ -17,7 +17,7 @@ Hierbei ist `label` der Block, zu dem das Programm springen soll.
 	
 	
 addierer:
-	ADD R2, R0, R1      @ Addiere die Werte 3 (R0) und 4 (R1) auf, speichere das Ergebnis in R2
+	ADD R2, R0, R1			@ Addiere die Werte 3 (R0) und 4 (R1) auf, speichere das Ergebnis in R2
 ```
 
 In diesem Beispiel wird die Anweisung `MOV R3, #5` nicht ausgeführt, weil der Befehl `B addierer` die Ausführung des Programms direkt zur Sprungmarke `addierer` weiterleitet. Sobald der Befehl `B addierer` ausgeführt wird, springt das Programm sofort zum Block `addierer` und die nachfolgende Anweisung (MOV R3, #5) wird übersprungen. Nach der Addition in `addierer` wird das Programm beendet.
