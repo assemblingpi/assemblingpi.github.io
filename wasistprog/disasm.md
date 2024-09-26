@@ -1,7 +1,6 @@
 
 ## Was ist denn nun ein "Disassembler"?
-Ein Disassembler ist ein Werkzeug, das Maschinencode in Assembler rückübersetzt.
-Der ursprüngliche Quellcode, der in einer höheren Programmiersprache wie C oder Python geschrieben sein kann, wird durch den Disassembler in die kompilierten, binären Anweisungen in ihre Assembler-Befehle zerlegt. Dadurch wird es möglich, den genauen Ablauf eines Programms nachzuvollziehen, was besonders nützlich ist, wenn der Quellcode nicht verfügbar ist, etwa zur Analyse von Schadsoftware oder zur Fehlersuche in bestehenden Programmen.
+Ein Disassembler ist ein Werkzeug, das Maschinencode in Assembler rückübersetzt. Der Maschinencode, der von der CPU ausgeführt wird, wird durch den **Disassembler** in lesbare Assembler-Befehle umgewandelt. Dieser Maschinencode entsteht durch das Kompilieren eines Programms, bei dem der Quellcode aus einer höheren Programmiersprache wie C in binäre Anweisungen umgewandelt wird, die die CPU direkt versteht. Der Disassembler macht es möglich, den genauen Ablauf eines Programms nachzuvollziehen, was besonders nützlich ist, wenn der Quellcode nicht verfügbar ist, etwa zur Analyse von Schadsoftware oder zur Fehlersuche in bestehenden Programmen.
 
 ![Programm](./disasm.png)
 
