@@ -12,9 +12,6 @@ Hierbei ist `<Zielregister>` das Register, in das das Ergebnis der Addition gesp
 
 Achtung: Es ist nicht möglich, zwei unmittelbare Werte direkt miteinander zu addieren!
 
-
-#### Beispiele
-
 1. **Addition zweier Register**
 ```
 ADD Rd, Rn, Rm
@@ -27,7 +24,7 @@ ADD Rd, Rn, #imm
 ```
 Hier wird der Wert von `Rn` mit dem unmittelbaren Wert `#imm` addiert, das Ergebnis wird dann in `Rd` gespeichert.
 
-#### Anwendungsbeispiel
+#### Beispiele
 
 ```
     MOV R1, #5       @ Lade den Wert 5 in Register R1
@@ -35,11 +32,6 @@ Hier wird der Wert von `Rn` mit dem unmittelbaren Wert `#imm` addiert, das Ergeb
     ADD R0, R1, R2   @ Addiere R1 und R2, speichere das Ergebnis in R0
     ADD R3, R1, #3   @ Addiere den Wert 3 auf R1, speichere das Ergebnis in R3
 ```
-
-**So sehen nach Ausführung die Register aus:**
-
-![Screenshot of Example Program](./ADD.png)
-
 
 ### SUB
 Der SUB-Befehl wird verwendet, um einen Wert von einem anderen zu subtrahieren und das Ergebnis in ein Register zu speichern.
@@ -53,7 +45,6 @@ SUB <Zielregister>, <Quellregister>, <Quelle>
 Hierbei ist `<Zielregister>` das Register, in das das Ergebnis der Subtraktion gespeichert wird, <Quellregister> ist das Register, von dem subtrahiert wird, und <Quelle> ist ein Register, dessen Wert subtrahiert wird. `<Quelle>` kann aber genauso wieder ein unmittelbarer Wert sein!
 Bei SUB gelten die selben Regeln wie bei ADD: Man darf keine unmittelbaren Werte voneinander subtrahieren und ein Registerwert kann nicht von einem unmittelbaren Wert subtrahiert werden! 
 
-#### Beispiele
 1. **Subtraktion zweier Register**
 ```
 SUB Rd, Rn, Rm
@@ -66,7 +57,7 @@ SUB Rd, Rn, #imm
 ```
 Hier wird der unmittelbare Wert `<#imm>` von dem Wert in `<Rn>` subtrahiert, das Ergebnis wird dann in `<Rd>` gespeichert.
 
-#### Anwendungsbeispiele
+#### Beispiele
 
 ```
     MOV R0, #10      @ Lade den Wert 10 in Register R0
@@ -74,7 +65,7 @@ Hier wird der unmittelbare Wert `<#imm>` von dem Wert in `<Rn>` subtrahiert, das
     SUB R2, R0, R1   @ Subtrahiere R1 von R0, speichere das Ergebnis in R2
     SUB R3, R0, #5   @ Subtrahiere den Wert 5 von R0, speichere das Ergebnis in R3
 ```    
-#### Folgende Beispiele zeigen, wie man SUB nicht anwenden kann:
+**Folgende Beispiele zeigen, wie man SUB nicht anwenden kann:**
 ```    
     SUB R4, #8, #3   @ Das Subtrahieren von zwei unmittelbaren Werten ist nicht erlaubt
     SUB R5, #9, R1   @ Ein Registerwert kann nicht von einem unmittelbaren Wert subtrahiert werden
@@ -136,7 +127,7 @@ MUL <Zielregister>, <Quellregister1>, <Quellregister2>
 Hierbei ist ``<Zielregister>`` das Register, in das das Ergebnis der Multiplikation gespeichert wird, ``<Quellregister1>`` und ``<Quellregister2>`` sind die Register, deren Werte multipliziert werden.
 Achtung: Bei `MUL` können keine unmittelbaren Werte verwendet werden!
 
-#### Anwendungsbeispiele
+#### Beispiele
 
 ```
     MOV R0, #3       @ Lade den Wert 3 in Register R0
@@ -144,7 +135,7 @@ Achtung: Bei `MUL` können keine unmittelbaren Werte verwendet werden!
     MUL R2, R0, R1   @ Multipliziere R0 und R1, speichere das Ergebnis in R2
 ```
 
-####  Folgende Beispiele zeigen, wie man MUL nicht anwenden kann:
+**Folgende Beispiele zeigen, wie man MUL nicht anwenden kann:**
 ```
     MUL R3, #3, #4   @ Unmittelbare Werte dürfen bei MUL nicht angewendet werden!
     MUL R4, R0, #3
@@ -165,7 +156,7 @@ Zuerst werden die Werte, die in `<Quellregister1>` und `<Quellregister2>` gespei
 Achtung: Auch bei `MLA` können keine unmittelbaren Werte verwendet werden!
 
 
-#### Anwendungsbeispiele
+#### Beispiele
 
 ```
     MOV R0, #2                      
@@ -173,7 +164,7 @@ Achtung: Auch bei `MLA` können keine unmittelbaren Werte verwendet werden!
     MOV R2, #1				 
     MLA R3, R0, R1, R2      @ R3 = (R0 * R1) + R2 = (2 * 7) + 1 = 15
 ```
-####  Folgendes Beispiel zeigt, wie man MLA nicht anwenden sollte:
+**Folgendes Beispiel zeigt, wie man MLA nicht anwenden sollte:**
 ```asm
     MLA R4, #3, R1, R2      @ Fehler: Unmittelbare Werte dürfen bei MLA nicht verwendet werden!
 ```

@@ -26,9 +26,9 @@ Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Regist
 
 #### Beispiel
 ``` 
-    MOV R0, #0x12
-    MOV R1, #0x30
-    AND R2, R0, R1
+    MOV R0, #0x12       @ Speichere 0x12 in Register R0
+    MOV R1, #0x30       @ Speichere 0x30 in Register R0
+    AND R2, R0, R1      @ Bitweise Verundung der Werte in R0 und R1, Ergebnis wird in R2 gespeichert
 ```
 In diesem Beispiel werden die Hexadezimalwerte `0x12` und `0x30` in die Register `R0` und `R1` geladen. Mit der AND-Operation werden die beiden Werte, die in den Registern R0 und R1 gespeichert sind, bitweise miteinander verundet. Das Ergebnis dieser Operation wird dann in `R2` gespeichert.
 
