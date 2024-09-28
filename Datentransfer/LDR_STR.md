@@ -19,14 +19,14 @@ var1: .word 5
 .text
 .global _start
 _start:
-    LDR R0, =var1    // Lade die Adresse von var1 in R0
+    LDR R0, =var1    @ Lade die Adresse von var1 in R0
 ```
 
 ###### Erklärung des Codes: 
 - ***.data:*** Im Segment **.data** wird kein ausführbarer Code abgelegt. Stattdessen enthält dieses Segment Daten, die im Speicher gespeichert werden und vom Programm während seiner Ausführung verwendet werden. Diese Daten können Variablen, Konstanten oder andere Informationen umfassen, die das Programm benötigt, um korrekt zu funktionieren.
 Im Gegensatz dazu enthält das **.text**-Segment den ausführbaren Code des Programms. Hier können dann die Daten aus dem Segment **.data** benötigt werden.
 - ***var1:***  Dies ist ein Label für eine Variable oder Datenstelle im Speicher. Labels werden verwendet, um auf bestimmte Adressen im Speicher zuzugreifen.
-- ***.word 5:*** Der **.word**-Befehl weist den Assembler an, eine 32-Bit-Ganzzahl (Wort) mit dem Wert 5 zu speichern. Die Größe der gespeicherten Daten ist plattformabhängig, aber in der Regel entspricht .word einer 4-Byte (32-Bit) Zahl.
+- ***.word 5:*** Der **.word**-Befehl weist den Assembler an, eine 32-Bit-Ganzzahl (Wort) mit dem Wert 5 zu speichern. Die Größe der gespeicherten Daten ist plattformabhängig, aber ArmV7 entspricht .word einer 4-Byte (32-Bit) Zahl.
 
 **Bedeutung:** In diesem Beispiel wird eine Variable namens var1 erstellt, die auf eine bestimmte Speicheradresse zeigt. An dieser Adresse wird der 32-Bit-Wert 5 gespeichert. Das Label var1 dient dazu, diese Speicheradresse im Programm zu referenzieren, sodass der Wert 5 gelesen oder modifiziert werden kann.
 
@@ -99,9 +99,9 @@ var1: .word 4
 .text
 .global _start
 _start:
-    MOV R0, #2
-    LDR R1, =var1
-    STR R0, [R1]
+    MOV R0, #2          
+    LDR R1, =var1      
+    STR R0, [R1]        
     STR R0, [R1, #4]
 ```
 - In Register R0 wird der Wert 2 gespeichert
@@ -229,7 +229,7 @@ _start:
 
 - In Register R0 wurde der Wert `0x0x11223344` gespeichert 
 - var1 ist auf `0xaaaaaaaa` gesetzt und wurde in die Speicheradresse `0x20` gespeichert
-- var2 ist auf `0xbbbbbbbb` gesetztund wurde in die SPeicher ádresse `0x24` gespeichert
+- var2 ist auf `0xbbbbbbbb` gesetzt und wurde in die Speicheradresse `0x24` gespeichert
 Diese Speicheradressen wurden jeweils einmal in Register `R1` und einmal in Register `R2` gespeichert.
 
 ![Screenshot of Example Program](./LDRHB4.png) 

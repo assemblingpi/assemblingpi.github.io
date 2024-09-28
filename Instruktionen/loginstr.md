@@ -30,7 +30,6 @@ Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Regist
     MOV R1, #0x30       @ Speichere 0x30 in Register R0
     AND R2, R0, R1      @ Bitweise Verundung der Werte in R0 und R1, Ergebnis wird in R2 gespeichert
 ```
-In diesem Beispiel werden die Hexadezimalwerte `0x12` und `0x30` in die Register `R0` und `R1` geladen. Mit der AND-Operation werden die beiden Werte, die in den Registern R0 und R1 gespeichert sind, bitweise miteinander verundet. Das Ergebnis dieser Operation wird dann in `R2` gespeichert.
 
 **So sehen die Register in CPULator nach der Ausführung aus:**
 
@@ -77,11 +76,10 @@ Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Regist
 
 #### Beispiel
 ``` 
-    MOV R0, #0x5c
-    MOV R1, #0x71
-    ORR R2, R0, R1
+    MOV R0, #0x5c       @ Speichere 0x5c in R0
+    MOV R1, #0x71       @ Speichere 0x71 in R1
+    ORR R2, R0, R1      @ Bitweise Veroderung der Werte in R0 und R1, Ergebnis wird in R2 gespeichert
 ```
-In diesem Beispiel werden die Hexadezimalwerte `0x5c` und `0x71` in die Register `R0` und `R1` geladen. Mit der ORR-Operation werden die beiden Werte, die in den Registern R0 und R1 gespeichert sind, bitweise miteinander verodert. Das Ergebnis dieser Operation wird dann in `R2` gespeichert.
 
 **So sehen die Register in CPULator nach der Ausführung aus:**
 
@@ -128,11 +126,10 @@ Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Regist
 
 #### Beispiel
 ```
-    MOV R0, #0x3a
-    MOV R1, #0x6e
-    EOR R2, R0, R1
+    MOV R0, #0x3a       @ Speichere 0x3a in R0
+    MOV R1, #0x6e       @ Speichere 0x3a in R0
+    EOR R2, R0, R1      @ Bitweise exklusive Veroderung der Werte in R0 und R1, Ergebnis wird in R2 gespeichert
 ```
-In diesem Beispiel werden die Hexadezimalwerte `0x3a` und `0x6e` in die Register `R0` und `R1` geladen. Mit der EOR-Operation werden die beiden Werte, die in den Registern R0 und R1 gespeichert sind, bitweise miteinander exklusiv verodert. Das Ergebnis dieser Operation wird dann in `R2` gespeichert.
 
 **So sehen die Register in CPULator nach der Ausführung aus:**
 
@@ -178,10 +175,9 @@ Hier wird der Wert, der in `Register A` gespeichert ist, bitweise negiert. Das E
 
 #### Beispiel
 ```
-    MOV R0, #0x3a
-    MVN R1, R0
+    MOV R0, #0x3a       @ Speichere 0x3a in R0
+    MVN R1, R0          @ Bitweise negierung des Wertes in R0, Ergebnis wird in R1 gespiechert
 ```
-In diesem Beispiel wird der Hexadezimalwert `0x3a` in das Register `R0` geladen. Mit der MVN-Operation wird dieser Wert bitweise negiert. Das Ergebnis dieser Operation wird dann in `R1` gespeichert.
 
 **So sehen die Register in CPULator nach der Ausführung aus:**
 

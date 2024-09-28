@@ -19,10 +19,10 @@ Hier wird der Wert in `Register A` um den Wert, der in `Register B` steht, nach 
 
 #### Beispiel
 ```	
-	MOV R0, #10
-	MOV R1, #4
-	LSL R2, R0, #3
-	LSL R3, R0, r1
+	MOV R0, #10			@ Speichere den Wert 10 in Register R0
+	MOV R1, #4			@ Speichere den Wert 4 in Register R1
+	LSL R2, R0, #3		@ Verschiebe den Wert in R0 um 3 Bits nach links und speichere das Ergebnis in R2
+	LSL R3, R0, R1		@ Verschiebe den Wert in R0 um den Wert in R1 (4) nach links und speichere das Ergebnis in R3
 ```
 Zuerst werden die Dezimalwerte `10` und `4` in die Register `R0` und `R1` geladen. Mit dem ersten LSL-Befehl wird der Wert in `R0` um den unmittelbaren Wert `3` nach links verschoben und das Ergebnis in `R2` gespeichert. Mit dem zweiten LSL-Befehl wird der Wert in `R0` um die Anzahl der Stellen nach links verschoben, die im Register `R1` gespeichert sind (also 4). Dieses Ergebnis wird anschließend in `R3` gespeichert.
 
