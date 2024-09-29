@@ -146,8 +146,8 @@ Hier wird der Wert in `Register A` um die Anzahl der Stellen nach rechts rotiert
 
 #### Beispiel
 ```
-	LDR R0, =0xaabbccdd
-	ROR R1, R0, #4
+LDR R0, =0xaabbccdd
+ROR R1, R0, #4		@ Rotiere R0 um 4 Bits nach rechts, überlaufende Bits werden am linken Ende wieder eingefügt, speichere das Ergebnis in R1
 ```
 
 Zuerst wird die Hexadezimalzahl `0xaabbccdd` in das Register `R0` geladen. Mit dem `ROR`-Befehl wird der Wert in `R0` um den unmittelbaren Wert `4` Stellen nach rechts rotiert. Dabei werden die Bits, die über die rechte Grenze hinausgehen, am linken Ende wieder eingefügt. Das Ergebnis dieser Rotation wird anschließend in `R1` gespeichert. 
