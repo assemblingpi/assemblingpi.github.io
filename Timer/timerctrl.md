@@ -56,7 +56,7 @@ enable_cntv_irq:
 		  str r1, [r0]
 		  bx  lr 
 ```
-### 4. Dektivieren des Timerinterrupts:
+### 4. Deaktivieren des Timerinterrupts:
 ```
 disable_cntv_irq:
     ldr r0, =C0TIMER_INTCTL
