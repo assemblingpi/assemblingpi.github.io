@@ -15,6 +15,7 @@ Das verhindert etwa, dass der Prozessorzustand verloren geht. Während ein Inter
 - cpsie i: Aktiviert   (demaskiert) Interrupts
 
 #### Ein Beispiel für einen generischen IRQ-Handler:
+Ein Ausschnitt aus dem bereits zuvor gezeigten Code `vector.s`: 
 ```asm
 irq:
     cpsid i                        @ Interrupts maskieren

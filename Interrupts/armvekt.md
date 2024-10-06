@@ -13,7 +13,11 @@ Die Vector Table in der ARMv7-A Architektur beginnt bei der Speicheradresse 0 un
 Jede dieser Adressen ist einem spezifischen Exception-Typ zugeordnet und verweist auf die entsprechenden Routinen zur Verarbeitung der Exceptions. Die Einträge in der Tabelle enthalten Verzweigungen zu den jeweiligen Interrupthandlern. Da die Exception Vector Table jedoch nur eine begrenzte Anzahl von Einträgen umfasst, verweist jeder Eintrag auf eine generische Interrupt-Handler-Routine für den entsprechenden Interrupt-Typ. Diese generische Routine muss dann feststellen, welcher spezifische Interrupt tatsächlich aufgetreten ist. Das bedeutet, dass die Vektortabelle selbst lediglich anzeigt, dass ein Interrupt einer bestimmten Art eingetreten ist, jedoch nicht, welcher spezifische Interrupt es genau war.
 
 #### Beispiel für die Implementierung der Interrupt-Vektor Tabelle:
+Es muss eine weitere Quelldatei namens `vector.s` erstellt werden, und die entsprechenden Kommandos zum Assemblieren und Linken müssen anschließend in die `build.sh`-Datei eingefügt werden. 
+
+Die Vektor-Tabelle definiert die Adressen der Handler für verschiedene Ausnahmen. Jeder Eintrag lädt die Adresse des entsprechenden Handlers in das Programmzähler-Register (pc), was einen Sprung zur Handler-Funktion bewirkt:
 ```asm
+.section .text
 vector:
     ldr pc, reset_handler
     ldr pc, undefined_handler
@@ -23,7 +27,21 @@ vector:
     ldr pc, unused_handler
     ldr pc, irq_handler
     ldr pc, fiq_handler
+```
 
+- **reset_handler:** Wird aufgerufen, wenn das System neu gestartet wird.
+- **undefined_handler:** Handhabt undefinierte Instruktionsausnahmen.
+- **swi_handler:** Handhabt Software-Interrupts (SWI).
+- **prefetch_handler:** Handhabt Prefetch-Ausnahmen, die bei fehlerhaften Instruktionsvorabrufen auftreten.
+- **data_handler:** Handhabt Daten-Ausnahmen, die bei fehlerhaften Datenzugriffen auftreten.
+- **unused_handler:** Reserviert für nicht verwendete Vektoren.
+- **irq_handler:** Handhabt IRQ (Interrupt Request) Interrupts.
+- **fiq_handler:** Handhabt FIQ (Fast Interrupt Request) Interrupts.
+
+
+Jeder Handler wird als ein Wort definiert, das auf die entsprechende Funktion zeigt:
+
+```
         
 reset_handler:      .word reset
 undefined_handler:  .word hang
@@ -33,12 +51,21 @@ data_handler:       .word hang
 unused_handler:     .word hang
 irq_handler:        .word irq
 fiq_handler:        .word hang
- 
+```
 
+- **reset_handler:** Verweist auf die reset-Funktion.
+- **undefined_handler, swi_handler, prefetch_handler, data_handler, unused_handler, fiq_handler:** Verweisen alle auf die hang-Funktion, was bedeutet, dass bei diesen Ausnahmen das System in einer Endlosschleife verbleibt.
+- **irq_handler:** Verweist auf die irq-Funktion, die für die Behandlung von IRQ-Interrupts zuständig ist.
+
+Die reset-Funktion ist der Einstiegspunkt nach einem System-Reset:
+```
 reset:
     b   start
-    b   .
+```
+`Reset` führt einen unbedingten Sprung (b) zur start-Funktion aus, die den eigentlichen Initialisierungsprozess übernimmt.
 
+Die irq-Funktion behandelt IRQ-Interrupts, in unserem Fall werden wir nur einen Timerinterrupt implementieren:
+```
 @ Timerinterrupt
 irq:
     cpsid i                        @ interrupts ausmaskieren
@@ -46,7 +73,15 @@ irq:
     bl irq_handler_ext             @ springe zu Extended Interrupt Handler
     pop {r0-r3, r12, lr}           @ prozessorstatus wiederherstellen
     sub pc, lr, #4                 @ returnadresse anpassen
+```
+1. **cpsid i:** Deaktiviert weitere Interrupts, um die kritische Sektion vor gleichzeitigen Unterbrechungen zu schützen.
+2. **push {r0-r3, r12, lr}:** Sichert die Register `r0` bis `r3`, `r12` und das `Link-Register` (lr) auf dem Stack, um den aktuellen Zustand zu bewahren.
+3. **bl irq_handler_ext:** Ruft die erweiterte Interrupt-Handler-Funktion `irq_handler_ext` auf, welche die spezifische Interrupt-Verarbeitung (des Timer-Interrupts) übernimmt.
+4. **pop {r0-r3, r12, lr}:** Stellt die zuvor gesicherten Register wieder her.
+5. **sub pc, lr, #4:** Korrigiert die Rücksprungadresse, um zur aufrufenden Funktion zurückzukehren. 
 
+Die `hang`-Funktion wird für nicht implementierte oder unerwartete Ausnahmen verwendet. Sie sorgt dafür, dass das System in einer Endlosschleife verbleibt:
+```
 @ Dauerschleife bei nicht implementierten Interrupts
 hang:
     wfi

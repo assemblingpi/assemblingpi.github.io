@@ -10,6 +10,7 @@ Jeder Modus, einschließlich des IRQ-Modus, verfügt aus Sicherheitsgründen üb
 Ein eigener Stack ist im Interruptmodus notwendig, um bei Start der ISR den vorherigen Prozessorzustand zu speichern, bevor die ISR ausgeführt wird. 
 
 #### Aufsetzen eines seperaten Stacks für den IRQ-Modus: 
+Folgender Code ist in `boot.s` zu ergänzen!
 ```asm
 @ EQUS für die benötigten Konstanten:
 .equ   MODE_MASK,   0x1F

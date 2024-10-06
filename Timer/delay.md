@@ -1,2 +1,16 @@
-|---------------------------|------------------------------------|---------------------------------------------|
-|   [zurück](timerctrl.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../vfpuNeon/floatingintro.md)    |
+### Aufgabenstellung: Implementierung einer Delay-Funktion
+
+#### Hintergrund
+
+In eingebetteten Systemen, ist es oft notwendig, präzise **Zeitverzögerungen** zu implementieren. Solche Verzögerungen können für verschiedene Zwecke verwendet werden, beispielsweise zum Warten auf Sensorantworten, zur Steuerung von Timern oder zur Synchronisierung von Prozessen.
+
+#### Aufgabenbeschreibung
+
+Implementieren Sie eine ARM-Assembly-Funktion namens `delay_ms`, die eine Verzögerung in Millisekunden (ms) erzeugt. `delay_ms` soll die Funktionen zur Steuerung des virtuellen Timers, die wir zuvor implementiert hatten - verwenden. 
+
+##### Anforderungen:
+- Die Funktion `delay_ms` soll als global deklariert sein, damit sie von anderen Modulen aufgerufen werden kann.
+- Der Eingabeparameter (Verzögerungsdauer in Millisekunden) wird im Register `r1` übergeben.
+
+|---------------------------|------------------------------------|-----------------------------|
+|   [zurück](timerctrl.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](delay_lsg.md)    |

@@ -1,6 +1,6 @@
 ## Von-Neumann-Architektur
 
-Um mit der Assembler-Programmierung auf ARM-Prozessoren zu beginnen, ist es entscheidend, die grundlegende Funktionsweise der ARM-CPUs zu verstehen.
+Um mit der Assembler-Programmierung auf ARM-Prozessoren zu beginnen, ist es entscheidend, die grundlegende Funktionsweise der ARM-CPUs zu verstehen:
 
 ARM-Prozessoren basieren auf der Von-Neumann-Architektur, die drei zentrale Komponenten umfasst: die CPU (Central Processing Unit), bestehend aus Kontrolleinheit und ALU, den Speicher und die Ein-/Ausgabegeräte (E/A). Diese Komponenten sind über einen Systembus miteinander verbunden.
 
@@ -14,7 +14,7 @@ Bei ARM-CPUs handelt es sich um eine Load/Store-Architektur, bei denen Speicherz
 
 Ein Prozessor ist im wesentlichen ein Maschine, die Berechnungen mit Hilfe kleiner Speichereinheiten namens Register durchführt. Die Daten, mit deren Hilfe wir Berechnungen durchführen wollen, müssen also in diese Register geladen werden, damit wir mit ihnen arbeiten können.
 An dieser Stelle ist es jedoch wichtig zu betonen, dass nicht alle dieser Ganzzahl-Register für alle Rechenoperationen verwendet werden dürfen. Selbst bei einigen Registern, die wir beliebig verwenden dürften, sollten wir davon Abstand nehmen, da wir sie für spezielle Zwecke benötigen.
-Innerhalb der ARM-CPU gibt es verschiedene 32-Bit Register, die für spezifische Aufgaben verwendet werden:
+Innerhalb der ARM-CPU gibt es verschiedene **32-Bit Register**, die für spezifische Aufgaben verwendet werden:
 
 
 | Register    |  Zweck            |
