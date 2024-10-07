@@ -1,20 +1,22 @@
 ## Assembling Pi: Ein praxisorientiertes Tutorial zur Assembler-Programmierung auf dem Raspberry Pi
 
-Assembling Pi ist ein Tutorial, das Schritt für Schritt in die Welt der Assembler-Programmierung auf dem Raspberry Pi einführt. Es richtet sich an Personen, die ein tieferes Verständnis für das Zusammenspiel von Hard- und Software auf grundlegender Ebene erlangen möchten, auch ohne Vorkenntnisse in der Assembler-Programmierung.
+Assembling Pi ist ein Tutorial, das Schritt für Schritt in die Welt der Assembler-Programmierung auf dem Raspberry Pi einführt.  Es richtet sich an alle, die ein tieferes Verständnis für die Interaktion von Hard- und Software auf fundamentaler Ebene entwickeln möchten – auch ohne Vorkenntnisse in der Assembler-Programmierung.
 
-Der Titel ist eine Anspielung auf das Tutorial [Baking Pi](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/), das eine Einführung in die Grafikprogrammierung auf dem Raspberry Pi 1 in Assembler bietet. Während der Fokus von **Baking Pi** sich vor allem auf die praktische Anwendung in der Grafikprogrammierung richtet,  bietet dieses Tutorial eine detaillierte Auseinandersetzung mit den grundlegenden Konzepten der Assembler-Programmierung. 
+Der Titel spielt auf das bekannte Tutorial [Baking Pi](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/), an, das eine Einführung in die Grafikprogrammierung auf dem Raspberry Pi 1 mittels Assembler bietet. Während sich Baking Pi primär auf grafische Anwendungen konzentriert, legt Assembling Pi den Fokus auf die Grundlagen der Assembler-Programmierung und vermittelt detailliert die zugrundeliegenden Konzepte.
 
-### Lernen Sie die Sprache der ARM-Prozessoren!
+### Lernen Sie die Muttersprache der ARM-Prozessoren!
 
-Die ersten Kapitel vermitteln die Grundlagen der ARM-Assembler-Programmierung und behandeln die wesentlichen Eigenschaften von ARM-Prozessoren unter Einsatz des CPUlator-Emulators. Aufbauend auf diesem theoretischen Fundament erfolgt im weiteren Verlauf die Emulation der Raspberry Pi 2B Hardware mit Qemu. Dabei werden grundlegende Input/Output-Funktionen sowie elementare Schritte in der System- und Grafikprogrammierung durchgeführt. Dieses praxisorientierte Tutorial kombiniert theoretisches Wissen mit gezielten Übungsaufgaben, um das Gelernte direkt anzuwenden und zu festigen.
+Die ersten Kapitel bieten eine fundierte Einführung in die ARM-Assembler-Programmierung und beleuchten die wichtigsten Merkmale der ARM-Prozessoren. Zur Unterstützung dient der CPUlator-Emulator, mit dem Sie die theoretischen Grundlagen praktisch umsetzen können. Darauf aufbauend wird im späteren Verlauf die Hardware des Raspberry Pi 2B mithilfe von QEMU emuliert, wobei wesentliche Input/Output-Funktionen, sowie grundlegende Schritte der System- und Grafikprogrammierung vermittelt werden. Dieses praxisnahe Tutorial kombiniert theoretisches Wissen mit gezielten Übungsaufgaben, um das Erlernte direkt anzuwenden und nachhaltig zu festigen.
 
 ### Hinweis zu den Übungsaufgaben:  
 
-Es wird empfohlen, die Aufgaben zunächst eigenständig zu bearbeiten. Sollte es zu Schwierigkeiten kommen, kann der bereitgestellte Quellcode als Orientierungshilfe dienen. Verwenden Sie Tools wie den CPULator oder QEMU, um die Auswirkungen bestimmter Befehle auf das System zu erkunden. Da dieses Tutorial nicht alle Aspekte der ARMv7 Architektur abdeckt, ist es sinnvoll, eigenständig zusätzliche Informationen zu recherchieren.
+Es wird empfohlen, die Aufgaben zunächst selbstständig zu lösen. Sollten dabei Probleme auftreten, kann der bereitgestellte Quellcode zur Unterstützung herangezogen werden. Versuchen Sie, den Lösungsansatz nachzuvollziehen, und wenden Sie Ihr Verständnis anschließend erneut auf die jeweilige Aufgabenstellung an.
 
-Unter dem Reiter Ressourcen finden Sie technische und theoretische Hilfsmittel, darunter Cheatsheets und nützliche Links. Insbesondere wird empfohlen, vor Beginn des Tutorials das Cheatsheet zur ARM® Instruction Set Quick Reference Card herunterzuladen. Es bietet eine umfassende Übersicht über Instruktionen, die im Tutorial nur teilweise thematisiert werden.
+Verwenden Sie Tools wie den CPULator oder QEMU, um die Auswirkungen bestimmter Befehle auf das System zu erkunden. Da dieses Tutorial nicht alle Aspekte der ARMv7 Architektur abdeckt, ist es sinnvoll, eigenständig zusätzliche Informationen zu recherchieren.
 
-Der bereitgestellte Quellcode zielt auf eine verständliche Darstellung ab, ohne den Anspruch auf Perfektion oder maximale Optimierung. Nutzen Sie die Gelegenheit, aktiv Notizen zu machen, bei Bedarf zusätzliche Informationen zu suchen und eigene Ideen auszuprobieren. Herausforderungen dienen hier als wertvolle Lerngelegenheiten und helfen, das Verständnis zu vertiefen.
+Unter dem Reiter **Ressourcen** finden Sie technische und theoretische Hilfsmittel, darunter Cheatsheets und nützliche Links. Insbesondere wird empfohlen, vor Beginn des Tutorials das Cheatsheet **ARM- Instruction Set Quick Reference Card** herunterzuladen. Es bietet eine umfassende Übersicht über Instruktionen, die im Tutorial nur teilweise thematisiert werden.
+
+Der bereitgestellte Quellcode in den Lösungen zielt auf eine verständliche Darstellung ab, ohne den Anspruch auf Perfektion oder maximale Optimierung. Nutzen Sie die Gelegenheit, aktiv Notizen zu machen, bei Bedarf zusätzliche Informationen zu suchen und eigene Ideen auszuprobieren. Herausforderungen dienen hier als wertvolle Lerngelegenheiten und helfen, das Verständnis zu vertiefen.
 
 
 |-----------------------------------|---------------------------------|---------------------------------------------------|

@@ -275,8 +275,3 @@ write_end:
 - **`pop {lr}`**: Stellt die Rücksprungadresse wieder her.
 - **`bx lr`**: Rückkehr zur aufrufenden Funktion.
 
-### Zusammenfassung
-
-Die Funktion `kwrite` ermöglicht es, Daten an verschiedene Ausgabemedien zu schreiben, abhängig vom Wert des Parameters `r0`. Sie verwendet eine Sprungtabelle, um je nach Ausgabetyp den entsprechenden Handler aufzurufen. Die Handler für das Display und die UART-Ausgabe verarbeiten die Eingabedaten zeichenweise, erkennen spezielle Sequenzen für Zeilenumbrüche und rufen entsprechende Funktionen auf, um diese korrekt auszugeben. Nicht implementierte oder unvollständige Abschnitte, wie der Datei-Handler, sind im Code angedeutet, aber nicht ausgeführt.
-
-Durch die Verwendung von Funktionen wie `text_printchar` und `k_uart_write_char` wird die eigentliche Ausgabe abstrahiert, sodass `kwrite` sich auf die Verarbeitung der Daten konzentrieren kann. Die sorgfältige Sicherung und Wiederherstellung von Registern stellt sicher, dass der Kontext beim Aufrufenden nicht beeinflusst wird.
