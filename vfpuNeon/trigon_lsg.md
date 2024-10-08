@@ -30,7 +30,7 @@ taylorcoeff_table:
 - **Globale Deklaration:** `.global trigon` macht die Funktion `trigon` für andere Module zugänglich.
 - **Konstanten:**
   - `halfpi`, `pi`, `twopi`: Wichtige Winkelwerte in Radiant.
-- **Taylor-Koeffizienten:** `taylorcoeff_table` enthält die Koeffizienten der Taylor-Reihe zur Approximation von `sin(x)` bis zur Potenz \( x^{17} \).
+- **Taylor-Koeffizienten:** `taylorcoeff_table` enthält die Koeffizienten der Taylor-Reihe zur Approximation von `sin(x)` bis zur Potenz **x^17**.
 
 ---
 
@@ -56,7 +56,7 @@ trig_table:
    err_:  .word error
 ```
 
-Zunächst sichert die Funktion `lr`, um die Rücksprungadresse zu speichern. Anschließend wird der Integer-Wert aus `r0` in einen Gleitkommawert umgewandelt und in das Gleitkommaregister `s0` geladen. Der **Auswahlwert** in `r1` wird maskiert um sicherzustellen, dass nur die relevanten Bits verwendet werden. Daraufhin lädt die Funktion die Adresse der gewünschten trigonometrischen Funktion aus der Sprungtabelle `trig_table` und springt direkt zu dieser Funktion. Abschließend sorgt der Befehl b . für eine unerreichbare Endlosschleife, die als Sicherheitsmaßnahme dient, falls der Sprung doch fehlschlägt.
+Zunächst sichert die Funktion `lr`, um die Rücksprungadresse zu speichern. Anschließend wird der Integer-Wert aus `r0` in einen Gleitkommawert umgewandelt und in das Gleitkommaregister `s0` geladen. Der **Auswahlwert** in `r1` wird maskiert um sicherzustellen, dass nur die relevanten Bits verwendet werden. Daraufhin lädt die Funktion die Adresse der gewünschten trigonometrischen Funktion aus der Sprungtabelle `trig_table` und springt direkt zu dieser Funktion. Abschließend sorgt der Befehl `b .` für eine unerreichbare Endlosschleife, die als Sicherheitsmaßnahme dient, falls der Sprung doch fehlschlägt.
 
 ##### Fehlerbehandlung
 
@@ -92,9 +92,9 @@ sine:                           @ input in s0 (f32), Ergebnis in s0 (f32) [rad]
     vldr s2, [r0] 
     vsub.f32 s0, s0, s2         @ xmod > π: xmod = xmod - 2π 
 ```
-Die Funktion `sine` berechnet den Sinus eines Gleitkommawerts, der über das Register `s0` übergeben wird. Zunächst sichert die Funktion die relevanten Gleitkommaregister. Anschließend wird der Eingabewert in `s0` durch eine Modulo-Operation auf den Bereich \([0, 2\pi)\) reduziert. Dazu wird der Wert in `s0` durch \( 2\pi \) geteilt, und das Vielfache von \( 2\pi \), das aus dieser Division resultiert, wird vom ursprünglichen Wert in `s0` abgezogen. Auf diese Weise wird der Wert \( x \) auf den Bereich \([0, 2\pi)\) begrenzt.
+Die Funktion `sine` berechnet den Sinus eines Gleitkommawerts, der über das Register `s0` übergeben wird. Zunächst sichert die Funktion die relevanten Gleitkommaregister. Anschließend wird der Eingabewert in `s0` durch eine Modulo-Operation auf den Bereich **`[0, 2π)`** reduziert. Dazu wird der Wert in `s0` durch `2π` geteilt, und das Vielfache von `2π`, das aus dieser Division resultiert, wird vom ursprünglichen Wert in `s0` abgezogen. Auf diese Weise wird der Wert `x` auf den Bereich `[0, 2π)` begrenzt.
 
-Danach überprüft die Funktion, ob der reduzierte Wert größer als \( \pi \) ist. Falls ja, wird \( 2\pi \) subtrahiert, sodass \( x \) in das Intervall \([-π, π]\) verschoben wird.
+Danach überprüft die Funktion, ob der reduzierte Wert größer als `π` ist. Falls ja, wird `2π` subtrahiert, sodass `x` in das Intervall `[-π, π]` verschoben wird.
 
 
 ```
@@ -130,11 +130,11 @@ lesserpi:
 
 Nach der Bereichsreduktion lädt die Funktion `sine` die Taylor-Koeffizienten aus der Tabelle `taylorcoeff_table` in die Register `q6` und `q7`.
 
-Anschließend berechnet die Funktion die Potenzen von \(x\), beginnend mit \(x^2\). Die Berechnungen setzen sich fort, bis die Potenzen bis \(x^{17}\) ermittelt sind.
+Anschließend berechnet die Funktion die Potenzen von `x`, beginnend mit `x^2`. Die Berechnungen setzen sich fort, bis die Potenzen bis `x^17` ermittelt sind.
 
-Im nächsten Schritt werden die berechneten Potenzen von \(x\) mit den entsprechenden Koeffizienten in den Registern `q6` und `q7` multipliziert. Die Potenzen bis \(x^9\) werden mit den Koeffizienten aus `q6` verrechnet, während die höheren Potenzen ab \(x^{11}\) die Koeffizienten aus `q7` nutzen.
+Im nächsten Schritt werden die berechneten Potenzen von `x` mit den entsprechenden Koeffizienten in den Registern `q6` und `q7` multipliziert. Die Potenzen bis `x^9` werden mit den Koeffizienten aus `q6` verrechnet, während die höheren Potenzen ab `x^11` die Koeffizienten aus `q7` nutzen.
 
-Nach der Multiplikation aller Potenzen mit ihren jeweiligen Koeffizienten folgt die schrittweise Summierung der Produkte. Das finale Ergebnis der Taylor-Approximation von \(\sin(x)\) wird nach der Summierung in `s0` abgelegt.
+Nach der Multiplikation aller Potenzen mit ihren jeweiligen Koeffizienten folgt die schrittweise Summierung der Produkte. Das finale Ergebnis der Taylor-Approximation von `sin(x)` wird nach der Summierung in `s0` abgelegt.
 
 Zum Abschluss stellt die Funktion die zuvor gesicherten Gleitkommaregister wieder her und kehrt zur aufrufenden Funktion zurück.
 
@@ -149,7 +149,7 @@ cos:                            @ s0 input & output
     bl sine
     pop {pc}
 ```
-Die Funktion `cos` berechnet den Kosinus eines Werts mithilfe der Identität \( \cos(x) = \sin(x + \frac{\pi}{2}) \). Dafür wird der Wert \(\frac{\pi}{2}\) in das Register `s1` geladen und zu `s0` addiert. Danach ruft die Funktion `sine` auf, um den Sinus des angepassten Werts zu berechnen. 
+Die Funktion `cos` berechnet den Kosinus eines Werts mithilfe der Identität `cos(x)` = `sin(x + π / 2)`. Dafür wird der Wert `π/2` in das Register `s1` geladen und zu `s0` addiert. Danach ruft die Funktion `sine` auf, um den Sinus des angepassten Werts zu berechnen. 
 
 
 ##### Funktion tan
@@ -180,7 +180,7 @@ tanend:
     pop {pc}
 ```
 
-`tan` berechnet den Tangens eines Werts mithilfe der Identität \( \tan(x) = \frac{\sin(x)}{\cos(x)} \). Zunächst werden die Register `lr` und `r11` gesichert, bevor der Eingabewert `s0` im Stack abgelegt wird. Anschließend wird die Funktion `sine` aufgerufen, um den Sinus von \(x\) zu berechnen, dessen Ergebnis ebenfalls im Stack gespeichert wird. Danach wird der ursprüngliche Wert von \(x\) wiederhergestellt und die Funktion `cos` aufgerufen, um den Kosinus zu berechnen. Um eine Division durch Null zu verhindern, wird überprüft, ob \( \cos(x) \) gleich Null ist. Falls dies nicht der Fall ist, wird der Tangens durch Division von \( \sin(x) \) durch \( \cos(x) \) berechnet. Schließlich wird der Stack aufgeräumt und zur aufrufenden Funktion zurückgekehrt.
+`tan` berechnet den Tangens eines Werts mithilfe der Identität `tan(x)` = `sin(x)/cos(x)`. Zunächst werden die Register `lr` und `r11` gesichert, bevor der Eingabewert `s0` im Stack abgelegt wird. Anschließend wird die Funktion `sine` aufgerufen, um den Sinus von `x` zu berechnen, dessen Ergebnis ebenfalls im Stack gespeichert wird. Danach wird der ursprüngliche Wert von `x` wiederhergestellt und die Funktion `cos` aufgerufen, um den Kosinus zu berechnen. Um eine Division durch Null zu verhindern, wird überprüft, ob `cos(x)` gleich Null ist. Falls dies nicht der Fall ist, wird der Tangens durch Division von `sin(x)` durch `cos(x)` berechnet. Schließlich wird der Stack aufgeräumt und zur aufrufenden Funktion zurückgekehrt.
 
 
 |-------------------------|-------------------------------|-----------------------------|

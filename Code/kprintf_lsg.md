@@ -243,9 +243,8 @@ float_conv:
 	mov     r4, r1
 	b 		print_to_buff
 ```
-- Das Argument wird als Fließkommazahl interpretiert und vom Stack geladen.
-- Die Funktion `float2ascii` wird aufgerufen, um die Fließkommazahl in eine ASCII-Zeichenkette umzuwandeln.
-- Die Länge der erzeugten Zeichenkette wird in `r4` gespeichert.
+
+Das Argument wird als Fließkommazahl interpretiert und vom Stack geladen. Anschließend wird die Funktion `float2ascii` aufgerufen, um die Fließkommazahl in eine ASCII-Zeichenkette umzuwandeln. Die Länge der erzeugten Zeichenkette wird dann in `r4` gespeichert, um sie für den weiteren Gebrauch bereitzuhalten.
 
 ##### Dezimalzahlen (%u, %d, %i)
 
@@ -293,11 +292,8 @@ conv_dec_asc:
 	mov     r4, r1
 	b 		print_to_buff
 ```
-- Das entsprechende Argument wird vom Stack geladen, basierend auf dem Parameterzähler und einem festen Offset (`ARGS`).
-- Bei `%d` wird zusätzlich geprüft, ob die Zahl negativ ist. Ist dies der Fall, wird das Vorzeichen berücksichtigt, und der Absolutwert der Zahl wird berechnet.
-- Die Zahl wird dann mittels der Funktion `num_2_dec` in eine dezimale ASCII-Zeichenkette umgewandelt.
-- Die Länge der erzeugten Zeichenkette wird in `r4` gespeichert, um sie später beim Schreiben in den Ausgabepuffer zu verwenden.
 
+Das entsprechende Argument wird vom Stack basierend auf dem Parameterzähler und einem festen Offset (`ARGS`) geladen. Bei `%d` wird zusätzlich geprüft, ob die Zahl negativ ist. Falls ja, wird das Vorzeichen berücksichtigt und der Absolutwert der Zahl berechnet. Danach wird die Zahl mithilfe der Funktion `num_2_dec` in eine dezimale ASCII-Zeichenkette umgewandelt. Die Länge der erzeugten Zeichenkette wird in `r4` gespeichert, um sie später beim Schreiben in den Ausgabepuffer zu verwenden.
 
 ##### Zeichenkette (%s)
 
@@ -314,9 +310,8 @@ is_s_get:
 	mov    r4, r1
 	b 	   print_to_buff
 ```
-- Das Argument wird als Zeiger auf eine nullterminierte Zeichenkette interpretiert und vom Stack geladen.
-- Die Länge der Zeichenkette wird mit der Funktion `str_get_length` ermittelt.
-- Die Länge wird in `r4` gespeichert.
+
+Das Argument wird als Zeiger auf eine nullterminierte Zeichenkette interpretiert und vom Stack geladen. Anschließend wird die Länge der Zeichenkette mit der Funktion `str_get_length` ermittelt und in `r4` gespeichert, um sie später für die Ausgabe zu verwenden.
 
 ##### Hexadezimale Zahl (%x)
 ```
@@ -336,9 +331,8 @@ is_x_convert:
 	bl      num2hexascii
 	mov     r4, r1
 ```
-- Das Argument wird vom Stack geladen.
-- Die Funktion `num2hexascii` wird aufgerufen, um die Zahl in eine hexadezimale ASCII-Zeichenkette umzuwandeln.
-- Die Länge der erzeugten Zeichenkette wird in `r4` gespeichert.
+
+Das Argument wird vom Stack geladen und anschließend die Funktion `num2hexascii` aufgerufen, um die Zahl in eine hexadezimale ASCII-Zeichenkette umzuwandeln. Die Länge der erzeugten Zeichenkette wird dann in `r4` gespeichert, um sie später für die Ausgabe zu verwenden.
 
 #### Schreiben in den Ausgabepuffer
 Nachdem die konvertierte Zeichenkette vorliegt und ihre Länge bekannt ist, wird sie in den Ausgabepuffer geschrieben:

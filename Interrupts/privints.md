@@ -20,6 +20,11 @@ Folgender Code ist in `boot.s` zu ergänzen!
 .equ   STACK_IRQ,   0x7000
 
 ...
+
+@ setze vector-adresse
+	ldr r0, =vector
+	mcr p15, #0, r0, c12, c0, 0
+
 @ Wechsel in den Interruptmodus
     MRS r0, cpsr
     MVN r1, #MODE_MASK
@@ -36,6 +41,13 @@ Folgender Code ist in `boot.s` zu ergänzen!
     AND r0, r1
     ORR r0, #MODE_SVC
     MSR cpsr, r0
+
+...
+
+@ Setze Stack-Basis-Adresse
+	mov sp, #0x80000
+
+... 
 ```
 
 |-------------------------|------------------------------------|---------------------------|

@@ -7,5 +7,18 @@ Ein Beispiel verdeutlicht die Funktionsweise: Wenn zwei 128-Bit NEON-Register al
 
 Durch diese parallele Verarbeitung kann NEON Operationen, die normalerweise viele sequenzielle Instruktionen erfordern würden, erheblich beschleunigen. Diese Fähigkeit ist besonders nützlich in Bereichen, in denen große Datenmengen effizient verarbeitet werden müssen
 
+Der gegebene Code aktiviert den NEON-Coprozessor und ist in `boot.s` zu ergänzen:
+```
+    @ enable Neon-Coprozessor
+    mrc p15, 0, r0, c1, c1, 2
+	orr r0, r0, #(3<<10)          @ enable neon
+	bic r0, r0, #(3<<14)          @ clear nsasedis/nsd32dis
+	mcr p15, 0, r0, c1, c1, 2
+	ldr r0, =(0xF << 20)
+	mcr p15, 0, r0, c1, c0, 2
+	mov r3, #0x40000000 
+	vmsr FPEXC, r3
+```
+
 |-----------------------|-------------------------------|---------------------------------|
 | [zurück](vfpconv.md)  | [Hauptmenü](../ueberblick.md) | [weiter](neonregs.md)           | 

@@ -37,7 +37,7 @@ Das **FPSCR**(Floating Point Status and Control Register) enthält wichtige Stat
 - **Len (19–16):** Vector Length - Gibt die Länge der NEON-Vektoroperationen an, d.h: wie viele Elemente im Vektor verarbeitet werden.
 - **IDE (15):** Input Denormal Exception - Wenn gesetzt, tritt eine Ausnahme auf, wenn eine denormalisierte Zahl als Eingabe verwendet wird.
 
-### Ausnahmeflags:
+### Exceptionflags:
 - **IXE (12):** Inexact Exception Enable - Wenn gesetzt, wird eine Ausnahme ausgelöst, wenn das Ergebnis einer Operation ungenau ist.
 - **UFE (11):** Underflow Exception Enable - Wenn gesetzt, wird eine Ausnahme ausgelöst, wenn das Ergebnis einer Operation zu klein ist, um dargestellt zu werden.
 - **OFE (10):** Overflow Exception Enable - Wenn gesetzt, wird eine Ausnahme ausgelöst, wenn das Ergebnis einer Operation einen Overflow verursacht.

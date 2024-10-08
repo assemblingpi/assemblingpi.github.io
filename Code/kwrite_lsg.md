@@ -1,3 +1,5 @@
+## Aufgabenstellung: Implementierung einer `kwrite`-Funktion
+
 Der gegebene ARM-Assembler-Code implementiert die Funktion `kwrite`, die Daten an verschiedene Ausgabestellen schreibt, wie zum Beispiel an das Display, eine Datei oder über UART für Fehlerausgaben. Diese Funktion wird beispielsweise von `kprintf` verwendet, um formatierte Ausgaben zu ermöglichen.
 
 ### Datenabschnitt
@@ -41,17 +43,17 @@ Der nächste Abschnitt verwendet eine Sprungtabelle, um je nach Wert von `r0` zu
     and     r0, r0, #0x3
     adr     r3, stdout_tbl
     ldr     pc, [r3, r0, lsl #2]
-    b       .  // Sollte nicht erreichbar sein
+    b       .  @ Sollte nicht erreichbar sein
 
 stdout_tbl:
     Out_0:
-        .word Out_0_handler  // Ausgabe an Display
+        .word Out_0_handler  @ Ausgabe an Display
     Out_1:
-        .word Out_1_handler  // Ausgabe an Datei
+        .word Out_1_handler  @ Ausgabe an Datei
     Out_2:
-        .word Out_2_handler  // Ausgabe über UART (Fehlerausgabe)
+        .word Out_2_handler  @ Ausgabe über UART 
     Out_3:
-        .word Out_2_handler  // Für Tabellen-Alignment
+        .word Out_2_handler  @ Für Tabellen-Alignment
 ```
 
 - **`and r0, r0, #0x3`**: Beschränkt den Wert von `r0` auf die unteren 2 Bits (Werte 0 bis 3).

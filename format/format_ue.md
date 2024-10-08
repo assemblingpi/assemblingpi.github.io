@@ -1,7 +1,7 @@
 ## Aufgabenstellung: Implementierung von Zahlendarstellungsfunktionen 
 
 ### **Hintergrund:**
-In eingebetteten Systemen und Low-Level-Programmierungen ist die effiziente Umwandlung von Zahlen in verschiedene Darstellungsformen essenziell. In dieser Aufgabe sollen Sie drei grundlegende Funktionen zur Zahlendarstellung implementieren: `float2ascii`, `num_2_dec` und `num2hexascii`. 
+In dieser Aufgabe sollen Sie drei grundlegende Funktionen zur Zahlendarstellung in der Sourcedatei `kformat.s` implementieren: `float2ascii`, `num_2_dec` und `num2hexascii`. 
 
 
 ### Teilaufgabe 1: Implementierung der Funktion float2ascii

@@ -555,7 +555,7 @@ In der Schleife `num_2_ascii_Hex_loop` werden die unteren 4 Bits von `r1` maskie
 In dieser Funktion wird die Anzahl der Hex-Ziffern in `r1` gesetzt und `r3` auf `0` initialisiert. Nach einer Anpassung von `r1` beginnt die Schleife `hex_save_loop`, in der die Hex-Ziffern vom Stack zurückgeholt und in den Puffer `kformat_buffer_reverse` geschrieben werden. Der Zähler `r3` wird dabei inkrementiert, bis alle Ziffern gespeichert sind.
 
 5. **Umkehrung der Zeichenfolge:**
-   ```
+```
    ldr     r0, =kformat_buffer_reverse
    ldr     r2, =kformat_buffer
    sub     r5, r5, #1
@@ -569,7 +569,7 @@ hex_reverse:
    pop     {r1}
    mov     r1, r5
    add     r1, r1, #2
-   ```
+```
 
 Die Funktion lädt die Adressen von `kformat_buffer_reverse` und `kformat_buffer` in `r0` bzw. `r2`. `r5` wird um `1` reduziert und `r1` auf diesen Wert gesetzt. In der Schleife `hex_reverse` wird ein Zeichen aus `kformat_buffer_reverse` gelesen und an der entsprechenden Position in `kformat_buffer` gespeichert. Nach jedem Durchlauf wird `r1` dekrementiert, bis alle Zeichen umgekehrt sind. Am Ende wird `r1` vom Stack zurückgeholt und um `2` erhöht.
 
