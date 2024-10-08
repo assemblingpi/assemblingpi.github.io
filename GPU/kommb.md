@@ -13,7 +13,7 @@ Der Empfänger wartet, bis das Statusfeld im 30. Bit eine 0 anzeigt. Danach lies
 Zudem ist es ratsam eine Fehlerbehandlung vorzunehmen, bei der sich die Funktionen bei Problemen vorzeitig beenden, indem sie mit einem Fehlercode als Rückgabewert zur Rücksprungadresse zurückkehren.
 
 
-### Implementierung Mailboxwrite & Mailboxread
+## Implementierung von Mailboxwrite & Mailboxread
 
 Der folgende Code implementiert die Funktionen zur Kommunikation zwischen CPU und GPU über die Mailbox:
 
