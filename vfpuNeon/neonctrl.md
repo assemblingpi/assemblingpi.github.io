@@ -41,3 +41,5 @@ Dieser Befehl kopiert die Statusbits **N, Z, C, V** des Floating-Point Status an
 (Das APSR (Application Program Status Register) speichert die Statusflags (z.B. N, Z, C, V) und ist immer aktiv, unabhängig vom aktuellen Modus des Prozessors. Es spiegelt nicht den Modus wider, in dem sich der Prozessor befindet, sondern nur die aktuellen Zustand-Flags, die nach jeder Anweisung aktualisiert werden. DAS APSR ist somit eine Teilemnge des CPSR.)
 Dies ermöglicht es, die Ergebnisse von Gleitkommaberechnungen mit den Statusbits zu überprüfen.
 
+|-----------------------|-------------------------------|----------------------------------|
+| [zurück](neonstat.md) | [Hauptmenü](../ueberblick.md) | [weiter](neoninstr.md)           |

@@ -46,7 +46,7 @@ Die Dezimalzahl 13.375 besteht aus dem Vorkommateil **13** und dem Nachkommantei
 
 Das Ergebnis ist **1101.011** in Binär.
 
-Diese Methode stellt eine exakte binäre Darstellung der Zahl dar und unterscheidet sich vom Floating-Point-Format, das in Computern zur Speicherung von Gleitkommazahlen verwendet wird. Im Floating-Point-Format werden zusätzlich ein Exponent und eine Mantisse berücksichtigt, was bei dieser Umwandlung noch nicht der Fall ist.
+Diese Methode stellt eine exakte binäre Darstellung der Zahl dar und unterscheidet sich vom Floating-Point-Format, das in Computern zur Speicherung von Gleitkommazahlen verwendet wird. Im Floating-Point-Format werden zusätzlich ein **Exponent** und eine **Mantisse** berücksichtigt, was bei dieser Umwandlung noch nicht der Fall ist.
 
 |-----------------------------|-------------------------------|-------------------------------------|
 | [zurück](floatingintro.md)  | [Hauptmenü](../ueberblick.md) | [weiter](floatingnums.md)           | 

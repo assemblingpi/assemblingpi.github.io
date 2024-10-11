@@ -172,7 +172,5 @@ Beim Interleaving werden die Daten nicht einfach nacheinander in den Speicher ge
 - **VST3:** Würde die Daten abwechselnd aus drei Registern speichern (z. B. `d0`, `d1`, `d2`).
 - **VST4:** Speichert die Daten abwechselnd aus vier Registern.
 
-Im Beispiel wird deutlich, wie Interleaving dazu führt, dass die Daten aus `d0` und `d1` im Speicher verschachtelt abgelegt werden. Das ist besonders nützlich, wenn bestimmte Datenformate wie RGB oder Stereo-Audio optimiert gespeichert werden sollen.
-
 |--------------------|-------------------------------|-----------------------------|
 | [zurück](vmov.md)  | [Hauptmenü](../ueberblick.md) | [weiter](varithlog.md)      |
