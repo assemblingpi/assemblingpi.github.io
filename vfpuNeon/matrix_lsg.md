@@ -253,6 +253,6 @@ Die Funktion `matr4_transp` lädt die vier Zeilen der Eingabematrix `matrix_B`, 
 
 
 |-------------------------|-------------------------------|-----------------------------------|
-| [zurück](matrix_ue.md)  | [Hauptmenü](../ueberblick.md) | [weiter](../GPU/gpuintro.md)      |
+| [zurück](matrix_ue.md)  | [Hauptmenü](../ueberblick.md) | [weiter](../GPU/grafikintro.md)      |
 
 
