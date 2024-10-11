@@ -42,3 +42,7 @@ Implementieren Sie die Funktion `num2hexascii`, die eine gegebene Ganzzahl in ih
 - **zusätzliche Anforderungen:**
   - Fügen Sie das Präfix `"0x"` in den ASCII-String ein.
 
+**Achtung: Um die Umwandlung von Float zur Asciidarstellung zu bewerkstelligen, müssen Floatingpoint-Register & Instruktionen verwendet werden, demnach müssen auch wieder entsprechende Einstellungen beim assemblieren vorgenommen werden!**
+
+|------------------------|------------------------------------|-----------------------------|
+|   [zurück](memlsg.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](formatlsg.md)    |

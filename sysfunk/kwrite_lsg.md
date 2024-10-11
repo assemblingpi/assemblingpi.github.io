@@ -277,3 +277,5 @@ write_end:
 - **`pop {lr}`**: Stellt die Rücksprungadresse wieder her.
 - **`bx lr`**: Rückkehr zur aufrufenden Funktion.
 
+|---------------------------|------------------------------------|----------------------------|
+|   [zurück](kwrite_ue.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](kread_ue.md)    |

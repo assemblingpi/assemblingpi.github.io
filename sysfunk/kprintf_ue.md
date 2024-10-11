@@ -67,3 +67,6 @@ Die Funktion kwrite soll für die tatsächliche Ausgabe verwendet werden, wobei 
 Verwenden Sie externe Funktionen, wo notwendig, z. B. für die Konvertierung von Zahlen in Zeichenketten (num_2_dec, num2hexascii).
 
 Hinweis: Erleichtern sie sich das Leben und kommentieren Sie Ihren Code ausreichend, um die Funktionsweise zu erläutern und dadurch die Wartbarkeit zu erhöhen.
+
+|---------------------------|------------------------------------|-------------------------------|
+|   [zurück](kread_lsg.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](kprintf_lsg.md)    |

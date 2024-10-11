@@ -147,5 +147,6 @@ text_current_index:
 
 Die Funktion `text_current_index` gibt den aktuellen Tabellenindex zurück. Sie ruft die `text_printchar`-Funktion auf, um ein spezielles Zeichen zu drucken, und passt dann den Tabellenindex an, um den aktuellen Zustand widerzuspiegeln. Dies ermöglicht es anderen Teilen des Programms, den aktuellen Position im Textmodus zu ermitteln und darauf basierend weitere Operationen durchzuführen.
 
-
+  |---------------------------|------------------------------------|-----------------------------|
+  |   [zurück](text_ue.md)    |   [Hauptmenü](../ueberblick.md)    |   [weiter](kwrite_ue.md)    |
 

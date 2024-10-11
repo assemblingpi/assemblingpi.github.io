@@ -32,3 +32,5 @@ Nutzung der globalen Variablen `table_index` zur Verfolgung der aktuellen Positi
 Verwenden Sie zudem die externen Symbole, bzw. Funktionen `char_base` und `textmode_get_tabentry` zur Zeichenverwaltung und Speicheradressierung.
 
 
+  |-------------------------------|------------------------------------|----------------------------|
+  |   [zurück](textmode_lsg.md)   |   [Hauptmenü](../ueberblick.md)    |   [weiter](text_lsg.md)    |

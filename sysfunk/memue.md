@@ -47,5 +47,5 @@ Die Funktion `memcmp` vergleicht zwei Speicherbereiche (`src1` und `src2`) der G
   - `r1`: Zweite Quelladresse (`src2`).
   - `r2`: Anzahl der zu vergleichenden Bytes (`size`).
 
-|------------------------------------|------------------------------------|--------------------------|
-|   [zurück](../UART/k_uart_lsg.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](memlsg.md)    |
+|------------------------------|------------------------------------|--------------------------|
+|   [zurück](sysfunkintro.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](memlsg.md)    |

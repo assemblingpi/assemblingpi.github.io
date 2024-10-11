@@ -310,3 +310,6 @@ skip_save_text:
 ```
 
 In diesem Abschnitt wird das Zeichen zunächst mit `k_uart_write_char` ausgegeben. Anschließend wird das Zeichen im Textmodus durch den Aufruf von `text_printchar` dargestellt. Nach dem Wiederherstellen der Register wird die Schleife fortgesetzt, indem zurück zu `scan_loop_text_out` gesprungen wird.
+
+|--------------------------|------------------------------------|------------------------------|
+|   [zurück](kread_ue.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](kprintf_ue.md)    |

@@ -1,4 +1,4 @@
-
+## Lösung: Implementiere `kscan` für formatiertes Einlesen
 ### 1. **Deklarationen und Datenabschnitt**
 
 Der Anfang des Codes deklariert globale Symbole, externe Funktionen und definiert Konstanten sowie Daten für Fehlermeldungen und einen internen Puffer:

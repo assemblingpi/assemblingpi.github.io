@@ -193,3 +193,5 @@ canvas_put_pixel:
 
 Die Funktion `canvas_put_pixel` setzt einen Pixel an den angegebenen Canvas-Koordinaten mit der angegebenen Farbe. Sie greift auf die Basisadresse des Framebuffers zu, berechnet die Speicheradresse des Pixels und speichert die Farbinformation dort ab.
 
+  |----------------------------|------------------------------------|-------------------------------|
+  |   [zurück](canvas_ue.md)   |   [Hauptmenü](../ueberblick.md)    |   [weiter](textmode_ue.md)    |

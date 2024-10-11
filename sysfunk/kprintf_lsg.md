@@ -465,3 +465,6 @@ Die ersten beiden Parameter, der Formatstring und der Ausgabetyp, werden in den 
 Über feste Offsets vom Frame-Pointer greift die Funktion auf lokale Variablen zu, wie etwa die aktuelle Position im Formatstring (`STR_ADR`) oder die Position im Ausgabepuffer (`BUFF_CNT`). Die geladenen Argumente, wie Zahlen oder Zeichenketten, werden bei Bedarf konvertiert und in den Ausgabepuffer geschrieben.
 
 Am Ende der Funktion wird der Stack-Pointer zurückgesetzt, der für lokale Variablen reservierte Speicher freigegeben und gesicherte Register wie `r11` und `lr` wiederhergestellt. Die Rückkehr zum Aufrufer erfolgt mit `bx lr`. Dieses Stack-Management ermöglicht es `kprintf`, flexibel mit variablen Argumenten umzugehen, ohne den Programmfluss zu beeinträchtigen. Den durch den Aufrufer reservierten Stack muss dieser selbst wieder freigeben!
+
+|----------------------------|------------------------------------|----------------------------|
+|   [zurück](kprintf_ue.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](kscan_ue.md)    |

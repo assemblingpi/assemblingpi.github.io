@@ -61,3 +61,6 @@ Implementieren Sie eine Funktion `kread` im File `kread.s`, die Daten von versch
 
 - **Hinweise:**
 Da es bei der Ausgabe von QEMU über UART erfahrungsgemäß zu Problemen mit Zeilenumbrüchen kommt, wenn `newline` verwendet wird, verwenden wir statt des üblichen `\n` die Zeichenfolge `/n`.
+
+|----------------------------|------------------------------------|-----------------------------|
+|   [zurück](kwrite_lsg.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](kread_lsg.md)    |

@@ -26,27 +26,11 @@ Diese Sektion definiert globale Symbole und reserviert Speicherplatz für versch
  					   .balign 4
 ```
 
-### **Erklärung:**
-
-1. **Globale Symbole:**
-   - `.global num_2_dec`, `.global num2hexascii`, `.global float2ascii`: Diese Direktiven machen die Symbole `num_2_dec`, `num2hexascii` und `float2ascii` global zugänglich, sodass sie von anderen Modulen oder Dateien aus referenziert werden können.
-
-2. **Datenobjekte und Speicherplatzzuweisungen:**
-   - `sign`: Ein einzelnes Byte (`.byte`) initialisiert mit `0x0`. Dies dient wahrscheinlich zur Speicherung des Vorzeichens einer Zahl (z.B. negativ).
-   - `.balign 4`: Richtet den folgenden Speicherbereich auf eine 4-Byte-Grenze aus, was für effiziente Speicherzugriffe wichtig ist.
-   - `num2dec_buffer`: Reserviert 16 Bytes Speicherplatz, initialisiert mit `0x0`. Dieser Puffer wird vermutlich zur Speicherung von Dezimalzahlen als ASCII-Strings verwendet.
-   - `Hex_Lookup`: Eine nullterminierte ASCII-Zeichenkette `"0123456789ABCDEF"`, die zur Umwandlung von Zahlen in ihre hexadezimale Darstellung dient.
-   - `kformat_buffer`: Reserviert 120 Bytes Speicherplatz, initialisiert mit `0x0`. Dieser Puffer wird für allgemeine Formatierungszwecke verwendet.
-   - `Hexres`: Eine ASCII-Zeichenkette `"0x"`, die als Präfix für hexadezimale Zahlen dient.
-   - `kformat_buffer_reverse`: Ein weiterer Puffer von 120 Bytes, initialisiert mit `0x0` und ausgerichtet auf 4 Bytes. Dieser wird wahrscheinlich für umgekehrte Zeichenfolgen genutzt.
-
----
+Die globalen Symbole `num_2_dec`, `num2hexascii` und `float2ascii` werden für den Zugriff aus anderen Modulen verfügbar gemacht. Im Datenbereich werden Speicherbereiche für verschiedene Zwecke reserviert: `sign` dient vermutlich zur Speicherung eines Vorzeichens, während der Puffer `num2dec_buffer` für die Umwandlung von Zahlen in Dezimaldarstellungen genutzt wird. Die Zeichenkette `Hex_Lookup` unterstützt die Konvertierung von Zahlen in ihre hexadezimale Form. Zusätzliche Puffer wie `kformat_buffer` und `kformat_buffer_reverse` bieten Speicherplatz für allgemeine Formatierungen und möglicherweise umgekehrte Zeichenfolgen. `Hexres` speichert das Präfix `"0x"` für hexadezimale Ausgaben.
 
 ## **Text-Sektion (`.section .text`)**
 
 Diese Sektion enthält die Implementierung der Funktionen zur Umwandlung von Zahlen in ASCII-Darstellungen sowie Hilfsfunktionen zur Pufferbereinigung.
-
----
 
 ### **Funktion: `float2ascii`**
 
@@ -616,8 +600,8 @@ clear_buff_rev:
 
 Die Funktion `clear_buff_rev` setzt den gesamten Inhalt des Puffers `kformat_buffer_reverse` auf null. Zunächst wird die Rücksprungadresse gesichert, danach wird die Adresse des Puffers in `r0` geladen, `r1` auf den Wert `0x00` gesetzt und `r2` mit der Puffergröße von 120 Bytes initialisiert. Anschließend wird die `memset`-Funktion aufgerufen, um alle 120 Bytes auf null zu setzen. Abschließend wird die Rücksprungadresse wiederhergestellt, und die Funktion kehrt zurück.
 
-
-
+|----------------------------|------------------------------------|-----------------------------|
+|   [zurück](format_ue.md)   |   [Hauptmenü](../ueberblick.md)    |   [weiter](canvas_ue.md)    |
 
 
 

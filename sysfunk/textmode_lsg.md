@@ -127,3 +127,5 @@ Da jedes Zeichen im 8x8-Pixel-Raster 16 Bytes belegt, wird dieser Gesamtoffset u
 
 Am Ende der Funktion wird der Stack-Frame aufgelöst, der Stack-Pointer wiederhergestellt, und die Funktion beendet, indem zur aufrufenden Funktion zurückgesprungen wird.
 
+  |------------------------------|------------------------------------|---------------------------|
+  |   [zurück](textmode_ue.md)   |   [Hauptmenü](../ueberblick.md)    |   [weiter](text_ue.md)    |
