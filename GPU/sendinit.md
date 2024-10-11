@@ -111,5 +111,5 @@ Auch das Ergebnis von `MailboxRead` wird auf 0 geprüft. Tritt hier ein Fehler a
 
 Sollte während der Kommunikation mit der GPU ein Fehler auftreten, wird in der Fehlerbehandlungsroutine `r0` auf 1 gesetzt, um den Fehler zu signalisieren, und die Funktion endet durch Rücksprung zum Aufrufer.
 
-|--------------------------|-------------------------------|-----------------------------|
-| [zurück](framemailb.md)  | [Hauptmenü](../ueberblick.md) | [weiter](sendinit.md)       |
+|--------------------------|-------------------------------|----------------------------------------|
+| [zurück](framemailb.md)  | [Hauptmenü](../ueberblick.md) | [weiter](../sysfunk/sysfunkintro.md)   |
