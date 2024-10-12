@@ -10,3 +10,6 @@ In der folgenden Aufgabe wird das Verständnis der Shift-Operationen geprüft. D
 Bitte beachten Sie, dass das Vorzeichen erhalten bleiben muss.
 
 2. Rotieren Sie das Endergebnis so, sodass das letzte Byte ganz links steht!
+
+|-------------------------------|------------------------------------|----------------------------|
+|   [zurück](shiftinstr.md)     |   [Hauptmenü](../ueberblick.md)    |   [weiter](shiftuelsg.md)  |

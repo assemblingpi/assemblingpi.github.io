@@ -166,6 +166,6 @@ Zuerst wird die Hexadezimalzahl `0xaabbccdd` in das Register `R0` geladen. Mit d
 ```
 Wie man an den Ergebnissen erkennen kann, führt das Rotieren der Zahl `0xaabbccdd` nach rechts um `4` Stellen dazu, dass die unteren 4 Bits `1101` (bzw. `0xd`) nach links verschoben und am Anfang der Zahl wieder eingefügt werden. Das Ergebnis dieser Rotation `0xdaabbccd` wird zuletzt im Register `R1` gespeichert. 
 
-|--------------------------|--------------------------------------|-------------------------|
-|   [zurück](loginstr.md)  |    [Hauptmenü](../ueberblick.md)     |   [weiter](flags.md)    |
+|--------------------------|--------------------------------------|---------------------------|
+|   [zurück](loguelsg.md)  |    [Hauptmenü](../ueberblick.md)     |   [weiter](shiftue.md)    |
 

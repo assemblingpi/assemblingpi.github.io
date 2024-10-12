@@ -38,3 +38,6 @@
 
 ***Ergebnisse in Hexadezimaldarstellung:***
 ![Screenshot of Example Program](./shiftuelsg2.png) 
+
+|-------------------------------|------------------------------------|----------------------------|
+|   [zurück](shiftue.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](flags.md)     |

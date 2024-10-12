@@ -21,3 +21,6 @@
     @ Subtrahiere f mit Berücksichtigung des Carry-Flags
     SBC R9, R8, R5		@ R9 = R8 - f - (1 - Carry) = 9 - 2 - (1 - C) = 7
 ```
+
+|-------------------------------|------------------------------------|----------------------------|
+|   [zurück](arithue.md)        |   [Hauptmenü](../ueberblick.md)    |   [weiter](loginstr.md)    |

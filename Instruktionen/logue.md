@@ -14,5 +14,7 @@ Achtung: Bei logischen Verknüpfungen mit `#imm`-Werten dürfen nur Werte verwen
 
 Speichern Sie zur Überprüfung die Zwischenergebnisse in verschiedene Register!
 
+|-------------------------------|------------------------------------|----------------------------|
+|   [zurück](loginstr.md)       |   [Hauptmenü](../ueberblick.md)    |   [weiter](loguelsg.md)    |
 
 

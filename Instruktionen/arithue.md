@@ -12,3 +12,6 @@ Verwenden sie folgende Werte:
 - f = 2
 
 Bei der letzten Subtraktion mit f soll das Carry-Bit berücksichtigt werden! 
+
+|-------------------------------|------------------------------------|----------------------------|
+|   [zurück](arithinstr.md)     |   [Hauptmenü](../ueberblick.md)    |   [weiter](arithuelsg.md)  |
