@@ -120,7 +120,7 @@ In dieser Variante wird der Wert, der in `Register A` gespeichert ist, mit einem
 
 **EOR (register):**
 ```
-ORR <Zielregister>, <RegisterA>, <RegisterB>
+EOR <Zielregister>, <RegisterA>, <RegisterB>
 ```
 Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Register B` bitweise exklusiv verodert. Das Ergebnis wird in das `Zielregister` gespeichert.
 
@@ -148,6 +148,7 @@ Um das Ergebnis der bitweisen exklusiven Veroderung zu verdeutlichen, werden die
 
 Wie es hier ersichtlich ist, ergibt sich als Ergebnis der exklusive Veroderung `0x6e`.  Dies liegt daran, dass das Ergebnis 1 ist, wenn die Bits unterschiedlich sind (eines 1, das andere 0). Sind beide Bits gleich, ist das Ergebnis 0. (Vergleich: Wahrheitstabelle)
 
+**Hinweis:** Mit der `EOR`-Verknüpfung lassen sich gezielt einzelne Bits invertieren, indem sie mit 1 exklusiv verodert werden. Bei einer EOR-Verknüpfung mit 0 bleiben die Bits unverändert. Dies wird im obigen Beispiel deutlich sichtbar.
 
 ### Die Logische Negation mit MVN
 Der MVN-Operator (Move Not) in ARMv7 führt eine bitweise Negation (NOT-Operation) auf einen Wert durch. Dabei wird jedes Bit des Operanden invertiert, d.h. eine 1 wird zu 0 und 0 wird zu 1. Das Ergebnis wird dann in das Zielregister geschrieben.
