@@ -140,10 +140,10 @@ Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Regist
 Um das Ergebnis der bitweisen exklusiven Veroderung zu verdeutlichen, werden die Hexadezimalwerte `0x3a` und `0x6d` in ihre Binärform umgewandelt und die Operation durchgeführt:
 
 ```
-0011 1010 (0x3a)
-0110 1110 (0x6e)
-----------------
-0101 0100 (0x54)
+    0011 1010 (0x3a)
+^   0110 1110 (0x6e)
+---------------------
+    0101 0100 (0x54)
 ```
 
 Wie es hier ersichtlich ist, ergibt sich als Ergebnis der exklusive Veroderung `0x6e`.  Dies liegt daran, dass das Ergebnis 1 ist, wenn die Bits unterschiedlich sind (eines 1, das andere 0). Sind beide Bits gleich, ist das Ergebnis 0. (Vergleich: Wahrheitstabelle)
@@ -189,9 +189,9 @@ Hier wird der Wert, der in `Register A` gespeichert ist, bitweise negiert. Das E
 Um das Ergebnis der bitweisen Negierung zu verdeutlichen, wird der Hexadezimalwert `0x3a` in ihre Binärform umgewandelt und die Operation durchgeführt. Es ist wichtig zu beachten, dass alle 32 Bits negiert werden::
 
 ```
-0000 0000 0000 0000 0000 0000 0011 1010 (0x3a)
------------------------------------------------
-1111 1111 1111 1111 1111 1111 1100 0101 (0xffffffc5)
+~   0000 0000 0000 0000 0000 0000 0011 1010 (0x3a)
+--------------------------------------------------------
+    1111 1111 1111 1111 1111 1111 1100 0101 (0xffffffc5)
 ```
 
 Wie hier ersichtlich ist, ergibt sich als Ergebnis der Negation `0xffffffc5`. Dies liegt daran, dass alle Bits des ursprünglichen Wertes invertiert wurden: `1` wird zu `0`, und `0` wird zu `1`. (Vergleich: Wahrheitstabelle)
