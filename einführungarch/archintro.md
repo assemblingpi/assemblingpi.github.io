@@ -1,15 +1,17 @@
-## Von-Neumann-Architektur
+# 1. Einführung
+## 1.2 Grundlagen der Computerarchitektur
+## 1.2.2 Von-Neumann-Architektur
 
 Um mit der Assembler-Programmierung auf ARM-Prozessoren zu beginnen, ist es entscheidend, die grundlegende Funktionsweise der ARM-CPUs zu verstehen:
 
 ARM-Prozessoren basieren auf der Von-Neumann-Architektur, die drei zentrale Komponenten umfasst: die CPU (Central Processing Unit), bestehend aus Kontrolleinheit und ALU, den Speicher und die Ein-/Ausgabegeräte (E/A). Diese Komponenten sind über einen Systembus miteinander verbunden.
 
-### Stored Program Concept
+#### Stored Program Concept
 Ein zentrales Konzept der Von-Neumann-Architektur ist das "Stored Program Concept". Es besagt, dass Programme und Daten im **gleichen** Speicher abgelegt werden. Dies erlaubt es der CPU, Befehle aus dem Speicher zu lesen und auszuführen, wodurch die Flexibilität erhöht wird, verschiedene Programme einfach durch Ändern des Speicherinhalts auszuführen.
 
 **Die zentralen Komponenten der Von-Neumann-Architektur werden bei ARM Prozessoren durch Konzept der Load/Store-Architektur ergänzt.**
 
-### Load/Store-Architektur
+#### Load/Store-Architektur
 Bei ARM-CPUs handelt es sich um eine Load/Store-Architektur, bei denen Speicherzugriffe nur mittels spezieller Befehle (LDR und STR) durchgeführt werden können und direkte Berechnungen auf Daten im Speicher nicht möglich sind (im Gegensatz zu x86 CPUs). Rechenoperationen finden demnach ausschließlich in den Registern (kleine Speichereinheiten) der CPU statt. Dies bedeutet, dass Daten für ihre Verarbeitung zuerst vom Speicher in Register geladen und nach der Berechnung wieder in den Speicher zurückgeschrieben werden müssen. 
 
 Ein Prozessor ist im wesentlichen ein Maschine, die Berechnungen mit Hilfe kleiner Speichereinheiten namens Register durchführt. Die Daten, mit deren Hilfe wir Berechnungen durchführen wollen, müssen also in diese Register geladen werden, damit wir mit ihnen arbeiten können.
