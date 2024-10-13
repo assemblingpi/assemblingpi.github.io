@@ -1,4 +1,6 @@
-## Der Speicher
+# 1. Einführung
+## 1.2 Grundlagen der Computerarchitektur
+### 1.2.3 Der Speicher
 
 Der Speicher ist ein zentraler Bereich in der Von-Neumann-Architektur, in dem sowohl Programmbefehle als auch Daten abgelegt werden. Dies ermöglicht der CPU einen flexiblen Zugriff, da sich Programme und Daten im gleichen Speicher befinden. Der Speicher kann als ein Array betrachtet werden, bei dem jedes Element die Größe eines Words hat und über eine eindeutige Adresse verfügt. Diese Adressen dienen als Indexe, die es der CPU erlauben, gezielt auf bestimmte Speicherplätze zuzugreifen, um Daten zu lesen oder zu schreiben. So wird eine effiziente und direkte Datenverarbeitung ermöglicht.
 
