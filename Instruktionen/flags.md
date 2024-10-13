@@ -1,4 +1,4 @@
-# 2. Basic Blocks implementieren
+# A.2 Basic Blocks implementieren
 ## 2.3.5 Datenverarbeitung: Das Statusregister
 
 Die Ergebnisse arithmetischer und logischer Operationen beeinflussen den Zustand der Flags, das sind spezielle Statusbits im Prozessor. 

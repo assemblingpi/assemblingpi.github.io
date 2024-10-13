@@ -1,4 +1,4 @@
-# 3. Verknüpfungen von Basic Blocks
+# A.3 Verknüpfungen von Basic Blocks
 ## 3.1.3 Kontrollflussinstruktionen: Bedingte Sprünge
 
 Bedingte Sprünge sind etwas komplexer. Sie führen nur dann einen Sprung aus, wenn eine bestimmte Bedingung erfüllt ist. Diese Bedingung basiert auf Status-Flags, die durch vorherige Operationen von der ALU gesetzt wurden. Diese bedingten Sprünge ermöglichen es dem Programm, verschiedene Codepfade abhängig von bestimmten Bedingungen oder Ergebnissen zu verfolgen, was eine flexible und dynamische Steuerung des Programms ermöglicht.

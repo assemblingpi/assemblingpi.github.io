@@ -1,4 +1,4 @@
-# 1. Einführung
+# A.1 Einführung
 ## 1.3 Zahlensysteme, Bits und Bytes
 
 Grundlegende Kenntnisse in verschiedenen Zahlensystemen und das hantieren mit Bits und Bytes sind für Assembler-Programmierung unerlässlich, da sie die Basis der Datenverarbeitung bilden. 

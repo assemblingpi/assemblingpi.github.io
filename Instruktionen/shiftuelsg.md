@@ -1,4 +1,4 @@
-# 2. Basic Blocks implementieren
+# A.2 Basic Blocks implementieren
 ## 2.3.4 Datenverarbeitung: Shift Operationen
 ### Lösung der Übungsaufgabe
 #### Lösungsansatz:

@@ -1,4 +1,4 @@
-# 6. Prozedurale Programmierung
+# A.6 Prozedurale Programmierung
 ## 6.1 Was ist prozedurale Programmierung?
 
 ### Was sind prozedurale Programmiersprachen?

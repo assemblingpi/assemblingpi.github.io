@@ -1,4 +1,6 @@
-## Was ist der Stackframe einer Prozedur?
+# A.6 Prozedurale Programmierung
+## 6.2.3 Was ist eine Prozedur: Was ist der Stackframe einer Prozedur?
+
 Ein Stackframe ist der Speicherbereich auf dem Stack, der einer Funktion bei ihrem Aufruf zugewiesen wird. Er enthält die **Rücksprungadresse** und **lokale Variablen**. Zudem dient der Stackframe auch zum **Speichern von Registern**, die innerhalb der Funktion verändert werden, um den Zustand der aufrufenden Funktion wiederherstellen zu können. Der Stackframe wird beim Funktionsaufruf erstellt und beim Verlassen der Funktion wieder freigegeben. Er ermöglicht es, Daten und Rückkehradressen einer Funktion zu verwalten, ohne andere Funktionen zu beeinflussen.
 
 ### Bestandteile eines Stackframes

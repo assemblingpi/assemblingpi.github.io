@@ -1,4 +1,4 @@
-# 5. Datentypen 
+# A.5 Datentypen 
 ## 5.3.1 Komplexe Datentypen: Intro
 Komplexe Datentypen bestehen aus **mehreren einfacheren Datentypen** und dienen dazu, kompliziertere Datenstrukturen effizient abzubilden. Sie ermöglichen es, verschiedene Arten von Informationen in einer strukturierten Weise zu kombinieren und zu speichern. Ein gängiges Beispiel sind Strukturen und Arrays.
 

@@ -1,4 +1,4 @@
-# 5. Datentypen 
+# A.5 Datentypen 
 ## 5.3.4 Komplexe Datentypen: Mehrdimensionale Arrays
 
 Mehrdimensionale Arrays sind Datenstrukturen, die Daten in mehreren Dimensionen organisieren, ähnlich wie eine Tabelle oder Matrix. Während ein eindimensionales Array eine einfache Liste von Werten darstellt, organisiert ein mehrdimensionales Array diese Werte in mehreren Reihen und Spalten. Dies ist besonders nützlich in Anwendungen wie mathematischen Berechnungen oder grafischer Datenverarbeitung.

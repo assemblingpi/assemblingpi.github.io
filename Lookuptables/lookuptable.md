@@ -1,4 +1,4 @@
-# 4. Datenstrukturen 
+# A.4 Datenstrukturen 
 ## 4.1 Lookup-Tables
 
 **Lookup-Tabellen** beschleunigen Berechnungen, indem **vorab berechnete Ergebnisse** gespeichert und bei Bedarf abgerufen werden. Dies spart Rechenzeit, besonders bei wiederholten oder aufwändigen Operationen. Sie sind nützlich in Systemen mit begrenzten Ressourcen, wie eingebetteten Anwendungen, wo Rechenleistung und Speicher effizient genutzt werden müssen.

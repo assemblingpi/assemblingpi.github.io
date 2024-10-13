@@ -1,4 +1,4 @@
-# 2. Basic Blocks implementieren
+# A.2 Basic Blocks implementieren
 ## 2.3.7 Datenverarbeitung: Bedingungscodes 
 
 In ARM-Assembler können Bedingungscodes verwendet werden, um Anweisungen basierend auf dem Zustand der Flags im CPSR (Current Program Status Register) auszuführen. Diese Bedingungscodes stellen Kombinationen der Flags dar und unterscheiden sich in zwei Gruppen, jene, die  vorzeichenbehaftete Bedingungen betreffen und diejenigen, die vorzeichenlose Bedingungen betreffen. Hier ist eine Übersicht der wichtigsten Bedingungscodes:

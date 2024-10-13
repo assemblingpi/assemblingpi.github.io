@@ -1,4 +1,4 @@
-# 2. Basic Blocks implementieren
+# A.2 Basic Blocks implementieren
 ## 2.1.4 Datentransfer zwischen Register und Speicher
 
 Neben dem Datentransfer zwischen Registern kann es notwendig sein, Daten zwischen einem Register und dem Hauptspeicher auszutauschen. Für diese Art des Datentransfers gibt es in ARM-Assembler Load und Store-Befehle. Bei diesen Befehlen (LDR/STR) gibt es unterschiedliche Adressierungsarten.

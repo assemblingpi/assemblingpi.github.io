@@ -1,4 +1,6 @@
-## Prozeduren, Link Register und Stack
+# A.6 Prozedurale Programmierung
+## 6.2.5 Was ist eine Prozedur: Prozeduren, Link Register und Stack
+
 Bei der Programmierung in Assembler ist es in diesem Kontext besonders wichtig, das Link Register korrekt zu verwalten. 
 Das LR-Register enthält die Rücksprungadresse, also die Adresse, zu der die Ausführung zurückkehren soll, nachdem eine Prozedur beendet ist. Die Handhabung dieses Registers ist entscheidend für das korrekte Funktionieren von Prozeduren und deren Aufrufen.
 

@@ -1,4 +1,4 @@
-# 1. Einführung
+# A.1 Einführung
 ## 1.4.2 Die Programmiersprache Assembler: Anweisungen und Operanden
 
 Ein Assemblerbefehl folgt einem spezifischen Format, das durch sogenannte Mnemonics (leicht zu merkende Kürzel) dargestellt wird. Mnemonics ermöglichen dem Programmierer, die Operationen des Prozessors auf verständliche Weise zu beschreiben. Statt numerische Maschinenbefehle zu verwenden, die schwer zu merken und zu interpretieren wären, nutzt der Assembler Mnemonics wie etwa MOV für "Move", ADD für "Addieren" oder SUB für "Subtrahieren". Diese Mnemonics repräsentieren die grundlegenden Operationen, die ein Prozessor ausführen kann.

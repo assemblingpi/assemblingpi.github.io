@@ -1,4 +1,4 @@
-# 1. Einführung
+# A.1 Einführung
 ## 1.2.7 Grundlagen der Computerarchitektur: Der Befehlszyklus
 
 Der Befehlszyklus in einem Computerprozessor beschreibt, wie Befehle vom Prozessor verarbeitet werden. Er besteht vereinfacht dargestellt aus drei grundlegenden Schritten: **Fetch (Holen)**, **Decode (Dekodieren)** und **Execute (Ausführen)**. Jeder dieser Schritte spielt eine wesentliche Rolle bei der Ausführung von Programmen.
