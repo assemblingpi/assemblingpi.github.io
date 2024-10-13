@@ -20,15 +20,15 @@ Implementieren Sie eine Funktion `kread` im File `kread.s`, die Daten von versch
 
 - **Anforderungen:**
 
-  1. **Eingabestream-Auswahl:**
+  - 1. **Eingabestream-Auswahl:**
      - Die Funktion soll anhand des Wertes in `r0` entscheiden, ob von einer Datei (0) oder von der UART-Schnittstelle (1) gelesen wird.
      - Bei nicht implementiertem Dateihandling soll der entsprechende Handler eine Endlosschleife enthalten oder einen geeigneten Fehlercode zurückgeben.
 
-  2. **Eingabe von der UART-Schnittstelle:**
+  - 2. **Eingabe von der UART-Schnittstelle:**
      - Verwenden Sie die Funktion `k_uart_read_char`, um ein Zeichen von der UART-Schnittstelle zu lesen.
      - Geben Sie jedes gelesene Zeichen mit `k_uart_write_char` wieder aus (Echo-Funktion).
 
-  3. **Sonderzeichenbehandlung:**
+  - 3. **Sonderzeichenbehandlung:**
      - **Carriage Return (Enter-Taste, ASCII 0x0D):**
        - Beenden Sie die Eingabe, wenn ein Carriage Return erkannt wird.
        - Geben Sie einen Zeilenvorschub aus, indem Sie `kwrite` mit der Zeichenkette `"/n"` aufrufen (siehe Hinweis).
@@ -38,24 +38,24 @@ Implementieren Sie eine Funktion `kread` im File `kread.s`, die Daten von versch
      - **Nicht druckbare Zeichen:**
        - Ignorieren Sie alle Zeichen mit ASCII-Werten unter 0x20 (außer Backspace und Enter).
 
-  4. **Tastaturanpassung:**
+  - 4. **Tastaturanpassung:**
      - Passen Sie die Eingaben für die Tasten 'Y' und 'Z' (sowohl Groß- als auch Kleinbuchstaben) an, um Unterschiede zwischen amerikanischer und deutscher Tastaturbelegung auszugleichen:
        - Ersetzen Sie 'Y' durch 'Z' und umgekehrt.
        - Ersetzen Sie 'y' durch 'z' und umgekehrt.
 
-  5. **Speichern der Eingabe:**
+  - 5. **Speichern der Eingabe:**
      - Speichern Sie gültige Zeichen in dem Puffer, dessen Adresse in `r1` übergeben wird.
      - Stellen Sie sicher, dass der Puffer nicht überläuft. Überschreiten Sie nicht die maximale Anzahl von Bytes, die in `r2` angegeben ist.
      - Nullterminieren Sie den String nach Abschluss der Eingabe.
 
-  6. **Textmodus-Unterstützung (optional):**
+  - 6. **Textmodus-Unterstützung (optional):**
      - Wenn das System im Textmodus arbeitet (Variable `textmode_state` ungleich 0), verwenden Sie die Funktionen:
        - `text_printchar` zum Ausgeben von Zeichen im Textmodus.
        - `text_newline` zum Einfügen eines Zeilenvorschubs.
        - `text_del` zum Löschen von Zeichen.
        - `text_current_index`, um den aktuellen Cursor-Index zu erhalten.
 
-  7. **Fehlerbehandlung:**
+  - 7. **Fehlerbehandlung:**
      - Geben Sie den Fehlercode `0xFFFFFFFF` zurück, wenn ein Fehler auftritt.
 
 

@@ -28,16 +28,16 @@ Dieser Abschnitt deklariert globale Symbole und externe Funktionen, die im gesam
 ```assembly
 .section .text
 
-.equ SCREEN_WIDTH,  640 //1024
-.equ SCREEN_HEIGHT, 480 // 768
+.equ SCREEN_WIDTH,  640 
+.equ SCREEN_HEIGHT, 480 
 .equ BIT_DEPTH,     16
 
-.equ CWh,           640 //1024
-.equ CHh,           240 //384
+.equ CWh,           640 
+.equ CHh,           240 
 
-.equ Xwidth,        640 * 2//2048
+.equ Xwidth,        640 * 2
 
-.equ SCREEN_MAX,    640 * 480// 1024 * 768
+.equ SCREEN_MAX,    640 * 480
 ```
 
 Hier werden verschiedene Konstanten definiert, die die Bildschirmauflösung (`SCREEN_WIDTH`, `SCREEN_HEIGHT`), Farbtiefe (`BIT_DEPTH`) und weitere Parameter für die grafische Darstellung festlegen. Diese Konstanten werden in den nachfolgenden Funktionen zur Berechnung von Speicheradressen und zur Steuerung der Grafikoperationen verwendet.
@@ -52,12 +52,12 @@ canvas_init:
     mov         r0, #SCREEN_WIDTH
     mov         r1, #SCREEN_HEIGHT
     mov         r2, #BIT_DEPTH
-    bl          InitializeFrameBuffer       // initialize the frame buffer and return its address in r0
-    teq         r0, #0                      // check if function result is 0 (error)
-    beq         canvas_error                       // handle error -> ersetze durch ein printf!
+    bl          InitializeFrameBuffer       
+    teq         r0, #0                      
+    beq         canvas_error                       
 store_canv_base_adr:
-    ldr     r3, [r0, #32]			     // canvas ptr
-    and     r3, #0x3FFFFFFF              //convert bus address to physical address used by the ARM CPU
+    ldr     r3, [r0, #32]			     
+    and     r3, #0x3FFFFFFF              
 	ldr     r1, =canvas_base
 	str     r3, [r1]
 	pop     {lr}
@@ -74,7 +74,7 @@ Die Funktion `canvas_init` initialisiert den Framebuffer für die Bildschirmausg
 canvas_error:
 	ldr     r1, =canvas_error_string
 	mov     r2, #2
-	bl		kprintf        //r1 = formatstring / r2 = OUT_TYPE 	
+	bl		kprintf        
 	b       canvas_error
 ```
 
@@ -113,6 +113,7 @@ Die Funktion `fillscreen` füllt den gesamten Bildschirm mit einer angegebenen H
 ```	
 get_canv_x:
 	push   {r1}
+	lsl    r1, r1, #1
 	ldr    r0, =#CWh
 	add    r0, r0, r1
 	pop    {r1}
@@ -120,8 +121,8 @@ get_canv_x:
 ```
 
 Die Funktion `get_canv_x` konvertiert eine Benutzer-x-Koordinate in das Canvas-Koordinatensystem. Sie berechnet die entsprechende x-Position relativ zum Ursprung des Canvas und gibt das Ergebnis zurück.
+(Da ein Pixel 2-Byte groß ist, muss der Benutzerwert mit 2 multipliziert werden)
 
----
 
 ### 7. **Funktion `get_canv_y`**
 
@@ -129,7 +130,6 @@ Die Funktion `get_canv_x` konvertiert eine Benutzer-x-Koordinate in das Canvas-K
 get_canv_y: 	
 	push   {r1-r2}
 	ldr    r0, =#CHh
-	mov    r2, #0
 	sub    r1, r0, r1
 	ldr    r0, =#Xwidth
 	mul    r0, r1, r0

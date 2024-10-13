@@ -7,7 +7,7 @@ In dieser Aufgabe sollen Sie drei grundlegende Funktionen zur Zahlendarstellung 
 ### Teilaufgabe 1: Implementierung der Funktion float2ascii
 
 #### **Ziel:**
-Implementieren Sie die Funktion `float2ascii`, die eine gegebene Gleitkommazahl in ihre ASCII-Darstellung konvertiert und in einem internen Puffer speichert.
+Implementieren Sie die Funktion `float2ascii`, die eine gegebene Gleitkommazahl in ihre ASCII-Darstellung konvertiert und in einem internen Puffer speichert. Dabei sollen mindestens 4 Nachkommastellen angezeigt werden.
 
 - **Eingaben:**
   - `r1`: Floatwert, der in einen ASCII-String umgewandelt werden soll.

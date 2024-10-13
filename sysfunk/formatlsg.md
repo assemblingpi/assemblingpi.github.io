@@ -1,6 +1,6 @@
+## Lösung: Implementierung von Zahlendarstellungsfunktionen 
 
-
-## **Daten-Sektion (`.section .data`)**
+### **Daten-Sektion (`.section .data`)**
 
 Diese Sektion definiert globale Symbole und reserviert Speicherplatz für verschiedene Datenstrukturen, die von den Funktionen im Textabschnitt verwendet werden.
 
@@ -28,11 +28,11 @@ Diese Sektion definiert globale Symbole und reserviert Speicherplatz für versch
 
 Die globalen Symbole `num_2_dec`, `num2hexascii` und `float2ascii` werden für den Zugriff aus anderen Modulen verfügbar gemacht. Im Datenbereich werden Speicherbereiche für verschiedene Zwecke reserviert: `sign` dient vermutlich zur Speicherung eines Vorzeichens, während der Puffer `num2dec_buffer` für die Umwandlung von Zahlen in Dezimaldarstellungen genutzt wird. Die Zeichenkette `Hex_Lookup` unterstützt die Konvertierung von Zahlen in ihre hexadezimale Form. Zusätzliche Puffer wie `kformat_buffer` und `kformat_buffer_reverse` bieten Speicherplatz für allgemeine Formatierungen und möglicherweise umgekehrte Zeichenfolgen. `Hexres` speichert das Präfix `"0x"` für hexadezimale Ausgaben.
 
-## **Text-Sektion (`.section .text`)**
+### **Text-Sektion (`.section .text`)**
 
 Diese Sektion enthält die Implementierung der Funktionen zur Umwandlung von Zahlen in ASCII-Darstellungen sowie Hilfsfunktionen zur Pufferbereinigung.
 
-### **Funktion: `float2ascii`**
+#### **Funktion: `float2ascii`**
 
 ```
 float2ascii: 	
@@ -111,7 +111,7 @@ endfl2asc:
 	bx  lr
 ```
 
-#### **Erklärung:**
+**Erklärung:**
 
 Die Funktion `float2ascii` konvertiert eine gegebene Gleitkommazahl in ihre ASCII-Darstellung und speichert sie in einem internen Puffer. Der Rückgabewert `r0` zeigt auf den Puffer, und `r1` gibt die Länge des erzeugten Strings an.
 
@@ -228,7 +228,7 @@ In dieser Funktion wird `0x30` zu den berechneten Werten addiert, um die ASCII-D
 
 Im Epilog wird der ursprüngliche Stackzeiger wiederhergestellt, indem `r11` in den Stackpointer (`sp`) zurückübertragen wird. Anschließend wird die Adresse des Puffers `kformat_buffer` in `r0` geladen. Schließlich wird die Rücksprungadresse (`lr`) wiederhergestellt, und die Funktion kehrt zum Aufrufer zurück.
 
-### **Funktion: `num_2_dec`**
+#### **Funktion: `num_2_dec`**
 
 ```assembly
 num_2_dec:		
@@ -308,8 +308,7 @@ num_2_dec_end:
 	pop     {lr}
 	bx      lr
 ```
-
-#### **Erklärung:**
+**Erklärung:**
 
 Die Funktion `num_2_dec` konvertiert eine gegebene Ganzzahl in ihre dezimale ASCII-Darstellung und speichert diese in einem internen Puffer. Der Rückgabewert `r0` zeigt auf den Puffer, und `r1` gibt die Länge des erzeugten Strings an. Die Funktion verarbeitet auch negative Zahlen und ermöglicht die Angabe einer Feldbreite (`fieldwidth`).
 
@@ -416,7 +415,7 @@ Die Konvertierung beginnt mit dem Vergleich von `r6` (Anzahl der Ziffern) mit `0
    ```
 Im Epilog wird `r5` zu `r1` addiert, um die Gesamtlänge des erstellten Strings zu berechnen. Danach wird das Vorzeichen überprüft, und falls es ein Minuszeichen ist, wird die Länge entsprechend angepasst. Das Vorzeichen im `sign`-Puffer wird zurückgesetzt. Anschließend werden die gespeicherten Register wiederhergestellt und die Adresse des Puffers `kformat_buffer` in `r0` geladen. Schließlich wird die Rücksprungadresse wiederhergestellt, und die Funktion kehrt zurück.
 
-### **Funktion: `num2hexascii`**
+#### **Funktion: `num2hexascii`**
 
 ```assembly
 num2hexascii:   
@@ -475,7 +474,7 @@ hex_reverse:
 	bx      lr
 ```
 
-#### **Erklärung:**
+**Erklärung:**
 
 Die Funktion `num2hexascii` konvertiert eine gegebene Ganzzahl in ihre hexadezimale ASCII-Darstellung und speichert sie in einem internen Puffer. Der Rückgabewert `r0` zeigt auf den Puffer, und `r1` gibt die Länge des erzeugten Strings an. Die Funktion ermöglicht auch die Angabe einer Feldbreite (`fieldwidth`) für die Ausgabe.
 
@@ -568,7 +567,7 @@ Die Funktion lädt die Adressen von `kformat_buffer_reverse` und `kformat_buffer
    ```
 Die Register `r4`, `r5` und `r6` werden wiederhergestellt, der ursprüngliche Stackzeiger wird zurückgesetzt, und die Adresse des Hex-Präfixes `"0x"` wird in `r0` geladen. Schließlich wird die Rücksprungadresse wiederhergestellt, und die Funktion kehrt zurück.
 
-### **Funktion: `clear_buff`**
+#### **Funktion: `clear_buff`**
 
 ```
 clear_buff:
@@ -585,7 +584,7 @@ Die Funktion `clear_buff` setzt den Inhalt des Puffers `kformat_buffer` auf null
 
 ---
 
-### **Funktion: `clear_buff_rev`**
+#### **Funktion: `clear_buff_rev`**
 
 ```
 clear_buff_rev:

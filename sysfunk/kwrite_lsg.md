@@ -56,9 +56,7 @@ stdout_tbl:
         .word Out_2_handler  @ Für Tabellen-Alignment
 ```
 
-- **`and r0, r0, #0x3`**: Beschränkt den Wert von `r0` auf die unteren 2 Bits (Werte 0 bis 3).
-- **`adr r3, stdout_tbl`**: Lädt die Adresse der Sprungtabelle in `r3`.
-- **`ldr pc, [r3, r0, lsl #2]`**: Lädt den Program Counter (`pc`) mit der Adresse des entsprechenden Handlers aus der Tabelle, basierend auf dem Wert von `r0`.
+In diesem Abschnitt wird der Wert in `r0` auf die unteren 2 Bits beschränkt, um eine Zahl zwischen 0 und 3 zu erhalten. Anschließend wird die Adresse der Sprungtabelle `stdout_tbl` in `r3` geladen. Der Programm Counter (`pc`) wird dann mit der Adresse des entsprechenden Handlers aus der Tabelle gesetzt, basierend auf dem Wert von `r0`. Der letzte Befehl ist ein Platzhalter, der nicht erreicht werden sollte.
 
 Die Sprungtabelle `stdout_tbl` enthält die Adressen der Handler für die verschiedenen Ausgabetypen:
 
@@ -81,11 +79,7 @@ Out_0_loop:
     ldrb    r0, [r1, r3]
 ```
 
-- **`mov r3, #0`**: Initialisiert einen Zähler `r3`, der die bereits verarbeiteten Bytes zählt.
-- **`Out_0_loop`**: Beginn der Schleife.
-- **`cmp r3, r2`**: Vergleich des Zählers mit der Anzahl der auszugebenden Bytes.
-- **`bhs Out_0_loop_end`**: Wenn alle Bytes verarbeitet sind, springt zur Schleifenende.
-- **`ldrb r0, [r1, r3]`**: Lädt das nächste Byte aus dem Eingabepuffer in `r0`.
+Der Handler beginnt mit der Initialisierung des Zählers `r3`, der die Anzahl der verarbeiteten Bytes verfolgt. In der Schleife wird `r3` mit der Gesamtzahl der auszugebenden Bytes verglichen. Wenn alle Bytes verarbeitet sind, wird zur Schleifenende gesprungen. Andernfalls wird das nächste Byte aus dem Eingabepuffer in `r0` geladen, um es weiter zu verarbeiten.
 
 Der nächste Abschnitt überprüft, ob ein spezielles Zeichen (möglicherweise ein Zeilenumbruch) erkannt wurde:
 
@@ -116,9 +110,7 @@ out_0_newline_output:
     b       Out_0_loop
 ```
 
-- **`bl out_0_print_newline`**: Aufruf der Funktion zum Ausgeben eines Zeilenumbruchs.
-- **`add r3, r3, #2`**: Erhöht den Zähler um 2, da zwei Zeichen (`/` und `n`) verarbeitet wurden.
-- Die Schleife wird fortgesetzt, um weitere Zeichen zu verarbeiten.
+Zunächst wird die Funktion `out_0_print_newline` aufgerufen, um einen Zeilenumbruch auszugeben. Der Zähler `r3` wird um 2 erhöht, da zwei Zeichen verarbeitet wurden. Danach wird die Schleife fortgesetzt, es sei denn, das Ende der Verarbeitung ist erreicht.
 
 Wenn kein Zeilenumbruch vorliegt, wird das Zeichen normal ausgegeben:
 
@@ -132,9 +124,7 @@ out_0_output:
     b       Out_0_loop
 ```
 
-- Das aktuelle Zeichen wird auf den Stack gesichert.
-- **`bl text_printchar`**: Aufruf der Funktion, die ein einzelnes Zeichen auf dem Display ausgibt.
-- Der Zähler `r3` wird um 1 erhöht, und die Schleife wird fortgesetzt.
+In dieser Schleife wird das aktuelle Zeichen zunächst auf den Stack gesichert. Danach wird die Funktion `text_printchar` aufgerufen, um ein einzelnes Zeichen auf dem Display auszugeben. Anschließend wird der Zähler in `r3` um 1 erhöht, bevor die Schleife fortgesetzt wird.
 
 Die Schleife endet, wenn alle Bytes verarbeitet sind:
 
@@ -159,11 +149,7 @@ out_0_print_newline:
     bx      lr
 ```
 
-- Die Register werden gesichert.
-- **`mov r0, #2`**: Möglicherweise ein Parameter für die Ausgabe (hier nicht weiter verwendet).
-- **`ldr r1, =0xa`**: Lädt den ASCII-Wert für Line Feed (`\n`) in `r1`.
-- **`bl text_printchar`**: Gibt das Zeichen aus.
-- Anschließend werden die Register wiederhergestellt, und die Funktion kehrt zurück.
+Diese Funktion gibt einen Zeilenumbruch auf dem Display aus. Die Funktion `text_printchar` wird aufgerufen, um den Zeilenumbruch auszugeben. Zum Abschluss werden die Register wiederhergestellt, und die Funktion kehrt zum Aufrufer zurück.
 
 #### Handler `Out_1_handler` (Ausgabe an Datei)
 
@@ -225,8 +211,7 @@ out_2_output:
     b       Out_2_loop
 ```
 
-- **`bl k_uart_write_char`**: Aufruf der Funktion, die ein Zeichen über UART sendet.
-- Der Zähler `r3` wird erhöht, und die Schleife wird fortgesetzt.
+In dieser Schleife wird zunächst die Funktion `k_uart_write_char` aufgerufen, um ein Zeichen über UART zu senden. Anschließend wird der Zähler in `r3` um eins erhöht, bevor die Schleife fortgesetzt wird.
 
 Die Schleife endet, wenn alle Bytes verarbeitet sind:
 
@@ -252,12 +237,7 @@ out_2_print_newline:
     bx      lr
 ```
 
-- Die Register werden gesichert.
-- **`mov r0, #2`**: Setzt den OUTPUT-Stream auf `2` (UART).
-- **`ldr r1, =newline`**: Lädt die Adresse der `newline`-Sequenz.
-- **`ldr r2, =2`**: Setzt die Anzahl der auszugebenden Bytes auf `2`.
-- **`bl kwrite`**: Ruft `kwrite` erneut auf, um den Zeilenumbruch auszugeben.
-- Die Register werden wiederhergestellt, und die Funktion kehrt zurück.
+Diese Funktion gibt einen Zeilenumbruch über UART aus. Zunächst werden die Register gesichert. Der OUTPUT-Stream wird auf UART gesetzt, die Adresse der `newline`-Sequenz und die Anzahl der auszugebenden Bytes werden geladen. Anschließend wird `kwrite` aufgerufen, um den Zeilenumbruch zu senden. Zum Abschluss werden die Register wiederhergestellt, und die Funktion kehrt zum Aufrufer zurück.
 
 #### Abschluss der Funktion `kwrite`
 
@@ -272,10 +252,7 @@ write_end:
     b       .
 ```
 
-- **`mov sp, r11`**: Setzt den Stack-Pointer zurück auf den Wert des Frame-Pointers.
-- **`pop {r11}`**: Stellt den ursprünglichen Frame-Pointer wieder her.
-- **`pop {lr}`**: Stellt die Rücksprungadresse wieder her.
-- **`bx lr`**: Rückkehr zur aufrufenden Funktion.
+Am Ende von `kwrite` wird der Stack wiederhergestellt und zur aufrufenden Funktion zurückgekehrt. Zunächst wird der Stack-Pointer auf den Wert des Frame-Pointers gesetzt, anschließend der ursprüngliche Frame-Pointer und die Rücksprungadresse wiederhergestellt. Schließlich erfolgt der Rücksprung zur aufrufenden Funktion durch das Kommando `bx lr`.
 
 |---------------------------|------------------------------------|----------------------------|
 |   [zurück](kwrite_ue.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](kread_ue.md)    |

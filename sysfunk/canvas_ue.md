@@ -55,5 +55,6 @@ In grafischen Anwendungen ist es essenziell, dass Benutzerkoordinaten (z.B. Maus
     - `r3` – Farbe des Pixels
   - **Rückgabewert:** Keine
 
+
   |----------------------------|------------------------------------|------------------------------|
   |   [zurück](formatlsg.md)   |   [Hauptmenü](../ueberblick.md)    |   [weiter](canvas_lsg.md)    |

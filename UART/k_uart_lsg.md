@@ -23,8 +23,6 @@ Zu Beginn des Codes werden die Konstanten für die Basisadressen und Register de
 
 Diese Definitionen geben die Adressen der relevanten Register an, die später in den UART-Funktionen verwendet werden. Beispielsweise wird das **UART0_CR** (Control Register) für die Steuerung der UART-Funktionalitäten verwendet.
 
----
-
 ### Funktion `k_uart0_init`
 
 Die Funktion `k_uart0_init` initialisiert die UART0-Schnittstelle, indem sie die Steuerungsregister zurücksetzt, die Baudrate konfiguriert und die UART aktiviert.
@@ -85,8 +83,6 @@ uart_enable:
 
 Schließlich wird die UART wieder aktiviert, indem das Control Register mit dem Wert `0x301` beschrieben wird. Dieser Wert aktiviert die UART (`UARTEN`), das Senden (`TXE`) und das Empfangen (`RXE`) von Daten.
 
----
-
 ### Funktion `k_uart_write_char`
 
 Die Funktion `k_uart_write_char` sendet ein einzelnes Zeichen über die UART0-Schnittstelle. Bevor das Zeichen gesendet wird, prüft die Funktion, ob der Sendepuffer bereit ist.
@@ -120,7 +116,6 @@ uart_wr_print:
 
 Wenn der Sendepuffer bereit ist, wird das zu sendende Zeichen (das sich in `r0` befindet) in das Datenregister (`UART0_DR`) geschrieben, und die gesicherten Register werden wiederhergestellt. Anschließend kehrt die Funktion zurück.
 
----
 
 ### Funktion `k_uart_read_char`
 
@@ -153,17 +148,6 @@ uart_rd_ret:
 
 Sobald Daten verfügbar sind, wird das Zeichen aus dem Datenregister (`UART0_DR`) gelesen und in `r0` gespeichert. Danach kehrt die Funktion zurück.
 
----
-
-### Zusammenfassung
-
-Der gegebene Code implementiert die Grundfunktionen zur Steuerung der UART0-Schnittstelle des Raspberry Pi 2B. 
-
-1. **`k_uart0_init`**: Initialisiert die UART, setzt die Baudrate und aktiviert die Kommunikation.
-2. **`k_uart_write_char`**: Sendet ein Zeichen über die UART-Schnittstelle, nachdem geprüft wurde, dass der Puffer bereit ist.
-3. **`k_uart_read_char`**: Liest ein empfangenes Zeichen von der UART-Schnittstelle, nachdem überprüft wurde, ob Daten im Puffer vorhanden sind.
-
-Diese Funktionen ermöglichen eine serielle Kommunikation über UART, was in vielen Anwendungen wie Debugging, Datenübertragung oder Steuerung von externen Geräten nützlich ist.
 
 |-----------------------------|------------------------------------|------------------------------------------|
 |   [zurück](k_uart_help.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../Interrupts/intintro.md)    |

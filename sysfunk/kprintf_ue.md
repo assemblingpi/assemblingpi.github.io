@@ -28,12 +28,12 @@ Normale Zeichen sollen direkt in einen Ausgabepuffer kopiert werden.
 Bei Auftreten eines %-Zeichens soll ein Formatierungsspezifikator erkannt und verarbeitet werden.
 Unterstützte Formatierungsspezifikatoren:
 
-%d oder %i: Vorzeichenbehaftete Dezimalzahl.
-%u: Vorzeichenlose Dezimalzahl.
-%x: Hexadezimale Zahl.
-%s: Zeichenkette.
+- **%d oder %i:** Vorzeichenbehaftete Dezimalzahl.
+- **%u:** Vorzeichenlose Dezimalzahl.
+- **%x:** Hexadezimale Zahl.
+- **%s:** Zeichenkette.
 
-Optional: Unterstützung von Feldbreitenangaben nach dem %-Zeichen (z. B. %5d) und Umwandlung von Floating Point Werten.
+Optional: Unterstützung von Feldbreitenangaben nach dem **%**-Zeichen (z. B. %5d) und Umwandlung von Floating Point Werten.
 #### Argumentverarbeitung:
 
 Die Funktion soll eine variable Anzahl von Argumenten verarbeiten, abhängig von den im Formatstring enthaltenen Spezifikatoren.
@@ -60,13 +60,12 @@ Bei Pufferüberläufen soll ebenfalls eine entsprechende Fehlermeldung erfolgen.
 #### Ausgabe:
 
 Nach vollständiger Verarbeitung soll der Inhalt des Ausgabepuffers auf das definierte Ausgabemedium ausgegeben werden.
-Die Funktion kwrite soll für die tatsächliche Ausgabe verwendet werden, wobei sie den Ausgabetyp, die Pufferadresse und die Anzahl der zu schreibenden Bytes erhält.
+Die Funktion `kwrite` soll für die tatsächliche Ausgabe verwendet werden, wobei sie den Ausgabetyp, die Pufferadresse und die Anzahl der zu schreibenden Bytes erhält.
 
 ### Hinweise:
 
-Verwenden Sie externe Funktionen, wo notwendig, z. B. für die Konvertierung von Zahlen in Zeichenketten (num_2_dec, num2hexascii).
-
-Hinweis: Erleichtern sie sich das Leben und kommentieren Sie Ihren Code ausreichend, um die Funktionsweise zu erläutern und dadurch die Wartbarkeit zu erhöhen.
+- Verwenden Sie externe Funktionen, wo notwendig, z. B. für die Konvertierung von Zahlen in Zeichenketten (`num_2_dec`, `num2hexascii`).
+- Erleichtern sie sich das Leben und kommentieren Sie Ihren Code ausreichend, um die Funktionsweise zu erläutern und dadurch die Wartbarkeit zu erhöhen.
 
 |---------------------------|------------------------------------|-------------------------------|
 |   [zurück](kread_lsg.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](kprintf_lsg.md)    |

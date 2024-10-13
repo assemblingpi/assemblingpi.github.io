@@ -116,7 +116,7 @@ Die Funktion durchläuft den Formatstring Zeichen für Zeichen. Zunächst der Ko
 scan_srcstr_loop:				
 	ldr     r0, [r11, #STR_ADR]
 	ldrb	r1, [r0]   
-	cmp		r1, #0                   @ Ende des nullterminierten Strings erreicht?
+	cmp		r1, #0                   @ Ende des nullterminierten Strings?
 	beq		kprintf_buf_out
 	cmp		r1, #0xD                 @ Enter?
 	beq		kprintf_buf_out
@@ -128,7 +128,7 @@ scan_srcstr_loop:
 	ldr		r0, [r11, #STR_ADR]
 	add     r1, r0, #1
 	str		r1, [r11, #STR_ADR]
-	ldrb    r1, [r1]                 @ Lade das nächste Zeichen nach %
+	ldrb    r1, [r1]                 @ Lade nächstes Zeichen nach %
 ```
 - **Ende des Strings prüfen**: Es wird überprüft, ob das aktuelle Zeichen ein Nullbyte (`0`) ist, was das Ende des nullterminierten Strings signalisiert. Ist dies der Fall, wird die Verarbeitung beendet und der Inhalt des Ausgabepuffers ausgegeben.
 - **Zeilenumbruch prüfen**: Wenn das Zeichen ein Carriage Return (`0xD`) ist, wird ebenfalls die Verarbeitung beendet und der Puffer ausgegeben.
@@ -142,7 +142,7 @@ Nach Erkennung eines %-Zeichens wird geprüft, welcher Spezifikator folgt:
 format_id:                           
 check: 
 	mov    r3, #1
-check_loop:                          @ prüfe ob zeichen nach % eine nummer d.h Fieldwith
+check_loop:                          @ prüfe ob zeichen nach % eine nummer (Fieldwith)
 	cmp 	r1, #64
 	bhi 	checkasc
 	cmp     r1, #0x30
@@ -172,10 +172,10 @@ check_loop:                          @ prüfe ob zeichen nach % eine nummer d.h 
 Eine Sprungtabelle (ascii_jmp_tbl) wird verwendet, um effizient zum entsprechenden Codeabschnitt für den Spezifikator zu springen:
 ```
 checkasc:
-	orr 	r1, #32                 @ wandle das Zeichen in `r1` in einen Kleinbuchstaben um
+	orr 	r1, #32                 
 	cmp		r1, #0x7b
 	bhs		checkerror
-	sub 	r1, r1, #0x61           @ passe den Wert von `r1` so an, dass er beginnend von 0 als Index in die Sprungtabelle dient
+	sub 	r1, r1, #0x61          
 	adr		r0, ascii_jmp_tbl
 	ldr 	pc, [r0, r1, lsl #2]
 	b		.     

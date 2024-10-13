@@ -35,5 +35,6 @@ Vorgehensweise:
   - `canvas_init`: Initialisiert die grafische Leinwand.
   - `fillscreen`: Löscht den Bildschirm oder füllt ihn mit einer Hintergrundfarbe.
 
+
   |------------------------------|------------------------------------|-------------------------------|
   |   [zurück](textmode_ue.md)   |   [Hauptmenü](../ueberblick.md)    |   [weiter](textmode_lsg.md)    |
