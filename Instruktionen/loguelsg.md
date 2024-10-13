@@ -47,6 +47,7 @@ So sieht es dann in Binärer schreibweise aus:
 ```
 
 **So sollen die Register nach Ausführung aussehen:**
+
 ![Screenshot of Example Program](./loguelsg.png)
     
 |-------------------------------|------------------------------------|----------------------------|

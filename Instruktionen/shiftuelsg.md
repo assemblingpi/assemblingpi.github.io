@@ -34,9 +34,11 @@
 #### So sollten die Register nach der Ausführung aussehen:
 
 ***Ergebnisse in Signed-Decimal-Darstellung:***
+
 ![Screenshot of Example Program](./shiftuelsg.png) 
 
 ***Ergebnisse in Hexadezimaldarstellung:***
+
 ![Screenshot of Example Program](./shiftuelsg2.png) 
 
 |-------------------------------|------------------------------------|----------------------------|
