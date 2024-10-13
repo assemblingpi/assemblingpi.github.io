@@ -8,7 +8,9 @@ Der folgende Code implementiert die trigonometrischen Funktionen `sin`, `cos` un
 #### Globale Deklarationen und Datenbereich
 
 ```assembly
-.global trigon
+.global sine
+.global cos
+.global tan
 
 .data
 halfpi: .float  1.5707963
@@ -27,46 +29,10 @@ taylorcoeff_table:
 .float  2.8114572543455206e-15   @  x^17 / 17!
 ```
 
-- **Globale Deklaration:** `.global trigon` macht die Funktion `trigon` für andere Module zugänglich.
+- **Globale Deklaration:** Machen die trigonometrischen Funktionen für andere Module zugänglich.
 - **Konstanten:**
   - `halfpi`, `pi`, `twopi`: Wichtige Winkelwerte in Radiant.
 - **Taylor-Koeffizienten:** `taylorcoeff_table` enthält die Koeffizienten der Taylor-Reihe zur Approximation von `sin(x)` bis zur Potenz **x^17**.
-
----
-
-#### Hauptfunktion trigon
-
-```assembly
-.text
-
-trigon:             @ r0 = Int-Value, r1 = Auswahl (sin=0, cos=1, tan=2)
-    push {lr}
-    @ Integer -> Gleitkommawert
-    vmov s0, r0
-    vcvt.f32.s32 s1, s0  
-    @ Auswahl der Funktion
-    and r1, r1, #3
-    adr r3, trig_table
-    ldr pc, [r3, r1, lsl #2]
-    b   . @ unerreichbar
-trig_table:
-   sine_: .word sine
-   cos_:  .word cos
-   tan_:  .word tan
-   err_:  .word error
-```
-
-Zunächst sichert die Funktion `lr`, um die Rücksprungadresse zu speichern. Anschließend wird der Integer-Wert aus `r0` in einen Gleitkommawert umgewandelt und in das Gleitkommaregister `s0` geladen. Der **Auswahlwert** in `r1` wird maskiert um sicherzustellen, dass nur die relevanten Bits verwendet werden. Daraufhin lädt die Funktion die Adresse der gewünschten trigonometrischen Funktion aus der Sprungtabelle `trig_table` und springt direkt zu dieser Funktion. Abschließend sorgt der Befehl `b .` für eine unerreichbare Endlosschleife, die als Sicherheitsmaßnahme dient, falls der Sprung doch fehlschlägt.
-
-##### Fehlerbehandlung
-
-```assembly
-error:
-    mov r1, #1                   
-    pop {pc}    
-```
-
-Die Funktion `error` signalisiert einen Fehler, indem sie das Register `r1` auf den Wert 1 setzt, was als Fehlerstatus dient. Anschließend wird durch den Befehl `pop {pc}` zur aufrufenden Funktion zurückgekehrt.
 
 #### Trigonometrische Funktionen
 

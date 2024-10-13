@@ -8,33 +8,18 @@
 
 Entwickeln Sie eine ARM-Assembly-Bibliothek, die die trigonometrischen Funktionen `sin`, `cos` und `tan` implementiert. Diese Funktionen sollen mithilfe der Taylor-Reihe approximiert werden. Die Implementierung soll folgende Anforderungen erfüllen:
 
-#### 1. **Globale Funktion `trigon`**
-   - **Prototyp:** `.global trigon`
-   - **Parameter:**
-     - **`r0`**: Integer-Wert, der in einen Gleitkommawert umgewandelt wird und als Eingabe für die trigonometrische Berechnung dient.
-     - **`r1`**: Auswahlparameter, der bestimmt, welche trigonometrische Funktion berechnet werden soll:
-       - `0` für `sin`
-       - `1` für `cos`
-       - `2` für `tan`
-   - **Funktionsweise:**
-     - Wandelt den Integer-Wert aus `r0` in einen Gleitkommawert um.
-     - Wählt basierend auf `r1` die entsprechende Funktion (`sin`, `cos`, `tan`) aus einer Sprungtabelle aus und führt diese aus.
-     - Implementiert eine Fehlerbehandlung für ungültige Auswahlwerte.
-
-#### 2. **Implementierung der Funktionen `sin`, `cos` und `tan`**
+#### **Implementierung der Funktionen `sin`, `cos` und `tan`**
    - **sin(x)**:
-     - Reduziert den Eingabewert `x` auf den Bereich \([-π, π]\) mittels Modulo-Operation.
-     - Verwendet die Taylor-Reihe zur Approximation von `sin(x)` bis zur Potenz \(x^{17}\):
-       \[
-       sin(x) = x - (x^3)/(3!) + (x^5)/(5!)  - (x^7)/(7!)  + (x^9)/(9!) - (x^11)/(11!)  + (x^13)/(13!) - (x^15)/(15!)  + (x^17)/(17!) 
-       \]
-     - Nutzt eine Tabelle mit den entsprechenden Taylor-Koeffizienten zur effizienten Berechnung.
-   
+     - Reduziert den Eingabewert `x` auf den Bereich **[-π, π]**
+     - Verwendet die Taylor-Reihe zur Approximation von `sin(x)` bis zur Potenz **x^17**:
+       
+**sin(x)** = `x` **-** `(x^3)/(3!)` **+** `(x^5)/(5!)`  **-** `(x^7)/(7!)`  **+** `(x^9)/(9!)` **-** `(x^11)/(11!)`  **+** `(x^13)/(13!)` **-** `(x^15)/(15!)`  **+** `(x^17)/(17!)` 
+       
    - **cos(x)**:
-     - Nutzt die Identität \( \cos(x) = \sin(x + \frac{\pi}{2}) \) zur Berechnung.
+     - Nutzt die Identität **cos(x)** = `sin(x + π/2)` zur Berechnung.
    
    - **tan(x)**:
-     - Berechnet \( \tan(x) \) als Quotient von `sin(x)` und `cos(x)`.
+     - Berechnet **tan(x)** als Quotient von `sin(x)` und `cos(x)`.
      - Implementiert eine Überprüfung, um eine Division durch Null zu verhindern.
 
 ### Wichtiger Hinweis beim Assemblieren
