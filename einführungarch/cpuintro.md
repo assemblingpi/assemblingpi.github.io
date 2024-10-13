@@ -1,6 +1,5 @@
 # 1. Einführung
-## 1.2 Grundlagen der Computerarchitektur
-### 1.2.1 Die Ausführung von Programmen durch den Computer
+## 1.2.1 Grundlagen der Computerarchitektur: Die Ausführung von Programmen durch den Computer
 
 Ein Computer führt Programme aus, indem er deren Anweisungen verarbeitet und Daten manipuliert. Im Zentrum dieses Prozesses steht die **CPU (Central Processing Unit)**, die als Mechanismus fungiert, der Programme umsetzt. Die CPU beginnt, indem sie Anweisungen aus dem Hauptspeicher lädt, der vereinfacht betrachtet wie ein lineares Array von Daten und Instruktionen organisiert ist. Diese Anweisungen werden im **Program Counter (PC)**, einem speziellen Register, verfolgt, das die Adresse der nächsten auszuführenden Anweisung enthält. Die **Kontrolleinheit** dekodiert die geladenen Anweisungen und bestimmt, welche Aktionen als nächstes ausgeführt werden sollen, sei es die fortlaufende Ausführung oder eine Verzweigung zu einem anderen Teil des Programms.
 
