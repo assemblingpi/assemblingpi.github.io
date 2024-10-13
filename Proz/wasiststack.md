@@ -1,4 +1,5 @@
-## Der Stack
+# 6. Prozedurale Programmierung
+## 6.2 Was ist eine Prozedur: Der Stack
 
 Der **Stack** spielt eine zentrale Rolle bei der Verwaltung von Daten und dem Programmfluss, insbesondere bei der Ausführung von **Prozeduren**. Er fungiert als spezieller Bereich im Hauptspeicher, der hauptsächlich für **Rücksprungadressen**, **lokale Variablen** und andere **temporäre Daten** verwendet wird. Der Stack arbeitet nach dem **Last-In-First-Out (LIFO)**-Prinzip, was bedeutet, dass die zuletzt hinzugefügten Daten als erstes wieder entfernt werden. Diese Eigenschaft macht den Stack ideal für die Verwaltung von Prozeduraufrufen, Rücksprungadressen und lokalen Variablen.
 

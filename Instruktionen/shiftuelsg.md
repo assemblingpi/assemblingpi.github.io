@@ -1,5 +1,7 @@
-## Lösung der Übungsaufgabe
-### Lösungsansatz:
+# 2. Basic Blocks implementieren
+## 2.3.4 Datenverarbeitung: Shift Operationen
+### Lösung der Übungsaufgabe
+#### Lösungsansatz:
 
 1. **Multiplikation:** Multipliziere a * b mithilfe der LSL-Instruktion (linke Verschiebung), indem du b in seine Potenzen von 2 zerlegst (b = 12 = 8 + 4 = 2³ + 2²).
 
@@ -9,7 +11,7 @@
 
 4. **Rotation:** Rotiere das finale Ergebnis um 8 Stellen nach rechts mit ROR. Dieser verschiebt die Bits nach rechts und fügt die Bits, die hinausfallen, am linken Rand wieder ein.
 
-### Lösung:
+#### Lösung:
 ```
     LDR R0, =-7           @ Lade a = -7 in R0
     LDR R1, =12           @ Lade b = 12 in R1
@@ -31,7 +33,7 @@
     ROR R9, R8, #8       
 ```
 
-#### So sollten die Register nach der Ausführung aussehen:
+##### So sollten die Register nach der Ausführung aussehen:
 
 ***Ergebnisse in Signed-Decimal-Darstellung:***
 

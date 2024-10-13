@@ -1,4 +1,5 @@
-## Aufgabenstellungen: Lookup-Tables
+# 4. Datenstrukturen 
+## 4.1 Lookup-Tables: Übungsaufgaben
 
 Neben der Berechnung der Fakultät (`x!`) gibt es zahlreiche weitere Anwendungsfälle für Lookup-Tabellen in der Programmierung. Im Folgenden werden zwei weitere Aufgabenstellungen präsentiert, bei denen Lookup-Tabellen als effiziente Lösung dienen. Jede Aufgabe wird durch einen entsprechenden ARM-Assembler-Code gelöst und ausführlich erläutert.
 

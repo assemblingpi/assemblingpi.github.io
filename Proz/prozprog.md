@@ -1,4 +1,5 @@
-## Prozedurale Programmierung
+# 6. Prozedurale Programmierung
+## 6.1 Was ist prozedurale Programmierung?
 
 ### Was sind prozedurale Programmiersprachen?
 Prozeduren sind der Grundbaustein von prozeduralen Programmiersprachen. In prozeduralen Sprachen (wie in C) organisiert man den Code in Form von Prozeduren. Der Programmfluss wird durch das Aufrufen dieser Prozeduren gesteuert, wobei jede Prozedur eine spezifische Aufgabe übernimmt.

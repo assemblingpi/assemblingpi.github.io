@@ -1,4 +1,5 @@
-## Structs (Strukturen)
+# 5. Datentypen 
+## 5.3.2 Komplexe Datentypen: Structs (Strukturen)
 Ein Struct ist ein komplexer Datentyp und gruppiert mehrere Elemente unterschiedlichen Typs unter einem gemeinsamen Namen. Im Speicher werden Structs als zusammenhängende Datenblöcke mit festen Offsets für jedes Feld abgelegt.
 
 **Beispiel:** Eine Struct `struct_bsp` die eine Ganzzahl `i_zahl`und eine Fließkommazahl `f_wert` enthält, wird im Speicher wie folgt organisiert:

@@ -1,4 +1,6 @@
-## While-Schleifen
+# 3. Verknüpfungen von Basic Blocks
+## 3.2.6 Kontrollstrukturen: While-Schleifen
+
 Die `while-Schleife` ist eine kopfgesteuerte Schleife, bei der die Bedingung vor der ersten Ausführung des Schleifeninhalts geprüft wird. Das heißt, dass der Inhalt nur ausgeführt wird, wenn die Bedingung zum Ausführen wahr ist, ansonsten wird die Schleife verlassen.
 
 ### Kopfgesteuerte Schleife 

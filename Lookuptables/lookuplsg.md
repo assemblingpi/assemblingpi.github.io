@@ -1,6 +1,7 @@
-## Lösungen der Aufgaben zu Lookup-Tables
-### Aufgabenstellung 1
+# 4. Datenstrukturen 
+## 4.1 Lookup-Tables: Lösungen der Übungsaufgaben
 
+### Aufgabenstellung 1
 **Lösung:**
 
 Der folgende Code verwendet eine Lookup-Tabelle, um die Werte der Funktion `y = x² + 2x + 3` für `x` von 0 bis 9 vorab zu berechnen und zu speichern. Durch den Zugriff auf die Tabelle kann der Wert von `y` schnell ermittelt werden, ohne die Berechnung zur Laufzeit durchführen zu müssen.

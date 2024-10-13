@@ -1,4 +1,6 @@
-## Logische Instrukionen
+# 2. Basic Blocks implementieren
+## 2.3.3 Datenverarbeitung: Logische Instrukionen
+
 ### Die Logische Verundung mit AND
 Der `AND`-Operator in ARMv7 führt eine bitweise logische UND-Operation zwischen zwei Werten durch. Dabei wird jedes Bit des ersten Operanden (in der Wahrheitstabelle A) mit dem entsprechenden Bit des zweiten Operanden (in der Wahrheitstabelle B) verglichen. Das Ergebnis ist nur dann 1, wenn beide Bits 1 sind. Andernfalls ist das Ergebnis 0.
 

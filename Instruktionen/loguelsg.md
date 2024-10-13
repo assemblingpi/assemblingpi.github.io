@@ -1,4 +1,6 @@
-## Lösung der Übungaufgabe zu logischen Instruktionen
+# 2. Basic Blocks implementieren
+## 2.3.3 Datenverarbeitung: Logische Instrukionen
+### Lösung der Übungaufgabe zu logischen Instruktionen
 
 ### Lösungsansatz:
 1. Extrahieren der oberen 16 Bits: Überlegen Sie, wie die Bitmaskierung funktioniert. Um nur die oberen 16 Bits zu extrahieren, kann eine logische UND-Operation (AND) mit einer Maske verwendet werden, die nur die oberen Bits erlaubt. 

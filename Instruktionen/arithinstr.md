@@ -1,4 +1,6 @@
-## Arithmetische Instruktionen
+# 2. Basic Blocks implementieren
+## 2.3.2 Datenverarbeitung: Arithmetische Instruktionen
+
 ### ADD
 Der ADD-Befehl wird verwendet, um zwei Werte zu addieren und das Ergebnis in ein Register zu speichern.
 

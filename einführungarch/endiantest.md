@@ -1,3 +1,5 @@
+# 1. Einführung
+## 1.2.3 Grundlagen der Computerarchitektur: Der Speicher
 ### Übungsaufgabe: Speicherzugriffe in Little und Big Endian
 
 Gegeben ist ein Speicherbereich, der vollständig mit 0 initialisiert wurde. Ihre Aufgabe besteht darin, die folgenden Werte nacheinander in den Speicher zu schreiben, wobei Sie zuerst alle Schritte in Little Endian und anschließend in Big Endian ausführen:

@@ -1,17 +1,19 @@
-### LDR/STR: Datentransfer zwischen Register und Speicher:
-Neben dem Datentransfer zwischen Registern kann es notwendig sein, Daten zwischen einem Register und dem Hauptspeicher auszutauschen. Für diese Art des Datentransfers gibt es in ARM-Assembler Load und Store-Befehle. Bei diesen Befehlen (LDR/STR) gibt es unterschiedliche Adressierungsarten
+# 2. Basic Blocks implementieren
+## 2.1.4 Datentransfer zwischen Register und Speicher
 
-#### Der LDR-Befehl
+Neben dem Datentransfer zwischen Registern kann es notwendig sein, Daten zwischen einem Register und dem Hauptspeicher auszutauschen. Für diese Art des Datentransfers gibt es in ARM-Assembler Load und Store-Befehle. Bei diesen Befehlen (LDR/STR) gibt es unterschiedliche Adressierungsarten.
+
+### Der LDR-Befehl
 Der **LDR-Befehl** steht für "Load Register" und wird verwendet, um Daten von einer Adresse im Speicher in ein Register zu laden. Hierbei gibt es mehrere Möglichkeiten, wie man ein Register laden kann:
 
-##### 1. Laden der Speicheradresse
-###### Syntax:
+#### 1. Laden der Speicheradresse
+##### Syntax:
 ```
 LDR <Zielregister>, =label  
 ```
 Wenn `"label"` eine Speicheradresse (also der Name einer Speicherstelle oder eines Labels) ist, dann wird der Befehl `LDR <Zielregister>, =label` so interpretiert, dass die Speicheradresse von `label` in das angegebene Register geladen wird.
 
-###### Beispiel:
+##### Beispiel:
 ```
 .data
 var1: .word 5
@@ -22,7 +24,7 @@ _start:
     LDR R0, =var1    @ Lade die Adresse von var1 in R0
 ```
 
-###### Erklärung des Codes: 
+##### Erklärung des Codes: 
 - ***.data:*** Im Segment **.data** wird kein ausführbarer Code abgelegt. Stattdessen enthält dieses Segment Daten, die im Speicher gespeichert werden und vom Programm während seiner Ausführung verwendet werden. Diese Daten können Variablen, Konstanten oder andere Informationen umfassen, die das Programm benötigt, um korrekt zu funktionieren.
 Im Gegensatz dazu enthält das **.text**-Segment den ausführbaren Code des Programms. Hier können dann die Daten aus dem Segment **.data** benötigt werden.
 - ***var1:***  Dies ist ein Label für eine Variable oder Datenstelle im Speicher. Labels werden verwendet, um auf bestimmte Adressen im Speicher zuzugreifen.
@@ -32,7 +34,7 @@ Im Gegensatz dazu enthält das **.text**-Segment den ausführbaren Code des Prog
 
 - ***LDR R0, =var1***: Hier wird die Speicheradresse, auf die das Label var1 zeigt, in das Register R0 geladen. Dies bedeutet, dass nach der Ausführung dieses Befehls das Register R0 die Adresse von var1 enthält, nicht den Wert 5 selbst.
 
-###### Speicherstruktur:
+##### Speicherstruktur:
 Um das besser zu verstehen, schauen wir uns den Speicher nach Ausführung des Codes in CPULator an:
 
 ![Screenshot of Example Program](./LDR1.png) 
@@ -46,15 +48,15 @@ Hier kann man dieses Ergebnis in CPULator sehen:
 
 ![Screenshot of Example Program](./LDR1.png) 
 
-##### 2. Laden eines Wertes
-###### Syntax:
+#### 2. Laden eines Wertes
+##### Syntax:
 ```
 LDR <Zielregister>, [<Quellregister>, #Offset]
 ```
 Diese Anweisung lädt den Wert aus dem Speicher, dessen Adresse im `<Quellregister>` gespeichert ist, in das `<Zielregister>`. Wenn ein #Offset angegeben wird, wird die Speicheradresse im Quellregister um den Offsetwert erhöht, und der Wert, der an der daraus resultierenden Speicheradresse steht, wird ins Zielregister geladen.
 **Achtung:** Als Offset kann auch ein Registerwert und kein Immediatwert stehen 
 
-###### Beispiel:
+##### Beispiel:
 ```
 .data
 var1: .word 4
@@ -82,16 +84,16 @@ _start:
 
 Wie man hier erkennen kann, wurde der Wert 0xaaaaaaaa aus der Speicheradresse 0x18 in R2 gespeichert.
 
-#### Der STR-Befehl
+### Der STR-Befehl
 Der **STR-Befehl** steht für "Store Register" und wird verwendet, um den Inhalt eines Registers in den Speicher zu schreiben. Er speichert den Wert eines Registers an einer angegebenen Speicheradresse.
 
-###### Syntax:
+##### Syntax:
 ```
 STR <Quellregister>, [Zielregister, #Offset]  
 ```
 Der Wert aus dem `<Quellregister>` wird in die Speicheradresse von dem `<Zielregister>` gespeichert. Bei einem `#Offset` wird die Speicheradresse des Zielregisters um den Offsetwert erhöht. Der Wert im Quellregister wird dann in die Speicheradresse geschrieben, die sich aus der Addition der Speicheradresse des Zielregisters und dem Offsetwert ergibt.
 
-###### Beispiel:
+##### Beispiel:
 ```
 .data
 var1: .word 4
@@ -123,32 +125,32 @@ Wie im Bild zu erkennen ist, wurde die 4 in die Speicheradresse 0x18 gespeichert
 
 Hier erkennt man, dass in der Speicheradresse 0x18 (die in R1 geladen wurde) jetzt nicht mehr die 4 steht, sondern durch den ersten STR-Befehl der Wert 2 (der im Register R0 steht) gespeichert wurde. Mit dem zweiten STR-Befehl wurde der Wert 2 in die Speicheradresse 0x22 geschrieben. Diese Speicheradresse ergibt sich aus der Speicheradresse 0x18 und dem Offsetwert #4.
 
-#### Speichern und Laden Halbwörtern und Bytes
+### Speichern und Laden Halbwörtern und Bytes
 Während STR und LDR für 32-Bit-Werte (Wörter) verwendet werden, ermöglichen die Befehle STRB, LDRB, STRH und LDRH das Arbeiten mit kleineren Datenmengen wie Bytes (8 Bit) und Halbwörtern (16 Bit). Im Folgenden werden diese Befehle näher erläutert:
 
-##### 1. STRB - Store Byte
-###### Syntax:
+#### 1. STRB - Store Byte
+##### Syntax:
 ```
 STRB <Quellregister>, [<Zielregister>, #Offset]
 ```
 Mit `<STRB>` wird das niederwertigste Byte (die unteren 8 Bits) aus dem `<Quellregister>` in die Speicheradresse des `<Zielregisters>` gespeichert. Wenn ein #Offset angegeben wird, wird die Speicheradresse um diesen Wert erhöht, bevor der Byte-Wert gespeichert wird.
 
-##### 2. LDRB - Load Byte
-###### Syntax:
+#### 2. LDRB - Load Byte
+##### Syntax:
 ```
 LDRB <Zielregister>, [<Quellregister>, #Offset]
 ```
 Der `<LDRB>`-Befehl lädt ein Byte (8 Bit) des Wertes aus dem Speicher, dessen Adresse im `<Quellregister>` gespeichert ist, in das `<Zielregister>`. Wenn ein #Offset angegeben wird, wird die Speicheradresse im Quellregister um den Offsetwert erhöht, und die unteren 8 Bits des Wertes, der an der daraus resultierenden Speicheradresse steht, werden in das Zielregister geladen.
 
-##### 3. STRH - Store Halfword
-###### Syntax:
+#### 3. STRH - Store Halfword
+##### Syntax:
 ```
 STRH <Quellregister>, [<Zielregister>, #Offset]
 ```
 Mit `<STRH>` wird niederwertigste Halfword (die unteren 16 Bits) aus dem `<Quellregister>` in die Speicheradresse des `<Zielregisters>` gespeichert. Wenn ein #Offset angegeben wird, wird die Speicheradresse um diesen Wert erhöht, bevor das Halfword gespeichert wird.
 
-##### 4. LDRH - Load Halfword
-###### Syntax:
+#### 4. LDRH - Load Halfword
+##### Syntax:
 ```
 LDRH <Zielregister>, [<Quellregister>, #Offset]
 ```
@@ -163,8 +165,8 @@ LDRSB <Zielregister>, [<Quellregister>, #Offset]
 ```
 Die Befehle `<LDRSH>` und`<LDRSB>` laden jeweils ein 16-Bit-Halbworte oder ein 8-Bit-Byte aus dem Speicher und erweitern das Vorzeichen auf 32 Bit, um negative Werte korrekt darzustellen, wobei `<LDRSH>` für Halbworte und `<LDRSB>` für Bytes verwendet wird.  
 
-##### Beispiele:
-###### LDRB und LDRH:
+#### Beispiele:
+##### LDRB und LDRH:
 ```
 .data
 var1: .word 0xaabbccdd  @ Lade das Word 0xaabbccdd
@@ -202,7 +204,7 @@ _start:
 
 In diesem Beispiel wurde das Wort `0xaabbccdd` an der Speicheradresse `var1` abgelegt. Diese Speicheradresse wurde dann in das Register `R0` geladen. Durch den `LDRSB`-Befehl wurde das unterste Byte des Wertes, also `0xdd`, in `R1` geladen, wobei die höheren 24 Bits auf 1 gesetzt wurden, um das Vorzeichen korrekt zu setzen. Anschließend hat der `LDRSH`-Befehl das unterste Halbwort des Wertes, also `0xccdd`, in `R2` geladen, wobei die höheren 16 Bits auf 1 gesetzt wurden, um das Vorzeichen korrekt zu setzen.
 
-###### STRB und STRH:
+##### STRB und STRH:
 ```
 .data
 var1: .word 0xaaaaaaaa  @ Lade das Word 0xaaaaaaaa

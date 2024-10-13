@@ -1,3 +1,5 @@
+# 1. Einführung
+## 1.2.3 Grundlagen der Computerarchitektur: Der Speicher
 ### Lösung: Speicherzugriffe in Little und Big Endian
 
 #### Lösung Little Endian:

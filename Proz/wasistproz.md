@@ -1,4 +1,5 @@
-## Was ist eine Prozedur?
+# 6. Prozedurale Programmierung
+## 6.2 Was ist eine Prozedur?
 
 In der Assemblerprogrammierung sind Prozeduren grundlegende Bauelemente, die die Struktur und Organisation von Programmen erheblich verbessern. Sie ermöglichen die Wiederverwendbarkeit von Code und die effiziente Verwaltung von Daten und Kontrollfluss, wodurch komplexe Aufgaben übersichtlich und **modular** umgesetzt werden können.
 

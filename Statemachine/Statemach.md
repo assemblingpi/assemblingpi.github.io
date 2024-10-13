@@ -1,4 +1,5 @@
-## Zustandsautomaten
+# 3. Verknüpfungen von Basic Blocks
+## 3.2.8 Kontrollstrukturen: Zustandsautomaten
 
 **Zustandsautomaten** (State Machines) sind ein essenzielles Werkzeug in der Programmierung, da sie komplexe Abläufe systematisch und nachvollziehbar abbilden können. Ein Zustandsautomat besteht aus einer endlichen Anzahl von Zuständen, die durch Übergänge miteinander verbunden sind. Jeder Zustand kann bestimmte Aktionen ausführen, und die Übergänge zwischen den Zuständen erfolgen basierend auf vordefinierten Bedingungen oder Eingaben. Diese klare Strukturierung ermöglicht es Entwicklern, Abläufe und Entscheidungslogik in Software übersichtlich zu gestalten.
 

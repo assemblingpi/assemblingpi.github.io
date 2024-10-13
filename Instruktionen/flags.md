@@ -1,4 +1,6 @@
-## Das Statusregister
+# 2. Basic Blocks implementieren
+## 2.3.5 Datenverarbeitung: Das Statusregister
+
 Die Ergebnisse arithmetischer und logischer Operationen beeinflussen den Zustand der Flags, das sind spezielle Statusbits im Prozessor. 
 Flags geben an, ob zum Beispiel das Ergebnis einer Berechnung Null war, ob ein Überlauf aufgetreten ist oder ob das Ergebnis negativ ist. Diese Flags sind entscheidend für die Kontrolle des Programmflusses, da sie die Grundlage für bedingte Sprünge und Entscheidungen im Programmablauf bilden. Somit sorgt die ALU durch ihre Operationen und die Nutzung von Flags für die korrekte Verarbeitung und Steuerung von Programmen.
 

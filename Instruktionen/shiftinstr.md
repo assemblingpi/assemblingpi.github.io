@@ -1,4 +1,6 @@
-## Shift Operationen
+# 2. Basic Blocks implementieren
+## 2.3.4 Datenverarbeitung: Shift Operationen
+
 Shift-Operationen sind grundlegende Befehle in der ARMv7-Architektur, die dazu verwendet werden, die Bits eines Registers nach links oder rechts zu verschieben. Es gibt verschiedene Arten von Shift-Operationen, die jeweils unterschiedliche Auswirkungen auf die Bits haben und je nach Bedarf des Programms eingesetzt werden können. Im Folgenden werden wir die wichtigsten Shift-Operationen in ARMv7 genauer betrachten.
 
 ### Logisches Shiften nach Links (LSL)

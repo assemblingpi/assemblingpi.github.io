@@ -1,10 +1,11 @@
-##  If-else
+# 3. Verknüpfungen von Basic Blocks
+## 3.2.3 Kontrollstrukturen: If-else
 
-#### Pseudocode:
+### Pseudocode:
 ```
 if(Condition) then... else...
 ```
-#### Beispiel in ARM-Assembler:
+### Beispiel in ARM-Assembler:
 ```asm
         MOV r0, #111
         MOV r1, #222

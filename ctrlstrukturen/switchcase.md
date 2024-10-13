@@ -1,4 +1,5 @@
-## Switch-Case
+# 3. Verknüpfungen von Basic Blocks
+## 3.2.5 Kontrollstrukturen: Switch-Case
 
 Ein `switch case` ist eine Kontrollstruktur, die es ermöglicht, eine Variable oder einen Ausdruck mit mehreren möglichen Werten zu vergleichen. Basierend auf dem Wert wird der entsprechende Fall (Case) ausgewählt und dessen Anweisungen ausgeführt. Diese Struktur ermöglicht eine effiziente und übersichtliche Handhabung von mehreren Bedingungen im Vergleich zu einer langen Kette von `if-else`-Anweisungen.
 ```

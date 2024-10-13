@@ -1,4 +1,5 @@
-## Vergleichsoperatoren
+# 2. Basic Blocks implementieren
+## 2.3.6 Datenverarbeitung: Vergleichsoperatoren
 Vergleichsoperatoren sind grundlegende Werkzeuge in Assembler, die verwendet werden, um Werte in Registern zu vergleichen, um auf der Grundlage dieser Vergleiche Entscheidungen zu treffen. 
 Im Gegensatz zu anderen Befehlen speichern Vergleichsoperatoren kein Resultat in einem Register. Stattdessen beeinflusst der Vergleich einzig die Statusflags, die im weiteren Programmverlauf für bedingte Anweisungen verwendet werden können.
 

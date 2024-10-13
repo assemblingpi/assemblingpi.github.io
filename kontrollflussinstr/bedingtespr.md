@@ -1,7 +1,9 @@
-#### Bedingte Sprünge:
+# 3. Verknüpfungen von Basic Blocks
+## 3.1.3 Kontrollflussinstruktionen: Bedingte Sprünge
+
 Bedingte Sprünge sind etwas komplexer. Sie führen nur dann einen Sprung aus, wenn eine bestimmte Bedingung erfüllt ist. Diese Bedingung basiert auf Status-Flags, die durch vorherige Operationen von der ALU gesetzt wurden. Diese bedingten Sprünge ermöglichen es dem Programm, verschiedene Codepfade abhängig von bestimmten Bedingungen oder Ergebnissen zu verfolgen, was eine flexible und dynamische Steuerung des Programms ermöglicht.
 
-###### Syntax
+### Syntax
 ```
 B<condition> <label>
 ```
@@ -9,7 +11,7 @@ B<condition> <label>
 - `<condition>` gibt die Bedingung an, unter der der Sprung erfolgen soll
 - `<label>` ist das Ziel, zu dem gesprungen wird, wenn die Bedingung erfüllt ist
 
-###### Beispiel
+### Beispiel
 Wenn eine bedingte Sprunganweisung ausgeführt wird, überprüft der Prozessor die Statusflags im CPSR. Falls die angegebene Bedingung erfüllt ist, wird der Sprung zu dem spezifizierten Label durchgeführt. Andernfalls wird die nächste Anweisung im Code ausgeführt.
 
 ```
@@ -36,7 +38,7 @@ end:
     MOV R3, #10          @ Programmende
 ```
 
-###### Der Kontrollflussgraph zum Beispiel
+#### Der Kontrollflussgraph zum Beispiel
 
 ![Screenshot of Example Program](./bedingt_b.png)
 

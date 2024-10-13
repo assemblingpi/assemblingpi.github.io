@@ -1,5 +1,5 @@
 # 1. Einführung
-## 1.1.1 Was ist ein Programm?: Intro
+## 1.1.1 Was ist ein Programm: Intro
 
 Ein Programm besteht aus einer Abfolge von sehr elementaren Anweisungen für einen Computer, deren schrittweise Abarbeitung dazu führt, dass eine bestimmte Aufgabe erledigt wird. Diese Anweisungen sind in einer Sprache geschrieben, die der Prozessor versteht, und sie werden im Speicher des Computers abgelegt, genauso wie die Daten, die das Programm verarbeitet. 
 

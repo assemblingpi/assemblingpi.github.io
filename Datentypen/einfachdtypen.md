@@ -1,4 +1,5 @@
-# Einfache Datentypen
+# 5. Datentypen 
+## 5.2.1 Einfache Datentypen: Intro
 
 Einfache Datentypen repräsentieren grundlegende Datenarten, die direkt von der Hardware unterstützt werden. Diese Datentypen unterscheiden sich in ihrer Größe und dem Wertebereich, den sie abdecken können.
 

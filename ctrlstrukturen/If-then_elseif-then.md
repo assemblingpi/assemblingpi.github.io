@@ -1,10 +1,12 @@
-## If-then elseif-then
-#### Pseudocode:
+# 3. Verknüpfungen von Basic Blocks
+## 3.2.4 Kontrollstrukturen: If-then elseif-then
+
+### Pseudocode:
     ```
     if(Condition1) then... else if(Condition2) then... else
     ```
 
-#### Beispiel in ARM-Assembler:
+### Beispiel in ARM-Assembler:
 ```asm
         MOV r0, #111
         MOV r1, #222

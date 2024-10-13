@@ -1,4 +1,7 @@
-## Übungsaufgabe: Maskierung mit logischen Instruktionen
+# 2. Basic Blocks implementieren
+## 2.3.3 Datenverarbeitung: Logische Instrukionen
+### Übungsaufgabe: Maskierung mit logischen Instruktionen
+
 In diesen Aufgaben geht es um die Verwendung von logischen Operationen, um bestimmte Bitmuster zu manipulieren. Hierbei sollen mit den kennengelernten Instruktionen gezielt Bits gesetzt, gelöscht oder invertiert werden. 
 
 ### Aufgabenstellung: Manipulation eines Bitmusters mit logischen Operationen

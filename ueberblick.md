@@ -9,17 +9,19 @@
 | **2. Basic Blocks implementieren**                                            |
 | [2.1 Datentransfer](../Datentransfer/datentr)                                 | 
 | [2.2 Sektionen](../Sektionen_Label/sektionen)                                 | 
-| [2.3 Arithmetische & Logische Instruktionen](../Instruktionen/arithlogintro)  | 
+| [2.3 Datenverarbeitung](../Instruktionen/arithlogintro)                       | 
 | **3. Verknüpfungen von Basic Blocks**                                         |
 | [3.1 Kontrollflussinstruktionen](../kontrollflussinstr/ctrlflow)              | 
 | [3.2 Kontrollstrukturen](../ctrlstrukturen/ctrlstrcts)                        | 
-| **4. Datentypen**                                                             |
-| [4.1 Datentypen](../Datentypen/datentypen)                                    |
-| [4.2 einfache Datentypen](../Datentypen/einfachdtypen)                        |
-| [4.3 komplexe Datentypen](../Datentypen/komplexedtypen)                       |
-| **5. prozedurale Programmierung**                                             |
-| [5.1 Was ist prozedurale Programmierung?](../Proz/prozprog)                   |
-| [5.2 Was ist eine Prozedur?](../Proz/wasistproz)                              |
+| **4. Datenstrukturen**                                                        |
+| [4.1 Lookup-Tabellen](../Lookuptables/lookuptable)                            |
+| **5. Datentypen**                                                             |
+| [5.1 Datentypen](../Datentypen/datentypen)                                    |
+| [5.2 einfache Datentypen](../Datentypen/einfachdtypen)                        |
+| [5.3 komplexe Datentypen](../Datentypen/komplexedtypen)                       |
+| **6. Prozedurale Programmierung**                                             |
+| [6.1 Was ist prozedurale Programmierung?](../Proz/prozprog)                   |
+| [6.2 Was ist eine Prozedur?](../Proz/wasistproz)                              |
 
 
 |**B. Fortgeschrittene Konzepte und Anwendungen**                               |

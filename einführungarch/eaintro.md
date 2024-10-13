@@ -1,4 +1,5 @@
-##  Ein- und Ausgabegeräte
+# 1. Einführung
+## 1.2.5 Grundlagen der Computerarchitektur:  Ein- und Ausgabegeräte
 
 E/A-Geräte sind Hardwarekomponenten, die es ermöglichen, Daten in ein Computersystem einzugeben (z.B. Tastaturen, Sensoren) oder Daten aus dem System auszugeben (z.B. Bildschirme, Drucker). Sie bilden die Schnittstelle zwischen dem Computer und der Außenwelt und machen die Interaktion mit dem System möglich.
 

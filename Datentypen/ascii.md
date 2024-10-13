@@ -1,4 +1,5 @@
-## ASCII
+# 5. Datentypen 
+## 5.2.2 Einfache Datentypen: ASCII
 
 ASCII steht für "American Standard Code for Information Interchange". Es handelt sich um einen Zeichensatz, der in den 1960er Jahren entwickelt wurde, um eine einheitliche Methode zur Darstellung von Textzeichen und Steuerzeichen in Computern und Kommunikationssystemen bereitzustellen.
 

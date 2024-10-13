@@ -1,12 +1,13 @@
-## If-not-then
+# 3. Verknüpfungen von Basic Blocks
+## 3.2.2 Kontrollstrukturen: If-not-then
 
 In Assembler ist die simpelste Kontrollstruktur ein if-not-then. Sprich, wenn eine Bedingung nicht erfüllt ist, wird ein Codeabschnitt ausgeführt, anderenfalls wird er übersprungen.
 
-#### Der Pseudocode für diese Kontrollstruktur ist folgender: 
+### Der Pseudocode für diese Kontrollstruktur ist folgender: 
 ```
 if not(Condition) then do ...
 ```
-#### Beispiel in ARM-Assembler:
+### Beispiel in ARM-Assembler:
 ```asm
 start:
         MOV r0, #111  @ Beispielwert 1

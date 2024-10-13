@@ -1,4 +1,6 @@
-# Datentypen 
+# 5. Datentypen 
+## 5.1 Datentypen allgemein
+
 Programme arbeiten mit Informationen ganz unterschiedlicher Art. Diese Informationen können **Texte** sein, die vom Benutzer eingegeben oder angezeigt werden, **Ganzzahlen** für einfache mathematische Berechnungen, **Gleitkommazahlen** für präzisere, wissenschaftliche Berechnungen oder **Zeiger**, um auf bestimmte Speicheradressen zuzugreifen. Für derart unterschiedliche Arten von Informationen braucht es verschiedene Datentypen, um diese sachgerecht zu bearbeiten. Jeder Datentyp erfüllt dabei spezifische Aufgaben und ist für bestimmte Arten von Operationen ausgelegt.
 
 In der Assemblerprogrammierung sind Datentypen grundlegend für die korrekte Verarbeitung und Speicherung von Daten. Sie definieren die Größe und Art der Daten, die von den Anweisungen verarbeitet werden, und beeinflussen somit direkt die Effizienz und Struktur des Programmflusses und der Datenverarbeitung. 

@@ -1,4 +1,5 @@
-## Sektionen (Abschnitte)
+# 2. Basic Blocks implementieren
+## 2.2.1 Sektionen (Abschnitte)
 In der Assembler-Programmierung sind Sektionen entscheidend für die Organisation des Codes und der Daten. In den Assembler-Quelldateien werden Sektionen deklariert, um bestimmte Speicherbereiche zu definieren, die jeweils für unterschiedliche Zwecke vorgesehen sind. Diese Struktur hilft dabei, das Programm klar zu gliedern und zu verwalten, sowohl beim Übersetzen des Codes als auch beim späteren Ausführen des Programms.
 
 ### Was sind Sektionen?
