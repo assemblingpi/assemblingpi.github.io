@@ -38,7 +38,10 @@
 | [2.1 Coprozessoren](../Coproc/Coprocessor)                                    |
 | [2.2 Timer](../Timer/timerintro)                                              |
 | [2.3 VFP und NEON](../vfpuNeon/floatingintro)                                 |
-| [2.4 GPU](../GPU/gpuintro)                                                    |
+| [2.4 Grafik & GPU](../GPU/grafikintro)                                        |
+|**3. Implementierung systemnaher Funktionen**                                  | 
+| [Systemnahe Funktionen](../sysfunk/sysfunkintro)
+
 
 |-------------------------------------------------------------------------------|
 |  [**Ressourcen**](ressourcen.md)                                              |

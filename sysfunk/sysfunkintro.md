@@ -1,4 +1,4 @@
-## Implementierung systemnaher Bibliotheken
+## Implementierung systemnaher Funktionen
 
 Systemnahe Funktionen stellen eine direkte Schnittstelle zur Hardware dar und bilden die Basis für weiterführende Programmieraufgaben. Funktionen zur Zeichenkonvertierung, Speicherverwaltung sowie zur Text- und Grafikausgabe bieten dabei die wesentlichen Bausteine, auf denen komplexere Anwendungen aufbauen können.
 

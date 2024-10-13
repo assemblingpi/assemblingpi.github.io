@@ -11,5 +11,7 @@ Gegeben ist ein Speicherbereich, der vollständig mit 0 initialisiert wurde. Ihr
 | 0x000    | 0x00   | 0x00   | 0x00   | 0x00   |
 | 0x004    | 0x00   | 0x00   | 0x00   | 0x00   |
 
+**Bearbeiten sie diese Aufgabe mit Stift und Papier und vergleichen Sie diese im Anschluss mit der Lösung**
+
 |----------------------|-------------------------------|---------------------|
 | [zurück](memintro.md)| [Hauptmenü](../ueberblick.md) | [weiter](endilsg.md)| 
