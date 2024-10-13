@@ -31,14 +31,16 @@
 | [Debugging mit GDB](..//debuggdb/debuggdb)                    |
 | [BCM2836](../bcm2836/bcm2836)                                 |
 | [Priviligierungslevel](../privlmodi/privmodiintro)            |
-| [Boot](../Boot/boot)                                        |
+| [Boot](../Boot/boot)                                          |
 | [UART](../UART/uart)                                          |
 | [Interrupts](../Interrupts/intintro)                          |
 | **2. Erweiterungen der CPU-Funktionalität**                   | 
 | [Coprozessoren](../Coproc/Coprocessor)                        |
 | [Timer](../Timer/timerintro)                                  |
 | [VFP und NEON](../vfpuNeon/floatingintro)                     |
-| [GPU](../GPU/gpuintro)                                        |
+| [Grafik und GPU](../GPU/grafikintro)                          |
+| **3. Implementierung systemnaher Funktionen**                 | 
+| [Systemnahe Funktionen](../sysfunk/sysfunkintro)              |
 
 |-----------------------------------|
 |  [**Ressourcen**](ressourcen.md)  |
