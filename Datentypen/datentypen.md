@@ -9,5 +9,5 @@ Auf Maschinenebene beziehen sich Datentypen auf die Art und Weise, wie Daten im 
 
 Der Programmierer muss also sicherstellen, dass das Programm die Werte im Speicher als den richtigen Datentyp behandelt. Beispielsweise muss eine Zeichenkette korrekt als solche interpretiert werden, damit entsprechende Operationen richtig ausgeführt werden. 
 
-|--------------------------------------------|------------------------------------|---------------------------------|
-|   [zurück](../ctrlstrukturen/do_while.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](einfachdtypen.md)    |
+|-------------------------------------------|------------------------------------|---------------------------------|
+|   [zurück](../Lookuptables/lookuplsg.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](einfachdtypen.md)    |

@@ -57,5 +57,5 @@ Im obigen Code wird die Fakultät eines Wertes `x` mithilfe einer Lookup-Tabelle
    ```
    Diese Anweisung sorgt dafür, dass das Programm nach dem Laden des Wertes in `r3` in einer Endlosschleife verharrt.
 
-|--------------------------|------------------------------------|----------------------------|
-|   [zurück](do_while.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](lookupue.md)    |
+|-------------------------------------------|------------------------------------|----------------------------|
+|   [zurück](../Statemachine/Statemach.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](lookupue.md)    |

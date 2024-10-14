@@ -77,5 +77,5 @@ Anschließend wird der nächste Zustand aus der Zustandsvariable geladen und in 
 
 Jeder Zustand (`state0` bis `state3`) enthält Platzhalter für Aktionen und bestimmt den nächsten Zustand durch Adressierung und Aktualisierung der Zustandsvariable. `state2` demonstriert einen **bedingten Übergang**, bei dem basierend auf dem Vergleich des Registers `r3` mit `0` entschieden wird, ob der nächste Zustand `state1` oder `state3` sein soll. Schließlich kehrt `state3` zu `state0` zurück.
 
-|--------------------------|------------------------------------|-----------------------------------------------|
-|   [zurück](do_while.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../Lookuptables/lookuptable.md)    |
+|--------------------------------------------|------------------------------------|-----------------------------------------------|
+|   [zurück](../ctrlstrukturen/do_while.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../Lookuptables/lookuptable.md)    |
