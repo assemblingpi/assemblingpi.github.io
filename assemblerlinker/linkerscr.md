@@ -1,4 +1,5 @@
-## Grundkonzepte von Linker-Scripten
+# B.1 Einführung
+## 1.3.2 Assembler und Linker: Grundkonzepte von Linker-Scripten
 
 Der Linker ist ein Programm das bei der Erstellung einer ausführbaren Datei eine zentrale Rolle einnimmt. Ein Linkerscript funkiert dabei als Anleitung für dieses Programm.
 

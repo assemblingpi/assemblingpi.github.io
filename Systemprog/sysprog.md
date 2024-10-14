@@ -1,4 +1,5 @@
-## Wichtige Konzepte der Systemprogrammierung
+# B.1 Einführung
+## 1.2 Wichtige Konzepte der Systemprogrammierung
 
 ### Memory-Mapped I/O
 Memory-Mapped I/O bedeutet, dass Kontroll- und Statusregister über Speicheradressen angesprochen werden. Durch das Schreiben in oder Lesen aus diesen Adressen kann Software direkt mit Hardwaremodulen interagieren, indem sie beispielsweise einen Timer startet oder den Status eines Interrupts überprüft. Dieser Mechanismus ermöglicht eine direkte und effiziente Steuerung der Hardware durch die Software.

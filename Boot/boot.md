@@ -1,4 +1,5 @@
-## Einrichtung des Projekts und Deklaration der Hauptdateien
+# B.1 Einführung
+## 1.7 Boot: Einrichtung des Projekts und Deklaration der Hauptdateien
 Zu Beginn wird ein Projektordner erstellt, in dem die folgenden Dateien angelegt werden: `boot.s`, `kmain.s`, `build.sh` und `link.lds`. Diese Dateien dienen als Grundlage für das Booten und den Aufbau der Systemstruktur. Jede dieser Dateien übernimmt spezifische Aufgaben, wie den Start des Systems, die Initialisierung der Hauptfunktionen und das Verlinken der nötigen Programmabschnitte. 
 
 **Für alle weiteren Programmteile, die im Laufe dieses Tutorials erstellt werden, gilt ebenso folgendes Vorgehen: Zu jeder neuen Komponente wird eine Quelldatei mit der Endung .s angelegt. Zusätzlich wird in der build.sh-Datei jeweils eine Passage hinzugefügt, um diese Datei zu assemblieren, sowie eine weitere Passage, um sie in den Linkprozess einzubinden. Erst bei den Floating-Point und SIMD Programmen gibt es in dieser Hinsicht etwas weiteres zu beachten!**

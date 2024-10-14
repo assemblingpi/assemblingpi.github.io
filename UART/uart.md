@@ -1,4 +1,6 @@
-## UART
+# B.1 Einführung
+## 1.8.1 UART: Intro
+
 UART steht für Universal Asynchronous Receiver/Transmitter. Es handelt sich um eine serielle Kommunikationsschnittstelle, die häufig in der Mikrocontroller- und Computertechnik verwendet wird, um Daten zwischen zwei Geräten auszutauschen. 
 Sie sendet und empfängt Daten ohne ein gemeinsames Taktsignal, wobei Start- und Stoppbits verwendet werden, um den Anfang und das Ende von Datenpaketen zu markieren.
 

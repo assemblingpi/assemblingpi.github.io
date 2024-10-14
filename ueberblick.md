@@ -27,7 +27,7 @@
 |**B. Fortgeschrittene Konzepte und Anwendungen**                               |
 |-------------------------------------------------------------------------------|
 | **1. Einführung**                                                             |
-| [1.1 Einführung](../Advanced/advanced)                                        | 
+| [1.1 Fortgeschrittene Konzepte und Anwendungen](../Advanced/advanced)                                        | 
 | [1.2 Konzepte der Systemprogrammierung](../Systemprog/sysprog)                |
 | [1.3 Assembler und Linker](../assemblerlinker/wasistasmlinker)                |
 | [1.4 Debugging mit GDB](..//debuggdb/debuggdb)                                |

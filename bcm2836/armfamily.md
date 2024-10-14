@@ -1,4 +1,5 @@
-## ARM-Familien: Ein Überblick
+# B.1 Einführung
+## 1.5.3 BCM2836: Ein Überblick auf die ARM-Familien 
 
 Die ARM-Architektur ist in drei Hauptfamilien unterteilt, die jeweils auf unterschiedliche Anwendungen und Leistungsanforderungen zugeschnitten sind:
 

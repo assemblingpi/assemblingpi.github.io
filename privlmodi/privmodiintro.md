@@ -1,4 +1,6 @@
-## Priviligierungslevel und Prozessormodi
+# B.1 Einführung
+## 1.6.1 Priviligierungslevel und Prozessormodi
+
 Moderne Prozessoren können in verschiedenen Betriebsmodi arbeiten, die unterschiedliche Privilegierungslevel haben. Die Betriebsmodi eines Prozessors bestimmen, in welchem Zustand er sich befindet und welche Art von Code er ausführt. Jeder Modus ist für eine bestimmte Art von Aufgaben ausgelegt und bietet Zugang zu unterschiedlichen Ressourcen und Registersets. Priviligierungslevel sind Sicherheitsstufen eines Prozessors, die bestimmen, welche Zugriffsrechte eine Software auf Systemressourcen hat.
 
 ### Privilegierungslevel und Prozessormodi bei ARM-Prozessoren

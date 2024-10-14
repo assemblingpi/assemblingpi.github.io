@@ -1,4 +1,5 @@
-## Statusregister und Betriebsmodi
+# B.1 Einführung
+## 1.6.4 Priviligierungslevel: Statusregister und Betriebsmodi
 
 Das **CPSR (Statusregister)** ist ein zentrales Register, das den aktuellen Zustand, wie etwa die ALU-Flags und den aktuellen Betriebsmodus des Prozessors speichert. Die Flags werden automatisch indirekt durch arithmetische und logische Operationen oder Vergleichegesetzt. Die **Bits 4 bis 0** des Statusregisters bestimmen, in welchem Modus der Prozessor arbeitet. 
 Unpriviligierte Modi haben im Gegensatz zu priviligierten Modi keinen direkten(!) Zugriff auf das CPSR zur Änderung der ALU-Flags oder der Betriebsmodi. Dieser Schutzmechanismus verhindert, dass Anwendungsprogramme den kritischen Systemstatus beeinflussen können, was die Sicherheit des Systems gewährleistet.
@@ -19,11 +20,11 @@ Ein Wechsel von einem **niedrigeren zu einem höheren Privilegierungslevel**, wi
 
 Um in der Systemprogrammierung auf einem ARM-Prozessor direkt auf Steuer- und Statusregister zugreifen zu können, verwendet man spezielle Instruktionen wie MRS und MSR.
 
-##### MSR: Move to Special Register
+### MSR: Move to Special Register
 ```
 Syntax: MSR  Destination, Source
 ```
-##### MRS: Move from Special Register
+### MRS: Move from Special Register
 ```
 Syntax: MRS  Destination, Source
 ```

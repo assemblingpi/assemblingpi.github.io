@@ -1,3 +1,5 @@
+# B.1 Einführung
+## 1.8.2 UART: Übungsaufgabe (Lösung)
 ### Analyse und Erklärung des UART-Codes für den Raspberry Pi 2B in ARM-Assembly
 
 Der gegebene ARM-Assembler-Code implementiert Funktionen zur Steuerung der UART0-Schnittstelle auf dem Raspberry Pi 2B. Diese Funktionen beinhalten das Initialisieren der UART-Schnittstelle, das Senden und Empfangen von Zeichen. Im Folgenden wird der Code abschnittsweise erklärt.

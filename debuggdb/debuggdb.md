@@ -1,4 +1,5 @@
-## Debugging mit GDB: Ein Leitfaden
+# B.1 Einführung
+## 1.4 Debugging mit GDB: Ein Leitfaden
 
 ### Einleitung
 

@@ -1,4 +1,5 @@
-## Interrupts und Priviligierungslevel
+# B.1 Einführung
+## 1.6.5 Priviligierungslevel: Interrupts und Priviligierungslevel
 
 Interrupts werden in modernen Prozessoren wie auch der ARMv7-Architektur in einem privilegierten Modus ausgeführt, um die Sicherheit und Integrität des Systems zu schützen. So wird verhindert, dass unautorisierte oder fehlerhafte Software den Interrupt-Prozess stören oder missbrauchen kann, was bei Software- und Hardware-Interrupts gleichermaßen wichtig ist.
 

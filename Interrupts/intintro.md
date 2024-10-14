@@ -1,4 +1,5 @@
-## Was sind Interrupts?
+# B.1 Einführung
+## 1.9.1 Interrupts: Was sind Interrupts?
 
 Interrupts sind Signale, die den Prozessor darauf hinweisen, dass ein bestimmtes Ereignis eingetreten ist, das sofortige Aufmerksamkeit erfordert.
 Dieser Mechanismus ermöglicht, auf externe oder interne Ereignisse zu reagieren, ohne dass der Prozessor ständig aktiv prüfen muss, ob neue Ereignisse aufgetreten sind. 

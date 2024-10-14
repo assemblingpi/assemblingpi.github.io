@@ -1,4 +1,5 @@
-## Betriebsmodi
+# B.1 Einführung
+## 1.6.3 Priviligierungslevel: Betriebsmodi
 
 - **User-Modus (usr):** Unprivilegierter Modus, geeignet für die meisten Anwendungsprogramme.
 - **FIQ-Modus (fiq):** Privilegierter Modus, der bei einem schnellen Interrupt betreten wird.
