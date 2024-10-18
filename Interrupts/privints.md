@@ -1,4 +1,5 @@
-## Privilegierungslevel und ihre Rolle bei Interrupts
+# B.1 Einführung
+## 1.9.7 Interrupts: Privilegierungslevel und ihre Rolle bei Interrupts
 
 ARMv7-A Prozessoren unterstützen verschiedene Privilegierungslevel wie den "User Mode" und den "Supervisor Mode". Wenn der Prozessor beispielsweise zurückgesetzt wird, startet er im Supervisor-Modus, einem privilegierten Modus, der es ermöglicht, auf alle Systemressourcen zuzugreifen. Jeder Exception-Typ hat einen zugeordneten Modus, und beim Auftreten eines Interrupts wechselt der Prozessor automatisch in den entsprechenden Modus, wie den IRQ-Modus für normale Interrupts, den FIQ-Modus für schnelle Interrupts oder den Supervisor-Modus für Supervisor Calls. Dies stellt sicher, dass die ISR den vollständigen Zugriff auf die notwendigen Ressourcen hat.
 

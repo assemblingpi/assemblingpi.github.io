@@ -1,4 +1,5 @@
-## Der ARMv7 Generic Timer
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.2.2 Timer: Der ARMv7 Generic Timer
 
 Der "Generic Timer" in der ARMv7-Architektur ist eine erweiterte Timer-Struktur, die unabhängig von der CPU-Taktfrequenz arbeitet. Diese Timer bieten eine konsistente Zeitbasis, die nicht von Prozessorzuständen wie Skalierung, Leistungszustand oder Drosselung beeinflusst wird.
 

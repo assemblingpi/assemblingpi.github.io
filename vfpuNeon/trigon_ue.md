@@ -1,4 +1,5 @@
-## Aufgabenstellung: Implementierung von Trigonometrischen Funktionen
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.17 VFP und NEON: Übungsaufgabe zur Implementierung von Trigonometrischen Funktionen
 
 ### Hintergrund
 

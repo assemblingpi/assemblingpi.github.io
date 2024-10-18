@@ -1,4 +1,5 @@
-## Lösung: Implementierung von Speicherfunktionen in ARM-Assembly
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.2 Systemnahe Funktionen: Lösung zur Implementierung von Speicherfunktionen in ARM-Assembly
 
 Der vorliegende Code implementiert drei grundlegende Speicherfunktionen in ARM-Assembly: `memset`, `memcpy` und `memcmp`.
 

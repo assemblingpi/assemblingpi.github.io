@@ -1,4 +1,5 @@
-## Aufgabenstellung: Implementierung einer 4x4-Matrixmultiplikationsfunktion mit NEON
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.18 VFP und NEON: Übungsaufgabe zur Implementierung einer 4x4-Matrixmultiplikationsfunktion mit NEON
 
 ### Hintergrund:
 Die Multiplikation von Matrizen,spielt in vielen Bereichen wie Grafik, Signalverarbeitung und wissenschaftlichen Berechnungen eine Rolle.

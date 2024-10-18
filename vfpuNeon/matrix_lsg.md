@@ -1,4 +1,5 @@
-## Lösung: Implementierung einer 4x4-Matrixmultiplikationsfunktion mit NEON
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.18 VFP und NEON: Lösung zur Implementierung einer 4x4-Matrixmultiplikationsfunktion mit NEON
 
 ### **Einleitung zur Matrizenmultiplikation**
 

@@ -1,4 +1,5 @@
-## Floating Point Format nach IEEE 754
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.3 VFP und NEON: Floating Point Format nach IEEE 754
 
 Die binäre Codierung einer Gleitkommazahl nach IEEE 754 besteht aus 3 Feldern
 - **Mantisse:** Das Mantissenfeld repräsentiert den Bruchteil einer Zahl
@@ -7,9 +8,9 @@ Die binäre Codierung einer Gleitkommazahl nach IEEE 754 besteht aus 3 Feldern
 
 Bei single precision 32-bit Gleitkommazahlen hat die Mantisse 23 Bit, der Exponent 8 Bit und das Vorzeichenbit besteht aus 1 Bit
 
-## Konvertierung einer binären Gleitkommazahl in das single Precision Floating Point format.
+### Konvertierung einer binären Gleitkommazahl in das single Precision Floating Point format:
 
-### 1. Normalisierung 
+#### 1. Normalisierung 
 
 Das **Normalisieren** im Kontext von Floating-Point-Zahlen (Gleitkommazahlen) bezieht sich auf den Prozess, bei dem die Mantisse einer Zahl so angepasst wird, dass der führende Stellenwert vor dem Komma (oder im Falle der binären Darstellung: vor dem Punkt) eine 1 ist. Dies wird als **normalisierte Form** bezeichnet. Entsprechend muss auch der Exponent angepasst werden, um den tatsächlichen Wert der Zahl beizubehalten. Da die führende 1 der Mantisse bei der normalisierten Form vorausgesetzt wird, kann sie in der Darstellung der Zahl letzlich weggelassen werden. 
 
@@ -22,25 +23,25 @@ Die Normalisierung ist entscheidend, weil sie sicherstellt, dass die Gleitkommaz
 Die Dezimalzahl `9.75` enstpricht der binären Gleitkommazahl `1001.110`.
 Normalisiert man diese Gleitkommazahl, dann erhält man die Zahl `1.001110` mit dem Exponenten `3`.
 
-### 2. Exponentenbias berücksichtigen
+#### 2. Exponentenbias berücksichtigen
 
-#### Was bedeutet Bias in diesem Kontext?
+##### Was bedeutet Bias in diesem Kontext?
 In der Gleitkommazahlendarstellung nach IEEE 754 wird der Exponent in einer bestimmten Form gespeichert, um sowohl positive als auch negative Exponenten abbilden zu können. Anstatt den Exponenten direkt in seiner Zwei-Komplement-Darstellung (wie bei ganzen Zahlen) zu speichern, wird ein sogenannter Bias verwendet.
 
-#### Bias in Single Precision
+##### Bias in Single Precision
 In der Single-Precision-Darstellung (32 Bit) werden 8 Bits für den Exponenten reserviert. Der Bias-Wert für diesen Exponenten beträgt **127**. Dies bedeutet, dass der tatsächliche Exponent, der im Speicher abgelegt wird, um 127 verschoben wird. Diese Verschiebung wird als **Bias** bezeichnet.
 
-#### Berechnung des gespeicherten Exponenten
+##### Berechnung des gespeicherten Exponenten
 Der im Exponentenfeld gespeicherte Exponent entspricht dem `tatsächlichen Exponent + 127`.
 
-#### Warum Bias?
+##### Warum Bias?
 Der Vorteil der Verwendung eines Bias besteht darin, dass der Exponent immer als eine positive Zahl dargestellt werden kann, was die Handhabung und Speicherung vereinfacht. Dies ermöglicht es, sowohl sehr kleine als auch sehr große Zahlen in einem standardisierten und effizienten Format zu speichern.
 
 **Beispiel:**
-Die Dezimalzahl `9.75` enstpricht der nromalisierten Gleitkommazahl `1.001110` mit dem Exponenten `3`.
+Die Dezimalzahl `9.75` enstpricht der normalisierten Gleitkommazahl `1.001110` mit dem Exponenten `3`.
 Um den Exponent nach IEEE 754 zu bestimmen muss man den Bias berücksichtigen, sprich `3` + `127`.
 
-### 3. Umwandlung fertigstellen
+#### 3. Umwandlung fertigstellen
 Zum Abschluss der Umwandlung in das Single Precision Floating Point Format müssen die entsprechenden 32-Bit-Felder belegt werden. Die Anordnung der Bits erfolgt wie folgt:
 
 **single Precision Floating Point Format**

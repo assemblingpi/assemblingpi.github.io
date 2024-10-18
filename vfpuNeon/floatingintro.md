@@ -1,4 +1,5 @@
-## Die vfp und Neon Coprozessoren
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.1 VFP und NEON: Intro
 
 In zahlreichen Berechnungen, besonders in Bereichen wie der Wissenschaft, Grafikverarbeitung oder dem maschinellen Lernen, stehen wir häufig vor der Herausforderung, mit extrem großen, kleinen oder äußerst präzisen Zahlen arbeiten zu müssen. Herkömmliche Ganzzahldarstellungen reichen in solchen Fällen nicht aus, da sie weder für das Rechnen mit Nachkommastellen, noch mit besonders große Zahlenwerten geeignet sind.
 

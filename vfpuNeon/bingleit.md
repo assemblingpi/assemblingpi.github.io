@@ -1,4 +1,6 @@
-## Gleitkommazahlen
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.2 VFP und NEON: Gleitkommazahlen
+
 Aufbau einer binären Gleitkommazahl: 
 
 `...` + `x1 * 2^3` + `x2 * 2^2` + `x3 * 2^1` + `x4 * 2^0` `. (Radixpunkt)` + `x5 * 2^(-1)` + `x6 * 2^(-2)` + `x7 * 2^(-3)` + `...`

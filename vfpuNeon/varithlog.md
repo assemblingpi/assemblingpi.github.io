@@ -1,5 +1,5 @@
-
-## Arithmetische und logische NEON-Operationen
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.15 VFP und NEON: Arithmetische und logische NEON-Operationen
 
 ### VAND: Vector AND
 ```asm

@@ -1,4 +1,5 @@
-## Aufgabenstellung: Textdarstellung via Textmode
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.6 Systemnahe Funktionen: Aufgabe Textdarstellung via Textmode
 
 Entwickeln Sie eine Textmodus-Verwaltungsbibliothek zur Darstellung und Verwaltung von Text im Textmodus. Diese Bibliothek soll grundlegende Funktionen bereitstellen, um Zeichen darzustellen, den aktuellen Textindex zu verwalten, Zeilenumbrüche zu handhaben sowie Zeichen zu löschen. 
 

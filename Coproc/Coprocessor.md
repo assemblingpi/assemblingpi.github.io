@@ -1,4 +1,5 @@
-## Koprozessoren: Erweiterung der CPU-Funktionalität
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.1 Koprozessoren: Erweiterung der CPU-Funktionalität
 
 Neben der **CPU (Central Processing Unit)** existieren in modernen Computersystemen spezialisierte Prozessoren, sogenannte **Koprozessoren**, die bestimmte Aufgaben übernehmen, um die Hauptprozessor zu entlasten. 
 

@@ -1,4 +1,5 @@
-## Lösung: Implementierung einer Eingabefunktion
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.8 Systemnahe Funktionen: Lösung Implementierung einer Eingabefunktion
 ### `kread`-Funktion
 
 Die Funktion `kread` liest Daten von verschiedenen Eingabequellen und speichert sie in einem bereitgestellten Puffer. Sie gibt die Anzahl der gelesenen Bytes zurück. Die Funktion hat folgende Parameter:

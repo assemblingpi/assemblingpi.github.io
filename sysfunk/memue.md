@@ -1,4 +1,5 @@
-## Übungsaufgaben: Implementierung von Speicherfunktionen in ARM-Assembly
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.2 Systemnahe Funktionen: Übungsaufgaben zur Implementierung von Speicherfunktionen in ARM-Assembly
 
 Diese Übungsaufgaben zielen darauf ab, grundlegende Speicherfunktionen (`memset`, `memcpy`, `memcmp`) in einem Sourcefile namens `kmem.s`zu implementieren. Entsprechende Änderungen sind in `build.sh` vorzunehmen. 
 

@@ -1,4 +1,6 @@
-## Lösung: Implementierung von Trigonometrischen Funktionen
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.17 VFP und NEON: Implementierung von Trigonometrischen Funktionen (Lösung)
+
 ### Erklärung des ARM-Assembly-Codes zur Implementierung von Trigonometriefunktionen
 
 Der folgende Code implementiert die trigonometrischen Funktionen `sin`, `cos` und `tan` mithilfe der Taylor-Reihe. 

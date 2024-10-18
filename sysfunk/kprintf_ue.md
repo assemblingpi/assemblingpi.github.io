@@ -1,4 +1,5 @@
-## Übungsaufgabe: Implementierung einer formatierenden Ausgabefunktion in ARM-Assembly
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.9 Systemnahe Funktionen: Aufgabe Implementierung einer formatierenden Ausgabefunktion in ARM-Assembly
 
 ### Aufgabenstellung:
 

@@ -1,4 +1,5 @@
-## Einführung in die Computergrafik & RGB565-Format
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.4.1 Grafik & GPU: Einführung in die Computergrafik & RGB565-Format
 
 Computergrafik ermöglicht es uns, Bilder, Animationen und komplexe visuelle Darstellungen in digitalen Medien zu erzeugen. Sie spielt eine zentrale Rolle in den Bereichen Unterhaltung, Design und Technik. Doch um ihre Mechanismen zu verstehen, müssen wir uns grundlegende Konzepte wie Pixel, Farbdarstellung und die Rolle der Hardware näher ansehen. In diesem Artikel betrachten wir zunächst diese Grundlagen und gehen anschließend auf das RGB565-Format ein, ein effizienteres Farbformat, das in vielen ressourcenbegrenzten Systemen eingesetzt wird.
 
@@ -34,4 +35,4 @@ Da wir im weiteren Verlauf des Tutorials das RGB565-Format verwenden werden, ist
 
 
 |--------------------------------------|-------------------------------|------------------------------|
-| [zurück](../vfpuNeon/matrix_lsg.md)  | [Hauptmenü](../ueberblick.md) | [weiter](gpuintro.md)      |
+| [zurück](../vfpuNeon/matrix_lsg.md)  | [Hauptmenü](../ueberblick.md) | [weiter](gpuintro.md)        |

@@ -1,4 +1,5 @@
-## VFP: Data Conversion Befehle
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.5 VFP und NEON: VFP Data Conversion Befehle
 
 Die Armv7-Architektur bietet Instruktionen, um Werte zwischen verschiedenen Floating-Point- und Integer-Formaten zu konvertieren.
 

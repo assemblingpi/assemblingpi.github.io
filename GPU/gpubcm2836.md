@@ -1,4 +1,6 @@
-## Die GPU des BCM2836: VideoCoreIV
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.4.3 Grafik & GPU: Die GPU des BCM2836 VideoCoreIV
+
 Im Raspberry Pi 2 B ist die VideoCore IV GPU integriert, die im Broadcom BCM2836 Chip enthalten ist. Diese GPU ist für die Berechnung und Darstellung von 2D- und 3D-Grafiken sowie für die Hardware-Video-Decodierung zuständig. Sie arbeitet eng mit dem ARM Cortex A7 Prozessor zusammen, um die Systemleistung zu optimieren.
 
 Die Kommunikation zwischen der ARM-CPU und der VideoCore IV GPU erfolgt über einen Mailbox-Mechanismus. Dieser Mechanismus ermöglicht den Austausch von Nachrichten und Daten. 

@@ -1,4 +1,5 @@
-## Timer
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.2.1 Timer: Intro
 
 Ein Timer ist eine Hardwarekomponente, die Zeitintervalle misst, meist durch Zählen in festen Schritten. Sobald der Timer einen vorgegebenen Wert erreicht, löst er ein einen Interrupt aus, der dem Prozessor signalisiert, dass das Zeitintervall abgelaufen ist. Timer arbeiten oft unabhängig von der CPU und sind entscheidend für das Timing von Ereignissen und die Steuerung zeitbasierter Prozesse. 
 

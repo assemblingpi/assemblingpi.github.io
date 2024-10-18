@@ -1,4 +1,5 @@
-## Aufbau und Funktion der Vector Table
+# B.1 Einführung
+## 1.9.6 Interrupts: Aufbau und Funktion der Vector Table
 Die Vector Table in der ARMv7-A Architektur beginnt bei der Speicheradresse 0 und ordnet verschiedene Speicheradressen den unterschiedlichen Exception-Typen zu:
 
 - **0x00:** Reset – Neustart des Kernels nach einem Hardware-Reset.

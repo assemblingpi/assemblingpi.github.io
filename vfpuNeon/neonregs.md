@@ -1,4 +1,5 @@
-## Überblick über die ARMv7 NEON-Register
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.7 VFP und NEON: Überblick über die ARMv7 NEON-Register
 
 In ARMv7 NEON können die Register in drei verschiedenen Arten betrachtet werden:
 1. **128-Bit Q-Register (Q0 - Q15)**: Es gibt 16 Q-Register, die jeweils 128 Bit breit sind.

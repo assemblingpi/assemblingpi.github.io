@@ -1,4 +1,5 @@
-## Was ist eine GPU?
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.4.2 Grafik & GPU: Was ist eine GPU?
 
 Eine Grafikprozessor-Einheit (GPU) ist ein spezialisierter Prozessor, der für die Verarbeitung und Darstellung von Grafiken und Bilddaten auf Computern und anderen Geräten entwickelt wurde. Sie spielt eine entscheidende Rolle in modernen Computern, Konsolen, Mobilgeräten und eingebetteten Systemen, indem sie komplexe grafische Operationen effizient ausführt.
 
@@ -14,4 +15,4 @@ Eine Grafikprozessor-Einheit (GPU) ist ein spezialisierter Prozessor, der für d
 GPUs sind vielseitige Komponenten, deren Einsatzbereiche weit über die herkömmliche Berechnung von Grafik- und Physikeffekten in modernen Computerspielen hinausgehen. Neben der Hauptverantwortung für die Echtzeit-Berechnung von detaillierten und flüssigen 3D-Darstellungen, die für ein immersives Spielerlebnis unerlässlich sind, finden GPUs auch Anwendung in der wissenschaftlichen Berechnung und Datenanalyse. Hierbei nutzen sie ihre Fähigkeit zur parallelen Verarbeitung, um große Datenmengen effizient zu bewältigen und komplexe Berechnungen zügig durchzuführen. Neben diesen prominenten Einsatzgebieten gibt es noch viele weitere Anwendungsbereiche, die von der Flexibilität und Leistungsfähigkeit von GPUs profitieren.
 
 |--------------------------------------|-------------------------------|------------------------------|
-| [zurück](grafikintro.md)  | [Hauptmenü](../ueberblick.md) | [weiter](gpubcm2836.md)      |
+| [zurück](grafikintro.md)             | [Hauptmenü](../ueberblick.md) | [weiter](gpubcm2836.md)      |

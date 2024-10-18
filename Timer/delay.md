@@ -1,4 +1,5 @@
-### Aufgabenstellung: Implementierung einer Delay-Funktion
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.2.4 Timer: Übungsaufgabe Implementierung einer Delay-Funktion
 
 #### Hintergrund
 

@@ -1,4 +1,5 @@
-## kprintf - Lösungsvorschlag
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.9 Systemnahe Funktionen:  kprintf - Lösungsvorschlag
 
 Die vorliegende `kprintf`-Funktion ist eine Implementierung eines formatierenden Ausgabemechanismus in ARM-Assembly, der ähnlich wie die `printf`-Funktion in der C-Standardbibliothek arbeitet. 
 

@@ -1,4 +1,5 @@
-## Aufgabenstellung: Implementierung einer `kwrite`-Funktion
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.7 Systemnahe Funktionen: Lösung Implementierung einer `kwrite`-Funktion
 
 Der gegebene ARM-Assembler-Code implementiert die Funktion `kwrite`, die Daten an verschiedene Ausgabestellen schreibt, wie zum Beispiel an das Display, eine Datei oder über UART für Fehlerausgaben. Diese Funktion wird beispielsweise von `kprintf` verwendet, um formatierte Ausgaben zu ermöglichen.
 

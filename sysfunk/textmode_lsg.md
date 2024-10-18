@@ -1,4 +1,5 @@
-## Lösung: Implementierung von Funktionen zur Verwaltung des Textmodus
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.5 Systemnahe Funktionen: Lösung: Implementierung von Funktionen zur Verwaltung des Textmodus
 
 ### Deklarationen und Definitionen
 

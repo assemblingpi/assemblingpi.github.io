@@ -1,4 +1,5 @@
-### Aufgabenstellung: Implementierung einer `kwrite`-Funktion
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.7 Systemnahe Funktionen: Aufgabe Implementierung einer `kwrite`-Funktion
 
 **Ziel:**  
 Entwickeln Sie die Funktion `kwrite` in ARM-Assembler, die Daten an verschiedene Ausgabemedien wie Display, Datei oder UART für Fehlerausgaben schreibt. Diese Funktion soll von `kprintf` genutzt werden, um formatierte Ausgaben zu ermöglichen. Es ist an dieser Stelle weder nötig noch möglich die Dateiausgabe zu implementieren, da wir im Rahmen des Tutorials kein Dateisystem implementieren werden.

@@ -1,10 +1,11 @@
-### Aufgabe: Implementierung einer Eingabefunktion 
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.8 Systemnahe Funktionen:  Aufgabe Implementierung einer Eingabefunktion 
 
-#### Beschreibung
+### Beschreibung
 
 Implementieren Sie eine Funktion `kread` im File `kread.s`, die Daten von verschiedenen Eingabequellen einliest und in einem bereitgestellten Puffer speichert. Die Funktion soll sowohl Eingaben von der UART-Schnittstelle als auch von Dateien verarbeiten können, letzteres ist optional, da wir im Rahmen dieses Tutorials kein Dateisystem implementieren werden. Dabei sollen spezielle Eingaben wie Carriage Return (Enter-Taste), Backspace und die Anpassung der Tastatureingaben zwischen amerikanischer und deutscher Belegung berücksichtigt werden. Am Ende soll die Funktion die Länge des eingelesenen Strings zurückgeben oder einen Fehlercode, falls ein Fehler aufgetreten ist.
 
-#### Spezifikationen
+### Spezifikationen
 
 - **Funktionsprototyp:**
 

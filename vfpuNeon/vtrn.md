@@ -1,4 +1,5 @@
-## **VTRN (Vector Transpose) Instruktionen**
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.16 VFP und NEON: VTRN (Vector Transpose) Instruktionen
 
 Die **VTRN**-Instruktionen dienen dazu, Elemente zwischen zwei Vektorregistern zu vertauschen. Diese Befehle sind besonders nützlich, wenn es darum geht, die Daten innerhalb von Registern so anzuordnen, dass sie für nachfolgende Verarbeitungsschritte optimal positioniert sind, zum Beispiel in der Bild- oder Audiodatenverarbeitung.
 

@@ -1,4 +1,6 @@
-## VFP (Vector Floating Point) in der ARM-Architektur
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.4 VFP und NEON: VFP (Vector Floating Point) in der ARM-Architektur
+
 Der **Vector Floating Point (VFP) Coprozessor** ist eine Erweiterung der ARM-Architektur, die Hardware-Unterstützung für Gleitkommaoperationen bietet. VFP ermöglicht effiziente Berechnungen mit Gleitkommazahlen im Single-Precision (32-Bit) und Double-Precision (64-Bit) Format. Diese Erweiterung ist entscheidend für Anwendungen, die umfangreiche mathematische Berechnungen erfordern, wie beispielsweise wissenschaftliche Simulationen, Signalverarbeitung und Multimedia-Anwendungen.
 
 **Hinweis: Im folgenden werden wir uns auf Single-Precision Arithmetik beschränken**

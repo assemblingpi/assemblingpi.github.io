@@ -1,4 +1,5 @@
-## Aufgabenstellung: grundlegende Grafikbibliothek
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.4 Systemnahe Funktionen: Grundlegende Grafikbibliothek Lösung
 
 ### 1. **Deklarationen und Datenabschnitt**
 

@@ -1,4 +1,5 @@
-## NEON: Was ist das?
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.3.6 VFP und NEON: Was ist NEON?
 NEON ist eine SIMD-Erweiterung (Single Instruction, Multiple Data) innerhalb von ARM-Prozessoren, die entwickelt wurde, um die Effizienz bei datenintensiven Anwendungen wie Multimedia, Signalverarbeitung und 3D-Grafik zu steigern. Diese Technologie ermöglicht die parallele Ausführung von Operationen auf Vektordaten in 128-Bit-Registerblöcken, was zu einer signifikanten Leistungssteigerung führt.
 
 Mit NEON können mehrere Datenelemente – entweder Integer oder Floating-Point – gleichzeitig verarbeitet werden. Dadurch reduziert sich der Rechenaufwand für Aufgaben, die traditionell sequenziell durchgeführt werden, erheblich. Dies macht NEON besonders wertvoll für Anwendungen, in denen große Datenmengen schnell verarbeitet werden müssen, wie zum Beispiel in der Signalverarbeitung und bei grafikintensiven Anwendungen.

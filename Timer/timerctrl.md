@@ -1,4 +1,5 @@
-## Steuerung des Virtual Timer
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.2.3 Timer: Steuerung des Virtual Timer
 
 Um den `Virtual Timer` nutzen zu können, sind mehrere Funktionen zur Überwachung und Steuerung des Timers erforderlich. 
 Zunächst muss der Timer aktiviert werden, damit er Zeitintervalle zählen kann. Ein **Zielwert** muss festgelegt werden, bei dessen Erreichen der Timer einen **Interrupt** auslöst. Dieser Interrupt muss aktiviert werden, damit der Prozessor benachrichtigt wird, wenn das Zeitintervall abgelaufen ist. Während der Ausführung des Programms kann es erforderlich sein, den aktuellen Status und den Zählerstand des Timers abzurufen, um zu überprüfen, wie viel Zeit vergangen ist und ob ein Interrupt ausgelöst wurde. Zusätzlich ist es wichtig, den **Offset** des Timers abzurufen zu können, um sicherzustellen, dass der Timer korrekt justiert ist, und die **Zählfrequenz** des Timers auszulesen, um die genaue Geschwindigkeit der Zeitmessung zu kennen. Schließlich muss der Timer deaktiviert werden, wenn er nicht mehr benötigt wird, um Ressourcen freizugeben und unnötige Events zu vermeiden.

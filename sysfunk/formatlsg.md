@@ -1,4 +1,5 @@
-## Lösung: Implementierung von Zahlendarstellungsfunktionen 
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.3 Systemnahe Funktionen: Lösung zur Implementierung von Zahlendarstellungsfunktionen 
 
 ### **Daten-Sektion (`.section .data`)**
 

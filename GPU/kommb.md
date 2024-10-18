@@ -1,4 +1,5 @@
-## Kommunikation mittels Mailbox
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.4.4 Grafik & GPU: Kommunikation mittels Mailbox
 Um über die Mailbox zwischen GPU und CPU Daten austauschen zu können werden zunächst zwei Funktionen benötigt. Eine, um damit der ARM-Prozessor Daten senden kann, MailboxWrite - und eine weitere, damit er Daten in Empfang nehmen kann, MailboxRead.
 
 ![Mailbox](mailbox.png)
@@ -13,7 +14,7 @@ Der Empfänger wartet, bis das Statusfeld im 30. Bit eine 0 anzeigt. Danach lies
 Zudem ist es ratsam eine Fehlerbehandlung vorzunehmen, bei der sich die Funktionen bei Problemen vorzeitig beenden, indem sie mit einem Fehlercode als Rückgabewert zur Rücksprungadresse zurückkehren.
 
 
-## Implementierung von Mailboxwrite & Mailboxread
+### Implementierung von Mailboxwrite & Mailboxread
 
 Der folgende Code implementiert die Funktionen zur Kommunikation zwischen CPU und GPU über die Mailbox:
 

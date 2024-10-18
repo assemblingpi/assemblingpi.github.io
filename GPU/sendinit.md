@@ -1,4 +1,6 @@
-## Senden der Initialisierungsnachricht
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.4.7 Grafik & GPU: Senden der Initialisierungsnachricht
+
 Legen sie das File `kframebuff.s` an, das folgenden Inhalt hat:
 
 ```

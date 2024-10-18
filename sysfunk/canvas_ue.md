@@ -1,4 +1,5 @@
-## Aufgabenstellung: grundlegende Grafikbibliothek
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.4 Systemnahe Funktionen:  Grundlegende Grafikbibliothek Aufgaben
 
 Entwickeln Sie eine Grafikbibliothek zur Verwaltung und Darstellung von Grafiken auf einem Bildschirm. Die Bibliothek soll die Initialisierung eines Framebuffers, das Setzen einzelner Pixel, das Füllen des gesamten Bildschirms mit einer Farbe sowie die Umrechnung von Benutzerkoordinaten in Bildschirmkoordinaten ermöglichen. Erstellen sie dazu das Sourcefile `canvas.s`. 
 

@@ -1,4 +1,5 @@
-## Lösung: Implementiere `kscan` für formatiertes Einlesen
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.10 Systemnahe Funktionen: Lösung zur Implementiere `kscan` für formatiertes Einlesen
 ### 1. **Deklarationen und Datenabschnitt**
 
 Der Anfang des Codes deklariert globale Symbole, externe Funktionen und definiert Konstanten sowie Daten für Fehlermeldungen und einen internen Puffer:

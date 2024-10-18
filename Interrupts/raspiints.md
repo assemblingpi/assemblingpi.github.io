@@ -1,4 +1,5 @@
-## Interrupts im Raspberry Pi 2B
+# B.1 Einführung
+## 1.9.5 Interrupts: Interrupts im Raspberry Pi 2B
 
 ### Struktur des Interrupt-Systems des BCM2836
 Jeder der vier Prozessor-Kerne besitzt einen eigenen lokalen Interrupt-Controller, der speziell für die Verwaltung von lokalen Interrupts, wie Timer- und Mailbox-Interrupts, zuständig ist. Zusätzlich existiert ein globaler Interrupt-Controller, der dafür verantwortlich ist, Interrupts von Peripheriegeräten, wie der GPU, an die verschiedenen Kerne zu verteilen.

@@ -1,4 +1,5 @@
-## Aufgabenstellung: Implementiere `kscan` für formatiertes Einlesen
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.10 Systemnahe Funktionen: Aufgabe Implementiere `kscan` für formatiertes Einlesen
 
 Entwickeln Sie die Assembly-Funktion `kscan`, die Benutzereingaben entsprechend einem vorgegebenen Formatstring verarbeitet. Die Funktion soll in der Lage sein, Eingaben für die Platzhalter `%d` (Dezimalzahl) und `%s` (Zeichenkette) einzulesen und die Werte an die entsprechenden Speicheradressen zu speichern. 
 

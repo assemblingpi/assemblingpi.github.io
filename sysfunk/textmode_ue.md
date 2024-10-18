@@ -1,4 +1,5 @@
-## Aufgabe: Implementierung von Funktionen zur Verwaltung des Textmodus
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.5 Systemnahe Funktionen: Aufgabe zur Implementierung von Funktionen zur Verwaltung des Textmodus
 
 ### Hintergrund
 

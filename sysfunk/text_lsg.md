@@ -1,4 +1,5 @@
-## Lösung: Textdarstellung via Textmode
+# B.3 Implementierung systemnaher Funktionen
+## 3.1.6 Systemnahe Funktionen: Lösung Textdarstellung via Textmode
 
 Der vorliegende Code implementiert ein grundlegendes System zur Textdarstellung im Textmodus. Er verwaltet den aktuellen Positionierungsindex in der Texttabelle, ermöglicht das Drucken und Löschen von Zeichen sowie das Handling von Zeilenumbrüchen. Durch die Verwendung von globalen und externen Symbolen lässt sich dieser Code problemlos in größere Systeme integrieren, um die Textausgabe auf dem Bildschirm zu steuern und darzustellen.
 

@@ -1,4 +1,5 @@
-## Der Framebuffer-Mailbox-Kanal
+# B.2 Erweiterungen der CPU-Funktionalität
+## 2.4.6 Grafik & GPU: Der Framebuffer-Mailbox-Kanal
 
 ### Überblick über den Framebuffer-Kanal
 Der Framebuffer-Kanal ist der Mailbox-Kanal 1 und stellt eine von mehreren Methoden dar, um von der GPU ein Framebuffer anzufordern.
