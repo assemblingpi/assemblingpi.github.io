@@ -10,3 +10,9 @@ Wenn man ein Programm im CPUlator ausführt, verhält es sich nahezu identisch z
 
 |---------------------------------------|-------------------------------|-----------------------|
 | [zurück](../progspracheasm/adrmodi.md)| [Hauptmenü](../ueberblick.md) | [weiter](cpulator.md) | 
+
+
+| **1.5 CPUlator**                                                                          |
+|-------------------------------------------------------------------------------------------|
+| [1.5.1 Erste Schritte in Assembler](../CPUlator/erste.md)                                 |
+| [1.5.2 Einführung in CPUlator](../CPUlator/cpulator.md)                                   |

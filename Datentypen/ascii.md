@@ -150,3 +150,9 @@ Die folgende Tabelle dient als Referenz, um schnell nachzusehen, welches Ascii-Z
 
 |-------------------------------|------------------------------------|----------------------------------|
 |   [zurück](einfachdtypen.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](komplexedtypen.md)    |
+
+
+| **5.2 Einfache Datentypen**                                           |
+|-----------------------------------------------------------------------|
+| [5.2.1 Intro](einfachdtypen.md)                                       |
+| [5.2.2 ASCII](ascii.md)                                               |

@@ -11,3 +11,5 @@ Der Programmierer muss also sicherstellen, dass das Programm die Werte im Speich
 
 |-------------------------------------------|------------------------------------|---------------------------------|
 |   [zurück](../Lookuptables/lookuplsg.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](einfachdtypen.md)    |
+
+

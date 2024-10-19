@@ -89,3 +89,9 @@ label_end:
 |--------------------|-------------------------------|--------------------------------|
 | [zurück](anwops.md)| [Hauptmenü](../ueberblick.md) | [weiter](../CPUlator/erste.md) | 
 
+
+| **1.4 Die Programmiersprache Assembler**  	                                            |
+|-------------------------------------------------------------------------------------------|
+| [1.4.1 Was ist Assembler?](../progspracheasm/progasmintro.md)                             |
+| [1.4.2 Anweisungen und Operanden](../progspracheasm/anwops.md)                            |
+| [1.4.3 Operanden und Adressierungsarten](../progspracheasm/adrmodi.md)                    |

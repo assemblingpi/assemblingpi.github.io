@@ -58,3 +58,9 @@ Hier kann man in Echtzeit verfolgen, wie sich die Registerwerte während der Aus
 
 |-------------------|-------------------------------|---------------------------------------|
 | [zurück](erste.md)| [Hauptmenü](../ueberblick.md) | [weiter](../Datentransfer/datentr.md) | 
+
+
+| **1.5 CPUlator**                                                                          |
+|-------------------------------------------------------------------------------------------|
+| [1.5.1 Erste Schritte in Assembler](../CPUlator/erste.md)                                 |
+| [1.5.2 Einführung in CPUlator](../CPUlator/cpulator.md)                                   |

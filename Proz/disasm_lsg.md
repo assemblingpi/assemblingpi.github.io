@@ -1,5 +1,5 @@
 # A.6 Prozedurale Programmierung
-## 6.2.6 Was ist eine Prozedur: Lösung zur Übungsaufgabe 
+## 6.2.7 Was ist eine Prozedur: Lösung zur Übungsaufgabe 
 
 ### Lokalisierung der main-Funktion
 Der erste Schritt zur Analyse des Programms ist das Auffinden der main-Funktion. Diese Funktion bildet den Ausgangspunkt des Programms und steuert den gesamten Ablauf. Indem wir die main-Funktion untersuchen, erhalten wir einen Überblick über die Struktur und den grundlegenden Ablauf des Codes. 
@@ -248,3 +248,14 @@ In `.LBB1_7` wird die Funktion, welche die Benutzereingabe prüft, beendet - sof
 
 |-----------------------------|------------------------------------|----------------------------------------|
 |   [zurück](disasm_ue.md)    |   [Hauptmenü](../ueberblick.md)    |   [weiter](../Advanced/advanced.md)    |
+
+
+| **6.2 Was Was ist eine Prozedur**                                             |
+|-------------------------------------------------------------------------------|
+| [6.2.1 Intro](wasistproz.md)                                                  |
+| [6.2.2 Der Stack](wasiststack.md)                                             |
+| [6.2.3 Was ist der Stackframe einer Prozedur?](wasiststackframe.md)           |
+| [6.2.4 Was ist der Calltree?](wasistcalltree.md)                              |
+| [6.2.5 Prozeduren, Link Register und Stack](prozlrstack.md)                   |
+| [6.2.6 Parameterübergabe und Rückgabewerte](param.md)                         |
+| [6.2.7 Finde das geheime Passwort!](disasm_ue.md)                             |

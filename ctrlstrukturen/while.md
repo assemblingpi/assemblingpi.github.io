@@ -34,3 +34,15 @@ Dieser Code implementiert eine `while-Schleife`, die die Variable `i` von 1 bis 
 
 |----------------------------|------------------------------------|----------------------------|
 |   [zurück](switchcase.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](do_while.md)    |
+
+
+| **3.2 Kontrollstrukturen**                                            |
+|-----------------------------------------------------------------------|
+| [3.2.1 Intro](../ctrlstrukturen/ctrlstrcts.md)                        |
+| [3.2.2 If-not-then](../ctrlstrukturen/ifnotthen.md)                   |
+| [3.2.3 If-elseIf-then](../ctrlstrukturen/ifelse.md)                   |
+| [3.2.4 If-then elseif-then](../ctrlstrukturen/If-then_elseif-then.md) |
+| [3.2.5 Switch-Case](../ctrlstrukturen/switchcase.md)                  |
+| [3.2.6 While-Schleifen](../ctrlstrukturen/while.md)                   |
+| [3.2.7 Do-While-Schleifen](../ctrlstrukturen/do_while.md)             |
+| [3.2.8 Zustandsautomaten](../Statemachine/Statemach.md)               |

@@ -84,3 +84,11 @@ In diesem Beispiel wird der Befehl `BL addierer` verwendet, um in den Block `add
 
 |--------------------------|------------------------------------|-------------------------------|
 |   [zurück](ctrlflow.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](bedingtespr.md)    |
+
+
+| **3.1 Kontrollflussinstruktionen**                                    |
+|-----------------------------------------------------------------------|
+| [3.1.1 Intro](ctrlflow.md)                                            |
+| [3.1.2 Unbedingte Sprünge](unbedingtespr.md)                          |
+| [3.1.3 Bedingte Sprünge](bedingtespr.md)                              |
+| [3.1.4 Manipulation des Programmcounters (Übungsaufgabe)](ctrlue.md)	|

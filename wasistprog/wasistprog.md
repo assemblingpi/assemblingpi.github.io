@@ -1,17 +1,6 @@
 # A.1 Einführung
 ## 1.1.1 Was ist ein Programm: Intro
 
-
-| **1.3 Zahlensysteme, Bits und Bytes**                                                     |
-| [1.3.1 Zahlensysteme Bits und Bytes](../ZahlensysBitsBytes/zbb.md)                        |
-| **1.4 Die Programmiersprache Assembler**  	                                            |
-| [1.4.1 Was ist Assembler?](../progspracheasm/progasmintro.md)                             |
-| [1.4.2 Anweisungen und Operanden](../progspracheasm/anwops.md)                            |
-| [1.4.3 Operanden und Adressierungsarten](../progspracheasm/adrmodi.md)                    |
-| **1.5 CPUlator**                                                                          |
-| [1.5.1 Erste Schritte in Assembler](../CPUlator/erste.md)                                 |
-| [1.5.2 Einführung in CPUlator](../CPUlator/cpulator.md)                                   |
-
 Ein Programm besteht aus einer Abfolge von sehr elementaren Anweisungen für einen Computer, deren schrittweise Abarbeitung dazu führt, dass eine bestimmte Aufgabe erledigt wird. Diese Anweisungen sind in einer Sprache geschrieben, die der Prozessor versteht, und sie werden im Speicher des Computers abgelegt, genauso wie die Daten, die das Programm verarbeitet. 
 
 Um als Programm eine sinnvolle Tätigkeit zu verrichten, braucht es viele dieser elementaren Befehle, die nacheinander abgearbeitet werden müssen. Die Reihenfolge, in der dies stattfindet, nennt man "Programmfluss". Typischerweise werden die Befehle vom Prozessor sequentiell in der Reihenfolge ausgeführt, in der sie auch im Speicher liegen, einer nach dem anderen. Der Programmfluss kann jedoch durch Befehle verändert werden, sodass der Prozessor anstelle des nächsten Befehls im Speicher an eine andere Stelle im Code springt und dort mit der Ausführung von Befehlen fortfährt. 
@@ -22,8 +11,6 @@ Ein Programm besteht somit aus Blöcken von Befehlen, die linear abgearbeitet we
 |-----------------------|-------------------------------|----------------------|
 | [zurück](../index.md) | [Hauptmenü](../ueberblick.md) | [weiter](mehrals.md) | 
 
-
-### Überblick Kapitel 1.1
 
 | **1.1 Was ist ein Programm?**                                                             |
 |-------------------------------------------------------------------------------------------| 

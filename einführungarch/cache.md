@@ -5,3 +5,14 @@ Den Hauptspeicher kann man, wie bereits erwähnt, vereinfacht als ein lineares A
 
 |---------------------|-------------------------------|---------------------|
 | [zurück](endilsg.md)| [Hauptmenü](../ueberblick.md) | [weiter](eaintro.md)| 
+
+
+| **1.2 Grundlagen der Computerarchitektur**                                                |
+|-------------------------------------------------------------------------------------------|
+| [1.2.1 Die Ausführung von Programmen durch den Computer](../einführungarch/cpuintro.md)   |
+| [1.2.2 Von-Neumann-Architektur](../einführungarch/archintro.md)                           |
+| [1.2.3 Der Speicher](../einführungarch/memintro.md)                                       |
+| [1.2.4 Speicher und Cache](../einführungarch/cache.md)                                    |
+| [1.2.5 Ein- und Ausgabegeräte](../einführungarch/eaintro.md)                              |
+| [1.2.6 Der Systembus](../einführungarch/sbusintro.md)                                     |
+| [1.2.7 Der Befehlszyklus](../einführungarch/archintro_pip.md)                             |

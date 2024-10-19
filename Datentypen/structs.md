@@ -40,3 +40,12 @@ struct_bsp:
 
 |--------------------------------|------------------------------------|--------------------------|
 |   [zurück](komplexedtypen.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](arrays.md)    |
+
+
+| **5.3 Komplexe Datentypen**                                                   |
+|-------------------------------------------------------------------------------|
+| [5.3.1 Intro](komplexedtypen.md)                                              |
+| [5.3.2 Structs (Strukturen)](structs.md)                                      |
+| [5.3.3 Arrays in Assembler](arrays.md)                                        |
+| [5.3.4 Zugriffsberechnung bei einem eindimensionalen Array](array1dim.md)     |
+| [5.3.5 Mehrdimensionalen Arrays](arraysmultidim.md)                           |
