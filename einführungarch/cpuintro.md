@@ -3,6 +3,7 @@
 
 ### Überblick Kapitel 1.2
 | **1.2 Grundlagen der Computerarchitektur**                                                |
+|-------------------------------------------------------------------------------------------|
 | [1.2.1 Die Ausführung von Programmen durch den Computer](../einführungarch/cpuintro.md)   |
 | [1.2.2 Von-Neumann-Architektur](../einführungarch/archintro.md)                           |
 | [1.2.3 Der Speicher](../einführungarch/memintro.md)                                       |
