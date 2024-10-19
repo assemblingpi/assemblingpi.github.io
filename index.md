@@ -2,7 +2,7 @@
 
 Assembling Pi ist ein Tutorial, das Schritt für Schritt in die Welt der Assembler-Programmierung auf dem Raspberry Pi einführt.  Es richtet sich an alle, die ein tieferes Verständnis für die Interaktion von Hard- und Software auf fundamentaler Ebene entwickeln möchten – auch ohne Vorkenntnisse in der Assembler-Programmierung.
 
-Der Titel spielt auf das bekannte Tutorial [Baking Pi](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/), an, das eine Einführung in die Grafikprogrammierung auf dem Raspberry Pi 1 mittels Assembler bietet. Während sich Baking Pi primär auf grafische Anwendungen konzentriert, legt Assembling Pi den Fokus auf die Grundlagen der Assembler-Programmierung und vermittelt detailliert die zugrundeliegenden Konzepte.
+Der Titel spielt auf das bekannte Tutorial [Baking Pi](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/), an, das eine Einführung in die Grafikprogrammierung auf dem Raspberry Pi 1 in Assembler bietet. Während sich Baking Pi primär auf grafische Anwendungen konzentriert, legt Assembling Pi den Fokus auf die Grundlagen der Assembler-Programmierung und vermittelt detailliert die zugrundeliegenden Konzepte.
 
 ### Lernen Sie die Muttersprache der ARM-Prozessoren!
 

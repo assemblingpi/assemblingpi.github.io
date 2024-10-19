@@ -1,22 +1,7 @@
 # A.1 Einführung
 ## 1.1.1 Was ist ein Programm: Intro
 
-### Überblick
 
-| **A.1 Einführung**                                                                        |
-|-------------------------------------------------------------------------------------------|
-| **1.1 Was ist ein Programm?**                                                             | 
-| [1.1.1 Intro](../wasistprog/wasistprog.md)                                                |
-| [1.1.2 Mehr als ein Gedankenspiel](../wasistprog/mehrals.md)                              | 
-| [1.1.3 Was ist denn nun ein "Disassembler"?](../wasistprog/disasm.md)                     |
-| **1.2 Grundlagen der Computerarchitektur**                                                |
-| [1.2.1 Die Ausführung von Programmen durch den Computer](../einführungarch/cpuintro.md)   |
-| [1.2.2 Von-Neumann-Architektur](../einführungarch/archintro.md)                           |
-| [1.2.3 Der Speicher](../einführungarch/memintro.md)                                       |
-| [1.2.4 Speicher und Cache](../einführungarch/cache.md)                                    |
-| [1.2.5 Ein- und Ausgabegeräte](../einführungarch/eaintro.md)                              |
-| [1.2.6 Der Systembus](../einführungarch/sbusintro.md)                                     |
-| [1.2.7 Der Befehlszyklus](../einführungarch/archintro_pip.md)                             |
 | **1.3 Zahlensysteme, Bits und Bytes**                                                     |
 | [1.3.1 Zahlensysteme Bits und Bytes](../ZahlensysBitsBytes/zbb.md)                        |
 | **1.4 Die Programmiersprache Assembler**  	                                            |
@@ -36,3 +21,9 @@ Ein Programm besteht somit aus Blöcken von Befehlen, die linear abgearbeitet we
 
 |-----------------------|-------------------------------|----------------------|
 | [zurück](../index.md) | [Hauptmenü](../ueberblick.md) | [weiter](mehrals.md) | 
+
+### Überblick Kapitel 1.1
+| **1.1 Was ist ein Programm?**                                                             | 
+| [1.1.1 Intro](../wasistprog/wasistprog.md)                                                |
+| [1.1.2 Mehr als ein Gedankenspiel](../wasistprog/mehrals.md)                              | 
+| [1.1.3 Was ist denn nun ein "Disassembler"?](../wasistprog/disasm.md)                     |
