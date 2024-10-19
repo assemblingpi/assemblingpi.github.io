@@ -13,9 +13,7 @@ Zusätzlich ermöglichen **Eingabe-/Ausgabegeräte (I/O)** dem Computer, mit ext
 | [zurück](../wasistprog/disasm.md)| [Hauptmenü](../index.md) | [weiter](archintro.md)| 
 
 
-### Überblick Kapitel 1.2
-
-| **1.2 Grundlagen der Computerarchitektur**                                                |
+| ** Überblick Kapitel 1.2 Grundlagen der Computerarchitektur**                             |
 |-------------------------------------------------------------------------------------------|
 | [1.2.1 Die Ausführung von Programmen durch den Computer](../einführungarch/cpuintro.md)   |
 | [1.2.2 Von-Neumann-Architektur](../einführungarch/archintro.md)                           |
