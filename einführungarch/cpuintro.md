@@ -2,6 +2,7 @@
 ## 1.2.1 Grundlagen der Computerarchitektur: Die Ausführung von Programmen durch den Computer
 
 ### Überblick Kapitel 1.2
+
 | **1.2 Grundlagen der Computerarchitektur**                                                |
 |-------------------------------------------------------------------------------------------|
 | [1.2.1 Die Ausführung von Programmen durch den Computer](../einführungarch/cpuintro.md)   |

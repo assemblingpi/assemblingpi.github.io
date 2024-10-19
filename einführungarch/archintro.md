@@ -49,6 +49,7 @@ Innerhalb der ARM-CPU gibt es verschiedene **32-Bit Register**, die für spezifi
 | [zurück](cpuintro.md) | [Hauptmenü](../ueberblick.md) | [weiter](memintro.md)| 
 
 ### Überblick Kapitel 1.2
+
 | **1.2 Grundlagen der Computerarchitektur**                                                |
 |-------------------------------------------------------------------------------------------|
 | [1.2.1 Die Ausführung von Programmen durch den Computer](../einführungarch/cpuintro.md)   |
