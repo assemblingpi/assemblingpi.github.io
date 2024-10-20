@@ -27,6 +27,7 @@ Hierbei gilt:
 
 Beispiel in ARM-Assembler:
 ```asm
+.data
 array: .space 16, 0xbb  @ 16 Elemente, die je 1 Byte groß sind und mit 0xbb
                         @ initialisiert wurden
 

@@ -143,7 +143,7 @@ Nach Erkennung eines %-Zeichens wird geprüft, welcher Spezifikator folgt:
 format_id:                           
 check: 
 	mov    r3, #1
-check_loop:                          @ prüfe ob zeichen nach % eine nummer (Fieldwith)
+check_loop:                          @ prüfe ob zeichen nach % eine nummer (Fieldwidth)
 	cmp 	r1, #64
 	bhi 	checkasc
 	cmp     r1, #0x30
@@ -155,7 +155,7 @@ check_loop:                          @ prüfe ob zeichen nach % eine nummer (Fie
 	sub     r1, r1, #0x30
 	mov     r0, #10
 	push    {r5}
-	umull 	r2, r5, r2, r3           @ fieldwith
+	umull 	r2, r5, r2, r3           @ fieldwidth
 	umull   r3, r5, r3, r0    
 	pop     {r5}
 	add     r1, r1, r2

@@ -10,7 +10,7 @@ In vielen Prozessoren ohne spezielle Hardware für Floating-Point-Operationen wi
 Trotz der vielen Vorteile der Floating-Point-Darstellung gibt es auch einige Einschränkungen. Da Computer nur eine **begrenzte Anzahl von Bits** zur Verfügung haben, um Zahlen zu speichern, ist die Präzision zwangsläufig **beschränkt**. Im Gegensatz zu reellen Zahlen, die unendlich viele Nachkommastellen besitzen können, stellt die Floating-Point-Darstellung nur eine **Annäherung an die tatsächlichen reellen Werte** dar. Dies führt zu unvermeidbaren Rundungsfehlern, die insbesondere in sensiblen Anwendungen sorgfältig berücksichtigt werden müssen.
 
 |--------------------------------|------------------------------------|----------------------------|
-|   [zurück](../Timer/delay.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](bingleit.md)    |
+|   [zurück](../Timer/delay_lsg.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](bingleit.md)    |
 
 
 |**2.3 VFP und NEON**                                                                                               |

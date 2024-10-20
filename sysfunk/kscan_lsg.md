@@ -4,7 +4,7 @@
 
 Der Anfang des Codes deklariert globale Symbole, externe Funktionen und definiert Konstanten sowie Daten für Fehlermeldungen und einen internen Puffer:
 
-```assembly
+```
 .global kscan
 .extern kprintf
 .extern memset
@@ -15,7 +15,7 @@ Der Anfang des Codes deklariert globale Symbole, externe Funktionen und definier
 .equ PARAM_CNT,         BASE -  0x08  
 .equ STACKMAX,          BASE -  PARAM_CNT
 // --------------------------------------
-.equ ARGS,              BASE +  0x04     @ offset noetig, da r11 + 4 nicht erstes Argument, sondern Rücksprungadr wäre
+.equ ARGS,              BASE +  0x04     
 // --------------------------------------
 .section .data
   unknown_for_str:    .asciz "ERROR: unknown format identifier/n" 
@@ -55,7 +55,7 @@ Im **Datenabschnitt** werden verschiedene Fehlermeldungen als nullterminierte Ze
 
 Die Hauptfunktion `kscan` implementiert eine Scanner-Funktion ähnlich der Standard `scanf`-Funktion. Sie verarbeitet einen Formatstring und liest entsprechende Eingaben ein.
 
-```assembly
+```
 .section .text
 kscan:  			
 ```
@@ -66,7 +66,7 @@ Der **`.text`-Abschnitt** enthält den ausführbaren Code, einschließlich der F
 
 Der Anfang der Funktion `kscan` richtet den Stack-Frame ein und speichert den Formatstring sowie den Parameterzähler.
 
-```assembly
+```
 	push {lr}
 	push {r11}
 	mov r11, sp
@@ -83,7 +83,7 @@ Zu Beginn der Funktion werden das Link-Register und der Frame-Pointer gesichert.
 
 Die Funktion durchläuft den Formatstring Zeichen für Zeichen und verarbeitet diese entsprechend.
 
-```assembly
+```
 scan_srcstr_loop:
 	ldr  r0, [r11, #STR_ADR]
 	ldrb r1, [r0], #1
@@ -101,7 +101,7 @@ Die Funktion durchläuft den Formatstring, indem sie jedes Zeichen nacheinander 
 
 Wenn ein `%` erkannt wird, wird das nachfolgende Zeichen als Formatbezeichner verarbeitet.
 
-```assembly
+```
 format_id:
 	ldr		r1, [r11, #PARAM_CNT]    @ aktueller param index in r2
 	add		r1, r1, #4 
@@ -110,10 +110,10 @@ format_id:
 	ldrb    r1, [r0]
 	add     r0, r0, #1
 	str     r0, [r11, #STR_ADR]
-	cmp     r1, #126                 @ 127 == DEL
+	cmp     r1, #126                 
 	bhi     checkerror
-	cmp     r1, #65                  @ 65 -> 126 = Buchstaben
-	bhi     checkasc				 @ wenn falsch -> faellt kontrolle automatisch in checkerror
+	cmp     r1, #65                  
+	bhi     checkasc				 
 ```
 
 Die Funktion verwaltet den aktuellen Parameterindex, indem sie diesen um 4 Bytes erhöht, da jedes Argument im Stack 4 Bytes groß ist. Anschließend wird das nächste Zeichen des Formatstrings geladen, das als Formatbezeichner dient, und die Adresse im Stack wird aktualisiert. Es folgt eine Überprüfung des Bezeichners: Wenn dieser einen ungültigen ASCII-Wert (größer als 126) hat, wird zur Fehlerbehandlung gesprungen. Ist der Bezeichner ein gültiger Buchstabe (ASCII-Wert >= 65), wird zur weiteren Überprüfung verzweigt.
@@ -122,13 +122,13 @@ Die Funktion verwaltet den aktuellen Parameterindex, indem sie diesen um 4 Bytes
 
 Falls ein unbekannter Formatbezeichner erkannt wird, wird eine Fehlermeldung ausgegeben.
 
-```assembly
+```
 checkerror:
 	mov     r0, #2
 	ldr     r1, =unknown_for_str
 	ldr     r2, =un_for_length
 	bl 		kwrite
-	ldr		r0, =0xffffffff //Error!
+	ldr		r0, =0xffffffff 
 	b       scanf_end	
 ```
 
@@ -138,10 +138,10 @@ Bei einem Fehler wird eine Fehlermeldung ausgegeben und die Funktion mit einem F
 
 Wenn das Ende des Formatstrings erreicht ist, wird geprüft, ob alle Parameter verarbeitet wurden.
 
-```assembly
+```
 scanf_end_scan:
 	ldr r1, [r11, #PARAM_CNT]
-	cmp r1, #0     @ wenn scanf zuende & parametercounter == 0 muss fehler vorliegen!
+	cmp r1, #0     
 	bne scanf_end
 ```
 
@@ -151,7 +151,7 @@ Am Ende des Scans wird der Parameterzähler überprüft. Wenn der Zähler auf nu
 
 Wenn der Parameterzähler nicht null ist, wird eine Fehlermeldung ausgegeben.
 
-```assembly
+```
 scan_error:
 	mov     r0, #2
 	ldr     r1, =scan_error_str
@@ -166,9 +166,9 @@ Bei einem Fehler wird eine Fehlermeldung ausgegeben und die Funktion mit einem F
 
 Die Funktion stellt den Stack wieder her und kehrt zum Aufrufer zurück.
 
-```assembly
+```
 scanf_end:
-	pop {r6} //??????????
+	pop {r6} 
 	mov sp, r11
 	pop {r11}
 	pop {lr}
@@ -182,7 +182,7 @@ Am Ende der Funktion wird das Register `r6` wiederhergestellt, und das Stack-Fra
 
 Die Sprungtabelle ordnet jedem unterstützten Formatbezeichner eine entsprechende Funktion zu.
 
-```assembly
+```
 checkasc:
 	orr 	r1, #32
 	sub 	r1, r1, #0x61
@@ -227,7 +227,7 @@ Die Funktion `checkasc` verarbeitet Formatbezeichner aus dem Formatstring. Zunä
 
 Die folgende Funktion verarbeitet das Einlesen und Konvertieren von Dezimalzahlen (`%d`).
 
-```assembly
+```
 sc_is_d:         
 	 ldr r0, =kscanf_buffer
 	 mov r1, #0
@@ -305,7 +305,7 @@ Die Konvertierung der Ziffern erfolgt in der Schleife `dez2reg_loop`, die die AS
 
 Diese Funktion verarbeitet das Einlesen und Speichern von Zeichenketten (`%s`).
 
-```assembly
+```
 sc_is_s:
 	 ldr r0, =kscanf_buffer
 	 mov r1, #0
@@ -350,7 +350,7 @@ Anschließend werden die eingelesenen Zeichen auf Leer- oder Steuerzeichen über
 
 Nach der Verarbeitung eines Formatbezeichners springt der Code zurück zur Hauptschleife.
 
-```assembly
+```
 format_id_end:
 	b  		scan_srcstr_loop
 ```
@@ -361,7 +361,7 @@ Am Ende der Verarbeitung eines Formatbezeichners springt die Funktion mit `b sca
 
 Mehrere Fehlerbehandlungsroutinen geben spezifische Fehlermeldungen aus und setzen den Fehlercode.
 
-```assembly
+```
 error_dez:
 	mov     r0, #2
 	ldr     r1, =dez_error1_str

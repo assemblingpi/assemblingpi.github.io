@@ -38,7 +38,7 @@ Vorgehensweise:
 
 
 |------------------------------|------------------------------------|-------------------------------|
-|   [zurück](textmode_ue.md)   |   [Hauptmenü](../ueberblick.md)    |   [weiter](textmode_lsg.md)   |
+|   [zurück](canvas_lsg.md)   |   [Hauptmenü](../ueberblick.md)    |   [weiter](textmode_lsg.md)   |
 
 
 |**3.1 Systemnahe Funktionen**                                                                  |

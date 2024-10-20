@@ -12,7 +12,7 @@ Ein praktisches Beispiel für die Verwendung einer Lookup-Tabelle ist die Berech
 ```asm
 .data
 Lookup:
-	.byte 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800
+	.word 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800
 
 .text
 .global _start
@@ -34,9 +34,9 @@ Im obigen Code wird die Fakultät eines Wertes `x` mithilfe einer Lookup-Tabelle
    ```asm
    .data
    Lookup:
-   	.byte 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800
+   	.word 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800
    ```
-   Hier werden die Fakultätswerte für `x` von 0 bis 10 in der Datensektion definiert. Jeder Wert ist als Byte gespeichert, wobei größere Werte möglicherweise mehrere Bytes benötigen, abhängig von der Architektur.
+   Hier werden die Fakultätswerte für `x` von 0 bis 10 in der Datensektion definiert. Jeder Wert ist als Word gespeichert.
 
 2. **Laden der Basisadresse:**
    ```asm

@@ -1,13 +1,10 @@
 # B.2 Erweiterungen der CPU-Funktionalität
 ## 2.3.17 VFP und NEON: Implementierung von Trigonometrischen Funktionen (Lösung)
 
-### Erklärung des ARM-Assembly-Codes zur Implementierung von Trigonometriefunktionen
-
 Der folgende Code implementiert die trigonometrischen Funktionen `sin`, `cos` und `tan` mithilfe der Taylor-Reihe. 
 
----
 
-#### Globale Deklarationen und Datenbereich
+### Globale Deklarationen und Datenbereich
 
 ```assembly
 .global sine
@@ -36,9 +33,9 @@ taylorcoeff_table:
   - `halfpi`, `pi`, `twopi`: Wichtige Winkelwerte in Radiant.
 - **Taylor-Koeffizienten:** `taylorcoeff_table` enthält die Koeffizienten der Taylor-Reihe zur Approximation von `sin(x)` bis zur Potenz **x^17**.
 
-#### Trigonometrische Funktionen
+### Trigonometrische Funktionen
 
-##### Funktion sine
+#### Funktion sine
 
 ```assembly
 sine:                           @ input in s0 (f32), Ergebnis in s0 (f32) [rad]
@@ -106,7 +103,7 @@ Nach der Multiplikation aller Potenzen mit ihren jeweiligen Koeffizienten folgt 
 
 Zum Abschluss stellt die Funktion die zuvor gesicherten Gleitkommaregister wieder her und kehrt zur aufrufenden Funktion zurück.
 
-##### Funktion cos
+#### Funktion cos
 
 ```assembly
 cos:                            @ s0 input & output
@@ -120,7 +117,7 @@ cos:                            @ s0 input & output
 Die Funktion `cos` berechnet den Kosinus eines Werts mithilfe der Identität `cos(x)` = `sin(x + π / 2)`. Dafür wird der Wert `π/2` in das Register `s1` geladen und zu `s0` addiert. Danach ruft die Funktion `sine` auf, um den Sinus des angepassten Werts zu berechnen. 
 
 
-##### Funktion tan
+#### Funktion tan
 
 ```assembly
 tan:
