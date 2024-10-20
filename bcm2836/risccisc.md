@@ -8,3 +8,10 @@ Im Gegensatz dazu bietet CISC eine Vielzahl komplexer Befehle, die oft mehrere M
 
 |-------------------------|------------------------------------|-----------------------------|
 |   [zurück](bcm2836.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](armfamily.md)    |
+
+
+|**1.5 BCM2836**                                                |
+|---------------------------------------------------------------|
+| [1.5.1 Intro](bcm2836.md)                                     |
+| [1.5.2 Grundlegende Unterschiede RISC vs. CISC](risccisc.md)  |
+| [1.5.3 Ein Überblick auf die ARM-Familien](armfamily.md)      |

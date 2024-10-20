@@ -150,6 +150,27 @@ tanend:
 
 `tan` berechnet den Tangens eines Werts mithilfe der Identität `tan(x)` = `sin(x)/cos(x)`. Zunächst werden die Register `lr` und `r11` gesichert, bevor der Eingabewert `s0` im Stack abgelegt wird. Anschließend wird die Funktion `sine` aufgerufen, um den Sinus von `x` zu berechnen, dessen Ergebnis ebenfalls im Stack gespeichert wird. Danach wird der ursprüngliche Wert von `x` wiederhergestellt und die Funktion `cos` aufgerufen, um den Kosinus zu berechnen. Um eine Division durch Null zu verhindern, wird überprüft, ob `cos(x)` gleich Null ist. Falls dies nicht der Fall ist, wird der Tangens durch Division von `sin(x)` durch `cos(x)` berechnet. Schließlich wird der Stack aufgeräumt und zur aufrufenden Funktion zurückgekehrt.
 
-
 |-------------------------|-------------------------------|-----------------------------|
 | [zurück](trigon_ue.md)  | [Hauptmenü](../ueberblick.md) | [weiter](matrix_ue.md)      |
+
+
+|**2.3 VFP und NEON**                                                                                               |
+|-------------------------------------------------------------------------------------------------------------------|
+| [2.3.1 Intro](floatingintro.md)                                                                                   |
+| [2.3.2 Gleitkommazahlen](bingleit.md)                                                                             |
+| [2.3.3 Floating Point Format nach IEEE 754](floatingnums.md)                                                      |
+| [2.3.4 VFP (Vector Floating Point) in der ARM-Architektur](vfp_intro.md)                                          |
+| [2.3.5 VFP Data Conversion Befehle](vfpconv.md)                                                                   |
+| [2.3.6 Was ist NEON?](neonintro.md)                                                                               |
+| [2.3.7 Überblick über die ARMv7 NEON-Register](neonregs.md)                                                       |
+| [2.3.8 Vektoren und Skalare](scalvekt.md)                                                                         |
+| [2.3.9 Registeradressierung in NEON](neonadr.md)                                                                  |
+| [2.3.10 Das NEON und Floatingpoint Status Register](neonstat.md)                                                  |
+| [2.3.11 Steuerung und Statusübertragung zwischen ARM- und NEON/VFP-Statusregistern (VMSR und VMRS)](neonctrl.md)  |
+| [2.3.12 NEON Instruktionen](neoninstr.md)                                                                         |
+| [2.3.13 Datentransfer](vmov.md)                                                                                   |
+| [2.3.14 NEON Load/Store Instruktionen](neonldstr.md)                                                              |
+| [2.3.15 Arithmetische und logische NEON-Operationen](varithlog.md)                                                |
+| [2.3.16 VTRN (Vector Transpose) Instruktionen](vtrn.md)                                                           |
+| [2.3.17 Implementierung von Trigonometrischen Funktionen](trigon_ue.md)                                           |
+| [2.3.18 Implementierung einer 4x4-Matrixmultiplikationsfunktion mit NEON](matrix_ue.md)                           |

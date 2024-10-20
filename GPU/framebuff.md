@@ -9,3 +9,14 @@ Die GPU überprüft diese Adresse regelmäßig und aktualisiert die Pixel auf de
 
 |---------------------|-------------------------------|-------------------------------|
 | [zurück](kommb.md)  | [Hauptmenü](../ueberblick.md) | [weiter](framemailb.md)       |
+
+
+|**2.4 Grafik & GPU**                                                       |
+|---------------------------------------------------------------------------|
+| [2.4.1 Einführung in die Computergrafik & RGB565-Format](grafikintro.md)  |
+| [2.4.2 Was ist eine GPU?](gpuintro.md)                                    |
+| [2.4.3 Die GPU des BCM2836 VideoCoreIV](gpubcm2836.md)                    |
+| [2.4.4 Kommunikation mittels Mailbox](kommb.md)                           |
+| [2.4.5 Der Framebuffer und seine Nutzung](framebuff.md)                   |
+| [2.4.6 Der Framebuffer-Mailbox-Kanal](framemailb.md)                      |
+| [2.4.7 Senden der Initialisierungsnachricht](sendinit.md)                 |

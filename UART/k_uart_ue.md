@@ -40,3 +40,9 @@ Zudem empfiehlt sich ein Blick in das Dokument `BCM2835 Peripherals`, das sich u
 
 |----------------------|------------------------------------|-------------------------------|
 |   [zurück](uart.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](k_uart_help.md)    |
+
+
+|**1.8 UART**                             |
+|-----------------------------------------|
+| [1.8.1 Intro](uart.md)                  |
+| [1.8.2 Übung ](k_uart_ue.md)            |

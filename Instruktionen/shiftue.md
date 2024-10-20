@@ -16,3 +16,15 @@ Bitte beachten Sie, dass das Vorzeichen erhalten bleiben muss.
 
 |-------------------------------|------------------------------------|----------------------------|
 |   [zurück](shiftinstr.md)     |   [Hauptmenü](../ueberblick.md)    |   [weiter](shiftuelsg.md)  |
+
+
+| **2.3 Datenverarbeitung**                                             |
+|-----------------------------------------------------------------------|
+| [2.3.1 Die ALU](arithlogintro.md)                                     |
+| [2.3.2 Arithmetische Instruktionen](arithinstr.md)                    |
+| [2.3.3 Logische Instrukionen](loginstr.md)                            |
+| [2.3.4 Shift Operationen](shiftinstr.md)                              |
+| [2.3.5 Das Statusregister](flags.md)                                  |
+| [2.3.6 Vergleichsoperatoren](comp.md)                                 |
+| [2.3.7 Bedingungscodes](beding.md)                                    |
+| [2.3.8 Bedingte Instruktionsausführung](bedinstr.md)                  |

@@ -52,3 +52,25 @@ Diese Methode stellt eine exakte binäre Darstellung der Zahl dar und unterschei
 
 |-----------------------------|-------------------------------|-------------------------------------|
 | [zurück](floatingintro.md)  | [Hauptmenü](../ueberblick.md) | [weiter](floatingnums.md)           | 
+
+
+|**2.3 VFP und NEON**                                                                                               |
+|-------------------------------------------------------------------------------------------------------------------|
+| [2.3.1 Intro](floatingintro.md)                                                                                   |
+| [2.3.2 Gleitkommazahlen](bingleit.md)                                                                             |
+| [2.3.3 Floating Point Format nach IEEE 754](floatingnums.md)                                                      |
+| [2.3.4 VFP (Vector Floating Point) in der ARM-Architektur](vfp_intro.md)                                          |
+| [2.3.5 VFP Data Conversion Befehle](vfpconv.md)                                                                   |
+| [2.3.6 Was ist NEON?](neonintro.md)                                                                               |
+| [2.3.7 Überblick über die ARMv7 NEON-Register](neonregs.md)                                                       |
+| [2.3.8 Vektoren und Skalare](scalvekt.md)                                                                         |
+| [2.3.9 Registeradressierung in NEON](neonadr.md)                                                                  |
+| [2.3.10 Das NEON und Floatingpoint Status Register](neonstat.md)                                                  |
+| [2.3.11 Steuerung und Statusübertragung zwischen ARM- und NEON/VFP-Statusregistern (VMSR und VMRS)](neonctrl.md)  |
+| [2.3.12 NEON Instruktionen](neoninstr.md)                                                                         |
+| [2.3.13 Datentransfer](vmov.md)                                                                                   |
+| [2.3.14 NEON Load/Store Instruktionen](neonldstr.md)                                                              |
+| [2.3.15 Arithmetische und logische NEON-Operationen](varithlog.md)                                                |
+| [2.3.16 VTRN (Vector Transpose) Instruktionen](vtrn.md)                                                           |
+| [2.3.17 Implementierung von Trigonometrischen Funktionen](trigon_ue.md)                                           |
+| [2.3.18 Implementierung einer 4x4-Matrixmultiplikationsfunktion mit NEON](matrix_ue.md)                           |

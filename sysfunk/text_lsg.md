@@ -148,6 +148,19 @@ text_current_index:
 
 Die Funktion `text_current_index` gibt den aktuellen Tabellenindex zurück. Sie ruft die `text_printchar`-Funktion auf, um ein spezielles Zeichen zu drucken, und passt dann den Tabellenindex an, um den aktuellen Zustand widerzuspiegeln. Dies ermöglicht es anderen Teilen des Programms, den aktuellen Position im Textmodus zu ermitteln und darauf basierend weitere Operationen durchzuführen.
 
-  |---------------------------|------------------------------------|-----------------------------|
-  |   [zurück](text_ue.md)    |   [Hauptmenü](../ueberblick.md)    |   [weiter](kwrite_ue.md)    |
+|---------------------------|------------------------------------|-----------------------------|
+|   [zurück](text_ue.md)    |   [Hauptmenü](../ueberblick.md)    |   [weiter](kwrite_ue.md)    |
 
+
+|**3.1 Systemnahe Funktionen**                                                                  |
+|-----------------------------------------------------------------------------------------------|
+| [3.1.1 Implementierung systemnaher Funktionen](sysfunkintro.md)                               |
+| [3.1.2 Implementierung von Speicherfunktionen in ARM-Assembly](memue.md)                      |
+| [3.1.3 Implementierung von Zahlendarstellungsfunktionen](format_ue.md)                        |
+| [3.1.4 Grundlegende Grafikbibliothek](canvas_ue.md)                                           |
+| [3.1.5 Implementierung von Funktionen zur Verwaltung des Textmodus](textmode_ue.md)           |
+| [3.1.6 Textdarstellung via Textmode](text_ue.md)                                              |
+| [3.1.7 Implementierung einer `kwrite`-Funktion](kwrite_ue.md)                                 |
+| [3.1.8 Implementierung einer Eingabefunktion](kread_ue.md)                                    |
+| [3.1.9 Implementierung einer formatierenden Ausgabefunktion in ARM-Assembly](kprintf_ue.md)   |
+| [3.1.10 Implementiere `kscan` für formatiertes Einlesen](kscan_ue.md)                         |

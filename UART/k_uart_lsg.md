@@ -153,3 +153,9 @@ Sobald Daten verfügbar sind, wird das Zeichen aus dem Datenregister (`UART0_DR`
 
 |-----------------------------|------------------------------------|------------------------------------------|
 |   [zurück](k_uart_help.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../Interrupts/intintro.md)    |
+
+
+|**1.8 UART**                             |
+|-----------------------------------------|
+| [1.8.1 Intro](uart.md)                  |
+| [1.8.2 Übung ](k_uart_ue.md)            |

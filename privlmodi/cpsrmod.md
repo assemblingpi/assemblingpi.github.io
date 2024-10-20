@@ -54,3 +54,13 @@ sleep:
 
 |-------------------------|------------------------------------|---------------------------|
 |   [zurück](betrmod.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](irqpriv.md)    |
+
+
+|**1.6 Priviligierungslevel**                                                       |
+|-----------------------------------------------------------------------------------|
+| [1.6.1 Priviligierungslevel und Prozessormodi](privmodiintro.md)                  |
+| [1.6.2 Privilegierungslevel (PL0, PL1, PL2)](privlev.md)                          |
+| [1.6.3 Betriebsmodi](betrmod.md)                                                  |
+| [1.6.4 Statusregister und Betriebsmodi](cpsrmod.md)                               |
+| [1.6.5 Interrupts und Priviligierungslevel](irqpriv.md)                           |
+| [1.6.6 Rolle der MMU bei den Priviligierungslevel des Prozessors](mmupriv.md)     |

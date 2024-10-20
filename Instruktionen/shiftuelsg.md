@@ -44,4 +44,16 @@
 ![Screenshot of Example Program](./shiftuelsg2.png) 
 
 |-------------------------------|------------------------------------|----------------------------|
-|   [zurück](shiftue.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](flags.md)     |
+|   [zurück](shiftue.md)        |   [Hauptmenü](../ueberblick.md)    |   [weiter](flags.md)       |
+
+
+| **2.3 Datenverarbeitung**                                             |
+|-----------------------------------------------------------------------|
+| [2.3.1 Die ALU](arithlogintro.md)                                     |
+| [2.3.2 Arithmetische Instruktionen](arithinstr.md)                    |
+| [2.3.3 Logische Instrukionen](loginstr.md)                            |
+| [2.3.4 Shift Operationen](shiftinstr.md)                              |
+| [2.3.5 Das Statusregister](flags.md)                                  |
+| [2.3.6 Vergleichsoperatoren](comp.md)                                 |
+| [2.3.7 Bedingungscodes](beding.md)                                    |
+| [2.3.8 Bedingte Instruktionsausführung](bedinstr.md)                  |

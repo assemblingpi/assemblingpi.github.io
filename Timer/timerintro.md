@@ -18,3 +18,11 @@ Während ein Timer läuft, kann es notwendig sein, den aktuellen Zählerstand au
 
 |---------------------------------------|------------------------------------|-------------------------------|
 |   [zurück](../Coproc/Coprocessor.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](generictimer.md)   |
+
+
+|**2.2 Timer**                                              |
+|-----------------------------------------------------------|
+| [2.2.1 Intro](timerintro.md)                              |
+| [2.2.2 Der ARMv7 Generic Timer](generictimer.md)          |
+| [2.2.3 Steuerung des Virtual Timer](timerctrl.md)         |
+| [2.2.4 Implementierung einer Delay-Funktion](delay.md)    |

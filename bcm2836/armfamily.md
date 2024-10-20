@@ -21,3 +21,10 @@ Ein wesentliches Merkmal des Cortex-A7 ist die NEON SIMD (Single Instruction - M
 
 |--------------------------|------------------------------------|----------------------------------------------|
 |   [zurück](risccisc.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../privlmodi/privmodiintro.md)    |
+
+
+|**1.5 BCM2836**                                                |
+|---------------------------------------------------------------|
+| [1.5.1 Intro](bcm2836.md)                                     |
+| [1.5.2 Grundlegende Unterschiede RISC vs. CISC](risccisc.md)  |
+| [1.5.3 Ein Überblick auf die ARM-Familien](armfamily.md)      |

@@ -23,3 +23,9 @@ Nachdem die Assemblerdateien in Objektdateien übersetzt wurden, werden diese Ob
 
 |---------------------------------------|------------------------------------|-----------------------------|
 |   [zurück](../Systemprog/sysprog.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](linkerscr.md)    |
+
+
+|**1.3 Assembler und Linker**                               |
+|-----------------------------------------------------------|
+| [1.3.1 Intro](wasistasmlinker.md)                         |
+| [1.3.2 Grundkonzepte von Linker-Scripten](linkerscr.md)   |

@@ -26,3 +26,11 @@ Zeitmessung, was Flexibilität bei der Verwendung in unterschiedlichen Szenarien
 
 |----------------------------|------------------------------------|-----------------------------|
 |   [zurück](timerintro.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](timerctrl.md)    |
+
+
+|**2.2 Timer**                                              |
+|-----------------------------------------------------------|
+| [2.2.1 Intro](timerintro.md)                              |
+| [2.2.2 Der ARMv7 Generic Timer](generictimer.md)          |
+| [2.2.3 Steuerung des Virtual Timer](timerctrl.md)         |
+| [2.2.4 Implementierung einer Delay-Funktion](delay.md)    |

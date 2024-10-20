@@ -604,8 +604,15 @@ Die Funktion `clear_buff_rev` setzt den gesamten Inhalt des Puffers `kformat_buf
 |   [zurück](format_ue.md)   |   [Hauptmenü](../ueberblick.md)    |   [weiter](canvas_ue.md)    |
 
 
-
-
-
-
-
+|**3.1 Systemnahe Funktionen**                                                                  |
+|-----------------------------------------------------------------------------------------------|
+| [3.1.1 Implementierung systemnaher Funktionen](sysfunkintro.md)                               |
+| [3.1.2 Implementierung von Speicherfunktionen in ARM-Assembly](memue.md)                      |
+| [3.1.3 Implementierung von Zahlendarstellungsfunktionen](format_ue.md)                        |
+| [3.1.4 Grundlegende Grafikbibliothek](canvas_ue.md)                                           |
+| [3.1.5 Implementierung von Funktionen zur Verwaltung des Textmodus](textmode_ue.md)           |
+| [3.1.6 Textdarstellung via Textmode](text_ue.md)                                              |
+| [3.1.7 Implementierung einer `kwrite`-Funktion](kwrite_ue.md)                                 |
+| [3.1.8 Implementierung einer Eingabefunktion](kread_ue.md)                                    |
+| [3.1.9 Implementierung einer formatierenden Ausgabefunktion in ARM-Assembly](kprintf_ue.md)   |
+| [3.1.10 Implementiere `kscan` für formatiertes Einlesen](kscan_ue.md)                         |

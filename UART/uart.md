@@ -37,3 +37,9 @@ Zeichen lesen: Lese das empfangene Zeichen aus dem Datenregister.
 
 |------------------------------|------------------------------------|-----------------------------|
 |   [zurück](../Boot/boot.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](k_uart_ue.md)    |
+
+
+|**1.8 UART**                             |
+|-----------------------------------------|
+| [1.8.1 Intro](uart.md)                  |
+| [1.8.2 Übung ](k_uart_ue.md)            |

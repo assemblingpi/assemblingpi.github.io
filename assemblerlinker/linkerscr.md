@@ -272,3 +272,9 @@ In diesem Beispiel wird der `.text`-Abschnitt sowohl bei der LMA `0x08000000` al
 
 |---------------------------------|------------------------------------|----------------------------------------|
 |   [zurück](wasistasmlinker.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../debuggdb/debuggdb.md)    |
+
+
+|**1.3 Assembler und Linker**                               |
+|-----------------------------------------------------------|
+| [1.3.1 Intro](wasistasmlinker.md)                         |
+| [1.3.2 Grundkonzepte von Linker-Scripten](linkerscr.md)   |
