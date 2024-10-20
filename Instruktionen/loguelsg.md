@@ -1,5 +1,5 @@
 # A.2 Basic Blocks implementieren
-## 2.3.3 Datenverarbeitung: Logische Instrukionen
+## 2.3.3 Datenverarbeitung: Logische Instruktionen
 ### Lösung der Übungaufgabe zu logischen Instruktionen
 
 ### Lösungsansatz:
@@ -45,7 +45,7 @@ So sieht es dann in Binärer schreibweise aus:
     1110 1101 0011 0100 1111 1111 1111 1111     @ Der Wert nach Schritt 3 (0xed34ffff) in binärer Darstellung
 ^   0000 0000 0000 0000 0000 1000 1010 1111     @ Mit 1 die gewünschten Bits invertieren, mit 0 gleichbehalten
 --------------------------------------------
-    1110 1101 0011 0100 1111 0111 0101 0000     @ Der Wert, der nach Schritt 4 rauskommen sol (0xed34f750)
+    1110 1101 0011 0100 1111 0111 0101 0000     @ Der Wert, der nach Schritt 4 rauskommen soll (0xed34f750)
 ```
 
 **So sollen die Register nach Ausführung aussehen:**

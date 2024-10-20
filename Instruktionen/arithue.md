@@ -6,7 +6,7 @@ In der folgenden Aufgabe wird die Anwendung mehrerer arithmetischer Instruktione
 ```
 (a + b − c) - (d ∗ e) - f
 ```
-Verwenden sie folgende Werte:
+Verwenden Sie folgende Werte:
 - a = 10
 - b = 25
 - c = 5

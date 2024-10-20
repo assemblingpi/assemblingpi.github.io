@@ -116,7 +116,7 @@ Zuerst werden die signed Dezimalwerte `-80` und `2` in die Register `R0` und `R1
 
 Wie man an den Ergebnissen erkennen kann, führt das arithmetische Rechtsschieben des negativen Wertes `-80`, der in Register `R0` gespeichert ist, zu einer Division durch Potenzen von `2`, wobei das Vorzeichen erhalten bleibt. Im Beispiel wird der Wert um `2` Stellen nach rechts verschoben. Dies entspricht einer Division durch `2^2` (also 4). Die Rechnung lautet daher `-80 / 4`, was zu dem Ergebnis `-20` führt. Dieses Ergebnis wird im Register `R2` gespeichert.
 
-**Darstellung der Bitweisen arithmetischen Verschiebung nach rechts um 4 Stellen:**
+**Darstellung der Bitweisen arithmetischen Verschiebung nach rechts um 2 Stellen:**
 
 ```
 1111 1111 1111 1111 1111 1111 1011 0000 (0xffffffb0 bzw. -80)

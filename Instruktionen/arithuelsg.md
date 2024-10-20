@@ -8,7 +8,7 @@
     MOV R2, #5			@ Lade c = 5 in R2
     MOV R3, #3			@ Lade d = 3 in R3
     MOV R4, #7			@ Lade e = 7 in R4
-    MOV R5, #2			@ Lade f = 20 in R5
+    MOV R5, #2			@ Lade f = 2 in R5
 
     @ Berechne a + b - c
     ADD R6, R0, R1		@ R6 = a + b = 10 + 25 = 35

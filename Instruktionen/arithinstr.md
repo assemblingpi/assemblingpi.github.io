@@ -44,8 +44,9 @@ Die grundlegende Syntax des SUB-Befehls lautet wie folgt:
 ```
 SUB <Zielregister>, <Quellregister>, <Quelle>
 ```
-Hierbei ist `<Zielregister>` das Register, in das das Ergebnis der Subtraktion gespeichert wird, <Quellregister> ist das Register, von dem subtrahiert wird, und <Quelle> ist ein Register, dessen Wert subtrahiert wird. `<Quelle>` kann aber genauso wieder ein unmittelbarer Wert sein!
-Bei SUB gelten die selben Regeln wie bei ADD: Man darf keine unmittelbaren Werte voneinander subtrahieren und ein Registerwert kann nicht von einem unmittelbaren Wert subtrahiert werden! 
+Bei der Subtraktion wird der Wert in `<Quelle>` von dem Wert im `<Quellregister>` abgezogen, und das Ergebnis wird im `<Zielregister>` gespeichert. `<Quelle>` kann aber genauso wieder ein unmittelbarer Wert sein!
+
+Bei SUB gelten die gleichen Regeln wie bei ADD: Man darf keine unmittelbaren Werte voneinander subtrahieren und ein Registerwert kann nicht von einem unmittelbaren Wert subtrahiert werden! 
 
 1. **Subtraktion zweier Register**
 ```
@@ -102,7 +103,7 @@ Der SBC-Befehl (Subtract with Carry) führt eine Subtraktion von zwei Werten dur
 ```
 SBC <Zielregister>, <Quellregister>, <Quelle>
 ```
-Hierbei ist `<Zielregister>` das Register, in das das Ergebnis der Subtraktion gespeichert wird, `<Quellregister>` ist das Register, von dem subtrahiert wird, und `<Quelle>` ist ein Register, dessen Wert subtrahiert wird. `<Quelle>` kann aber genauso wieder ein unmittelarer Wert sein! Zuletzt wird dann noch zusätzlich der invertierte Wert des Carry-Flags abgezogen.
+In diesem Fall wird das Ergebnis der Subtraktion im `<Zielregister>` gespeichert. Das `<Quellregister>` ist das Register, von dem der Wert subtrahiert wird, während `<Quelle>` entweder ein Register oder ein unmittelbarer Wert sein kann, dessen Wert subtrahiert wird. Zuletzt wird dann noch zusätzlich der invertierte Wert des Carry-Flags abgezogen.
 
 Achtung: Man darf keine unmittelbaren Werte voneinander subtrahieren und ein Registerwert kann nicht von einem unmittelbaren Wert subtrahiert werden! 
 
@@ -127,7 +128,7 @@ MUL <Zielregister>, <Quellregister1>, <Quellregister2>
 ```
 
 Hierbei ist ``<Zielregister>`` das Register, in das das Ergebnis der Multiplikation gespeichert wird, ``<Quellregister1>`` und ``<Quellregister2>`` sind die Register, deren Werte multipliziert werden.
-Achtung: Bei `MUL` können keine unmittelbaren Werte verwendet werden!
+Achtung: Bei `MUL` dürfen keine unmittelbaren Werte verwendet werden!
 
 #### Beispiele
 

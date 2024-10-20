@@ -44,7 +44,7 @@ mydata: .word 0xabc
 
 
 #### Der Literal Pool
-Achtung: Ein häufiges Missverständnis ist, dass der Befehl ```ldr r0, =My_data``` die Daten, (in diesem Fall den Wert 0xbb0000aa) in ein Register lädt. 
+Achtung: Ein häufiges Missverständnis ist, dass der Befehl ```ldr r0, =My_data``` die Daten (in diesem Fall den Wert 0xbb0000aa) in ein Register lädt. 
 Tatsächlich lädt dieser Befehl jedoch die Adresse von My_data in das Register r0, nicht den gesuchten Datenwert. 
 Woher wird diese Adresse geladen? Der Assembler platziert diese Adresse am Ende der Text-Sektion im Code, im sogenannten Literal Pool um den Zugriff auf die Daten zu ermöglichen. 
 

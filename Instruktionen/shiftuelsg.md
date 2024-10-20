@@ -3,13 +3,13 @@
 ### Lösung der Übungsaufgabe
 #### Lösungsansatz:
 
-1. **Multiplikation:** Multipliziere a * b mithilfe der LSL-Instruktion (linke Verschiebung), indem du b in seine Potenzen von 2 zerlegst (b = 12 = 8 + 4 = 2³ + 2²).
+1. **Multiplikation:** Multiplizieren Sie a * b mithilfe der LSL-Instruktion (linke Verschiebung), indem Sie b in seine Potenzen von 2 zerlegen (b = 12 = 8 + 4 = 2³ + 2²).
 
-2. **Division:** Teile c durch d, indem du eine ASR-Instruktion (arithmetische rechte Verschiebung) verwendest. Die LSR-Instruktion eignet sich da nicht, da das Vorzeichen bei signed Zahlen dann nicht berücksichtigt wird. Das Teilen von c durch 16 lässt sich durch eine ASR-Operation mit einer Verschiebung um 4 Stellen realisieren (weil 2⁴ = 16).
+2. **Division:** Teilen Sie c durch d, indem Sie die ASR-Instruktion (arithmetische rechte Verschiebung) verwenden. Die LSR-Instruktion eignet sich da nicht, da das Vorzeichen bei signed Zahlen dann nicht berücksichtigt wird. Das Teilen von c durch 16 lässt sich durch eine ASR-Operation mit einer Verschiebung um 4 Stellen realisieren (weil 2⁴ = 16).
 
-3. **Addition:** Addiere das Ergebnis der Multiplikation und der Division mit ADD auf.
+3. **Addition:** Addieren Sie das Ergebnis der Multiplikation und der Division mit ADD auf.
 
-4. **Rotation:** Rotiere das finale Ergebnis um 8 Stellen nach rechts mit ROR. Dieser verschiebt die Bits nach rechts und fügt die Bits, die hinausfallen, am linken Rand wieder ein.
+4. **Rotation:** Rotieren Sie das finale Ergebnis um 8 Stellen nach rechts mit ROR. Dieser verschiebt die Bits nach rechts und fügt die Bits, die hinausfallen, am linken Rand wieder ein.
 
 #### Lösung:
 ```

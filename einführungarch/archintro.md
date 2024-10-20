@@ -13,7 +13,7 @@ Ein zentrales Konzept der Von-Neumann-Architektur ist das "Stored Program Concep
 ### Load/Store-Architektur
 Bei ARM-CPUs handelt es sich um eine Load/Store-Architektur, bei denen Speicherzugriffe nur mittels spezieller Befehle (LDR und STR) durchgeführt werden können und direkte Berechnungen auf Daten im Speicher nicht möglich sind (im Gegensatz zu x86 CPUs). Rechenoperationen finden demnach ausschließlich in den Registern (kleine Speichereinheiten) der CPU statt. Dies bedeutet, dass Daten für ihre Verarbeitung zuerst vom Speicher in Register geladen und nach der Berechnung wieder in den Speicher zurückgeschrieben werden müssen. 
 
-Ein Prozessor ist im wesentlichen ein Maschine, die Berechnungen mit Hilfe kleiner Speichereinheiten namens Register durchführt. Die Daten, mit deren Hilfe wir Berechnungen durchführen wollen, müssen also in diese Register geladen werden, damit wir mit ihnen arbeiten können.
+Ein Prozessor ist im wesentlichen eine Maschine, die Berechnungen mit Hilfe kleiner Speichereinheiten namens Register durchführt. Die Daten, mit deren Hilfe wir Berechnungen durchführen wollen, müssen also in diese Register geladen werden, damit wir mit ihnen arbeiten können.
 An dieser Stelle ist es jedoch wichtig zu betonen, dass nicht alle dieser Ganzzahl-Register für alle Rechenoperationen verwendet werden dürfen. Selbst bei einigen Registern, die wir beliebig verwenden dürften, sollten wir davon Abstand nehmen, da wir sie für spezielle Zwecke benötigen.
 Innerhalb der ARM-CPU gibt es verschiedene **32-Bit Register**, die für spezifische Aufgaben verwendet werden:
 

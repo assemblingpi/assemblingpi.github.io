@@ -229,7 +229,7 @@ _start:
 
 ![Screenshot of Example Program](./LDRHB3.png) 
 
-- In Register R0 wurde der Wert `0x0x11223344` gespeichert 
+- In Register R0 wurde der Wert `0x11223344` gespeichert 
 - var1 ist auf `0xaaaaaaaa` gesetzt und wurde in die Speicheradresse `0x20` gespeichert
 - var2 ist auf `0xbbbbbbbb` gesetzt und wurde in die Speicheradresse `0x24` gespeichert
 Diese Speicheradressen wurden jeweils einmal in Register `R1` und einmal in Register `R2` gespeichert.
