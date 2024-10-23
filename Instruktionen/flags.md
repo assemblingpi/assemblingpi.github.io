@@ -38,9 +38,9 @@ MULS <Zielregister>, <Quellregister1>, <Quellregister2>
 #### Beispiel 1: Setzen des Zero-Flags (Z) und des Carry-Flags (C)
 Nehmen wir an, dass zwei Register denselben Wert enthalten und diese Werte voneinander subtrahiert werden. In diesem Fall sollte das Ergebnis 0 sein, wodurch das Zero-Flag (Z) im CPSR-Register gesetzt wird.
 ```asm
-    MOV R0, #7       @ Lade den Wert 7 in Register R0
-    MOV R1, #7       @ Lade den Wert 7 in Register R1
-    SUBS R2, R0, R1  @ Subtrahiere R1 von R0, speichere das Ergebnis in R2 und setze die Flags
+MOV R0, #7       @ Lade den Wert 7 in Register R0
+MOV R1, #7       @ Lade den Wert 7 in Register R1
+SUBS R2, R0, R1  @ Subtrahiere R1 von R0, speichere das Ergebnis in R2 und setze die Flags
 ```
 Nach der Operation SUBS zeigt das gesetzte Zero-Flag (Z) im CPSR an, dass das Ergebnis der Subtraktion Null war. Das Zero-Flag befindet sich im CPSR an Bit 30. Wenn das Ergebnis der Operation Null ist, wird dieses Bit auf 1 gesetzt. Betrachtet man das Ergebnis im CPU-Lator, so wird ersichtlich, dass auch das Carry-Flag (C) gesetzt wurde:
 
@@ -61,9 +61,9 @@ Bei der Subtraktion **7-7** wird das Ergebnis **0** weshalb das Zero-Bit gesetzt
 Wie im vorherigen Beispiel gezeigt wurde, wird das Carry-Bit bei einer Subtraktion **ohne** Untertrag gesetzt.  Bei der Addition ist es jedoch umgekehrt: Wenn es bei einer Addition zu einem Übertrag kommt, wird das Carry-Flag auf **1** gesetzt.. In diesem Beispiel addieren wir **2** zu **0xFFFFFFFF**, dem größten Wert, der im 32-Bit-Register dargestellt werden kann. Dies führt zu einem Überlauf: 
 
 ```
-    MOV R0, #4294967295      @ Register R0 wird mit 0xFFFFFFFF (alle 1er) geladen
-    MOV R1, #2               @ Lade den Wert 2 in Register R1
-    ADDS R2, R0, R1          @ Addiere R1 auf R0, speichere das Ergebnis in R2 und setze die Flags
+MOV R0, #0xFFFFFFFF     @ Register R0 wird mit 0xFFFFFFFF (alle 1er) geladen
+MOV R1, #0x2            @ Lade den Wert 2 in Register R1
+ADDS R2, R0, R1         @ Addiere R1 auf R0, speichere das Ergebnis in R2 und setze die Flags
 ```
 
 So sieht das Ergebnis dann in CPULator aus:
@@ -74,10 +74,10 @@ So sieht das Ergebnis dann in CPULator aus:
 So sieht die Unvorzeichenbehaftete Addition aus:
 
 ```
-  11111111 11111111 11111111 11111111  (0xFFFFFFFF)
-+ 00000000 00000000 00000000 00000010  (2 in Binär)
+    11111111 11111111 11111111 11111111  (0xFFFFFFFF in Binär)
++   00000000 00000000 00000000 00000010  (0x2 in Binär)
 --------------------------------------
-  00000000 00000000 00000000 00000001  (Ergebnis: 0x00000001)
+(1) 00000000 00000000 00000000 00000001  (Ergebnis: 0x00000001)
 ```
 
 Die Addition von 0xFFFFFFFF und 2 ergibt 0x00000001. Dies liegt daran, dass die größte Zahl in einem 32-Bit-System (0xFFFFFFFF) bei der Addition von 2 einen Überlauf (Carry) verursacht, der den Wert zurück auf 1 bringt. Die **1**, die sich im 32ten Bit ergeben würde, wird abgeschnitten, da das Resgistern nur eine Größe von 32 Bits hat (0-31tes Bit werden dargestellt).
