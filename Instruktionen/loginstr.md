@@ -28,9 +28,9 @@ Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Regist
 
 #### Beispiel
 ``` 
-    MOV R0, #0x12       @ Speichere 0x12 in Register R0
-    MOV R1, #0x30       @ Speichere 0x30 in Register R1
-    AND R2, R0, R1      @ Bitweise Verundung der Werte in R0 und R1, Ergebnis wird in R2 gespeichert
+MOV R0, #0x12       @ Speichere 0x12 in Register R0
+MOV R1, #0x30       @ Speichere 0x30 in Register R1
+AND R2, R0, R1      @ Bitweise Verundung der Werte in R0 und R1, Ergebnis wird in R2 gespeichert
 ```
 
 **So sehen die Register in CPULator nach der Ausführung aus:**
@@ -42,10 +42,10 @@ Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Regist
 Um das Ergebnis der bitweisen Verundung zu verdeutlichen, werden die Hexadezimalwerte `0x12` und `0x30` in ihre Binärform umgewandelt und die Operation durchgeführt:
 
 ```
-0001 0010 (0x12)
-0011 0000 (0x30)
-----------------
-0001 0000 (0x10)
+    0001 0010 (0x12)
+&   0011 0000 (0x30)    @ & = Zeichen für bitweise Verundung
+--------------------
+    0001 0000 (0x10)
 ```
 
 Wie es hier ersichtlich ist, ergibt sich als Ergebnis der Verundung `0x10`. Dies liegt daran, dass nur die Bits, die in beiden Operanden an der gleichen Position 1 sind, im Ergebnis auf 1 gesetzt werden. Alle anderen Bits sind 0. (Vergleich: Wahrheitstabelle)
@@ -78,9 +78,9 @@ Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Regist
 
 #### Beispiel
 ``` 
-    MOV R0, #0x5c       @ Speichere 0x5c in R0
-    MOV R1, #0x71       @ Speichere 0x71 in R1
-    ORR R2, R0, R1      @ Bitweise Veroderung der Werte in R0 und R1, Ergebnis wird in R2 gespeichert
+MOV R0, #0x5c       @ Speichere 0x5c in R0
+MOV R1, #0x71       @ Speichere 0x71 in R1
+ORR R2, R0, R1      @ Bitweise Veroderung der Werte in R0 und R1, Ergebnis wird in R2 gespeichert
 ```
 
 **So sehen die Register in CPULator nach der Ausführung aus:**
@@ -92,10 +92,10 @@ Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Regist
 Um das Ergebnis der bitweisen Veroderung zu verdeutlichen, werden die Hexadezimalwerte `0x5c` und `0x71` in ihre Binärform umgewandelt und die Operation durchgeführt:
 
 ```
-0101 1100 (0x5c)
-0111 0001 (0x71)
-----------------
-0111 1101 (0x7d)
+    0101 1100 (0x5c)
+|   0111 0001 (0x71)    @ | = Zeichen für bitweise Veroderung
+---------------------
+    0111 1101 (0x7d)
 ```
 
 Wie es hier ersichtlich ist, ergibt sich als Ergebnis der Veroderung `0x7d`. Dies liegt daran, dass das Ergebnis 1 ist, wenn mindestens eines der beiden Bits 1 ist. Alle anderen Bits werden entsprechend der ODER-Operation gesetzt. (Vergleich: Wahrheitstabelle)
@@ -128,9 +128,9 @@ Hier wird der Wert, der in `Register A` gespeichert ist, mit dem Wert in `Regist
 
 #### Beispiel
 ```
-    MOV R0, #0x3a       @ Speichere 0x3a in R0
-    MOV R1, #0x6e       @ Speichere 0x6e in R1
-    EOR R2, R0, R1      @ Bitweise exklusive Veroderung der Werte in R0 und R1, Ergebnis wird in R2 gespeichert
+MOV R0, #0x3a       @ Speichere 0x3a in R0
+MOV R1, #0x6e       @ Speichere 0x6e in R1
+EOR R2, R0, R1      @ Bitweise exklusive Veroderung der Werte in R0 und R1, Ergebnis wird in R2 gespeichert
 ```
 
 **So sehen die Register in CPULator nach der Ausführung aus:**
@@ -143,7 +143,7 @@ Um das Ergebnis der bitweisen exklusiven Veroderung zu verdeutlichen, werden die
 
 ```
     0011 1010 (0x3a)
-^   0110 1110 (0x6e)
+^   0110 1110 (0x6e)    @ ^ = Zeichen für XOR
 ---------------------
     0101 0100 (0x54)
 ```
@@ -178,8 +178,8 @@ Hier wird der Wert, der in `Register A` gespeichert ist, bitweise negiert. Das E
 
 #### Beispiel
 ```
-    MOV R0, #0x3a       @ Speichere 0x3a in R0
-    MVN R1, R0          @ Bitweise Negierung des Wertes in R0, Ergebnis wird in R1 gespeichert
+MOV R0, #0x3a       @ Speichere 0x3a in R0
+MVN R1, R0          @ Bitweise Negierung des Wertes in R0, Ergebnis wird in R1 gespeichert
 ```
 
 **So sehen die Register in CPULator nach der Ausführung aus:**
@@ -191,8 +191,8 @@ Hier wird der Wert, der in `Register A` gespeichert ist, bitweise negiert. Das E
 Um das Ergebnis der bitweisen Negierung zu verdeutlichen, wird der Hexadezimalwert `0x3a` in ihre Binärform umgewandelt und die Operation durchgeführt. Es ist wichtig zu beachten, dass alle 32 Bits negiert werden:
 
 ```
-~   0000 0000 0000 0000 0000 0000 0011 1010 (0x3a)
---------------------------------------------------------
+~   0000 0000 0000 0000 0000 0000 0011 1010 (0x3a)      @ ~ = Zeichen für Negierung
+----------------------------------------------------------
     1111 1111 1111 1111 1111 1111 1100 0101 (0xffffffc5)
 ```
 
