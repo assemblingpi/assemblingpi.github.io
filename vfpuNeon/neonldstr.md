@@ -3,45 +3,49 @@
 
 Die Befehle **VLD** (Vector Load) und **VST** (Vector Store) sind grundlegende Instruktionen für den Datenaustausch mit den NEON-Registern. Die spezifischen Varianten **VLDM** und **VSTM** stehen für "Vector Load Multiple" und "Vector Store Multiple" und werden verwendet, um mehrere Register gleichzeitig zu laden oder zu speichern.
 
+
+
+
+
+
+
+
 ### **VLDM (Vector Load Multiple)**
-Der VLDM-Befehl ermöglicht es, mehrere Datenblöcke aus dem Speicher gleichzeitig in mehrere NEON-Register zu laden. Das ist besonders nützlich, wenn große Datenmengen, wie zum Beispiel Bild- oder Audiodaten, schnell verarbeitet werden müssen. Anstatt jedes Register einzeln zu laden, können Sie mit VLDM mehrere Register auf einmal füllen. Zum Beispiel lädt der Befehl `VLDM R1, {D0-D3}` vier NEON-Register (D0 bis D3) mit Daten aus dem Speicher, der bei der Adresse beginnt, die im ARM-Register `R1` gespeichert ist.
+Mit dem VLDM-Befehl lassen sich mehrere Datenblöcke gleichzeitig aus dem Speicher in verschiedene NEON-Register laden. Statt die Register einzeln zu befüllen, können mehrere Register in einem Schritt geladen werden. So lädt zum Beispiel `VLDM R1, {D0-D3}` die NEON-Register D0 bis D3 mit Daten, die aus dem Speicherbereich stammen, dessen Startadresse im ARM-Register `R1` angegeben ist.
 
 ### **VSTM (Vector Store Multiple)**
-Der VSTM-Befehl ermöglicht es, Daten aus mehreren NEON-Registern gleichzeitig zurück in den Speicher zu schreiben. Dies ist besonders nützlich, um große Datenmengen schnell und effizient aus den Registern in den Speicher zu übertragen. Anstatt jedes Register einzeln zu speichern, können Sie mit VSTM den Inhalt mehrerer Register auf einmal sichern. Ein Beispiel dafür ist `VSTM R1, {D0-D3}`, bei dem die Daten aus den NEON-Registern D0 bis D3 in einen Speicherbereich geschrieben werden, dessen Anfangsadresse im ARM-Register `R1` gespeichert ist.
+Der VSTM-Befehl dient dazu, Daten aus mehreren NEON-Registern auf einmal in den Speicher zu schreiben. Statt die Inhalte einzelner Register nacheinander zu speichern, können mehrere Register auf einen Schlag gesichert werden. Beispielsweise speichert der Befehl `VSTM R1, {D0-D3}` die Daten aus den Registern D0 bis D3 in den Speicherbereich, der durch die im Register `R1` hinterlegte Adresse bestimmt wird.
 
 ### VLD und VST: Interleaving und De-Interleaving
 Die NEON-Einheit ermöglicht es auch, Daten in einer spezifischen Anordnung zu laden und zu speichern. 
 
-### VLD (Vector Load)
-Der **VLD**-Befehl lädt Daten aus dem Speicher in die NEON-Register. 
-Der VLD-Befehl kann mehrere Daten gleichzeitig in die Register laden, was ihn besonders nützlich für die parallele Datenverarbeitung macht.
+#### **VLD (Vector Load)**  
+Der **VLD**-Befehl lädt Daten direkt aus dem Speicher in die NEON-Register. 
 
-- **Syntax:** `vldX.size {D0-Dn},[Rs]`
-  - `X` steht für das Numerische Interleave-Muster und bestimmt den Abstand zwischen den Elementen in der Struktur (1, 2, 3, 4).
-  - `size` gibt die Größe der geladenen Elemente an (8, 16, 32, 64 Bits).
-  - `D0-Dn` gibt die Register an, in die die Daten geladen werden.
-  - `[Rs]` gibt die Speicheradresse an, von der die Daten geladen werden.
+- **Syntax:** `vldX.size {D0-Dn},[Rs]`  
+  - `X` legt das Interleave-Muster fest und definiert den Abstand der Elemente innerhalb der Struktur (1, 2, 3, 4).
+  - `size` gibt die Größe der Daten an (8, 16, 32 oder 64 Bit).
+  - `D0-Dn` spezifiziert die Register, in die die Daten geladen werden.
+  - `[Rs]` stellt die Speicheradresse dar, von der die Daten abgerufen werden.
 
-### VST (Vector Store)
-Der **VST**-Befehl speichert Daten aus den NEON-Registern zurück in den Speicher. Dieser Befehl wird verwendet, nachdem die Daten in den Registern verarbeitet wurden, um die Ergebnisse im Speicher abzulegen.
+#### **VST (Vector Store)**  
+Der **VST**-Befehl hingegen speichert die Daten aus den NEON-Registern wieder zurück in den Speicher. Nachdem die Daten in den Registern verarbeitet wurden, ermöglicht VST das Ablegen der Ergebnisse in einem bestimmten Speicherbereich.
 
-- **Beispiel:** Wenn Sie die zuvor geladenen und verarbeiteten Daten zurück in den Speicher schreiben möchten, verwenden Sie den VST-Befehl. Er nimmt die Daten aus den NEON-Registern und speichert sie in einem Speicherbereich, der durch eine Speicheradresse angegeben wird.
-
-- **Syntax:** `vstX.size {D0-Dn},[Rd]`
-  - `X` steht für das Numerische Interleave-Muster und bestimmt den Abstand zwischen den Elementen in der Struktur (1, 2, 3, 4).
-  - `size` gibt die Größe der gespeicherten Elemente an (8, 16, 32, 64 Bits).
-  - `D0-Dn` gibt die Register an, deren Daten gespeichert werden.
-  - `[Rd]` gibt die Speicheradresse an, an der die Daten gespeichert werden.
-
+- **Syntax:** `vstX.size {D0-Dn},[Rd]`  
+  - `X` steht auch hier für das Interleave-Muster und bestimmt den Datenabstand (1, 2, 3, 4).
+  - `size` spezifiziert die Größe der zu speichernden Daten (8, 16, 32 oder 64 Bit).
+  - `D0-Dn` gibt die Register an, deren Inhalt gespeichert wird.
+  - `[Rd]` bezeichnet die Speicheradresse, an die die Daten geschrieben werden.
 
 ### Funktionsweise von Interleaving und De-Interleaving
 `Interleaving` und `De-Interleaving` bestimmen, wie Daten beim Laden und Speichern zwischen dem Speicher und den NEON-Registern angeordnet werden.
 
 #### De-Interleaving beim Laden
-Beim Laden von Daten aus dem Speicher in NEON-Register können die Daten entflechtet (de-interleaved) werden. Das bedeutet, dass verschachtelt gespeicherte Daten in separate Register aufgeteilt werden. 
+Beim Laden von Daten aus dem Speicher in NEON-Register können die Daten entflechtet (de-interleaved) werden. Das bedeutet, dass Daten, die im Speicher "verschachtelt" abgelegt sind, beim Laden auf mehrere Register verteilt und sauber getrennt werden. Diese Technik wird häufig genutzt, um komplexe Datensätze effizient zu verarbeiten.
 
 #### Interleaving beim Speichern
-Beim Speichern von Daten aus den NEON-Registern können die Daten verschachtelt (interleaved) werden. Dabei werden die Registerdaten kombiniert und in einem verschachtelten Muster im Speicher abgelegt, wie es in manchen Multimedia-Anwendungen üblich ist.
+Umgekehrt können beim Speichern von Daten aus den NEON-Registern die Inhalte verschachtelt (interleaved) abgelegt werden. 
+Beim Speichern von Daten aus den NEON-Registern können die Daten verschachtelt (interleaved) werden. Hierbei werden die Registerdaten in einem verschachtelten Muster kombiniert und im Speicher gespeichert, wie es in manchen Multimedia-Anwendungen üblich ist.
 
 #### Interleave-Muster und Befehle
 - **VLD1:** Lädt ein bis vier Register aus dem Speicher ohne De-Interleaving. Für nicht-verschachtelte Daten geeignet.

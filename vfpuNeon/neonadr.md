@@ -3,13 +3,6 @@
 
 In ARMv7 NEON bezieht sich die Adressierung von verschiedenen Elementen innerhalb der Register auf die Art und Weise, wie Daten in den Q-, D- und S-Registern organisiert und durch Instruktionen verarbeitet werden. NEON ist darauf ausgelegt, mehrere Datenoperationen gleichzeitig durchzuführen, indem es Register in kleinere Datenstücke unterteilt.
 
-### Registerstruktur in ARMv7 NEON
-
-ARMv7 NEON stellt drei Hauptregistertypen zur Verfügung:
-- **Q-Register (128 Bit)**: Diese bestehen aus zwei D-Registern. Es gibt 16 Q-Register (Q0 bis Q15).
-- **D-Register (64 Bit)**: Diese können als eigenständige 64-Bit-Register verwendet werden oder als Paare, die ein Q-Register bilden. Es gibt 32 D-Register (D0 bis D31).
-- **S-Register (32 Bit)**: Diese sind die kleinsten adressierbaren Einheiten. Jedes D-Register besteht aus zwei S-Registern. Es gibt 32 S-Register (S0 bis S31), die auf die D-Register D0 bis D15 abgebildet sind.
-
 ### Adressierung in Instruktionen
 
 #### 1. **Q-Register (128-Bit)**
