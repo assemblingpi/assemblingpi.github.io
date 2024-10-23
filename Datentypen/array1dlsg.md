@@ -106,7 +106,7 @@ end:
     b end
 ```
 
-Aufruf der `insertsort-Funktion.
+Aufruf der `insertsort`-Funktion.
 
 ```
 insertsort:
