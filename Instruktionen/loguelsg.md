@@ -15,26 +15,26 @@
 
 ### Lösung: 
 ```
-	LDR R0, =0x12345678		@ Lade die 32-Bit-Zahl 0x12345678 in das Register R0
-	
-	@ Schritt 1: Extrahiere die oberen 16 Bits (0x1234) in R1
-	LDR R1, =0xFFFF0000		
-	AND R1, R0, R1			@ Führe eine AND-Operation mit R0 und R1 aus, um die oberen 16 Bits zu extrahieren
-	
-	@ Schritt 2: Setze die unteren 16 Bits auf 0xFFFF
-	LDR R2, =0x0000FFFF		   
-	ORR R2, R1, R2			@ Führe eine ORR-Operation durch, um die unteren 16 Bits auf 0xFFFF zu setzen
-	
-	@ Schritt 3: Invertiere die oberen 8 Bits
-	LDR R3, =0xFF000000   
-	EOR R3, R2, R3			@ Führe eine EOR-Operation mit R3 durch, um die oberen 8 Bits in R2 zu invertieren
-	
-	@ Schritt 4: Setze die unteren 16 Bits auf 0xF750
-	LDR R4, =0x000008AF		@ Lade die Maske 0x000008AF in R4, um die Exklusiv-Veroderung mit den unteren 16 Bits vorzunehmen
-	EOR R4, R3, R4			@ Führe eine EOR-Operation aus, um die unteren 16 Bits auf 0xF750 zu setzen
-	
-	@ Schritt 5: Invertiere das Ergebnis
-	MVN R5, R4	
+LDR R0, =0x12345678		@ Lade die 32-Bit-Zahl 0x12345678 in das Register R0
+
+@ Schritt 1: Extrahiere die oberen 16 Bits (0x1234) in R1
+LDR R1, =0xFFFF0000		
+AND R1, R0, R1			@ Führe eine AND-Operation mit R0 und R1 aus, um die oberen 16 Bits zu extrahieren
+
+@ Schritt 2: Setze die unteren 16 Bits auf 0xFFFF
+LDR R2, =0x0000FFFF		   
+ORR R2, R1, R2			@ Führe eine ORR-Operation durch, um die unteren 16 Bits auf 0xFFFF zu setzen
+
+@ Schritt 3: Invertiere die oberen 8 Bits
+LDR R3, =0xFF000000   
+EOR R3, R2, R3			@ Führe eine EOR-Operation mit R3 durch, um die oberen 8 Bits in R2 zu invertieren
+
+@ Schritt 4: Setze die unteren 16 Bits auf 0xF750
+LDR R4, =0x000008AF		@ Lade die Maske 0x000008AF in R4, um die Exklusiv-Veroderung mit den unteren 16 Bits vorzunehmen
+EOR R4, R3, R4			@ Führe eine EOR-Operation aus, um die unteren 16 Bits auf 0xF750 zu setzen
+
+@ Schritt 5: Invertiere das Ergebnis
+MVN R5, R4	
 ```
 
 **Erklärung zu Schritt 4:**

@@ -143,7 +143,7 @@ Um das Ergebnis der bitweisen exklusiven Veroderung zu verdeutlichen, werden die
 
 ```
     0011 1010 (0x3a)
-^   0110 1110 (0x6e)    @ ^ = Zeichen für XOR
+^   0110 1110 (0x6e)    @ ^ = Zeichen für die exklusive Veroderung
 ---------------------
     0101 0100 (0x54)
 ```
