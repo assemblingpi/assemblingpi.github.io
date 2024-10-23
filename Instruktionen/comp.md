@@ -28,7 +28,7 @@ Der Befehl vergleicht den Wert in Register A mit dem in Register B, indem er die
 In diesem Beispiel werden die Werte `5` und `4` in die Register `R0` und `R1` geladen. Anschließend werden die drei CMP-Operationen durchgeführt, die jeweils zwei Register miteinander vergleichen und die entsprechenden Flags im CPSR-Register setzen.
 
 1. **Das CPSR nach der ersten CMP-Operation**
-In dieser ersten CMP-Operation wird der Wert in R0 (5) mit dem Wert in R1 (4) verglichen. Der Befehl subtrahiert R1 von R0 (5 - 4 = 1). Da das Ergebnis positiv ist (größer als 0), wird die Negative Flag (N-Flag) nicht gesetzt. Das Zero Flag (Z-Flag) bleibt ebenfalls unverändert, da das Ergebnis nicht null ist. Da es keinen Borrow/Unterlauf gibt, bleibt das Carry Flag (C-Flag, das 29. Bit im CPSR) gesetzt:
+In dieser ersten CMP-Operation wird der Wert in R0 (5) mit dem Wert in R1 (4) verglichen. Der Befehl subtrahiert R1 von R0 (5 - 4 = 1). Da das Ergebnis positiv ist (größer als 0), wird die Negative Flag (N-Flag) nicht gesetzt. Das Zero Flag (Z-Flag) bleibt ebenfalls unverändert, da das Ergebnis nicht Null ist. Da es keinen Borrow/Unterlauf gibt, bleibt das Carry Flag (C-Flag, das 29. Bit im CPSR) gesetzt:
 
     ![Screenshot of Example Program](./CMP1.png)
 
@@ -88,7 +88,7 @@ TEQ <RegisterA>, <RegisterB>
 	TEQ R0, R1			       	
 ```
 
-**Das CPSR nach der TST-Operation:**
+**Das CPSR nach der TEQ-Operation:**
 
 Zuerst werden die Binärzahlen `1100` und `1100` in die Register `R0` und `R1` geladen. Die TEQ-Instruktion führt eine bitweise XOR-Operation durch, bei der das Ergebnis `0000` ist, da beide Register identische Werte haben. Da das Ergebnis 0 ist, wird im CPSR-Register das `Zero Flag (Z-Flag)` gesetzt. Dies bedeutet, dass alle Bits in den beiden Registern übereinstimmen.
 

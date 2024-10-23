@@ -50,8 +50,8 @@ Beispiele zur Verwendung von `MOVW` und `MOVT`
 
 Laden eines 32-Bit-Werts: Angenommen, man möchte `0x12345678` in das Register `R0` laden. Dazu musst man `MOVW` und `MOVT` kombinieren:
 ```asm
-  MOVW R0, #0x5678   @ Setzt die unteren 16 Bits auf 0x5678
-  MOVT R0, #0x1234   @ Setzt die oberen 16 Bits auf 0x1234
+MOVW R0, #0x5678   @ Setzt die unteren 16 Bits auf 0x5678
+MOVT R0, #0x1234   @ Setzt die oberen 16 Bits auf 0x1234
 @ Nach diesen beiden Instruktionen enthält `R0` den Wert `0x12345678`.
 ```
 Achtung: Um mit MOVW und MOVT 32-Bit Werte zu laden, muss man die Reihenfolge der Instruktionen aufgrund deren Eigenarten beachten: **Zuerst MOVT, dann MOVW!**

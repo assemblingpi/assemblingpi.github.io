@@ -11,8 +11,8 @@ Im Assembler-Quellcode wird die `.data`-Sektion durch die Direktive `.data` eing
 
 Ein Beispiel für die Definition einer Variablen in dieser Sektion könnte so aussehen:
 ```asm
-   .section .data
-   a: .word 1
+.section .data
+a: .word 1
 ```
    Hier wird die Variable `a` mit dem Wert `1` initialisiert und in der `.data`-Sektion
    gespeichert. 
@@ -22,8 +22,8 @@ Die `.bss`-Sektion (Block Started by Symbol) wird für Variablen verwendet, die 
 Die Direktive `.bss` wird verwendet, um die nachfolgende Anweisung in diese Sektion einzuordnen. 
 Beispiel:
 ```asm
-   .section .bss
-   a: .space 4
+.section .bss
+a: .space 4
 ```
    Hier wird ein Speicherbereich von 4 Bytes für die Variable `a` reserviert, die in
    der `.bss`-Sektion gespeichert wird. 
@@ -32,9 +32,9 @@ Beispiel:
 Die `.text`-Sektion enthält den ausführbaren Code des Programms. Alle Assembler-Anweisungen, die dieser Sektion zugeordnet werden, gehören zum Programmcode, der zur Laufzeit ausgeführt wird. Die Direktive `.text` wird verwendet, um die nachfolgenden Instruktionen in dieser Sektion zu platzieren. 
 Beispiel:
 ```asm
-   .section .text
-   main:
-       mov r0, #1
+.section .text
+main:
+      mov r0, #1
 ```
 
 |--------------------------------------|-------------------------------|--------------------|

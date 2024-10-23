@@ -23,7 +23,7 @@ Das CPSR-Register ist 32 Bit breit und in verschiedene Felder unterteilt, die je
 |   N  |   Z  |   C  |   V  |  ... |
 
 
-### Setzen des CPSR`s (nur Condition Flags)
+### Setzen des CPSR (nur Condition Flags)
 Das CPSR kann durch Anweisungen beeinflusst werden, die eine Berechnung durchführen und dabei die Condition Flags setzen. Dies wird erreicht, indem ein `s` am Ende der Operation angehängt wird. Diese erweiterte Syntax sorgt dafür, dass die entsprechenden Flags im CPSR basierend auf dem Ergebnis der Operation aktualisiert werden.
 
 #### Beispiel-Syntax (mit bisher bekannten Anweisungen):
@@ -86,7 +86,7 @@ So sieht das CPSR nach der Ausführung aus:
 
 ![Screenshot of Example Program](./CPSR4.png) 
 
-Wenn man die oberen vier Bits (Bits 31 bis 28) des CPSR, die die Condition-Flags repräsentieren, nach dieser Operation binär darstellt, ergibt sich die Folge 0010 (in hexadezimal 0x2, wie auch in CPULator angezeigt). Dies bedeutet, dass das das Carry-Flag (Bit 29) wie erwartet gesetzt wurde.
+Wenn man die oberen vier Bits (Bits 31 bis 28) des CPSR, die die Condition-Flags repräsentieren, nach dieser Operation binär darstellt, ergibt sich die Folge 0010 (in hexadezimal 0x2, wie auch in CPULator angezeigt). Dies bedeutet, dass das Carry-Flag (Bit 29) wie erwartet gesetzt wurde.
 
 |----------------------------|------------------------------------|------------------------|
 |   [zurück](shiftinstr.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](comp.md)    |

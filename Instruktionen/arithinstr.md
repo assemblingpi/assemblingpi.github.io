@@ -29,10 +29,10 @@ Hier wird der Wert von `Rn` mit dem unmittelbaren Wert `#imm` addiert, das Ergeb
 #### Beispiele
 
 ```
-    MOV R1, #5       @ Lade den Wert 5 in Register R1
-    MOV R2, #10      @ Lade den Wert 10 in Register R2
-    ADD R0, R1, R2   @ Addiere R1 und R2, speichere das Ergebnis in R0
-    ADD R3, R1, #3   @ Addiere den Wert 3 auf R1, speichere das Ergebnis in R3
+MOV R1, #5       @ Lade den Wert 5 in Register R1
+MOV R2, #10      @ Lade den Wert 10 in Register R2
+ADD R0, R1, R2   @ Addiere R1 und R2, speichere das Ergebnis in R0
+ADD R3, R1, #3   @ Addiere den Wert 3 auf R1, speichere das Ergebnis in R3
 ```
 
 ### SUB
@@ -63,15 +63,15 @@ Hier wird der unmittelbare Wert `<#imm>` von dem Wert in `<Rn>` subtrahiert, das
 #### Beispiele
 
 ```
-    MOV R0, #10      @ Lade den Wert 10 in Register R0
-    MOV R1, #4       @ Lade den Wert 4 in Register R1
-    SUB R2, R0, R1   @ Subtrahiere R1 von R0, speichere das Ergebnis in R2
-    SUB R3, R0, #5   @ Subtrahiere den Wert 5 von R0, speichere das Ergebnis in R3
+MOV R0, #10      @ Lade den Wert 10 in Register R0
+MOV R1, #4       @ Lade den Wert 4 in Register R1
+SUB R2, R0, R1   @ Subtrahiere R1 von R0, speichere das Ergebnis in R2
+SUB R3, R0, #5   @ Subtrahiere den Wert 5 von R0, speichere das Ergebnis in R3
 ```    
 **Folgende Beispiele zeigen, wie man SUB nicht anwenden kann:**
 ```    
-    SUB R4, #8, #3   @ Das Subtrahieren von zwei unmittelbaren Werten ist nicht erlaubt
-    SUB R5, #9, R1   @ Ein Registerwert kann nicht von einem unmittelbaren Wert subtrahiert werden
+SUB R4, #8, #3   @ Das Subtrahieren von zwei unmittelbaren Werten ist nicht erlaubt
+SUB R5, #9, R1   @ Ein Registerwert kann nicht von einem unmittelbaren Wert subtrahiert werden
 ```
 
 
@@ -88,11 +88,11 @@ Achtung: Es ist nicht möglich, zwei unmittelbare Werte direkt miteinander zu ad
 
 #### Beispiel
 ```
-    LDR R0, =0xffffffff		 
-    LDR R1, =0xa    		
-    MOV R2, #0x0			
-    ADDS R3, R0, R1         @ Führe die Addition R0 + R1 durch, setze Flags
-    ADC R4, R2, #0          @ R4 = R2 + 0 + Carry = 0 + 0 + 1 = 1
+LDR R0, =0xffffffff		 
+LDR R1, =0xa    		
+MOV R2, #0x0			
+ADDS R3, R0, R1         @ Führe die Addition R0 + R1 durch, setze Flags
+ADC R4, R2, #0          @ R4 = R2 + 0 + Carry = 0 + 0 + 1 = 1
 ```
 
 
@@ -109,11 +109,11 @@ Achtung: Man darf keine unmittelbaren Werte voneinander subtrahieren und ein Reg
 
 #### Beispiel
 ```
-    MOV R0, #0x3			
-    MOV R1, #0x5			
-    MOV R2, #0x2			
-    SUBS R3, R0, R1         @ Führe R0 - R1 durch, Carry wird nicht gesetzt, heißt Borrow ist aufgetreten
-    SBC R4, R2, #0          @ R4 = R2 - 0 - (1 - C) = 2 - 0 - (1 - 0) = 1 
+MOV R0, #0x3			
+MOV R1, #0x5			
+MOV R2, #0x2			
+SUBS R3, R0, R1         @ Führe R0 - R1 durch, Carry wird nicht gesetzt, heißt Borrow ist aufgetreten
+SBC R4, R2, #0          @ R4 = R2 - 0 - (1 - C) = 2 - 0 - (1 - 0) = 1 
 ```
 
 
@@ -133,16 +133,16 @@ Achtung: Bei `MUL` dürfen keine unmittelbaren Werte verwendet werden!
 #### Beispiele
 
 ```
-    MOV R0, #3       @ Lade den Wert 3 in Register R0
-    MOV R1, #7       @ Lade den Wert 7 in Register R1
-    MUL R2, R0, R1   @ Multipliziere R0 und R1, speichere das Ergebnis in R2
+MOV R0, #3       @ Lade den Wert 3 in Register R0
+MOV R1, #7       @ Lade den Wert 7 in Register R1
+MUL R2, R0, R1   @ Multipliziere R0 und R1, speichere das Ergebnis in R2
 ```
 
 **Folgende Beispiele zeigen, wie man MUL nicht anwenden kann:**
 ```
-    MUL R3, #3, #4   @ Unmittelbare Werte dürfen bei MUL nicht angewendet werden!
-    MUL R4, R0, #3
-    MUL R5, #2, R1
+MUL R3, #3, #4   @ Unmittelbare Werte dürfen bei MUL nicht angewendet werden!
+MUL R4, R0, #3
+MUL R5, #2, R1
 ```
 
 
@@ -162,14 +162,14 @@ Achtung: Auch bei `MLA` können keine unmittelbaren Werte verwendet werden!
 #### Beispiele
 
 ```
-    MOV R0, #2                      
-    MOV R1, #7               
-    MOV R2, #1				 
-    MLA R3, R0, R1, R2      @ R3 = (R0 * R1) + R2 = (2 * 7) + 1 = 15
+MOV R0, #2                      
+MOV R1, #7               
+MOV R2, #1				 
+MLA R3, R0, R1, R2      @ R3 = (R0 * R1) + R2 = (2 * 7) + 1 = 15
 ```
 **Folgendes Beispiel zeigt, wie man MLA nicht anwenden sollte:**
 ```asm
-    MLA R4, #3, R1, R2      @ Fehler: Unmittelbare Werte dürfen bei MLA nicht verwendet werden!
+MLA R4, #3, R1, R2      @ Fehler: Unmittelbare Werte dürfen bei MLA nicht verwendet werden!
 ```
 
 
