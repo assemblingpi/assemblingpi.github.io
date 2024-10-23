@@ -18,11 +18,11 @@ Der Befehl vergleicht den Wert in Register A mit dem in Register B, indem er die
 #### Beispiel
 
 ```
-	MOV R0, #5
-	MOV R1, #4
-	CMP R0, R1   @ Erste CMP-Operation
-	CMP R1, R0   @ Zweite CMP-Operation
-	CMP R0, R0   @ Dritte CMP-Operation
+MOV R0, #5
+MOV R1, #4
+CMP R0, R1   @ Erste CMP-Operation
+CMP R1, R0   @ Zweite CMP-Operation
+CMP R0, R0   @ Dritte CMP-Operation
 ```
 
 In diesem Beispiel werden die Werte `5` und `4` in die Register `R0` und `R1` geladen. Anschließend werden die drei CMP-Operationen durchgeführt, die jeweils zwei Register miteinander vergleichen und die entsprechenden Flags im CPSR-Register setzen.
@@ -58,9 +58,9 @@ Der Befehl führt eine bitweise UND-Operation zwischen den Werten in Register A 
 #### Beispiel
 
 ```
-	MOV R0, #0b1010   
-	MOV R1, #0b0101   
-	TST R0, R1			       	
+MOV R0, #0b1010   
+MOV R1, #0b0101   
+TST R0, R1			       	
 ```
 
 **Das CPSR nach der TST-Operation:**
@@ -83,9 +83,9 @@ TEQ <RegisterA>, <RegisterB>
 #### Beispiel
 
 ```
-	MOV R0, #0b1100   
-	MOV R1, #0b1100   
-	TEQ R0, R1			       	
+MOV R0, #0b1100   
+MOV R1, #0b1100   
+TEQ R0, R1			       	
 ```
 
 **Das CPSR nach der TEQ-Operation:**
@@ -104,10 +104,10 @@ Neben den spezifischen Vergleichsoperatoren wie **CMP**, **TST** und **TEQ** kö
 ```
 #### Beispiel
 ```
-	MOV R0, #5      
-	MOV R1, #3      
-	ADDS R2, R0, R1   @ Addition mit Flags
-	SUBS R3, R0, R1   @ Subtraktion mit Flags
+MOV R0, #5      
+MOV R1, #3      
+ADDS R2, R0, R1   @ Addition mit Flags
+SUBS R3, R0, R1   @ Subtraktion mit Flags
 ```
 **Erklärung der ADDS-Operation:**
 

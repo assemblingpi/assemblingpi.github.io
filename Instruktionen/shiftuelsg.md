@@ -13,27 +13,27 @@
 
 #### Lösung:
 ```
-    LDR R0, =-7           @ Lade a = -7 in R0
-    LDR R1, =12           @ Lade b = 12 in R1
-    LDR R2, =-1024        @ Lade c = -1024 in R2 
-    LDR R3, =16           @ Lade d = 16 in R3
+LDR R0, =-7           @ Lade a = -7 in R0
+LDR R1, =12           @ Lade b = 12 in R1
+LDR R2, =-1024        @ Lade c = -1024 in R2 
+LDR R3, =16           @ Lade d = 16 in R3
 
-    @ Multipliziere a * b durch Shiften (Multiplikation)
-    LSL R4, R0, #3        @ R4 = (-7) * 8 = -56
-    LSL R5, R0, #2        @ R5 = (-7) * 4 = -28
-    ADD R6, R4, R5        @ R6 = (-56) + (-28) = -84
+@ Multipliziere a * b durch Shiften (Multiplikation)
+LSL R4, R0, #3        @ R4 = (-7) * 8 = -56
+LSL R5, R0, #2        @ R5 = (-7) * 4 = -28
+ADD R6, R4, R5        @ R6 = (-56) + (-28) = -84
 
-    @ Teile c durch d durch arithmetische Rechtsverschiebung (signed Division)
-    ASR R7, R2, #4        @ R7 = -1024 / 16 = -64
+@ Teile c durch d durch arithmetische Rechtsverschiebung (signed Division)
+ASR R7, R2, #4        @ R7 = -1024 / 16 = -64
 
-    @ Addiere die Ergebnisse der Multiplikation und Division
-    ADD R8, R6, R7        @ R8 = -84 + (-64) = -148
+@ Addiere die Ergebnisse der Multiplikation und Division
+ADD R8, R6, R7        @ R8 = -84 + (-64) = -148
 
-    @ Rotiere das Endergebnis um 8 Stellen (= ein Byte) nach rechts
-    ROR R9, R8, #8       
+@ Rotiere das Endergebnis um 8 Stellen (= ein Byte) nach rechts
+ROR R9, R8, #8       
 ```
 
-##### So sollten die Register nach der Ausführung aussehen:
+#### So sollten die Register nach der Ausführung aussehen:
 
 ***Ergebnisse in Signed-Decimal-Darstellung:***
 
