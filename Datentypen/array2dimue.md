@@ -7,9 +7,9 @@ Gegeben ist der folgende Codeabschnitt:
 .data
 
 matrix: 
-    .word 0x00000000, 0x000000aa, 0xbbff0000, 0x00000000
-    .word 0x0000aaaa, 0x00000000, 0xffff00ff, 0x0000aa0a
-    .word 0x00000000, 0xaaaaaaaa, 0xaaaabbff, 0x00000000
+    .word 0x00000000, 0x000000aa, 0xbbffaa00, 0x00aaaa00
+    .word 0x0000aa0a, 0x00000000, 0xffff00ff, 0xaaaaaa00
+    .word 0x0000aaaa, 0xaaaaaaaa, 0xaaaabbff, 0x00000000
 
 
 .text
@@ -22,10 +22,10 @@ _start:
 ```
 
 #### Aufgabenstellung:
-Kopiere den oben stehenden Code in den CPUlator und ergänze ihn so, dass die Matrix als zweidimensionales Array verarbeitet wird. Der Array `matrix[3][16]` soll dabei nach der längsten Sequenz von `0xaa` in jeder Zeile durchsucht werden. Die Länge dieser Sequenzen in Byte soll anschließend in `r0`.
+Kopiere den oben stehenden Code in den CPUlator und ergänze ihn so, dass die Matrix als zweidimensionales Array verarbeitet wird. Der Array `matrix[3][16]` soll dabei nach der längsten Sequenz von `0xaa` durchsucht werden. Diese Länge in Byte soll anschließend in `r0` abgelegt werden.
 
-|--------------------------------|------------------------------------|------------------------------------|
-|   [zurück](arraysmultidim.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](../Proz/prozprog.md)    |
+|--------------------------------|------------------------------------|--------------------------------|
+|   [zurück](arraysmultidim.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](arrays2dimlsg.md)   |
 
 
 | **5.3 Komplexe Datentypen**                                                   |

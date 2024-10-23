@@ -6,7 +6,7 @@ Gegeben ist der folgende Codeabschnitt mit einem kleinen eindimensionalen Array.
 Die Aufgabe ist nun, diesen mittels einfacher Sortieralgorithmen zu sortieren.
 ```asm
 .data
-   array: .byte 0x5, 0x4, 0x3, 0x2, 0x1
+   array: .byte 0x5, 0x12, 0x4, 0xa, 0x2, 0x1, 0x09, 0x00
    .align 4
 .text
 .global _start

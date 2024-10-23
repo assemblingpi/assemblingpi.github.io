@@ -10,5 +10,5 @@ Prozedurale Konzepte können in Assembler implementiert werden, aber die Sprache
 ### Prozedurale Programmierung in Assembler
 Um in Assembler komplexe Programme zu entwickeln, ist das Verständnis prozeduraler Konzepte unerlässlich. Prozeduren, die spezifische Aufgaben ausführen, werden über den Stack organisiert, der die Aufrufe und dazugehörigen Daten verwaltet. 
 
-|-------------------------------------------|------------------------------------|------------------------------|
-|   [zurück](../Datentypen/array2dimue.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](wasistproz.md)    |
+|------------------------------------------------|------------------------------------|------------------------------|
+|   [zurück](../Datentypen/(arrays2dimlsg.md) )  |   [Hauptmenü](../ueberblick.md)    |   [weiter](wasistproz.md)    |
