@@ -43,26 +43,74 @@ mydata: .word 0xabc
 ```
 
 
+
+### Der Literal Pool in ARMv7
+
+#### Hintergrund
+
+In der ARMv7-Architektur kann der Befehl `ldr r0, =My_data` eine 32-Bit-Adresse wie die von `My_data` nicht direkt als Immediate-Wert kodieren. Immediate-Werte in ARM-Instruktionen sind auf kleinere Größen beschränkt, und ein Maschinenbefehl selbst umfasst nur 32 Bit, was nicht ausreicht, um eine vollständige 32-Bit-Adresse direkt im Befehl zu integrieren. Wie lädt `ldr` also dennoch eine solche Adresse korrekt?
+
 #### Der Literal Pool
-Achtung: Ein häufiges Missverständnis ist, dass der Befehl ```ldr r0, =My_data``` die Daten (in diesem Fall den Wert 0xbb0000aa) in ein Register lädt. 
-Tatsächlich lädt dieser Befehl jedoch die Adresse von My_data in das Register r0, nicht den gesuchten Datenwert. 
-Woher wird diese Adresse geladen? Der Assembler platziert diese Adresse am Ende der Text-Sektion im Code, im sogenannten Literal Pool um den Zugriff auf die Daten zu ermöglichen. 
 
-Um den tatsächlichen Wert von My_data in ein Register zu laden, müssen folglich zwei Schritte durchgeführt werden:
-1.Laden der Adresse von My_data in ein Register:
-```asm
-ldr r0, =My_data
+Dieses Problem wird durch den **Literal Pool** gelöst. Der Literal Pool ist ein spezieller Speicherbereich, der Konstanten wie Adressen oder große Zahlen enthält, die nicht direkt in einem Maschinenbefehl kodiert werden können. Statt die Konstanten in den Befehl einzubetten, speichert der Assembler sie im Literal Pool, und der `ldr`-Befehl lädt sie von dort.
+
+#### Funktionsweise
+
+Der Zugriff auf den Literal Pool erfolgt mittels **PC-relativer Adressierung**, wobei der Programmzähler (PC) als Referenz dient, um die gewünschte Konstante im Literal Pool zu finden. Dies ermöglicht es dem `ldr`-Befehl, entweder eine Adresse (die eines Labels) oder einen unmittelbaren Wert zu laden, ohne dass diese direkt im Befehl kodiert werden müssen.
+
+- **Laden einer Adresse**: Wird ein Label wie `My_data` referenziert, speichert der Literal Pool die **Adresse** dieses Labels. Der Befehl `ldr r0, =My_data` lädt dann die Adresse von `My_data` in das Register `r0`.
+  
+  Beispiel:
+  ```assembly
+  ldr r0, =My_data    @ Lädt die Adresse von My_data in r0
+  ```
+
+- **Laden eines Werts**: Handelt es sich hingegen um eine direkte Zahl, speichert der Literal Pool diesen **Wert**. Der Befehl `ldr r1, =0x12345678` lädt dann den Wert `0x12345678` direkt in das Register `r1`.
+
+  Beispiel:
+  ```assembly
+  ldr r1, =0x12345678 @ Lädt den Wert 0x12345678 in r1
+  ```
+
+##### Detaillierter Ablauf:
+
+1. **Platzierung des Literal Pools**: Der Literal Pool wird vom Assembler meist, aber nicht zwingend am Ende einer Code-Sektion eingefügt. Der Assembler kann ihn näher an den Befehlen platzieren, die ihn benötigen. In umfangreichen Code-Segmenten kann es mehrere Literal Pools geben, die strategisch platziert sind, um Zugriffszeiten zu minimieren.
+   
+2. **Speicherung der Konstanten**: Im Literal Pool wird die Konstante, wie die 32-Bit-Adresse von `My_data`, abgelegt. Der `ldr`-Befehl wird so umgewandelt, dass er die relative Position dieser Konstante im Literal Pool aufruft.
+
+3. **PC-relative Adressierung**: Der Befehl `ldr r0, =My_data` wird vom Assembler in `ldr r0, [pc, #offset]` übersetzt, wobei `offset` die relative Position im Literal Pool angibt. Der PC enthält während der Ausführung die Adresse der aktuell geladenen Anweisung, sodass der Assembler den Offset zur nächsten Konstanten berechnen kann.
+
+#### Beispiel
+
+Ein Beispiel verdeutlicht die Funktionsweise des Literal Pools:
+
 ```
-2.Zugriff auf den Wert an dieser Adresse:
-```asm
-ldr r0, [r0]
+.section .data
+My_data:
+    .word 0x12345678    @ Definiert den Wert von My_data
+    
+.section .text    
+    LDR r0, =My_data    @ Lädt die Adresse von My_data in r0
+    @ ... weiterer Code ...
+
 ```
 
+Der Assembler setzt dies wie folgt um:
+
+```
+.section .text
+    ...
+    LDR r0, [PC, #offset]     @ Lädt die Adresse von My_data aus dem Literal Pool in r0
+    @ ... weiterer Code ...
+    
+    @ Literal Pool
+    .word My_data             @ Im Literal Pool wird die Adresse von My_data abgelegt
+```
 
 ### Label in der Text-Sektion:
 Im Code-Bereich eines Assemblers dienen Labels dazu, bestimmte Stellen im Programmfluss zu kennzeichnen:
 ```asm
-.section .code
+.section .text
 ...
 Here: b here
 ```
@@ -76,3 +124,10 @@ Das Label `Here` ist ein Platzhalter, nicht etwa für die Instruktion, die auf d
 |-----------------------------------------------------------------------|
 | [2.2.1 Sektionen (Abschnitte)](sektionen.md)                          |
 | [2.2.2 Label in ARM-Assembler](label.md)                              |
+
+
+
+
+
+
+
