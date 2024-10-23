@@ -44,7 +44,7 @@ mydata: .word 0xabc
 
 
 
-### Der Literal Pool in ARMv7
+### Der Literal Pool 
 
 #### Hintergrund
 
