@@ -10,10 +10,10 @@ Das **Current Program Status Register (CPSR)** in der ARMv7-Architektur ist ein 
 ### Aufbau des CPSR Registers
 Das CPSR-Register ist 32 Bit breit und in verschiedene Felder unterteilt, die jeweils unterschiedliche Informationen enthalten:
 **Condition Flags (N, Z, C, V):** Diese Flags befinden sich in den oberen 4 Bits (Bits 31 bis 28) des Registers. Sie werden von arithmetischen und logischen Operationen beeinflusst und helfen dabei, den Zustand des Ergebnisses einer Berechnung zu bestimmen.
-    - **N (Negative Flag):** Dieses Flag wird gesetzt, wenn das Ergebnis der letzten arithmetischen Operation negativ war.
-    - **Z (Zero Flag):** Dieses Flag wird gesetzt, wenn das Ergebnis der letzten Operation Null war.
-    - **C (Carry Flag):** Das Carry-Flag zeigt an, ob bei einer arithmetischen Operation eine Über- oder Unterschreitung des Zahlenbereichs auftritt, wenn man Zahlen als unvorzeichenbehaftet (unsigned) betrachtet.
-    - **V (Overflow Flag):** Das Overflow-Flag zeigt an, dass ein Überlauf bei vorzeichenbehafteten (signed) arithmetischen Operationen aufgetreten ist. Ein Überlauf tritt auf, wenn das Ergebnis einer Operation den zulässigen Zahlenbereich für vorzeichenbehaftete Zahlen überschreitet und somit das Vorzeichen des Ergebnisses falsch wird.
+- **N (Negative Flag):** Dieses Flag wird gesetzt, wenn das Ergebnis der letzten arithmetischen Operation negativ war.
+-  **Z (Zero Flag):** Dieses Flag wird gesetzt, wenn das Ergebnis der letzten Operation Null war.
+-  **C (Carry Flag):** Das Carry-Flag zeigt an, ob bei einer arithmetischen Operation eine Über- oder Unterschreitung des Zahlenbereichs auftritt, wenn man Zahlen als unvorzeichenbehaftet (unsigned) betrachtet.
+-  **V (Overflow Flag):** Das Overflow-Flag zeigt an, dass ein Überlauf bei vorzeichenbehafteten (signed) arithmetischen Operationen aufgetreten ist. Ein Überlauf tritt auf, wenn das Ergebnis einer Operation den zulässigen Zahlenbereich für vorzeichenbehaftete Zahlen überschreitet und somit das Vorzeichen des Ergebnisses falsch wird.
 
 
 #### Übersicht der relevanten Bits des CPSR:

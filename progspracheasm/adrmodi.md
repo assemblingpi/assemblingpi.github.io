@@ -11,7 +11,7 @@ Jede Assembleranweisung benötigt **Operanden**, um Daten zu verarbeiten. Ein Op
   
 - **Register-Operanden:** Diese beziehen sich auf Daten, die in den schnellen **Registern** der CPU gespeichert sind. Ein Beispiel wäre `ADD R1, R2`, bei dem die Werte in den Registern `R1` und `R2` addiert werden.
 
-- **Speicher-Operanden:** Diese Operanden verweisen auf Daten, die im **Hauptspeicher** abgelegt sind. Zum Beispiel bedeutet `LOAD R1, [R2]`, dass der Inhalt der Speicheradresse, auf die `R2` zeigt, in das Register `R1` geladen wird.
+- **Speicher-Operanden:** Diese Operanden verweisen auf Daten, die im **Hauptspeicher** abgelegt sind. Zum Beispiel bedeutet `LDR R1, [R2]`, dass der Inhalt der Speicheradresse, auf die `R2` zeigt, in das Register `R1` geladen wird.
 
 ### Adressierungsarten: Zugriffsmethoden auf Daten
 
@@ -31,31 +31,31 @@ In der **Register-Adressierung** beziehen sich die Operanden auf Register innerh
 
 #### Register-indirekte Adressierung
 ```
-LOAD R1, [R2]
+LDR R1, [R2]
 ```
 Die **Register-indirekte Adressierung** verwendet den Inhalt eines Registers als Speicheradresse. In diesem Beispiel enthält `R2` die Adresse, an der die zu ladenden Daten gespeichert sind. Dies ermöglicht den Zugriff auf Daten im Hauptspeicher basierend auf dynamischen Adressen.
 
 #### Register-indirekte Adressierung mit Offset
 ```
-LOAD R1, [R2, #4]
+LDR R1, [R2, #4]
 ```
 Diese Form der **Register-indirekten Adressierung** fügt einen festen Offset zum Inhalt des Basisregisters hinzu, um die Zieladresse zu berechnen. Dies ist nützlich für den Zugriff auf strukturierte Daten wie Arrays oder Felder innerhalb von Datenstrukturen.
 
 #### Pre-Indexed Adressierung
 ```
-LOAD R1, [R2, #4]!
+LDR R1, [R2, #4]!
 ```
 Bei der **Pre-Indexed Adressierung** wird der Offset vor dem Zugriff auf den Speicher zur Basisadresse hinzugefügt. Der Inhalt des Basisregisters wird ebenfalls aktualisiert, was den nächsten Zugriff vorbereitet.
 
 #### Post-Indexed Adressierung
 ```
-LOAD R1, [R2], #4
+LDR R1, [R2], #4
 ```
 Die **Post-Indexed Adressierung** führt den Speicherzugriff zuerst durch und fügt anschließend den Offset zur Basisadresse hinzu. Dies ermöglicht den Zugriff auf aktuelle Daten, während die Basisadresse für zukünftige Zugriffe angepasst wird.
 
 #### Register-indirekte Adressierung mit zwei Registern
 ```
-LOAD R1, [R2, R3]
+LDR R1, [R2, R3]
 ```
 Hier werden zwei Register verwendet, um die Speicheradresse zu berechnen. `R2` enthält die Basisadresse, und `R3` liefert einen dynamischen Offset, was flexible und komplexe Datenzugriffe ermöglicht.
 
@@ -70,7 +70,7 @@ Betrachten wir ein einfaches Beispiel, das verschiedene Adressierungsarten inner
 ```
 MOV R1, #5          @ Immediate Adressierung: R1 = 5
 ADD R2, R1          @ Register-Adressierung: R2 = R2 + R1
-LOAD R3, [R2]       @ Register-indirekte Adressierung: R3 = Speicher[R2]
+LDR R3, [R2]        @ Register-indirekte Adressierung: R3 = Speicher[R2]
 CMP R3, #10         @ Immediate Adressierung: Vergleiche R3 mit 10
 BGE label_end       @ Verzweigung: Springe zu 'label_end' wenn R3 >= 10
 SUB R3, R1          @ Register-Adressierung: R3 = R3 - R1

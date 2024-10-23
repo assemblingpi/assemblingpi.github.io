@@ -25,7 +25,7 @@ In Assembler wird das Struct durch die Verwaltung von **Speicheradressen** und *
 .data
 @ offsets für den Zugriff auf die Elemente
     .equ i_zahl, 0
-    .equ i_wert, 4        
+    .equ f_wert, 4        
 
 struct_bsp:
     .space 8                @ Reserviere 8 Bytes für das Struct
