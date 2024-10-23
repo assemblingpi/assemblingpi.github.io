@@ -150,7 +150,7 @@ end_loop_o:
 Wenn die äußere Schleife alle Elemente des Arrays durchlaufen hat, ist das Array sortiert, und die Sortierfunktion wird beendet.
 
 |---------------------------|------------------------------------|----------------------------------|
-|   [zurück](array1dimue.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](arraysmultidim.md)    |
+|   [zurück](array1dueb.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](arraysmultidim.md)    |
 
 
 | **5.3 Komplexe Datentypen**                                                   |
