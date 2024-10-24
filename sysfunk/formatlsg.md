@@ -40,31 +40,19 @@ float2ascii:
 	push {lr}
 	push {r11}
 	mov  r11, sp
+	vpush {d0-d15}
 	vmov s0, r1
+	mov r2, #0
 float_asc:	
+	vcmpe.f32 s0, #0
+	vmrs APSR_nzcv, FPSCR
+	movmi r2, #1
+	vabs.f32 s0, s0
 	vcvt.s32.f32 s1, s0
 	vmov r0, s1
-	cmp r0, #0
-	bge float_positive
-float_negative:
-	ldr r1, =#-1
-	vmov s2, r1
-	vcvt.f32.s32 s2, s2
-	vcvt.f32.s32 s1, s1
-	vmul.f32 s1, s1, s2
-	vmul.f32 s0, s0, s2
-	vsub.f32 s0, s0, s1
-	mov r1, #0
-	sub r1, r1, r0
-	mov r2, #1
-	mov r3, #0
-	bl num_2_dec
-	b fraction
-float_positive:
 	vcvt.f32.s32 s1, s1
 	vsub.f32 s0, s0, s1
 	mov r1, r0
-	mov r2, #0
 	mov r3, #0
 	bl num_2_dec
 fraction:
@@ -105,129 +93,166 @@ float_fr_save:
 	strb r2, [r0, r1]
 	add r1, r1, #1
 endfl2asc:
-	mov		sp, r11
-	pop     {r11}	
+	vpop {d0-d15}
+	mov sp, r11
+	pop {r11}	
 	ldr r0, =kformat_buffer
 	pop {lr}
 	bx  lr
+
 ```
 
-**Erklärung:**
+**1. Initialisierung und Vorbereitung**
 
-Die Funktion `float2ascii` konvertiert eine gegebene Gleitkommazahl in ihre ASCII-Darstellung und speichert sie in einem internen Puffer. Der Rückgabewert `r0` zeigt auf den Puffer, und `r1` gibt die Länge des erzeugten Strings an.
+```assembly
+    push {lr}
+    push {r11}
+    mov  r11, sp
+    vpush {d0-d15}
+    vmov s0, r1
+    mov r2, #0
+```
 
-**Schritt-für-Schritt-Erklärung:**
+Ja, hier ist die Erklärung in kürzerer und wesentlicherer Form:
 
-1. **Prolog:**
-   ```
-   push {lr}
-   push {r11}
-   mov  r11, sp
-   vmov s0, r1
-   ```
-Im Prolog werden die Rücksprungadresse (`lr`) und das Register `r11` auf den Stack gesichert. Der aktuelle Stackzeiger wird in `r11` gespeichert, um ihn später verwenden zu können. Anschließend wird der Float-Wert aus `r1` in das FPU-Register `s0` übertragen.
+**1. Initialisierung und Vorbereitung**
 
-2. **Konvertierung des Float-Werts in eine Ganzzahl:**
-   ```
-   float_asc:	
-   vcvt.s32.f32 s1, s0
-   vmov r0, s1
-   cmp r0, #0
-   bge float_positive
-   ```
-Die Funktion konvertiert den Float-Wert im Register `s0` in eine 32-Bit-Ganzzahl und speichert das Ergebnis in `s1`. Diese Ganzzahl wird anschließend in das Register `r0` übertragen. Schließlich wird `r0` mit 0 verglichen, um festzustellen, ob die Zahl positiv oder negativ ist.
+```assembly
+    push {lr}
+    push {r11}
+    mov  r11, sp
+    vpush {d0-d15}
+    vmov s0, r1
+    mov r2, #0
+```
 
-3. **Behandlung negativer Werte:**
-   ```
-   float_negative:
-   ldr r1, =#-1
-   vmov s2, r1
-   vcvt.f32.s32 s2, s2
-   vcvt.f32.s32 s1, s1
-   vmul.f32 s1, s1, s2
-   vmul.f32 s0, s0, s2
-   vsub.f32 s0, s0, s1
-   mov r1, #0
-   sub r1, r1, r0
-   mov r2, #1
-   mov r3, #0
-   bl num_2_dec
-   b fraction
-   ```
-Zunächst wird der Wert `-1` in `r1` geladen und in das FPU-Register `s2` übertragen. Dann werden `s2` und `s1` in Fließkommazahlen umgewandelt. Die Werte in `s1` und `s0` werden mit `-1` multipliziert, um den Betrag der negativen Zahl zu ermitteln. Anschließend wird der negative Rest berechnet, und die Register werden für den Aufruf der Funktion `num_2_dec` vorbereitet. Schließlich wird zur Verarbeitung des Dezimalteils in den Abschnitt `fraction` gesprungen.
+Die Funktion sichert die Rücksprungadresse und den Framepointer auf dem Stack, speichert die Floating-Point-Register und lädt den Eingabewert (`r1`) in das Register `s0`. Das Register `r2` wird auf `0` gesetzt, um das Vorzeichen des Vorkommateils der Zahl für den späteren Aufruf von `num_2_dec` als positiv zu initialisieren.
 
-4. **Behandlung positiver Werte:**
-   ```
-   float_positive:
-   vcvt.f32.s32 s1, s1
-   vsub.f32 s0, s0, s1
-   mov r1, r0
-   mov r2, #0
-   mov r3, #0
-   bl num_2_dec
-   ```
-In diesem Abschnitt wird `s1` zurück in eine Fließkommazahl konvertiert, und der ganzzahlige Teil wird von `s0` subtrahiert, um den Dezimalteil zu isolieren. Anschließend werden die Register vorbereitet, um die Funktion `num_2_dec` für die Umwandlung des Ganzzahlteils aufzurufen.
+**2. Bestimmen des Vorzeichens und Absolutwertbildung**
 
-5. **Verarbeitung des Dezimalteils:**
-   ```assembly
-   fraction:
-   add r1, r1, #1
-   mov r2, #0x2e
-   strb r2, [r0, r1]
-   add r1, r1, #1
-   mov r2, #10
-   vmov s2, r2
-   vcvt.f32.s32 s2, s2
-   vmov.f32 s3, #1   
-   vdiv.f32 s3, s3, s2	
-   vmov s15, s2
-   vmul.f32 s14, s15, s2
-   vmul.f32 s13, s14, s2
-   vmul.f32 s12, s13, s2
-   vmul.f32 q3, q3, d0[0]
-   vmul.f32 q2, q3, d1[1]
-   vcvt.s32.f32 q2, q2
-   vcvt.f32.s32 q2, q2
-   vmul.f32 q2, q2, d1[0]
-   vsub.f32 q1, q3, q2
-   vcvt.s32.f32 q2, q1
-   ```
+```assembly
+float_asc:	
+    vcmpe.f32 s0, #0
+    vmrs APSR_nzcv, FPSCR
+    movmi r2, #1
+    vabs.f32 s0, s0
+```
 
-In diesem Abschnitt wird zunächst ein Dezimalpunkt (`0x2e`) in den Puffer eingefügt, gefolgt von der Inkrementierung des Index. Der Wert `10` wird in `r2` gesetzt und in eine Fließkommazahl `s2` umgewandelt. Es folgen eine Reihe von Multiplikationen und Divisionen, um die Dezimalstellen zu berechnen und genau darzustellen. Schließlich werden die berechneten Werte konvertiert und für die Ausgabe vorbereitet.
+Die Fließkommazahl in `s0` wird mit Null verglichen, um das Vorzeichen zu ermitteln. Wenn die Zahl negativ ist, wird die Negativ-Flag gesetzt, und `r2` wird auf `1` gesetzt. Anschließend wird der Absolutwert der Zahl berechnet und wieder in `s0` gespeichert, um die weitere Verarbeitung zu vereinfachen.
 
-6. **Speichern der Dezimalstellen:**
-   ```assembly
-   float_fr_save:	
-   mov r2, #0x30
-   vdup.s32 q3, r2
-   vadd.s32 q1, q2, q3 
-   vmov r2, s7
-   strb r2, [r0, r1]
-   add r1, r1, #1
-   vmov r2, s6
-   strb r2, [r0, r1]
-   add r1, r1, #1
-   vmov r2, s5
-   strb r2, [r0, r1]
-   add r1, r1, #1
-   vmov r2, s4
-   strb r2, [r0, r1]
-   add r1, r1, #1
-   ```
+**3. Trennung in Ganzzahl- und Bruchteil**
 
-In dieser Funktion wird `0x30` zu den berechneten Werten addiert, um die ASCII-Darstellung der Dezimalstellen zu erhalten. Die berechneten ASCII-Zeichen werden dann nacheinander in den Puffer gespeichert, wobei der Index nach jedem gespeicherten Zeichen erhöht wird.
+```assembly
+    vcvt.s32.f32 s1, s0
+    vmov r0, s1
+    vcvt.f32.s32 s1, s1
+    vsub.f32 s0, s0, s1
+```
 
-7. **Epilog:**
-   ```assembly
-   endfl2asc:
-   mov		sp, r11
-   pop     {r11}	
-   ldr r0, =kformat_buffer
-   pop {lr}
-   bx  lr
-   ```
+Der Absolutwert in `s0` wird in eine Ganzzahl konvertiert und in `s1` gespeichert. Dieser ganzzahlige Wert wird in `r0` übertragen. Durch Rückkonvertierung von `s1` in eine Fließkommazahl und anschließende Subtraktion von `s0` wird der Bruchteil ermittelt und in `s0` belassen.
 
-Im Epilog wird der ursprüngliche Stackzeiger wiederhergestellt, indem `r11` in den Stackpointer (`sp`) zurückübertragen wird. Anschließend wird die Adresse des Puffers `kformat_buffer` in `r0` geladen. Schließlich wird die Rücksprungadresse (`lr`) wiederhergestellt, und die Funktion kehrt zum Aufrufer zurück.
+**4. Konvertierung des Ganzzahlteils in ASCII**
+
+```assembly
+    mov r1, r0
+    mov r3, #0
+    bl num_2_dec
+```
+
+Der ganzzahlige Wert wird in `r1` kopiert, und `r3` wird auf `0` gesetzt. Die Funktion `num_2_dec` wird aufgerufen, um den Ganzzahlteil in eine ASCII-Zeichenkette zu konvertieren. Das Vorzeichenflag in `r2` wird dabei berücksichtigt, sodass `num_2_dec` ein Minuszeichen voranstellen kann, wenn die Zahl negativ ist.
+
+**5. Einfügen des Dezimalpunkts**
+
+```assembly
+fraction:
+    add r1, r1, #1
+    mov r2, #0x2e
+    strb r2, [r0, r1]
+    add r1, r1, #1
+```
+
+Nach der Konvertierung des Ganzzahlteils wird der Index `r1` um 1 erhöht, und der ASCII-Wert für den Dezimalpunkt (`.`) wird in den Puffer an der aktuellen Position gespeichert. Der Index wird erneut erhöht, um Platz für die Nachkommastellen zu schaffen.
+
+**6. Vorbereitung zur Berechnung der Nachkommastellen**
+
+```assembly
+    mov r2, #10
+    vmov s2, r2
+    vcvt.f32.s32 s2, s2
+    vmov.f32 s3, #1   
+    vdiv.f32 s3, s3, s2	
+```
+
+Der Wert `10` wird in `s2` als Fließkommazahl gespeichert. `s3` wird auf `1.0` gesetzt und durch `s2` geteilt, um `0.1` zu erhalten. Dieser Wert wird als Skalierungsfaktor für die Nachkommastellen verwendet.
+
+**7. Berechnung der Potenzen von 10**
+
+```assembly
+    vmov s15, s2
+    vmul.f32 s14, s15, s2
+    vmul.f32 s13, s14, s2
+    vmul.f32 s12, s13, s2
+```
+
+Es werden die Potenzen von 10 berechnet und in den Registern `s12` bis `s15` gespeichert. Diese Werte (10, 100, 1000, 10000) werden genutzt, um die Nachkommastellen entsprechend ihrer Stellenwerte zu skalieren.
+
+**8. Skalierung und Extraktion der Nachkommastellen**
+
+```assembly
+    vmul.f32 q3, q3, d0[0]
+    vmul.f32 q2, q3, d1[1]
+    vcvt.s32.f32 q2, q2
+    vcvt.f32.s32 q2, q2
+    vmul.f32 q2, q2, d1[0]
+    vsub.f32 q1, q3, q2
+    vcvt.s32.f32 q2, q1
+```
+
+Der Bruchteil in `s0` wird mit den berechneten Potenzen multipliziert, um die Nachkommastellen zu isolieren. Die Ergebnisse werden zwischen Fließkomma- und Ganzzahlformaten konvertiert, um die Ziffern der Nachkommastellen zu erhalten.
+
+**9. Konvertierung der Nachkommastellen in ASCII**
+
+```assembly
+float_fr_save:	
+    mov r2, #0x30
+    vdup.s32 q3, r2
+    vadd.s32 q1, q2, q3 
+```
+
+Der ASCII-Wert für '0' (`0x30`) wird in alle Elemente des Vektors `q3` dupliziert. Durch Addition der extrahierten Nachkommastellen in `q2` zu `q3` entstehen die ASCII-Codes der entsprechenden Ziffern.
+
+**10. Speichern der Nachkommastellen im Puffer**
+
+```assembly
+    vmov r2, s7
+    strb r2, [r0, r1]
+    add r1, r1, #1
+    vmov r2, s6
+    strb r2, [r0, r1]
+    add r1, r1, #1
+    vmov r2, s5
+    strb r2, [r0, r1]
+    add r1, r1, #1
+    vmov r2, s4
+    strb r2, [r0, r1]
+    add r1, r1, #1
+```
+
+Die ASCII-Zeichen der Nachkommastellen werden nacheinander in den Puffer geschrieben. Nach jedem Schreibvorgang wird der Index `r1` erhöht, um die nächste Position zu adressieren.
+
+**11. Abschluss und Rückgabe**
+
+```assembly
+endfl2asc:
+    vpop {d0-d15}
+    mov	 sp, r11
+    pop     {r11}	
+    ldr r0, =kformat_buffer
+    pop {lr}
+    bx  lr
+```
+
+Am Ende werden die Register vom Stack geladen, `sp` auf `r11` zurückgesetzt, `r11` vom Stack geholt und die Adresse von `kformat_buffer` in `r0` geladen. Schließlich wird `lr` wiederhergestellt und zur Rückkehr gesprungen.
 
 #### **Funktion: `num_2_dec`**
 
@@ -309,22 +334,17 @@ num_2_dec_end:
 	pop     {lr}
 	bx      lr
 ```
-**Erklärung:**
-
-Die Funktion `num_2_dec` konvertiert eine gegebene Ganzzahl in ihre dezimale ASCII-Darstellung und speichert diese in einem internen Puffer. Der Rückgabewert `r0` zeigt auf den Puffer, und `r1` gibt die Länge des erzeugten Strings an. Die Funktion verarbeitet auch negative Zahlen und ermöglicht die Angabe einer Feldbreite (`fieldwidth`).
-
-**Schritt-für-Schritt-Erklärung:**
 
 1. **Prolog:**
    ```
-   push    {lr}
+   push  {lr}
    push 	{r11}
    mov 	r11, sp
-   and     r2, r2, #0x3f 
+   and   r2, r2, #0x3f 
    push 	{r1, r2}
-   bl      clear_buff
+   bl    clear_buff
    ```
-Im Prolog werden die Rücksprungadresse (`lr`) und das Register `r11` auf den Stack gesichert, und der aktuelle Stackzeiger wird in `r11` übertragen. Anschließend werden die unteren 6 Bits von `r2` maskiert, und `r1` sowie `r2` werden auf dem Stack gespeichert. Schließlich wird die Funktion `clear_buff` aufgerufen, um den Puffer zu leeren.
+Im Prolog werden die Rücksprungadresse (`lr`) und das Register `r11` auf den Stack gesichert, danach wird der Stackzeiger in `r11` gespeichert. `r2` wird so maskiert, dass nur die unteren 6 Bits erhalten bleiben und dient als Übergabeparameter dazu, der Dezimalzahl gegebenenfalls später ein ASCII-Minuszeichen voranzustellen. Anschließend werden `r1` und `r2` auf den Stack gelegt, bevor die Funktion `clear_buff` zum Leeren des Puffers aufgerufen wird.
 
 2. **Nach dem Aufruf von `clear_buff`:**
    ```

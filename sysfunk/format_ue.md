@@ -24,7 +24,7 @@ Implementieren Sie die Funktion `num_2_dec`, die eine gegebene Ganzzahl in ihre 
 
 - **Eingaben:**
   - `r1`: Ganzzahlwert, der als Dezimalzahl dargestellt werden soll.
-  - `r2`: Feldbreite (optional), um den erzeugten String entsprechend zu füllen.
+  - `r2`: Vorzeichen: 0 = Wert ist negativ  /  1 = Wert ist Positiv
 - **Ausgaben:**
   - `r0`: Adresse des erzeugten ASCII-Strings.
   - `r1`: Länge des erzeugten Strings.
