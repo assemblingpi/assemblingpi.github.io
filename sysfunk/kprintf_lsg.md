@@ -1,10 +1,6 @@
 # B.3 Implementierung systemnaher Funktionen
 ## 3.1.9 Systemnahe Funktionen:  kprintf - Lösungsvorschlag
 
-Die vorliegende `kprintf`-Funktion ist eine Implementierung eines formatierenden Ausgabemechanismus in ARM-Assembly, der ähnlich wie die `printf`-Funktion in der C-Standardbibliothek arbeitet. 
-
-Das zentrale Prinzip der Funktion besteht darin, einen sogenannten Formatstring zu verarbeiten und die darin enthaltenen Platzhalter durch entsprechende Werte zu ersetzen.
-
 ### Ablauf der Funktion:
 Die Funktion beginnt damit, den übergebenen **Formatstring** Zeichen für Zeichen zu durchlaufen. Normale Zeichen, die keine speziellen Anweisungen enthalten, werden direkt in einen Ausgabepuffer geschrieben, der dazu dient, die endgültige Zeichenkette aufzubauen. Sobald die Funktion auf ein `%`-Zeichen trifft, erkennt sie einen **Formatierungsspezifikator**. Dieser zeigt an, dass ein Platzhalter für ein Argument vorhanden ist. Die Zeichen nach dem `%` bestimmen, welcher Datentyp erwartet wird, z. B. `%d` für eine Dezimalzahl oder `%s` für eine Zeichenkette.
 
@@ -38,18 +34,9 @@ Das Datensegment enthält die Definition von Puffer, Konstanten und Zeichenkette
   HexAusgabe:	       .ascii "0x"
                        .balign 1
   HexString:           .byte  0,0,0,0,0,0,0,0
-  format_id_error_str: .asciz "Umwandlung übersteigt Buffergroesse /n"
-  check_error_str:     .asciz "Illegales Umwandlungszeichen /n"
-  error_end:           .byte  0x00
 ```
 Zusätzlich werden einige Konstanten definiert, um Längen von Zeichenketten zu berechnen:
 
-```
-.equ fid_length,       ( check_error_str - format_id_error_str)
-.equ cer_length,       ( error_end - check_error_str)	
-                       .balign 4
-```
-Diese Konstanten (fid_length und cer_length) repräsentieren die Längen der Fehlermeldungen und werden später bei der Ausgabe verwendet.
 
 ### Textsegment und Konstantendefinitionen
 Im Textsegment werden zunächst Konstanten definiert, die für die Adressierung von Variablen auf dem Stack verwendet werden:
@@ -409,24 +396,22 @@ buff_str_char:
 
 
 #### Fehlerbehandlung
-Die Funktion enthält Mechanismen zur Fehlerbehandlung:
+
+Falls Fehler auftreten, sollte die Funktion über ihren Rückgabewert Auskunft darüber erteilen können, welche Art von Fehler vorliegt.
+
 ```
 checkerror:
-    mov     r0, #2
-	ldr     r1, =check_error_str
-	ldr     r2, =cer_length
-	bl 		kwrite
-	b       kprintf_end
-
-format_id_error:
-	mov     r0, #2
-	ldr     r1, =format_id_error_str
-	ldr     r2, =fid_length
-	bl 		kwrite
+    mvn     r0, #0
 	b       kprintf_end
 ```
-**Ungültige Spezifikatoren:** Wenn ein nicht unterstützter Spezifikator erkannt wird, wird eine Fehlermeldung ausgegeben.
-**Pufferüberlauf:** Bei Überschreiten der Puffergröße wird ebenfalls eine Fehlermeldung ausgegeben.
+Wenn ein ungültiges Umwandlungszeichen aufgerufen wurde, dann wird die Funktion mit  `r0 = -1` beendet.
+
+```
+format_id_error:
+	mvn     r0, #1
+	b       kprintf_end
+```
+Bei Überschreiten der Puffergröße wird `-2` in `r0`zurückgegeben.
 
 #### Abschluss der Funktion
 Nach der Verarbeitung des gesamten Formatstrings wird der Ausgabepuffer ausgegeben:
@@ -438,11 +423,13 @@ kprintf_buf_out:
 	ldr     r2, [r11, #BUFF_CNT]
 	bl 		kwrite
 ```
-Sobald die gesamte Zeichenkette verarbeitet wurde oder ein Abbruchkriterium erreicht ist, wird die Funktion `kwrite` aufgerufen, um den Inhalt des Ausgabepuffers auszugeben. Die Parameter für `kwrite` sind:
+Sobald die gesamte Zeichenkette verarbeitet wurde oder ein Abbruchkriterium erreicht ist, wird die Funktion `kwrite` aufgerufen, um den Inhalt des Ausgabepuffers auszugeben. 
 
-- **`r0`**: Der Ausgabetyp (`OUT_TYPE`), der angibt, wohin die Ausgabe erfolgen soll (z. B. Display, UART).
-- **`r1`**: Die Adresse des Ausgabepuffers (`kprintf_buffer`).
-- **`r2`**: Die Anzahl der zu schreibenden Bytes (`BUFF_CNT`).
+Anschließend wird der Returnwert in `r0` geladen:
+```
+ldr     r0, [r11, #BUFF_CNT]
+```
+Bei ordnungsgemäßer Beendigung der Funktion wird somit die Anzahl der ausgegebenen Zeichen zurückgegeben.S
 
 Die Funktion endet mit der Wiederherstellung der Register und dem Rücksprung zum Aufrufer:
 ```
@@ -456,16 +443,13 @@ kprintf_end:
 	b		.
 ```
 
-
 ### Das Stackmanagement bei `kprintf`
 
-Die `kprintf`-Funktion nutzt den Stack zur Verwaltung von Parametern und lokalen Variablen. Zu Beginn werden wichtige Register wie `lr` (Rücksprungadresse) und `r11` (Frame-Pointer) auf dem Stack gesichert. Anschließend wird der Frame-Pointer auf den aktuellen Stack-Pointer gesetzt, um festen Zugriff auf lokale Variablen über definierte Offsets zu gewährleisten.
+Die `kprintf`-Funktion verwaltet Parameter und lokale Variablen über den Stack. Zu Beginn sichert sie wichtige Register wie `lr` (Rücksprungadresse) und `r11` (Frame-Pointer) auf dem Stack. Der Frame-Pointer wird dann auf den Stack-Pointer gesetzt, um konsistent auf lokale Variablen zuzugreifen.
 
-Die ersten beiden Parameter, der Formatstring und der Ausgabetyp, werden in den Registern `r1` und `r2` übergeben. Zusätzliche Argumente, die durch Formatierungsspezifikatoren wie `%d` oder `%s` eingebunden werden sollen, liegen auf dem Stack (bereitgestellt von der aufrufenden Funktion). Um diese Argumente zu verarbeiten, nutzt `kprintf` einen Zähler (`PARAM_CNT`), der die Position des nächsten Arguments auf dem Stack angibt. Mit jedem neuen Spezifikator wird dieser Zähler um 4 Bytes (die Größe eines Words) erhöht, sodass das nächste Argument korrekt geladen werden kann.
+Der Formatstring und der Ausgabetyp werden in den Registern `r1` und `r2` übergeben, während weitere Argumente (z.B. `%d`, `%s`) auf dem Stack liegen. Ein Zähler (`PARAM_CNT`) hilft, die Argumente korrekt vom Stack zu laden, indem er mit jedem Spezifikator um 4 Bytes erhöht wird.
 
-Über feste Offsets vom Frame-Pointer greift die Funktion auf lokale Variablen zu, wie etwa die aktuelle Position im Formatstring (`STR_ADR`) oder die Position im Ausgabepuffer (`BUFF_CNT`). Die geladenen Argumente, wie Zahlen oder Zeichenketten, werden bei Bedarf konvertiert und in den Ausgabepuffer geschrieben.
-
-Am Ende der Funktion wird der Stack-Pointer zurückgesetzt, der für lokale Variablen reservierte Speicher freigegeben und gesicherte Register wie `r11` und `lr` wiederhergestellt. Die Rückkehr zum Aufrufer erfolgt mit `bx lr`. Dieses Stack-Management ermöglicht es `kprintf`, flexibel mit variablen Argumenten umzugehen, ohne den Programmfluss zu beeinträchtigen. Den durch den Aufrufer reservierten Stack muss dieser selbst wieder freigeben!
+Die Funktion greift über feste Offsets auf lokale Variablen zu und schreibt konvertierte Argumente in den Ausgabepuffer. Am Ende werden Stack und Register zurückgesetzt, bevor die Rückkehr zum Aufrufer erfolgt. Der Aufrufer ist für das Freigeben des reservierten Stacks verantwortlich.
 
 |----------------------------|------------------------------------|----------------------------|
 |   [zurück](kprintf_ue.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](kscan_ue.md)    |

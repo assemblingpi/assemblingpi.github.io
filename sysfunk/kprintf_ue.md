@@ -26,15 +26,18 @@ Wenn die Funktion diesen Formatstring mit den Argumenten 404 und "Datei nicht ge
 
 Die Funktion soll den übergebenen Formatstring Zeichen für Zeichen durchlaufen.
 Normale Zeichen sollen direkt in einen Ausgabepuffer kopiert werden.
-Bei Auftreten eines %-Zeichens soll ein Formatierungsspezifikator erkannt und verarbeitet werden.
+Bei Auftreten eines `%`-Zeichens soll ein Formatierungsspezifikator erkannt und verarbeitet werden.
 Unterstützte Formatierungsspezifikatoren:
 
-- **%d oder %i:** Vorzeichenbehaftete Dezimalzahl.
-- **%u:** Vorzeichenlose Dezimalzahl.
-- **%x:** Hexadezimale Zahl.
-- **%s:** Zeichenkette.
+- **%d oder %i:** Vorzeichenbehaftete Dezimalzahl
+- **%u:** Vorzeichenlose Dezimalzahl
+- **%f:** Gleitkommazahl
+- **%x:** Hexadezimale Zahl
+- **%s:** Zeichenkette
 
-Optional: Unterstützung von Feldbreitenangaben nach dem **%**-Zeichen (z. B. %5d) und Umwandlung von Floating Point Werten.
+
+Optional: Unterstützung von Feldbreitenangaben nach dem **%**-Zeichen (z. B. %5d) 
+
 #### Argumentverarbeitung:
 
 Die Funktion soll eine variable Anzahl von Argumenten verarbeiten, abhängig von den im Formatstring enthaltenen Spezifikatoren.
@@ -53,20 +56,24 @@ Wichtige Register müssen zu Beginn der Funktion gesichert und am Ende wiederher
 Lokale Variablen sollen über feste Offsets vom Frame-Pointer verwaltet werden.
 Die Funktion soll den Stack korrekt handhaben, um mit einer variablen Anzahl von Argumenten umzugehen.
 
-#### Fehlerbehandlung:
-
-Bei unbekannten oder nicht unterstützten Spezifikatoren soll eine Fehlermeldung ausgegeben werden.
-Bei Pufferüberläufen soll ebenfalls eine entsprechende Fehlermeldung erfolgen.
-
 #### Ausgabe:
 
 Nach vollständiger Verarbeitung soll der Inhalt des Ausgabepuffers auf das definierte Ausgabemedium ausgegeben werden.
 Die Funktion `kwrite` soll für die tatsächliche Ausgabe verwendet werden, wobei sie den Ausgabetyp, die Pufferadresse und die Anzahl der zu schreibenden Bytes erhält.
 
+#### Returnwert:
+
+Die Funktion soll die Anzahl der ausgegebenen Zeichen zurückgeben (inklusive `/n`).
+
+
+Der Rückgabewert der Funktion printf ist ein Wert in `r0`, der die Anzahl der erfolgreich gedruckten Zeichen angibt. Wenn ein Fehler auftritt, ist der Rückgabewert `-1`.
+Zu den gedruckten Zeichen zählen alle sichtbaren Zeichen sowie spezielle Zeichen wie Leerzeichen und Zeilenumbrüche `/n`.
+
 ### Hinweise:
 
 - Verwenden Sie externe Funktionen, wo notwendig, z. B. für die Konvertierung von Zahlen in Zeichenketten (`num_2_dec`, `num2hexascii`).
 - Erleichtern sie sich das Leben und kommentieren Sie Ihren Code ausreichend, um die Funktionsweise zu erläutern und dadurch die Wartbarkeit zu erhöhen.
+
 
 |---------------------------|------------------------------------|-------------------------------|
 |   [zurück](kread_lsg.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](kprintf_lsg.md)    |
