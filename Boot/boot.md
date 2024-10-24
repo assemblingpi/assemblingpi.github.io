@@ -43,11 +43,11 @@ In diesem Fall werden start und KMain global bzw. extern deklariert:
 Folgende **Equs** sind Konstantendefinitionen, die den Code leserlicher und damit wartbarer machen: 
 ```
 @ equs für Betriebsmodi
-.equ   MODE_MASK,              0x1F
-.equ   MODE_USR,               0x10
-.equ   MODE_IRQ,               0x12
-.equ   MODE_SVC,               0x13
-.equ   STACK_IRQ,            0x7000
+.equ   MODE_MASK,		0x1F
+.equ   MODE_USR,		0x10
+.equ   MODE_IRQ,		0x12
+.equ   MODE_SVC,		0x13
+.equ   STACK_IRQ,		0x7000
 ```
 
 Der Code deaktiviert zunächst die Interrupts und setzt die Register zurück. Anschließend wird der aktive Core geprüft, um sicherzustellen, dass es sich um Core 0 handelt. Wenn dies nicht der Fall ist, wird in eine Dauerschleife (sleep) gewechselt.
@@ -129,7 +129,7 @@ kernel_entry:
 	mov r12, #0
 	bl k_uart0_init
 	bl  KMain
-	b  .	 @ wenn main verlassen wird -> hier Dauerschleife
+	b  .		@ wenn main verlassen wird -> hier Dauerschleife
 							
 sleep:
 	b sleep						

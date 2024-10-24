@@ -8,9 +8,9 @@ Implementierung von UART-Funktionen in ARM-Assembler für den Raspberry Pi 2B
 #### Ziel:
 Entwickeln Sie drei grundlegende Funktionen zur Steuerung der UART0-Schnittstelle:
 
-**k_uart0_init** – Initialisierung der UART0-Schnittstelle.
-**k_uart_write_char** – Senden eines einzelnen Zeichens über UART0.
-**k_uart_read_cha**r – Empfangen eines einzelnen Zeichens von UART0.
+**k_uart0_init** – Initialisierung der UART0-Schnittstelle
+**k_uart_write_char** – Senden eines einzelnen Zeichens über UART0
+**k_uart_read_char** – Empfangen eines einzelnen Zeichens von UART0.
 
 #### Anforderungen:
 
