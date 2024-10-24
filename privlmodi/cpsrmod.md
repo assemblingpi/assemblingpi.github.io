@@ -21,21 +21,23 @@ Ein Wechsel von einem **niedrigeren zu einem höheren Privilegierungslevel**, wi
 Um in der Systemprogrammierung auf einem ARM-Prozessor direkt auf Steuer- und Statusregister zugreifen zu können, verwendet man spezielle Instruktionen wie MRS und MSR.
 
 ### MSR: Move to Special Register
+#### Syntax:
 ```
-Syntax: MSR  Destination, Source
+MSR  <Destination>, <Source>
 ```
 ### MRS: Move from Special Register
+#### Syntax: 
 ```
-Syntax: MRS  Destination, Source
+MRS  <Destination>, <Source>
 ```
 Beim Starten des Prozessors wollen wir überprüfen, ob er sich im Supervisormode befindet und wenn ihn "Schlafen legen", also in eine Dauerschleife führen, sollte das nicht der Fall sein.
 
 **EQUS für die benötigten Konstanten:**
 ```asm
-.equ   MODE_MASK,              0x1F
-.equ   MODE_USR,               0x10
-.equ   MODE_IRQ,               0x12
-.equ   MODE_SVC,               0x13
+.equ    MODE_MASK,      0x1F
+.equ    MODE_USR,       0x10
+.equ    MODE_IRQ,       0x12
+.equ    MODE_SVC,       0x13
 
 ...
 ```
@@ -47,7 +49,7 @@ Beim Starten des Prozessors wollen wir überprüfen, ob er sich im Supervisormod
         AND r2, r0, r1
         CMP r2, #MODE_SVC
         BNE sleep
-...
+        ...
 sleep:
         B sleep
 ```
