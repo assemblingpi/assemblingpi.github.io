@@ -63,9 +63,6 @@ Die Funktion `kwrite` soll für die tatsächliche Ausgabe verwendet werden, wobe
 
 #### Returnwert:
 
-Die Funktion soll die Anzahl der ausgegebenen Zeichen zurückgeben (inklusive `/n`).
-
-
 Der Rückgabewert der Funktion printf ist ein Wert in `r0`, der die Anzahl der erfolgreich gedruckten Zeichen angibt. Wenn ein Fehler auftritt, ist der Rückgabewert `-1`.
 Zu den gedruckten Zeichen zählen alle sichtbaren Zeichen sowie spezielle Zeichen wie Leerzeichen und Zeilenumbrüche `/n`.
 

@@ -18,38 +18,13 @@ Der Anfang des Codes deklariert globale Symbole, externe Funktionen und definier
 .equ ARGS,              BASE +  0x04     
 // --------------------------------------
 .section .data
-  unknown_for_str:    .asciz "ERROR: unknown format identifier/n" 
-  .equ un_for_length,       ( scan_error_str - unknown_for_str)
-  
-  scan_error_str:        .asciz "ERROR: scanf - no args/n" 
-  scerror_end:          
-  .equ sc_er_length,           ( scerror_end - scan_error_str)
-  
-  dez_error1_str:        .asciz "ERROR: %d no input/n"
-  dezerror1_end: 
-  .equ dez_er1_length,         ( dezerror1_end - dez_error1_str)  
-  
-  error_input_str:       .asciz "ERROR: unexpected input/n"
-  inputerror_end: 
-  .equ input_er_length,        ( inputerror_end - error_input_str) 
-  
-  str_error_str:         .asciz "ERROR: %s no input/n"
-  strerror_end: 
-  .equ str_er_length,          ( strerror_end - str_error_str) 
-  
-  error_wrinput_str:     .asciz "ERROR: %s input/n"
-  wrinerror_end: 
-  .equ wrinputstr_er_length,       ( wrinerror_end - error_wrinput_str) 
-
-.balign 4
-
-kscanf_buffer:
+	kscanf_buffer:
                      .space 1024, 0x0
 ```
 
 Eine globale Funktion `kscan` und externe Funktionen (`kprintf`, `memset`, `kread`) werden definiert. Es werden einige Konstanten zur Speicherverwaltung und Parameterübergabe gesetzt, wie etwa **`BASE`** und **`ARGS`**, die Offsets für verschiedene Speicheradressen festlegen.
 
-Im **Datenabschnitt** werden verschiedene Fehlermeldungen als nullterminierte Zeichenketten definiert, die bei Fehlern ausgegeben werden. Die Längen dieser Fehlermeldungen werden durch **`.equ`-Anweisungen** berechnet, indem die Differenz zwischen den Start- und Endadressen der Strings bestimmt wird. Schließlich wird ein interner Puffer (`kscanf_buffer`) von 1024 Bytes reserviert, der für Eingaben durch `kread` genutzt wird.
+Im **Datenabschnitt** wird ein interner Puffer (`kscanf_buffer`) von 1024 Bytes reserviert, der für Eingaben durch `kread` genutzt wird.
 
 ### 2. **Funktion `kscan`**
 
@@ -120,19 +95,13 @@ Die Funktion verwaltet den aktuellen Parameterindex, indem sie diesen um 4 Bytes
 
 ### 6. **Fehlerbehandlung bei ungültigen Formatbezeichnern**
 
-Falls ein unbekannter Formatbezeichner erkannt wird, wird eine Fehlermeldung ausgegeben.
+Falls ein unbekannter Formatbezeichner erkannt wird, wird die Funktion mit dem Rückgabewert `-1` beendet:
 
 ```
 checkerror:
-	mov     r0, #2
-	ldr     r1, =unknown_for_str
-	ldr     r2, =un_for_length
-	bl 		kwrite
-	ldr		r0, =0xffffffff 
+	mvn r0, #0 
 	b       scanf_end	
 ```
-
-Bei einem Fehler wird eine Fehlermeldung ausgegeben und die Funktion mit einem Fehlercode beendet. Zunächst wird der Dateideskriptor (oder eine ähnliche Angabe) auf `2` gesetzt, die Fehlermeldung und deren Länge geladen und über `kwrite` ausgegeben. Anschließend wird `r0` auf den Fehlercode `0xffffffff` gesetzt, und die Funktion springt zum Ende, um den Fehler zu signalisieren.
 
 ### 7. **Ende des Scanvorgangs**
 
@@ -149,18 +118,14 @@ Am Ende des Scans wird der Parameterzähler überprüft. Wenn der Zähler auf nu
 
 ### 8. **Fehlerbehandlung bei fehlenden Argumenten**
 
-Wenn der Parameterzähler nicht null ist, wird eine Fehlermeldung ausgegeben.
+Wenn der Parameterzähler nicht null ist, wird eine entsprechende Fehlerbehandlung eingeleitet:
 
 ```
 scan_error:
-	mov     r0, #2
-	ldr     r1, =scan_error_str
-	ldr     r2, =sc_er_length
-	bl 		kwrite
-	ldr		r0, =0xffffffff //Error!
+	mvn  r0, #1 
 ```
 
-Bei einem Fehler wird eine Fehlermeldung ausgegeben und die Funktion mit einem Fehlercode beendet. Der Deskriptor wird auf `2` gesetzt, die Fehlermeldung "ERROR: scanf - no args/n" sowie deren Länge werden geladen und mittels `kwrite` über UART ausgegeben. Anschließend wird `r0` auf den Fehlercode `0xffffffff` gesetzt, und die Funktion springt zum Ende, um den Fehler zu signalisieren.
+Der Wert `-2` wird in das Register `r0` geladen, und der Kontrollfluss setzt sich mit `scanf_end` fort, wo die Funktion schließlich mit dem Rückgabewert in `r0` beendet wird.
 
 ### 9. **Ende der `kscan`-Funktion**
 
@@ -190,7 +155,6 @@ checkasc:
 	ldr 	pc, [r0, r1, lsl #2]
 	b		.                       //shouln´t be reachable
 
-.balign 4	
 ascii_jmp_tbl:
     a: .word checkerror
     b: .word checkerror
@@ -218,7 +182,7 @@ ascii_jmp_tbl:
     x: .word sc_is_x
     y: .word checkerror
     z: .word checkerror
-.balign 4
+
 ```
 
 Die Funktion `checkasc` verarbeitet Formatbezeichner aus dem Formatstring. Zunächst wird der Buchstabe, falls nötig, von Groß- in Kleinbuchstaben umgewandelt. Anschließend wird der Buchstabe in einen Index für die Sprungtabelle umgerechnet, und die Adresse der entsprechenden Funktion wird geladen. Die Sprungtabelle enthält Zuordnungen für die Buchstaben `d`, `i`, `s`, und `x`, die zu spezifischen Verarbeitungsfunktionen führen, während alle anderen Bezeichner zu einer Fehlerbehandlung (`checkerror`) verzweigen. Der Befehl `b .` ist ein Fallback, der nicht erreicht werden sollte.
@@ -359,50 +323,22 @@ Am Ende der Verarbeitung eines Formatbezeichners springt die Funktion mit `b sca
 
 ### 15. **Fehlerbehandlungen**
 
-Mehrere Fehlerbehandlungsroutinen geben spezifische Fehlermeldungen aus und setzen den Fehlercode.
+Mehrere Fehlerbehandlungsroutinen geben spezifische Fehlercodes als Rückgabewert zurück:
 
 ```
 error_dez:
-	mov     r0, #2
-	ldr     r1, =dez_error1_str
-	ldr     r2, =dez_er1_length
-	bl 		kwrite
-	ldr		r0, =0xffffffff
-	b       scanf_end
-
+			mvn     r0, #2 		
+			b       scanf_end
 error_wrong_input:
-	mov     r0, #2
-	ldr     r1, =error_input_str
-	ldr     r2, =input_er_length
-	bl 		kwrite
-	ldr		r0, =0xffffffff
-	b       scanf_end
-
+			mvn     r0, #3 
+			b       scanf_end
 error_s:
-	mov     r0, #2
-	ldr     r1, =str_error_str
-	ldr     r2, =str_er_length
-	bl 		kwrite
-	ldr		r0, =0xffffffff
-	b       scanf_end
-
+		    mvn     r0, #4 
+			b       scanf_end
 error_wrong_input_str:
-	mov     r0, #2
-	ldr     r1, =error_wrinput_str
-	ldr     r2, =wrinputstr_er_length
-	bl 		kwrite
-	ldr		r0, =0xffffffff
-	b       scanf_end
+			mvn     r0, #5 
+			b       scanf_end
 ```
-
-Die Fehlerbehandlungsroutinen geben jeweils eine spezifische Fehlermeldung aus und setzen den Fehlercode:
-
-- **`error_dez`**: Gibt die Fehlermeldung "ERROR: %d no input/n" aus.
-- **`error_wrong_input`**: Gibt die Fehlermeldung "ERROR: unexpected input/n" aus.
-- **`error_s`**: Gibt die Fehlermeldung "ERROR: %s no input/n" aus.
-- **`error_wrong_input_str`**: Gibt die Fehlermeldung "ERROR: %s input/n" aus.
-
-In allen Fällen wird `kwrite` aufgerufen, um die Fehlermeldung auszugeben. Anschließend wird der Fehlercode (`0xffffffff`) gesetzt, und es erfolgt ein Sprung zur Endroutine `scanf_end`.
 
 
 |**3.1 Systemnahe Funktionen**                                                                  |

@@ -5,7 +5,7 @@ Entwickeln Sie die Assembly-Funktion `kscan`, die Benutzereingaben entsprechend 
 
 Die Übergabe der Parameter erfolgt wie folgt: Die Adresse des nullterminierten Formatstrings wird im Register `r1` übergeben. Die weiteren Argumente, die die Zieladressen für die eingelesenen Werte sind, werden über den Stack übergeben, wobei die zuerst verwendeten Argumente zuletzt gepusht werden müssen. 
 
-Beim Aufruf der Funktion `kscan` soll der Rückgabewert die Anzahl der erfolgreich eingelesenen und zugewiesenen Werte sein. Tritt ein Fehler auf, beispielsweise durch einen ungültigen Formatbezeichner oder fehlende Argumente, soll die Funktion `-1` zurückgeben und eine entsprechende Fehlermeldung ausgeben.
+Beim Aufruf der Funktion `kscan` soll der Rückgabewert die Anzahl der erfolgreich eingelesenen und zugewiesenen Werte sein. Tritt ein Fehler auf, beispielsweise durch einen ungültigen Formatbezeichner, soll die Funktion einen negativen Wert zurückgeben.
 
 |-----------------------------|------------------------------------|-----------------------------|
 |   [zurück](kprintf_lsg.md)  |   [Hauptmenü](../ueberblick.md)    |   [weiter](kscan_lsg.md)    |
