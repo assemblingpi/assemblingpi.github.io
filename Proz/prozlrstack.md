@@ -30,15 +30,15 @@ Eine Leaf-Prozedur hingegen ruft keine weiteren Prozeduren auf. Da diese Prozedu
 #### Beispiel für den Ablauf bei einer Leaf Prozedur:
 ```asm
 Prolog:
-        PUSH {r11}      @ Sichern des alten Frame-Pointers
-        MOV  r11, sp
+    PUSH {r11}      @ Sichern des alten Frame-Pointers
+    MOV  r11, sp
 
 Body: 
-       ...
+    ...
 Epilog:
-        MOV sp, r11  
-        POP {r11}       @ Wiederherstellen des alten Frame-Pointers
-        BX lr           @ Rückkehr zur aufrufenden Funktion
+    MOV sp, r11  
+    POP {r11}       @ Wiederherstellen des alten Frame-Pointers
+    BX lr           @ Rückkehr zur aufrufenden Funktion
 ```
 
 |--------------------------------|------------------------------------|-------------------------|

@@ -8,19 +8,19 @@ Im Assembler gibt es meist spezifische Konventionen und Praktiken, die bei der �
 **Direkte Übergabe durch Register:** Bei ARMv7-Assembler werden die ersten vier Parameter einer Funktion typischerweise über die Register R0 bis R3 übergeben. Diese Methode ist effizient, da der Zugriff auf Register schneller ist als auf den Stack. 
 Beispiel:
 ```asm
-mov r0, #1       @ 1. Parameter in R0
-mov r1, #2       @ 2. Parameter in R1
-mov r2, #3       @ 3. Parameter in R2
-mov r3, #4       @ 4. Parameter in R3
-bl  my_function  @ Aufruf der Funktion
+mov r0, #1          @ 1. Parameter in R0
+mov r1, #2          @ 2. Parameter in R1
+mov r2, #3          @ 3. Parameter in R2
+mov r3, #4          @ 4. Parameter in R3
+bl  my_function     @ Aufruf der Funktion
 ```
 
 **Übergabe per Stack:** Wenn mehr als vier Parameter übergeben werden müssen, werden die zusätzlichen Parameter auf den Stack gelegt. Dies bedeutet, dass die Prozedur auf den Stack zugreifen muss, um die Werte abzurufen. Es ist wichtig, den Stack sorgfältig zu managen, um Stabilitätsprobleme zu vermeiden. Die Verantwortung dafür liegt entweder beim aufrufenden (Caller) oder beim aufgerufenen Code (Callee).
 Beispiel:
 ```asm
-push {r4}        @ 5. Parameter auf den Stack legen
-bl  my_function  @ Aufruf der Funktion
-add sp, sp, #4   @ Stack aufräumen nach dem Funktionsaufruf durch den Caller
+push {r4}           @ 5. Parameter auf den Stack legen
+bl  my_function     @ Aufruf der Funktion
+add sp, sp, #4      @ Stack aufräumen nach dem Funktionsaufruf durch den Caller
 ```
 
 **Übergabe per Referenz:** Für größere Datenmengen wird ein Zeiger anstelle der tatsächlichen Daten übergeben. In diesem Fall wird ein Speicheradresszeiger in einem der Register (z.B. R0) übergeben, und die Funktion dereferenziert diesen Zeiger, um auf die Daten zuzugreifen.
