@@ -11,17 +11,18 @@
         MOV r0, #111
         MOV r1, #222
         MOV r2, #0
-@ Kontrollstruktur if then... elsif... - else...
-       
-        CMP r0, r1  @ check(r0 == r1) - condition 1
+
+@ Kontrollstruktur if then... elsif... - else...     
+        CMP r0, r1      @ check(r0 == r1) - condition 1
         BEQ iftrue  
-        CMP r0, r2  @ check(r0 == r2) - condition 2
+        CMP r0, r2      @ check(r0 == r2) - condition 2
         BEQ elsif
 
 @ else...        
 else:
         MOV r0, #123
         B endif
+
 @ elsif...
 elsif:
         MOV r0, #110

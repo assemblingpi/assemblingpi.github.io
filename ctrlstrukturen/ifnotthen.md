@@ -10,14 +10,17 @@ if not(Condition) then do ...
 ### Beispiel in ARM-Assembler:
 ```asm
 start:
-        MOV r0, #111  @ Beispielwert 1
-        MOV r1, #222  @ Beispielwert 2
+        MOV r0, #111    @ Beispielwert 1
+        MOV r1, #222    @ Beispielwert 2
+
 @ Kontrollstruktur if not...then...
-        CMP r0, r1    @ check(r0 == r1)
+        CMP r0, r1      @ check(r0 == r1)
         BEQ endif
-ifnot:                @ Wenn Condition == false
+
+ifnot:                  @ Wenn Condition == false
         MOV r0, #123
         B endif
+
 @ Ende der Kontrollstruktur
 endif:
         MOV r0, #00

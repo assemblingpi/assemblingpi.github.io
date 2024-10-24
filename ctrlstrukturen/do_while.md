@@ -9,7 +9,7 @@ Die `do-while-Schleife` ist eine fußgesteuerte Schleife, bei der der Schleifeni
 
 ### Pseudocode:
 ```
-    do: i = i + 1 ... while (i < limit)
+do: i = i + 1 ... while (i < limit)
 ```
 
 ### Beispiel in ARM-Assembler:

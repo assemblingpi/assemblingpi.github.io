@@ -11,17 +11,19 @@ if(Condition) then... else...
         MOV r1, #222
 
         @ Kontrollstruktur if...then - else...
-        CMP r0, r1  @ if(r0 == r1)
+        CMP r0, r1      @ if(r0 == r1)
         BEQ iftrue
      
-else:               @ Wenn Condition == false
+else:                   @ Wenn Condition == false
         MOV r0, #123
         ...
         B endif
-iftrue:              @ Wenn Condition = true
+
+iftrue:                 @ Wenn Condition = true
         MOV r0, #0x32
         ...
-endif:               @ Ende der Kontrollstruktur
+        
+endif:                  @ Ende der Kontrollstruktur
         MOV r0, #00
 ```
 #### Der Kontrollflussgraph zum Beispiel:

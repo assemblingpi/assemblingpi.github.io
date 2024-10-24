@@ -9,22 +9,22 @@ Die `while-Schleife` ist eine kopfgesteuerte Schleife, bei der die Bedingung vor
 
 ### Pseudocode:
 ```
-    while (i < limit): i = i + 1 
+while (i < limit): i = i + 1 
 ```
 
 ### Beispiel in ARM-Assembler:
 ```
-    MOV R0, #1           @ i = 1
-    MOV R1, #7           @ Setze die Obergrenze (7 für i < 7)
+    MOV R0, #1          @ i = 1
+    MOV R1, #7          @ Setze die Obergrenze (7 für i < 7)
 
 while_loop:
-    CMP R0, R1           @ Vergleiche i mit der Obergrenze (R0-R1)
-    BGE end_while        @ Wenn i >= 7, springe aus der Schleife
-    ADD R0, R0, #1       @ i++, falls i < 7
-    B while_loop         @ Springe zurück zum Schleifenanfang
+    CMP R0, R1          @ Vergleiche i mit der Obergrenze (R0-R1)
+    BGE end_while       @ Wenn i >= 7, springe aus der Schleife
+    ADD R0, R0, #1      @ i++, falls i < 7
+    B while_loop        @ Springe zurück zum Schleifenanfang
 
 end_while:
-    MOV R2, #10			 @ Programmende
+    MOV R2, #10         @ Programmende
 ```
 Dieser Code implementiert eine `while-Schleife`, die die Variable `i` von 1 bis 6 hochzählt. Solange `i` kleiner als 7 ist, wird `i` um 1 erhöht. Sobald `i` den Wert 7 erreicht oder überschreitet, wird die Schleife verlassen und das Programm beendet.
 
