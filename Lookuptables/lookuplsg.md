@@ -18,10 +18,10 @@ _start:
 	@ r2  = Baseadresse der Lookup-Tabelle
 	@ r3 = y
 
-	LDR  r2, =Lookup           @ Lade die Basisadresse der Lookup-Tabelle in r2
-	LDRB r3, [r2, r1]         @ Lade den Wert y = x^2 + 2x + 3 aus der Tabelle basierend auf x in r3
+	LDR  r2, =Lookup        @ Lade die Basisadresse der Lookup-Tabelle in r2
+	LDRB r3, [r2, r1]       @ Lade den Wert y = x^2 + 2x + 3 aus der Tabelle basierend auf x in r3
 HLT:
-	B HLT                      @ Halte das Programm
+	B HLT                   @ Halte das Programm
 ```
 
 #### Erklärung des Code-Beispiels
