@@ -11,13 +11,13 @@ Elementadresse = Basisadresse + (Index × Elementgroesse)
 ### Beispiel in ARM Assembler:
 ```asm
 .data
-array: .space 8, 0xaa @ array von der größe 8 Byte mit 8 x 0 initialisiert
+array: .space 8, 0xaa   @ array von der größe 8 Byte mit 8 x 0 initialisiert
 .text
 
 .global _start
 _start:
         ldr r0, =array
-        mov r1, #5 // offset == index, da elementgröße 1 Byte
+        mov r1, #5      @ offset == index, da elementgröße 1 Byte
         mov r2, #0
         strb r2, [r0, r1]
 end:

@@ -2,12 +2,12 @@
 ## Lösung: Mehrdimensionale Arrays
 
 ```
-    mov r1, #0        @ reihenindex
-    mov r2, #16       @ reihengroesse
-    mov r3, #0        @ spaltenindex
-    mov r4, #1        @ offset
-    mov r5, #0        @ Zähler
-    mov r6, #0        @ Maximaler Zählwert
+    mov r1, #0          @ reihenindex
+    mov r2, #16         @ reihengroesse
+    mov r3, #0          @ spaltenindex
+    mov r4, #1          @ offset
+    mov r5, #0          @ Zähler
+    mov r6, #0          @ Maximaler Zählwert
 ```
 
 Mehrere Register werden initialisiert, um die Schleife zu steuern und Indizes sowie Zähler zu verwalten. 
@@ -16,7 +16,7 @@ Mehrere Register werden initialisiert, um die Schleife zu steuern und Indizes so
 matrix_inc:
     @ R1 = (R1 * R2) + R3
     mla r4, r1, r2, r3
-    ldr r0, =matrix   @ Basisadresse der Matrix
+    ldr r0, =matrix     @ Basisadresse der Matrix
 ```
 
 Im Abschnitt `matrix_inc` wird der Offset berechnet. Anschließend wird die Matrixbasisadresse in `r0` geladen.
@@ -65,12 +65,12 @@ Der Abschnitt `done` übernimmt die geforderte Speicherung der maximal gefundene
 
 ```
 not_aa:
-	cmp r5, r6
-	movlo r5, #0
-	blo col_end
-	mov r6, r5
-	mov r5, #0
-	b col_end
+    cmp r5, r6
+    movlo r5, #0
+    blo col_end
+    mov r6, r5
+    mov r5, #0
+    b col_end
 ```
 
 Im Abschnitt `not_aa` wird der aktuelle Zähler `r5` mit dem maximalen Zähler `r6` verglichen. Ist `r5` kleiner, wird er auf 0 zurückgesetzt und zu `col_end` gesprungen. Andernfalls wird `r6` auf den Wert von `r5` gesetzt, bevor auch `r5` zurückgesetzt und die Verarbeitung der nächsten Spalte fortgesetzt wird.

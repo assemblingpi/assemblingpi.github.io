@@ -16,9 +16,9 @@ matrix:
 
 .global _start
 _start:
-        
-        ldr r0, =matrix
-        @ code hier
+    
+    ldr r0, =matrix
+    @ code hier
 ```
 
 #### Aufgabenstellung:

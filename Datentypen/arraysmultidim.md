@@ -35,11 +35,11 @@ array: .space 16, 0xbb  @ 16 Elemente, die je 1 Byte groß sind und mit 0xbb
 .global _start
 _start:
         
-        ldr r0, =array @ basisadresse
-        mov r1, #1     @ reihenindex
-        mov r2, #4     @ reihengroesse
-        mov r3, #0     @ spaltenindex
-        mov r4, #1     @ elementgroesse in byte
+        ldr r0, =array  @ basisadresse
+        mov r1, #1      @ reihenindex
+        mov r2, #4      @ reihengroesse
+        mov r3, #0      @ spaltenindex
+        mov r4, #1      @ elementgroesse in byte
         
         @ mla Rd, Rm, Rs, Rn entspricht Rd = (Rm * Rs) + Rn
         mla r1, r1, r2, r3
