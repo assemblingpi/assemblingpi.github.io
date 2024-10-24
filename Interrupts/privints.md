@@ -23,8 +23,8 @@ Folgender Code ist in `boot.s` zu ergänzen!
 ...
 
 @ setze vector-adresse
-	ldr r0, =vector
-	mcr p15, #0, r0, c12, c0, 0
+    ldr r0, =vector
+    mcr p15, #0, r0, c12, c0, 0
 
 @ Wechsel in den Interruptmodus
     MRS r0, cpsr
@@ -46,7 +46,7 @@ Folgender Code ist in `boot.s` zu ergänzen!
 ...
 
 @ Setze Stack-Basis-Adresse
-	mov sp, #0x80000
+    mov sp, #0x80000
 
 ... 
 ```
